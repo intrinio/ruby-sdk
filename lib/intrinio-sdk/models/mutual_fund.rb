@@ -13,38 +13,38 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 require 'date'
 
 module Intrinio
-  # A news article about a company
-  class CompanyNews
-    # The title of the news article
-    attr_accessor :title
+  # An investment program funded by shareholders that trades in diversified holdings and is professionally managed
+  class MutualFund
+    # The Intrinio ID of the mutual fund
+    attr_accessor :id
 
-    # The publication date of the news article
-    attr_accessor :publication_date
+    # The mutual fund's common name
+    attr_accessor :name
 
-    # The url of the news article
-    attr_accessor :url
+    # The nine-character CUSIP identifier
+    attr_accessor :cusip
 
-    # A summary of the news article
-    attr_accessor :summary
+    # The vendor-provided id of the mutual fund
+    attr_accessor :vendor_id
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'title' => :'title',
-        :'publication_date' => :'publication_date',
-        :'url' => :'url',
-        :'summary' => :'summary'
+        :'id' => :'id',
+        :'name' => :'name',
+        :'cusip' => :'cusip',
+        :'vendor_id' => :'vendor_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'title' => :'String',
-        :'publication_date' => :'Date',
-        :'url' => :'String',
-        :'summary' => :'String'
+        :'id' => :'String',
+        :'name' => :'String',
+        :'cusip' => :'String',
+        :'vendor_id' => :'String'
       }
     end
 
@@ -56,20 +56,20 @@ module Intrinio
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'title')
-        self.title = attributes[:'title']
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
       end
 
-      if attributes.has_key?(:'publication_date')
-        self.publication_date = attributes[:'publication_date']
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
       end
 
-      if attributes.has_key?(:'url')
-        self.url = attributes[:'url']
+      if attributes.has_key?(:'cusip')
+        self.cusip = attributes[:'cusip']
       end
 
-      if attributes.has_key?(:'summary')
-        self.summary = attributes[:'summary']
+      if attributes.has_key?(:'vendor_id')
+        self.vendor_id = attributes[:'vendor_id']
       end
 
     end
@@ -92,10 +92,10 @@ module Intrinio
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          title == o.title &&
-          publication_date == o.publication_date &&
-          url == o.url &&
-          summary == o.summary
+          id == o.id &&
+          name == o.name &&
+          cusip == o.cusip &&
+          vendor_id == o.vendor_id
     end
 
     # @see the `==` method
@@ -107,7 +107,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [title, publication_date, url, summary].hash
+      [id, name, cusip, vendor_id].hash
     end
 
     # Builds the object from hash
