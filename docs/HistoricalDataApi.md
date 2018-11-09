@@ -4,15 +4,15 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_historical_data**](HistoricalDataApi.md#get_historical_data) | **GET** /historical_data/{identifier}/{item} | Get Historical Data
+[**get_historical_data**](HistoricalDataApi.md#get_historical_data) | **GET** /historical_data/{identifier}/{tag} | Get Historical Data
 
 
 # **get_historical_data**
-> Array&lt;HistoricalData&gt; get_historical_data(identifier, item, opts)
+> ApiResponseHistoricalData get_historical_data(identifier, tag, opts)
 
 Get Historical Data
 
-Returns historical values for the given `item` and the entity represented by the given `identifier`
+Returns historical values for the given `tag` and the entity represented by the given `identifier`
 
 ### Example
 ```ruby
@@ -21,14 +21,14 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['api_key'] = 'YOUR API KEY'
 end
 
 historicalData_api = Intrinio::HistoricalDataApi.new
 
 identifier = "identifier_example" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-item = "item_example" # String | An Intrinio data tag or other item
+tag = "tag_example" # String | An Intrinio data tag ID or code-name
 
 opts = { 
   type: "type_example", # String | Filter by type, when applicable
@@ -39,7 +39,7 @@ opts = {
 }
 
 begin
-  result = historicalData_api.get_historical_data(identifier, item, opts)
+  result = historicalData_api.get_historical_data(identifier, tag, opts)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling HistoricalDataApi->get_historical_data: #{e}"
@@ -51,7 +51,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **item** | **String**| An Intrinio data tag or other item | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
  **type** | **String**| Filter by type, when applicable | [optional] 
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical date on or before this date | [optional] 
@@ -60,5 +60,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;HistoricalData&gt;**](HistoricalData.md)
+[**ApiResponseHistoricalData**](ApiResponseHistoricalData.md)
 

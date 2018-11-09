@@ -24,7 +24,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['api_key'] = 'YOUR API KEY'
 end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 [**Fundamental**](Fundamental.md)
 
 # **get_fundamental_reported_financials**
-> Array&lt;ReportedFinancial&gt; get_fundamental_reported_financials(id)
+> ApiResponseReportedFinancials get_fundamental_reported_financials(id)
 
 Get Reported Financials for a Fundamental
 
@@ -64,7 +64,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['api_key'] = 'YOUR API KEY'
 end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
@@ -88,10 +88,10 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;ReportedFinancial&gt;**](ReportedFinancial.md)
+[**ApiResponseReportedFinancials**](ApiResponseReportedFinancials.md)
 
 # **get_fundamental_standardized_financials**
-> Array&lt;StandardizedFinancial&gt; get_fundamental_standardized_financials(id)
+> ApiResponseStandardizedFinancials get_fundamental_standardized_financials(id)
 
 Get Standardized Financials for a Fundamental
 
@@ -104,7 +104,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['api_key'] = 'YOUR API KEY'
 end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;StandardizedFinancial&gt;**](StandardizedFinancial.md)
+[**ApiResponseStandardizedFinancials**](ApiResponseStandardizedFinancials.md)
 
 # **lookup_fundamental**
 > Array&lt;Fundamental&gt; lookup_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
@@ -144,7 +144,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['api_key'] = 'YOUR API KEY'
 end
 
 fundamentals_api = Intrinio::FundamentalsApi.new

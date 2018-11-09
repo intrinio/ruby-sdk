@@ -11,8 +11,6 @@ Name | Type | Description | Notes
 **low** | **Float** | The lowest price over the span of the period | [optional] 
 **close** | **Float** | The price at the end of the period | [optional] 
 **volume** | **Float** | The number of shares exchanged during the period | [optional] 
-**ex_dividend** | **Float** | The face (or dollar) value of any dividends awarded during the period | [optional] 
-**split_ratio** | **Float** | The combined ratio of all splits during the period. A 2 for 1 split would yield a split ratio of 0.5. | [optional] 
 **adj_open** | **Float** | The price at the beginning of the period, adjusted for splits and dividends | [optional] 
 **adj_high** | **Float** | The highest price over the span of the period, adjusted for splits and dividends | [optional] 
 **adj_low** | **Float** | The lowest price over the span of the period, adjusted for splits and dividends | [optional] 
