@@ -10,11 +10,9 @@ Method | HTTP request | Description
 
 
 # **filter_filings**
-> ApiResponseFilings filter_filings(company, opts)
+> Array&lt;Filing&gt; filter_filings(company, opts)
 
 Filter Filings
-
-Returns filings that match the specified filters
 
 ### Example
 ```ruby
@@ -23,7 +21,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -57,14 +55,12 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseFilings**](ApiResponseFilings.md)
+[**Array&lt;Filing&gt;**](Filing.md)
 
 # **get_all_filings**
-> ApiResponseFilings get_all_filings(opts)
+> Array&lt;Filing&gt; get_all_filings(opts)
 
 Get All Filings
-
-Returns all filings
 
 ### Example
 ```ruby
@@ -73,7 +69,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -98,14 +94,12 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseFilings**](ApiResponseFilings.md)
+[**Array&lt;Filing&gt;**](Filing.md)
 
 # **get_filing_by_id**
 > Filing get_filing_by_id(id)
 
 Get a Filing by ID
-
-Return the filing with the given ID
 
 ### Example
 ```ruby
@@ -114,7 +108,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
 end
 
 filing_api = Intrinio::FilingApi.new

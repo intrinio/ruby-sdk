@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**filter_stock_exchanges**](StockExchangeApi.md#filter_stock_exchanges) | **GET** /stock_exchanges/filter | Filter Stock Exchanges
 [**get_all_stock_exchanges**](StockExchangeApi.md#get_all_stock_exchanges) | **GET** /stock_exchanges | Get All Stock Exchanges
 [**get_stock_exchange_by_id**](StockExchangeApi.md#get_stock_exchange_by_id) | **GET** /stock_exchanges/{identifier} | Get Stock Exchange by ID
-[**get_stock_exchange_price_adjustments**](StockExchangeApi.md#get_stock_exchange_price_adjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Get Stock Price Adjustments by Exchange
 [**get_stock_exchange_prices**](StockExchangeApi.md#get_stock_exchange_prices) | **GET** /stock_exchanges/{identifier}/prices | Get Stock Prices by Exchange
 [**get_stock_exchange_securities**](StockExchangeApi.md#get_stock_exchange_securities) | **GET** /stock_exchanges/{identifier}/securities | Get Securities by Exchange
 
@@ -17,8 +16,6 @@ Method | HTTP request | Description
 
 Filter Stock Exchanges
 
-Return Stock Exchanges matching the given filters
-
 ### Example
 ```ruby
 # Load the gem
@@ -26,7 +23,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -34,7 +31,8 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 opts = { 
   city: "city_example", # String | Filter by city
   country: "country_example", # String | Filter by country
-  country_code: "country_code_example" # String | Filter by ISO country code
+  country_code: "country_code_example", # String | Filter by ISO country code
+  next_page: "next_page_example" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -52,17 +50,16 @@ Name | Type | Description  | Notes
  **city** | **String**| Filter by city | [optional] 
  **country** | **String**| Filter by country | [optional] 
  **country_code** | **String**| Filter by ISO country code | [optional] 
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**Array&lt;StockExchange&gt;**](StockExchange.md)
 
 # **get_all_stock_exchanges**
-> Array&lt;StockExchange&gt; get_all_stock_exchanges
+> Array&lt;StockExchange&gt; get_all_stock_exchanges(opts)
 
 Get All Stock Exchanges
-
-Return All Stock Exchanges
 
 ### Example
 ```ruby
@@ -71,13 +68,17 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
+opts = { 
+  next_page: "next_page_example" # String | Gets the next page of data from a previous API call
+}
+
 begin
-  result = stockExchange_api.get_all_stock_exchanges
+  result = stockExchange_api.get_all_stock_exchanges(opts)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling StockExchangeApi->get_all_stock_exchanges: #{e}"
@@ -85,7 +86,10 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
@@ -103,7 +107,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -129,54 +133,8 @@ Name | Type | Description  | Notes
 
 [**StockExchange**](StockExchange.md)
 
-# **get_stock_exchange_price_adjustments**
-> ApiResponseStockExchangeStockPriceAdjustments get_stock_exchange_price_adjustments(identifier, opts)
-
-Get Stock Price Adjustments by Exchange
-
-Return stock price adjustments for the Stock Exchange with the given `identifier`
-
-### Example
-```ruby
-# Load the gem
-require 'intrinio-sdk'
-
-# Setup authorization
-Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
-end
-
-stockExchange_api = Intrinio::StockExchangeApi.new
-
-identifier = "identifier_example" # String | A Stock Exchange identifier (MIC or Intrinio ID)
-
-opts = { 
-  date: Date.parse("2013-10-20"), # Date | The date for which to return price adjustments
-  next_page: "next_page_example" # String | Gets the next page of data from a previous API call
-}
-
-begin
-  result = stockExchange_api.get_stock_exchange_price_adjustments(identifier, opts)
-  p result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->get_stock_exchange_price_adjustments: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
- **date** | **Date**| The date for which to return price adjustments | [optional] 
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseStockExchangeStockPriceAdjustments**](ApiResponseStockExchangeStockPriceAdjustments.md)
-
 # **get_stock_exchange_prices**
-> ApiResponseStockExchangeStockPrices get_stock_exchange_prices(identifier, opts)
+> Array&lt;StockPrice&gt; get_stock_exchange_prices(identifier, opts)
 
 Get Stock Prices by Exchange
 
@@ -189,7 +147,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -219,14 +177,14 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseStockExchangeStockPrices**](ApiResponseStockExchangeStockPrices.md)
+[**Array&lt;StockPrice&gt;**](StockPrice.md)
 
 # **get_stock_exchange_securities**
-> ApiResponseStockExchangeSecurities get_stock_exchange_securities(identifier, opts)
+> Array&lt;Security&gt; get_stock_exchange_securities(identifier, opts)
 
 Get Securities by Exchange
 
-Return Securities traded on the Stock Exchange with `identifier`
+Return Securities on the Stock Exchange with `identifier`
 
 ### Example
 ```ruby
@@ -235,7 +193,7 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -263,5 +221,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseStockExchangeSecurities**](ApiResponseStockExchangeSecurities.md)
+[**Array&lt;Security&gt;**](Security.md)
 

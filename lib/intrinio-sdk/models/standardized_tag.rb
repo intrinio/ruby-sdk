@@ -13,38 +13,89 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 require 'date'
 
 module Intrinio
-  # A news article about a company
-  class CompanyNews
-    # The title of the news article
-    attr_accessor :title
 
-    # The publication date of the news article
-    attr_accessor :publication_date
+  class StandardizedTag
+    # The Intrinio ID for the Standardized Tag
+    attr_accessor :id
 
-    # The url of the news article
-    attr_accessor :url
+    # The readable name of tag
+    attr_accessor :name
 
-    # A summary of the news article
-    attr_accessor :summary
+    # The Intrinio standardized tag
+    attr_accessor :tag
 
+    # The code of the financial statement to which this tag belongs
+    attr_accessor :statement_code
+
+    # The format of the financial statment to which this tag belongs
+    attr_accessor :statement_type
+
+    # The parent Standardized Tag forming the statement relationship with the factor
+    attr_accessor :parent
+
+    # The operator forming the statement relationship between the child tag (or tags) and the parent
+    attr_accessor :factor
+
+    # Whether the tag represents a credit or debit
+    attr_accessor :balance
+
+    # The nature of the tag, operating or nonoperating
+    attr_accessor :type
+
+    # The unit of the tag
+    attr_accessor :unit
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'title' => :'title',
-        :'publication_date' => :'publication_date',
-        :'url' => :'url',
-        :'summary' => :'summary'
+        :'id' => :'id',
+        :'name' => :'name',
+        :'tag' => :'tag',
+        :'statement_code' => :'statement_code',
+        :'statement_type' => :'statement_type',
+        :'parent' => :'parent',
+        :'factor' => :'factor',
+        :'balance' => :'balance',
+        :'type' => :'type',
+        :'unit' => :'unit'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'title' => :'String',
-        :'publication_date' => :'Date',
-        :'url' => :'String',
-        :'summary' => :'String'
+        :'id' => :'String',
+        :'name' => :'String',
+        :'tag' => :'String',
+        :'statement_code' => :'String',
+        :'statement_type' => :'String',
+        :'parent' => :'String',
+        :'factor' => :'String',
+        :'balance' => :'Float',
+        :'type' => :'String',
+        :'unit' => :'String'
       }
     end
 
@@ -56,20 +107,44 @@ module Intrinio
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'title')
-        self.title = attributes[:'title']
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
       end
 
-      if attributes.has_key?(:'publication_date')
-        self.publication_date = attributes[:'publication_date']
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
       end
 
-      if attributes.has_key?(:'url')
-        self.url = attributes[:'url']
+      if attributes.has_key?(:'tag')
+        self.tag = attributes[:'tag']
       end
 
-      if attributes.has_key?(:'summary')
-        self.summary = attributes[:'summary']
+      if attributes.has_key?(:'statement_code')
+        self.statement_code = attributes[:'statement_code']
+      end
+
+      if attributes.has_key?(:'statement_type')
+        self.statement_type = attributes[:'statement_type']
+      end
+
+      if attributes.has_key?(:'parent')
+        self.parent = attributes[:'parent']
+      end
+
+      if attributes.has_key?(:'factor')
+        self.factor = attributes[:'factor']
+      end
+
+      if attributes.has_key?(:'balance')
+        self.balance = attributes[:'balance']
+      end
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
+      end
+
+      if attributes.has_key?(:'unit')
+        self.unit = attributes[:'unit']
       end
 
     end
@@ -84,7 +159,19 @@ module Intrinio
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      statement_type_validator = EnumAttributeValidator.new('String', ["financial", "industrial"])
+      return false unless statement_type_validator.valid?(@statement_type)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] statement_type Object to be assigned
+    def statement_type=(statement_type)
+      validator = EnumAttributeValidator.new('String', ["financial", "industrial"])
+      unless validator.valid?(statement_type)
+        fail ArgumentError, "invalid value for 'statement_type', must be one of #{validator.allowable_values}."
+      end
+      @statement_type = statement_type
     end
 
     # Checks equality by comparing each attribute.
@@ -92,10 +179,16 @@ module Intrinio
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          title == o.title &&
-          publication_date == o.publication_date &&
-          url == o.url &&
-          summary == o.summary
+          id == o.id &&
+          name == o.name &&
+          tag == o.tag &&
+          statement_code == o.statement_code &&
+          statement_type == o.statement_type &&
+          parent == o.parent &&
+          factor == o.factor &&
+          balance == o.balance &&
+          type == o.type &&
+          unit == o.unit
     end
 
     # @see the `==` method
@@ -107,7 +200,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [title, publication_date, url, summary].hash
+      [id, name, tag, statement_code, statement_type, parent, factor, balance, type, unit].hash
     end
 
     # Builds the object from hash
