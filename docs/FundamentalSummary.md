@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **start_date** | **Date** | The period start date | [optional] 
 **end_date** | **Date** | The period start date | [optional] 
 **filing_date** | **Date** | The date and time when the Fundamental was filed with the SEC | [optional] 
-**calculated** | **BOOLEAN** | If true, this Fundamental was calculated by Intrinio and not actually reported by the Company | [optional] 
 
 

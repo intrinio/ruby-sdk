@@ -4,16 +4,16 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_data_point_number**](DataPointApi.md#get_data_point_number) | **GET** /data_point/{identifier}/{item}/number | Get a Data Point (Number)
-[**get_data_point_text**](DataPointApi.md#get_data_point_text) | **GET** /data_point/{identifier}/{item}/text | Get a Data Point (Text)
+[**get_data_point_number**](DataPointApi.md#get_data_point_number) | **GET** /data_point/{identifier}/{tag}/number | Get a Data Point (Number)
+[**get_data_point_text**](DataPointApi.md#get_data_point_text) | **GET** /data_point/{identifier}/{tag}/text | Get a Data Point (Text)
 
 
 # **get_data_point_number**
-> DataPointNumber get_data_point_number(identifier, item)
+> DataPointNumber get_data_point_number(identifier, tag)
 
 Get a Data Point (Number)
 
-Returns a numeric value for the given `item` and the entity with the given `identifier`
+Returns a numeric value for the given `tag` and the entity with the given `identifier`
 
 ### Example
 ```ruby
@@ -22,18 +22,18 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['api_key'] = 'YOUR API KEY'
 end
 
 dataPoint_api = Intrinio::DataPointApi.new
 
 identifier = "identifier_example" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-item = "item_example" # String | An Intrinio data tag or other item
+tag = "tag_example" # String | An Intrinio data tag ID or code-name
 
 
 begin
-  result = dataPoint_api.get_data_point_number(identifier, item)
+  result = dataPoint_api.get_data_point_number(identifier, tag)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling DataPointApi->get_data_point_number: #{e}"
@@ -45,18 +45,18 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **item** | **String**| An Intrinio data tag or other item | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 [**DataPointNumber**](DataPointNumber.md)
 
 # **get_data_point_text**
-> DataPointText get_data_point_text(identifier, item)
+> DataPointText get_data_point_text(identifier, tag)
 
 Get a Data Point (Text)
 
-Returns a text value for the given `item` and the entity with the given `identifier`
+Returns a text value for the given `tag` and the entity with the given `identifier`
 
 ### Example
 ```ruby
@@ -65,18 +65,18 @@ require 'intrinio-sdk'
 
 # Setup authorization
 Intrinio.configure do |config|
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['api_key'] = 'YOUR API KEY'
 end
 
 dataPoint_api = Intrinio::DataPointApi.new
 
 identifier = "identifier_example" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-item = "item_example" # String | An Intrinio data tag or other item
+tag = "tag_example" # String | An Intrinio data tag ID or code-name
 
 
 begin
-  result = dataPoint_api.get_data_point_text(identifier, item)
+  result = dataPoint_api.get_data_point_text(identifier, tag)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling DataPointApi->get_data_point_text: #{e}"
@@ -88,7 +88,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **item** | **String**| An Intrinio data tag or other item | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
