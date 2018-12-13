@@ -228,7 +228,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [DataPointNumber]
+    # @return [Float]
     def get_economic_index_data_point_number(identifier, tag, opts = {})
       data, _status_code, _headers = get_economic_index_data_point_number_with_http_info(identifier, tag, opts)
       return data
@@ -239,7 +239,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataPointNumber, Fixnum, Hash)>] DataPointNumber data, response status code and response headers
+    # @return [Array<(Float, Fixnum, Hash)>] Float data, response status code and response headers
     def get_economic_index_data_point_number_with_http_info(identifier, tag, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IndexApi.get_economic_index_data_point_number ..."
@@ -261,7 +261,7 @@ module Intrinio
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain; charset=utf-8'])
 
       # form parameters
       form_params = {}
@@ -275,7 +275,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DataPointNumber')
+        :return_type => 'Float')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IndexApi#get_economic_index_data_point_number\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -287,7 +287,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [DataPointText]
+    # @return [String]
     def get_economic_index_data_point_text(identifier, tag, opts = {})
       data, _status_code, _headers = get_economic_index_data_point_text_with_http_info(identifier, tag, opts)
       return data
@@ -298,7 +298,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataPointText, Fixnum, Hash)>] DataPointText data, response status code and response headers
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def get_economic_index_data_point_text_with_http_info(identifier, tag, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IndexApi.get_economic_index_data_point_text ..."
@@ -320,7 +320,7 @@ module Intrinio
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain; charset=utf-8'])
 
       # form parameters
       form_params = {}
@@ -334,7 +334,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DataPointText')
+        :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IndexApi#get_economic_index_data_point_text\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -476,7 +476,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [DataPointNumber]
+    # @return [Float]
     def get_sic_index_data_point_number(identifier, tag, opts = {})
       data, _status_code, _headers = get_sic_index_data_point_number_with_http_info(identifier, tag, opts)
       return data
@@ -487,7 +487,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataPointNumber, Fixnum, Hash)>] DataPointNumber data, response status code and response headers
+    # @return [Array<(Float, Fixnum, Hash)>] Float data, response status code and response headers
     def get_sic_index_data_point_number_with_http_info(identifier, tag, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IndexApi.get_sic_index_data_point_number ..."
@@ -509,7 +509,7 @@ module Intrinio
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain; charset=utf-8'])
 
       # form parameters
       form_params = {}
@@ -523,7 +523,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DataPointNumber')
+        :return_type => 'Float')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IndexApi#get_sic_index_data_point_number\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -535,7 +535,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [DataPointText]
+    # @return [String]
     def get_sic_index_data_point_text(identifier, tag, opts = {})
       data, _status_code, _headers = get_sic_index_data_point_text_with_http_info(identifier, tag, opts)
       return data
@@ -546,7 +546,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataPointText, Fixnum, Hash)>] DataPointText data, response status code and response headers
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def get_sic_index_data_point_text_with_http_info(identifier, tag, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IndexApi.get_sic_index_data_point_text ..."
@@ -568,7 +568,7 @@ module Intrinio
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain; charset=utf-8'])
 
       # form parameters
       form_params = {}
@@ -582,7 +582,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DataPointText')
+        :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IndexApi#get_sic_index_data_point_text\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -724,7 +724,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [DataPointNumber]
+    # @return [Float]
     def get_stock_market_index_data_point_number(identifier, tag, opts = {})
       data, _status_code, _headers = get_stock_market_index_data_point_number_with_http_info(identifier, tag, opts)
       return data
@@ -735,7 +735,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataPointNumber, Fixnum, Hash)>] DataPointNumber data, response status code and response headers
+    # @return [Array<(Float, Fixnum, Hash)>] Float data, response status code and response headers
     def get_stock_market_index_data_point_number_with_http_info(identifier, tag, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IndexApi.get_stock_market_index_data_point_number ..."
@@ -757,7 +757,7 @@ module Intrinio
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain; charset=utf-8'])
 
       # form parameters
       form_params = {}
@@ -771,7 +771,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DataPointNumber')
+        :return_type => 'Float')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IndexApi#get_stock_market_index_data_point_number\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -783,7 +783,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [DataPointText]
+    # @return [String]
     def get_stock_market_index_data_point_text(identifier, tag, opts = {})
       data, _status_code, _headers = get_stock_market_index_data_point_text_with_http_info(identifier, tag, opts)
       return data
@@ -794,7 +794,7 @@ module Intrinio
     # @param identifier An Index Identifier (symbol, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataPointText, Fixnum, Hash)>] DataPointText data, response status code and response headers
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def get_stock_market_index_data_point_text_with_http_info(identifier, tag, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IndexApi.get_stock_market_index_data_point_text ..."
@@ -816,7 +816,7 @@ module Intrinio
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain; charset=utf-8'])
 
       # form parameters
       form_params = {}
@@ -830,7 +830,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DataPointText')
+        :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IndexApi#get_stock_market_index_data_point_text\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

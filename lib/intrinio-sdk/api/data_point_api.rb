@@ -84,7 +84,7 @@ module Intrinio
     # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [DataPointText]
+    # @return [String]
     def get_data_point_text(identifier, tag, opts = {})
       data, _status_code, _headers = get_data_point_text_with_http_info(identifier, tag, opts)
       return data
@@ -95,7 +95,7 @@ module Intrinio
     # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataPointText, Fixnum, Hash)>] DataPointText data, response status code and response headers
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def get_data_point_text_with_http_info(identifier, tag, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DataPointApi.get_data_point_text ..."
@@ -131,7 +131,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DataPointText')
+        :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DataPointApi#get_data_point_text\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

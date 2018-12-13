@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 [**Security**](Security.md)
 
 # **get_security_data_point_number**
-> DataPointNumber get_security_data_point_number(identifier, tag)
+> Float get_security_data_point_number(identifier, tag)
 
 Get Security Data Point (Number)
 
@@ -133,10 +133,10 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**Float**
 
 # **get_security_data_point_text**
-> DataPointText get_security_data_point_text(identifier, tag)
+> String get_security_data_point_text(identifier, tag)
 
 Get Security Data Point (Text)
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**String**
 
 # **get_security_historical_data**
 > ApiResponseSecurityHistoricalData get_security_historical_data(identifier, tag, opts)

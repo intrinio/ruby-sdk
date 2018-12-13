@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 **Float**
 
 # **get_data_point_text**
-> DataPointText get_data_point_text(identifier, tag)
+> String get_data_point_text(identifier, tag)
 
 Get a Data Point (Text)
 
@@ -92,5 +92,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**String**
 

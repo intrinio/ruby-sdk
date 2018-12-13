@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 [**EconomicIndex**](EconomicIndex.md)
 
 # **get_economic_index_data_point_number**
-> DataPointNumber get_economic_index_data_point_number(identifier, tag)
+> Float get_economic_index_data_point_number(identifier, tag)
 
 Get Economic Index Data Point (Number)
 
@@ -220,10 +220,10 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**Float**
 
 # **get_economic_index_data_point_text**
-> DataPointText get_economic_index_data_point_text(identifier, tag)
+> String get_economic_index_data_point_text(identifier, tag)
 
 Get Economic Index Data Point (Text)
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**String**
 
 # **get_economic_index_historical_data**
 > ApiResponseEconomicIndexHistoricalData get_economic_index_historical_data(identifier, tag, opts)
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 [**SICIndex**](SICIndex.md)
 
 # **get_sic_index_data_point_number**
-> DataPointNumber get_sic_index_data_point_number(identifier, tag)
+> Float get_sic_index_data_point_number(identifier, tag)
 
 Get SIC Index Data Point (Number)
 
@@ -399,10 +399,10 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**Float**
 
 # **get_sic_index_data_point_text**
-> DataPointText get_sic_index_data_point_text(identifier, tag)
+> String get_sic_index_data_point_text(identifier, tag)
 
 Get SIC Index Data Point (Text)
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**String**
 
 # **get_sic_index_historical_data**
 > ApiResponseSICIndexHistoricalData get_sic_index_historical_data(identifier, tag, opts)
@@ -538,7 +538,7 @@ Name | Type | Description  | Notes
 [**StockMarketIndex**](StockMarketIndex.md)
 
 # **get_stock_market_index_data_point_number**
-> DataPointNumber get_stock_market_index_data_point_number(identifier, tag)
+> Float get_stock_market_index_data_point_number(identifier, tag)
 
 Get Stock Market Index Data Point (Number)
 
@@ -578,10 +578,10 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**Float**
 
 # **get_stock_market_index_data_point_text**
-> DataPointText get_stock_market_index_data_point_text(identifier, tag)
+> String get_stock_market_index_data_point_text(identifier, tag)
 
 Get Stock Market Index Data Point (Text)
 
@@ -621,7 +621,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**String**
 
 # **get_stock_market_index_historical_data**
 > ApiResponseStockMarketIndexHistoricalData get_stock_market_index_historical_data(identifier, tag, opts)

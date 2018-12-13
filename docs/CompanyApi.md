@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 [**Company**](Company.md)
 
 # **get_company_data_point_number**
-> DataPointNumber get_company_data_point_number(identifier, tag)
+> Float get_company_data_point_number(identifier, tag)
 
 Get Company Data Point (Number)
 
@@ -292,10 +292,10 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**Float**
 
 # **get_company_data_point_text**
-> DataPointText get_company_data_point_text(identifier, tag)
+> String get_company_data_point_text(identifier, tag)
 
 Get Company Data Point (Text)
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**String**
 
 # **get_company_filings**
 > ApiResponseCompanyFilings get_company_filings(identifier, opts)

@@ -142,8 +142,6 @@ Class | Method | HTTP request | Description
  - [Intrinio::CompanyNews](docs/CompanyNews.md)
  - [Intrinio::CompanyNewsSummary](docs/CompanyNewsSummary.md)
  - [Intrinio::CompanySummary](docs/CompanySummary.md)
- - [Intrinio::DataPointNumber](docs/DataPointNumber.md)
- - [Intrinio::DataPointText](docs/DataPointText.md)
  - [Intrinio::DataTag](docs/DataTag.md)
  - [Intrinio::DataTagSummary](docs/DataTagSummary.md)
  - [Intrinio::EconomicIndex](docs/EconomicIndex.md)
