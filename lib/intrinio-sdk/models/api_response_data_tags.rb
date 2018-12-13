@@ -15,7 +15,7 @@ require 'date'
 module Intrinio
 
   class ApiResponseDataTags
-    attr_accessor :data_tags
+    attr_accessor :tags
 
     # The token required to request the next page of the data
     attr_accessor :next_page
@@ -24,7 +24,7 @@ module Intrinio
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data_tags' => :'data_tags',
+        :'tags' => :'tags',
         :'next_page' => :'next_page'
       }
     end
@@ -32,7 +32,7 @@ module Intrinio
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'data_tags' => :'Array<DataTag>',
+        :'tags' => :'Array<DataTag>',
         :'next_page' => :'String'
       }
     end
@@ -45,9 +45,9 @@ module Intrinio
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'data_tags')
-        if (value = attributes[:'data_tags']).is_a?(Array)
-          self.data_tags = value
+      if attributes.has_key?(:'tags')
+        if (value = attributes[:'tags']).is_a?(Array)
+          self.tags = value
         end
       end
 
@@ -75,7 +75,7 @@ module Intrinio
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_tags == o.data_tags &&
+          tags == o.tags &&
           next_page == o.next_page
     end
 
@@ -88,7 +88,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data_tags, next_page].hash
+      [tags, next_page].hash
     end
 
     # Builds the object from hash

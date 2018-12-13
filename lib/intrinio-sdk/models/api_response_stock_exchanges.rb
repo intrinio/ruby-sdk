@@ -13,67 +13,27 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 require 'date'
 
 module Intrinio
-  # A filing submitted to the SEC by a company
-  class Filing
-    # The Intrinio ID of the Filing
-    attr_accessor :id
 
-    # The date when the filing was submitted to the SEC by the company
-    attr_accessor :filing_date
+  class ApiResponseStockExchanges
+    attr_accessor :stock_exchanges
 
-    # The date and time when the filing was accepted by SEC
-    attr_accessor :accepted_date
-
-    # The ending date of the fiscal period for the filing
-    attr_accessor :period_end_date
-
-    # The filing report type
-    attr_accessor :report_type
-
-    # A unique identifier for the filing provided by the SEC
-    attr_accessor :sec_unique_id
-
-    # The URL to the filing page on the SEC site
-    attr_accessor :filing_url
-
-    # The URL to the actual report on the SEC site
-    attr_accessor :report_url
-
-    # The URL for the XBRL filing for the report
-    attr_accessor :instance_url
-
-    attr_accessor :company
+    # The token required to request the next page of the data
+    attr_accessor :next_page
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'filing_date' => :'filing_date',
-        :'accepted_date' => :'accepted_date',
-        :'period_end_date' => :'period_end_date',
-        :'report_type' => :'report_type',
-        :'sec_unique_id' => :'sec_unique_id',
-        :'filing_url' => :'filing_url',
-        :'report_url' => :'report_url',
-        :'instance_url' => :'instance_url',
-        :'company' => :'company'
+        :'stock_exchanges' => :'stock_exchanges',
+        :'next_page' => :'next_page'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
-        :'filing_date' => :'Date',
-        :'accepted_date' => :'DateTime',
-        :'period_end_date' => :'Date',
-        :'report_type' => :'String',
-        :'sec_unique_id' => :'String',
-        :'filing_url' => :'String',
-        :'report_url' => :'String',
-        :'instance_url' => :'String',
-        :'company' => :'CompanySummary'
+        :'stock_exchanges' => :'Array<StockExchange>',
+        :'next_page' => :'String'
       }
     end
 
@@ -85,44 +45,14 @@ module Intrinio
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.has_key?(:'stock_exchanges')
+        if (value = attributes[:'stock_exchanges']).is_a?(Array)
+          self.stock_exchanges = value
+        end
       end
 
-      if attributes.has_key?(:'filing_date')
-        self.filing_date = attributes[:'filing_date']
-      end
-
-      if attributes.has_key?(:'accepted_date')
-        self.accepted_date = attributes[:'accepted_date']
-      end
-
-      if attributes.has_key?(:'period_end_date')
-        self.period_end_date = attributes[:'period_end_date']
-      end
-
-      if attributes.has_key?(:'report_type')
-        self.report_type = attributes[:'report_type']
-      end
-
-      if attributes.has_key?(:'sec_unique_id')
-        self.sec_unique_id = attributes[:'sec_unique_id']
-      end
-
-      if attributes.has_key?(:'filing_url')
-        self.filing_url = attributes[:'filing_url']
-      end
-
-      if attributes.has_key?(:'report_url')
-        self.report_url = attributes[:'report_url']
-      end
-
-      if attributes.has_key?(:'instance_url')
-        self.instance_url = attributes[:'instance_url']
-      end
-
-      if attributes.has_key?(:'company')
-        self.company = attributes[:'company']
+      if attributes.has_key?(:'next_page')
+        self.next_page = attributes[:'next_page']
       end
 
     end
@@ -145,16 +75,8 @@ module Intrinio
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          filing_date == o.filing_date &&
-          accepted_date == o.accepted_date &&
-          period_end_date == o.period_end_date &&
-          report_type == o.report_type &&
-          sec_unique_id == o.sec_unique_id &&
-          filing_url == o.filing_url &&
-          report_url == o.report_url &&
-          instance_url == o.instance_url &&
-          company == o.company
+          stock_exchanges == o.stock_exchanges &&
+          next_page == o.next_page
     end
 
     # @see the `==` method
@@ -166,7 +88,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, filing_date, accepted_date, period_end_date, report_type, sec_unique_id, filing_url, report_url, instance_url, company].hash
+      [stock_exchanges, next_page].hash
     end
 
     # Builds the object from hash

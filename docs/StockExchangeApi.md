@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **filter_stock_exchanges**
-> Array&lt;StockExchange&gt; filter_stock_exchanges(opts)
+> ApiResponseStockExchanges filter_stock_exchanges(opts)
 
 Filter Stock Exchanges
 
@@ -55,10 +55,10 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;StockExchange&gt;**](StockExchange.md)
+[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
 
 # **get_all_stock_exchanges**
-> Array&lt;StockExchange&gt; get_all_stock_exchanges
+> ApiResponseStockExchanges get_all_stock_exchanges
 
 Get All Stock Exchanges
 
@@ -89,7 +89,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;StockExchange&gt;**](StockExchange.md)
+[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
 
 # **get_stock_exchange_by_id**
 > StockExchange get_stock_exchange_by_id(identifier)

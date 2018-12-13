@@ -54,6 +54,9 @@ module Intrinio
     # The exchange-level OpenFIGI identifier
     attr_accessor :figi
 
+    # Central Index Key issued by the SEC, which is the unique identifier for all owner filings
+    attr_accessor :cik
+
     # The country-composite OpenFIGI identifier
     attr_accessor :composite_figi
 
@@ -110,6 +113,7 @@ module Intrinio
         :'composite_ticker' => :'composite_ticker',
         :'alternate_tickers' => :'alternate_tickers',
         :'figi' => :'figi',
+        :'cik' => :'cik',
         :'composite_figi' => :'composite_figi',
         :'share_class_figi' => :'share_class_figi',
         :'figi_uniqueid' => :'figi_uniqueid',
@@ -142,6 +146,7 @@ module Intrinio
         :'composite_ticker' => :'String',
         :'alternate_tickers' => :'Array<String>',
         :'figi' => :'String',
+        :'cik' => :'String',
         :'composite_figi' => :'String',
         :'share_class_figi' => :'String',
         :'figi_uniqueid' => :'String',
@@ -218,6 +223,10 @@ module Intrinio
 
       if attributes.has_key?(:'figi')
         self.figi = attributes[:'figi']
+      end
+
+      if attributes.has_key?(:'cik')
+        self.cik = attributes[:'cik']
       end
 
       if attributes.has_key?(:'composite_figi')
@@ -307,6 +316,7 @@ module Intrinio
           composite_ticker == o.composite_ticker &&
           alternate_tickers == o.alternate_tickers &&
           figi == o.figi &&
+          cik == o.cik &&
           composite_figi == o.composite_figi &&
           share_class_figi == o.share_class_figi &&
           figi_uniqueid == o.figi_uniqueid &&
@@ -331,7 +341,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, company_id, name, type, code, share_class, currency, round_lot_size, ticker, exchange_ticker, composite_ticker, alternate_tickers, figi, composite_figi, share_class_figi, figi_uniqueid, active, etf, delisted, primary_listing, primary_security, first_stock_price, last_stock_price, last_stock_price_adjustment, last_corporate_action, previous_tickers].hash
+      [id, company_id, name, type, code, share_class, currency, round_lot_size, ticker, exchange_ticker, composite_ticker, alternate_tickers, figi, cik, composite_figi, share_class_figi, figi_uniqueid, active, etf, delisted, primary_listing, primary_security, first_stock_price, last_stock_price, last_stock_price_adjustment, last_corporate_action, previous_tickers].hash
     end
 
     # Builds the object from hash

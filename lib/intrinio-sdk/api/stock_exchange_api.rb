@@ -26,7 +26,7 @@ module Intrinio
     # @option opts [String] :city Filter by city
     # @option opts [String] :country Filter by country
     # @option opts [String] :country_code Filter by ISO country code
-    # @return [Array<StockExchange>]
+    # @return [ApiResponseStockExchanges]
     def filter_stock_exchanges(opts = {})
       data, _status_code, _headers = filter_stock_exchanges_with_http_info(opts)
       return data
@@ -38,7 +38,7 @@ module Intrinio
     # @option opts [String] :city Filter by city
     # @option opts [String] :country Filter by country
     # @option opts [String] :country_code Filter by ISO country code
-    # @return [Array<(Array<StockExchange>, Fixnum, Hash)>] Array<StockExchange> data, response status code and response headers
+    # @return [Array<(ApiResponseStockExchanges, Fixnum, Hash)>] ApiResponseStockExchanges data, response status code and response headers
     def filter_stock_exchanges_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StockExchangeApi.filter_stock_exchanges ..."
@@ -69,7 +69,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<StockExchange>')
+        :return_type => 'ApiResponseStockExchanges')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StockExchangeApi#filter_stock_exchanges\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -79,7 +79,7 @@ module Intrinio
     # Get All Stock Exchanges
     # Return All Stock Exchanges
     # @param [Hash] opts the optional parameters
-    # @return [Array<StockExchange>]
+    # @return [ApiResponseStockExchanges]
     def get_all_stock_exchanges(opts = {})
       data, _status_code, _headers = get_all_stock_exchanges_with_http_info(opts)
       return data
@@ -88,7 +88,7 @@ module Intrinio
     # Get All Stock Exchanges
     # Return All Stock Exchanges
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StockExchange>, Fixnum, Hash)>] Array<StockExchange> data, response status code and response headers
+    # @return [Array<(ApiResponseStockExchanges, Fixnum, Hash)>] ApiResponseStockExchanges data, response status code and response headers
     def get_all_stock_exchanges_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StockExchangeApi.get_all_stock_exchanges ..."
@@ -116,7 +116,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<StockExchange>')
+        :return_type => 'ApiResponseStockExchanges')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StockExchangeApi#get_all_stock_exchanges\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

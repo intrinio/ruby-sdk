@@ -160,8 +160,6 @@ module Intrinio
 
       # header parameters
       header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
 
       # form parameters
       form_params = {}
@@ -451,7 +449,7 @@ module Intrinio
     # Screen Securities
     # Screen securities using complex logic
     # @param [Hash] opts the optional parameters
-    # @option opts [SecurityScreenGroup] :logic The logic to screen with, consisting of operators, clauses, and nested groups
+    # @option opts [SecurityScreenGroup] :logic The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
     # @option opts [String] :order_column Results returned sorted by this column
     # @option opts [String] :order_direction Sort order to use with the order_column (default to asc)
     # @option opts [BOOLEAN] :primary_only Return only primary securities (default to false)
@@ -464,7 +462,7 @@ module Intrinio
     # Screen Securities
     # Screen securities using complex logic
     # @param [Hash] opts the optional parameters
-    # @option opts [SecurityScreenGroup] :logic The logic to screen with, consisting of operators, clauses, and nested groups
+    # @option opts [SecurityScreenGroup] :logic The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
     # @option opts [String] :order_column Results returned sorted by this column
     # @option opts [String] :order_direction Sort order to use with the order_column
     # @option opts [BOOLEAN] :primary_only Return only primary securities

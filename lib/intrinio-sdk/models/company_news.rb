@@ -51,7 +51,7 @@ module Intrinio
       {
         :'id' => :'String',
         :'title' => :'String',
-        :'publication_date' => :'Date',
+        :'publication_date' => :'DateTime',
         :'url' => :'String',
         :'summary' => :'String',
         :'company' => :'CompanySummary'

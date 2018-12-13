@@ -183,12 +183,12 @@ module Intrinio
     # Returns the Fundamental for the Company with the given `identifier` and with the given parameters
     # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     # @param statement_code The statement code
-    # @param fiscal_period The fiscal period
     # @param fiscal_year The fiscal year
+    # @param fiscal_period The fiscal period
     # @param [Hash] opts the optional parameters
-    # @return [Array<Fundamental>]
-    def lookup_fundamental(identifier, statement_code, fiscal_period, fiscal_year, opts = {})
-      data, _status_code, _headers = lookup_fundamental_with_http_info(identifier, statement_code, fiscal_period, fiscal_year, opts)
+    # @return [Fundamental]
+    def lookup_fundamental(identifier, statement_code, fiscal_year, fiscal_period, opts = {})
+      data, _status_code, _headers = lookup_fundamental_with_http_info(identifier, statement_code, fiscal_year, fiscal_period, opts)
       return data
     end
 
@@ -196,11 +196,11 @@ module Intrinio
     # Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
     # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     # @param statement_code The statement code
-    # @param fiscal_period The fiscal period
     # @param fiscal_year The fiscal year
+    # @param fiscal_period The fiscal period
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<Fundamental>, Fixnum, Hash)>] Array<Fundamental> data, response status code and response headers
-    def lookup_fundamental_with_http_info(identifier, statement_code, fiscal_period, fiscal_year, opts = {})
+    # @return [Array<(Fundamental, Fixnum, Hash)>] Fundamental data, response status code and response headers
+    def lookup_fundamental_with_http_info(identifier, statement_code, fiscal_year, fiscal_period, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FundamentalsApi.lookup_fundamental ..."
       end
@@ -216,6 +216,10 @@ module Intrinio
       if @api_client.config.client_side_validation && !['income_statement', 'balance_sheet_statement', 'cash_flow_statement', 'calculations'].include?(statement_code)
         fail ArgumentError, "invalid value for 'statement_code', must be one of income_statement, balance_sheet_statement, cash_flow_statement, calculations"
       end
+      # verify the required parameter 'fiscal_year' is set
+      if @api_client.config.client_side_validation && fiscal_year.nil?
+        fail ArgumentError, "Missing the required parameter 'fiscal_year' when calling FundamentalsApi.lookup_fundamental"
+      end
       # verify the required parameter 'fiscal_period' is set
       if @api_client.config.client_side_validation && fiscal_period.nil?
         fail ArgumentError, "Missing the required parameter 'fiscal_period' when calling FundamentalsApi.lookup_fundamental"
@@ -224,12 +228,8 @@ module Intrinio
       if @api_client.config.client_side_validation && !['Q1TTM', 'Q2TTM', 'Q3TTM', 'FY', 'Q1', 'Q2', 'Q3', 'Q4', 'Q2YTD', 'Q3YTD'].include?(fiscal_period)
         fail ArgumentError, "invalid value for 'fiscal_period', must be one of Q1TTM, Q2TTM, Q3TTM, FY, Q1, Q2, Q3, Q4, Q2YTD, Q3YTD"
       end
-      # verify the required parameter 'fiscal_year' is set
-      if @api_client.config.client_side_validation && fiscal_year.nil?
-        fail ArgumentError, "Missing the required parameter 'fiscal_year' when calling FundamentalsApi.lookup_fundamental"
-      end
       # resource path
-      local_var_path = "/fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period}".sub('{' + 'identifier' + '}', identifier.to_s).sub('{' + 'statement_code' + '}', statement_code.to_s).sub('{' + 'fiscal_period' + '}', fiscal_period.to_s).sub('{' + 'fiscal_year' + '}', fiscal_year.to_s)
+      local_var_path = "/fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period}".sub('{' + 'identifier' + '}', identifier.to_s).sub('{' + 'statement_code' + '}', statement_code.to_s).sub('{' + 'fiscal_year' + '}', fiscal_year.to_s).sub('{' + 'fiscal_period' + '}', fiscal_period.to_s)
 
       # query parameters
       query_params = {}
@@ -251,7 +251,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<Fundamental>')
+        :return_type => 'Fundamental')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FundamentalsApi#lookup_fundamental\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

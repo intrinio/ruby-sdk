@@ -351,7 +351,7 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = { 
-  logic: Intrinio::SecurityScreenGroup.new, # SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups
+  logic: Intrinio::SecurityScreenGroup.new, # SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
   order_column: "order_column_example", # String | Results returned sorted by this column
   order_direction: "asc", # String | Sort order to use with the order_column
   primary_only: false # BOOLEAN | Return only primary securities
@@ -369,7 +369,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups | [optional] 
+ **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional] 
  **order_column** | **String**| Results returned sorted by this column | [optional] 
  **order_direction** | **String**| Sort order to use with the order_column | [optional] [default to asc]
  **primary_only** | **BOOLEAN**| Return only primary securities | [optional] [default to false]

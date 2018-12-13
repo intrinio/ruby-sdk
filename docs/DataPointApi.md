@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_data_point_number**
-> DataPointNumber get_data_point_number(identifier, tag)
+> Float get_data_point_number(identifier, tag)
 
 Get a Data Point (Number)
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**Float**
 
 # **get_data_point_text**
 > DataPointText get_data_point_text(identifier, tag)

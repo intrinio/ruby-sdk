@@ -569,7 +569,7 @@ Name | Type | Description  | Notes
 [**ApiResponseCompanySecurities**](ApiResponseCompanySecurities.md)
 
 # **lookup_company_fundamental**
-> Array&lt;Fundamental&gt; lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
+> Fundamental lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
 
 Lookup a Fundamental for a Company
 
@@ -615,7 +615,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;Fundamental&gt;**](Fundamental.md)
+[**Fundamental**](Fundamental.md)
 
 # **search_companies**
 > ApiResponseCompanies search_companies(query)

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **composite_ticker** | **String** | The country-composite ticker | [optional] 
 **alternate_tickers** | **Array&lt;String&gt;** | Alternate formats of the common ticker | [optional] 
 **figi** | **String** | The exchange-level OpenFIGI identifier | [optional] 
+**cik** | **String** | Central Index Key issued by the SEC, which is the unique identifier for all owner filings | [optional] 
 **composite_figi** | **String** | The country-composite OpenFIGI identifier | [optional] 
 **share_class_figi** | **String** | The global-composite OpenFIGI identifier | [optional] 
 **figi_uniqueid** | **String** | The OpenFIGI unique ID | [optional] 

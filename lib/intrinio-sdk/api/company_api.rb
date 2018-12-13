@@ -756,7 +756,7 @@ module Intrinio
     # @param fiscal_period The fiscal period
     # @param fiscal_year The fiscal year
     # @param [Hash] opts the optional parameters
-    # @return [Array<Fundamental>]
+    # @return [Fundamental]
     def lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year, opts = {})
       data, _status_code, _headers = lookup_company_fundamental_with_http_info(identifier, statement_code, fiscal_period, fiscal_year, opts)
       return data
@@ -769,7 +769,7 @@ module Intrinio
     # @param fiscal_period The fiscal period
     # @param fiscal_year The fiscal year
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<Fundamental>, Fixnum, Hash)>] Array<Fundamental> data, response status code and response headers
+    # @return [Array<(Fundamental, Fixnum, Hash)>] Fundamental data, response status code and response headers
     def lookup_company_fundamental_with_http_info(identifier, statement_code, fiscal_period, fiscal_year, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CompanyApi.lookup_company_fundamental ..."
@@ -821,7 +821,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<Fundamental>')
+        :return_type => 'Fundamental')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CompanyApi#lookup_company_fundamental\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -1,8 +1,6 @@
 # Intrinio Ruby SDK
 
-WARNING: THIS IS IS A BETA - DO NOT USE IN PRODUCTION.
-
-Intrinio - the Ruby gem for the Intrinio API
+intrinio-sdk - the Ruby gem for the Intrinio API
 
 To get an API key, [sign up here](https://intrinio.com/).
 
@@ -136,6 +134,7 @@ Class | Method | HTTP request | Description
  - [Intrinio::ApiResponseStockExchangeSecurities](docs/ApiResponseStockExchangeSecurities.md)
  - [Intrinio::ApiResponseStockExchangeStockPriceAdjustments](docs/ApiResponseStockExchangeStockPriceAdjustments.md)
  - [Intrinio::ApiResponseStockExchangeStockPrices](docs/ApiResponseStockExchangeStockPrices.md)
+ - [Intrinio::ApiResponseStockExchanges](docs/ApiResponseStockExchanges.md)
  - [Intrinio::ApiResponseStockMarketIndexHistoricalData](docs/ApiResponseStockMarketIndexHistoricalData.md)
  - [Intrinio::ApiResponseStockMarketIndices](docs/ApiResponseStockMarketIndices.md)
  - [Intrinio::Company](docs/Company.md)

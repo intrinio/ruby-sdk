@@ -47,7 +47,7 @@ module Intrinio
       {
         :'id' => :'String',
         :'title' => :'String',
-        :'publication_date' => :'Date',
+        :'publication_date' => :'String',
         :'url' => :'String',
         :'summary' => :'String'
       }

@@ -63,7 +63,7 @@ module Intrinio
       {
         :'id' => :'String',
         :'filing_date' => :'Date',
-        :'accepted_date' => :'String',
+        :'accepted_date' => :'DateTime',
         :'period_end_date' => :'Date',
         :'report_type' => :'String',
         :'sec_unique_id' => :'String',

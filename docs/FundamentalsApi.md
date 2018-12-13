@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [**ApiResponseStandardizedFinancials**](ApiResponseStandardizedFinancials.md)
 
 # **lookup_fundamental**
-> Array&lt;Fundamental&gt; lookup_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
+> Fundamental lookup_fundamental(identifier, statement_code, fiscal_year, fiscal_period)
 
 Lookup a Fundamental
 
@@ -153,13 +153,13 @@ identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, 
 
 statement_code = "statement_code_example" # String | The statement code
 
-fiscal_period = "fiscal_period_example" # String | The fiscal period
-
 fiscal_year = 56 # Integer | The fiscal year
+
+fiscal_period = "fiscal_period_example" # String | The fiscal period
 
 
 begin
-  result = fundamentals_api.lookup_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
+  result = fundamentals_api.lookup_fundamental(identifier, statement_code, fiscal_year, fiscal_period)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FundamentalsApi->lookup_fundamental: #{e}"
@@ -172,10 +172,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **statement_code** | **String**| The statement code | 
- **fiscal_period** | **String**| The fiscal period | 
  **fiscal_year** | **Integer**| The fiscal year | 
+ **fiscal_period** | **String**| The fiscal period | 
 
 ### Return type
 
-[**Array&lt;Fundamental&gt;**](Fundamental.md)
+[**Fundamental**](Fundamental.md)
 

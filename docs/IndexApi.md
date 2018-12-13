@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 [**DataPointText**](DataPointText.md)
 
 # **get_economic_index_historical_data**
-> Object get_economic_index_historical_data(identifier, tag, opts)
+> ApiResponseEconomicIndexHistoricalData get_economic_index_historical_data(identifier, tag, opts)
 
 Get Economic Index Historical Data
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
 
 # **get_sic_index_by_id**
 > SICIndex get_sic_index_by_id(identifier)

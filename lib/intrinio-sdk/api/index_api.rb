@@ -351,7 +351,7 @@ module Intrinio
     # @option opts [Date] :end_date Get historical data on or before this date
     # @option opts [String] :sort_order Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (default to desc)
     # @option opts [String] :next_page Gets the next page of data from a previous API call
-    # @return [Object]
+    # @return [ApiResponseEconomicIndexHistoricalData]
     def get_economic_index_historical_data(identifier, tag, opts = {})
       data, _status_code, _headers = get_economic_index_historical_data_with_http_info(identifier, tag, opts)
       return data
@@ -367,7 +367,7 @@ module Intrinio
     # @option opts [Date] :end_date Get historical data on or before this date
     # @option opts [String] :sort_order Sort by date &#x60;asc&#x60; or &#x60;desc&#x60;
     # @option opts [String] :next_page Gets the next page of data from a previous API call
-    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    # @return [Array<(ApiResponseEconomicIndexHistoricalData, Fixnum, Hash)>] ApiResponseEconomicIndexHistoricalData data, response status code and response headers
     def get_economic_index_historical_data_with_http_info(identifier, tag, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IndexApi.get_economic_index_historical_data ..."
@@ -411,7 +411,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Object')
+        :return_type => 'ApiResponseEconomicIndexHistoricalData')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IndexApi#get_economic_index_historical_data\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

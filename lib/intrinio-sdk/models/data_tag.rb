@@ -93,7 +93,7 @@ module Intrinio
         :'statement_type' => :'String',
         :'parent' => :'String',
         :'factor' => :'String',
-        :'balance' => :'Float',
+        :'balance' => :'String',
         :'type' => :'String',
         :'unit' => :'String'
       }

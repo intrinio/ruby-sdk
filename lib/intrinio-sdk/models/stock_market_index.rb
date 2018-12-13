@@ -71,7 +71,7 @@ module Intrinio
         :'continent' => :'String',
         :'country' => :'String',
         :'update_frequency' => :'String',
-        :'last_updated' => :'Date',
+        :'last_updated' => :'DateTime',
         :'description' => :'String',
         :'observation_start' => :'Date',
         :'observation_end' => :'Date'
