@@ -31,10 +31,10 @@ filing_api = Intrinio::FilingApi.new
 company = "AAPL" # String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  report_type: "", # String | Filter by report type
+  report_type: nil, # String | Filter by report type
   start_date: Date.parse("2015-01-01"), # Date | Filed on or after the given date
   end_date: Date.parse("2019-01-01"), # Date | Filed before or after the given date
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -79,7 +79,7 @@ end
 filing_api = Intrinio::FilingApi.new
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin

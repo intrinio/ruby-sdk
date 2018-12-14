@@ -26,16 +26,16 @@ end
 
 historicalData_api = Intrinio::HistoricalDataApi.new
 
-identifier = "identifier_example" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-tag = "tag_example" # String | An Intrinio data tag ID or code-name
+tag = "marketcap" # String | An Intrinio data tag ID or code-name
 
 opts = { 
-  type: "type_example", # String | Filter by type, when applicable
-  start_date: Date.parse("2013-10-20"), # Date | Get historical data on or after this date
-  end_date: Date.parse("2013-10-20"), # Date | Get historical date on or before this date
+  type: nil, # String | Filter by type, when applicable
+  start_date: Date.parse("2015-01-01"), # Date | Get historical data on or after this date
+  end_date: Date.parse("2019-01-01"), # Date | Get historical date on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin

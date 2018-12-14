@@ -33,7 +33,7 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -202,11 +202,11 @@ identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP,
 tag = "volume" # String | An Intrinio data tag ID or code-name
 
 opts = { 
-  type: "", # String | Filter by type, when applicable
+  type: nil, # String | Filter by type, when applicable
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical date on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -257,7 +257,7 @@ identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP,
 opts = { 
   start_date: Date.parse("2018-01-01"), # Date | Return price adjustments on or after the date
   end_date: Date.parse("2019-01-01"), # Date | Return price adjustments on or before the date
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -306,7 +306,7 @@ opts = {
   start_date: Date.parse("2018-01-01"), # Date | Return prices on or after the date
   end_date: Date.parse("2019-01-01"), # Date | Return prices on or before the date
   frequency: "daily", # String | Return stock prices in the given frequency
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin

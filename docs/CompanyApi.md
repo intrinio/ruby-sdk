@@ -40,13 +40,13 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
-  last_filing_date: Date.parse("2011-07-15"), # Date | Last filing date
+  last_filing_date: nil, # Date | Last filing date
   sic: "3350", # String | Standard Industrial Classification code
   template: "industrial", # String | Template
   sector: "Basic Materials", # String | Industry sector
   industry_category: "Metals & Mining", # String | Industry category
   industry_group: "Aluminum", # String | Industry group
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -95,15 +95,15 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  filed_after: Date.parse("2017-01-01"), # Date | Filed on or after this date
-  filed_before: Date.parse("2018-01-01"), # Date | Filed on or before this date
+  filed_after: nil, # Date | Filed on or after this date
+  filed_before: nil, # Date | Filed on or before this date
   reported_only: false, # BOOLEAN | Only as-reported fundamentals
   fiscal_year: 2017, # Integer | Only for the given fiscal year
-  statement_code: "", # String | Only of the given statement code
-  type: "", # String | Only of the given type
-  start_date: Date.parse("2017-01-01"), # Date | Only on or after the given date
-  end_date: Date.parse("2018-01-01"), # Date | Only on or before the given date
-  next_page: "" # String | Gets the next page of data from a previous API call
+  statement_code: nil, # String | Only of the given statement code
+  type: nil, # String | Only of the given type
+  start_date: nil, # Date | Only on or after the given date
+  end_date: nil, # Date | Only on or before the given date
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -151,7 +151,7 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -192,7 +192,7 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -359,7 +359,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -403,7 +403,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -449,11 +449,11 @@ identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio 
 tag = "marketcap" # String | Item
 
 opts = { 
-  type: "", # String | Filter by type, when applicable
+  type: nil, # String | Filter by type, when applicable
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -502,7 +502,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -546,7 +546,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin

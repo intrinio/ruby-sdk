@@ -152,7 +152,7 @@ identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID
 
 opts = { 
   date: Date.parse("2018-08-14"), # Date | The date for which to return price adjustments
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -198,7 +198,7 @@ identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID
 
 opts = { 
   date: Date.parse("2018-08-14"), # Date | The date for which to return prices
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -243,7 +243,7 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
-  next_page: "" # String | Gets the next page of data from a previous API call
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
