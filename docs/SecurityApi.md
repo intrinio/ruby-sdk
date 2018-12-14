@@ -203,8 +203,8 @@ tag = "volume" # String | An Intrinio data tag ID or code-name
 
 opts = { 
   type: "", # String | Filter by type, when applicable
-  start_date: Date.parse(""), # Date | Get historical data on or after this date
-  end_date: Date.parse(""), # Date | Get historical date on or before this date
+  start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
+  end_date: Date.parse("2019-01-01"), # Date | Get historical date on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
   next_page: "" # String | Gets the next page of data from a previous API call
 }

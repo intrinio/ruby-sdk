@@ -33,7 +33,7 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 
 opts = { 
   city: "city_example", # String | Filter by city
-  country: "country_example", # String | Filter by country
+  country: "CHINA", # String | Filter by country
   country_code: "country_code_example" # String | Filter by ISO country code
 }
 
@@ -108,7 +108,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "identifier_example" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "XSHG" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 
 begin
@@ -148,10 +148,10 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "identifier_example" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
-  date: Date.parse("2013-10-20"), # Date | The date for which to return price adjustments
+  date: Date.parse("2018-08-14"), # Date | The date for which to return price adjustments
   next_page: "" # String | Gets the next page of data from a previous API call
 }
 
@@ -194,10 +194,10 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "identifier_example" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
-  date: Date.parse("2013-10-20"), # Date | The date for which to return prices
+  date: Date.parse("2018-08-14"), # Date | The date for which to return prices
   next_page: "" # String | Gets the next page of data from a previous API call
 }
 
@@ -240,7 +240,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "identifier_example" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   next_page: "" # String | Gets the next page of data from a previous API call
