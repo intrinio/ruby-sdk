@@ -46,7 +46,7 @@ opts = {
   sector: "sector_example", # String | Industry sector
   industry_category: "industry_category_example", # String | Industry category
   industry_group: "industry_group_example", # String | Industry group
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -103,7 +103,7 @@ opts = {
   type: "type_example", # String | Only of the given type
   start_date: Date.parse("2013-10-20"), # Date | Only on or after the given date
   end_date: Date.parse("2013-10-20"), # Date | Only on or after the given date
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -151,7 +151,7 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -192,7 +192,7 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -359,7 +359,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -403,7 +403,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -453,7 +453,7 @@ opts = {
   start_date: Date.parse("2013-10-20"), # Date | Get historical data on or after this date
   end_date: Date.parse("2013-10-20"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -502,7 +502,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -546,7 +546,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin

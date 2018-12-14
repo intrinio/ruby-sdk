@@ -34,7 +34,7 @@ opts = {
   report_type: "report_type_example", # String | Filter by report type
   start_date: Date.parse("2013-10-20"), # Date | Filed on or after the given date
   end_date: Date.parse("2013-10-20"), # Date | Filed before or after the given date
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -79,7 +79,7 @@ end
 filing_api = Intrinio::FilingApi.new
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin

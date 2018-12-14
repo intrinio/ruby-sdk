@@ -42,7 +42,7 @@ end
 index_api = Intrinio::IndexApi.new
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -81,7 +81,7 @@ end
 index_api = Intrinio::IndexApi.new
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -120,7 +120,7 @@ end
 index_api = Intrinio::IndexApi.new
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -293,7 +293,7 @@ opts = {
   start_date: Date.parse("2013-10-20"), # Date | Get historical data on or after this date
   end_date: Date.parse("2013-10-20"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -472,7 +472,7 @@ opts = {
   start_date: Date.parse("2013-10-20"), # Date | Get historical data on or after this date
   end_date: Date.parse("2013-10-20"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -651,7 +651,7 @@ opts = {
   start_date: Date.parse("2013-10-20"), # Date | Get historical data on or after this date
   end_date: Date.parse("2013-10-20"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin

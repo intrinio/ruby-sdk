@@ -33,7 +33,7 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -71,7 +71,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "\"AAPL\"" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 
 begin
@@ -111,9 +111,9 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "\"AAPL\"" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-tag = "\"52_week_high\"" # String | An Intrinio data tag ID or code-name
+tag = "52_week_high" # String | An Intrinio data tag ID or code-name
 
 
 begin
@@ -154,9 +154,9 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "\"AAPL\"" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-tag = "\"figi\"" # String | An Intrinio data tag ID or code-name
+tag = "figi" # String | An Intrinio data tag ID or code-name
 
 
 begin
@@ -197,16 +197,16 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "\"AAPL\"" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-tag = "\"volume\"" # String | An Intrinio data tag ID or code-name
+tag = "volume" # String | An Intrinio data tag ID or code-name
 
 opts = { 
-  type: "\"\"", # String | Filter by type, when applicable
-  start_date: Date.parse("\"\""), # Date | Get historical data on or after this date
-  end_date: Date.parse("\"\""), # Date | Get historical date on or before this date
+  type: "", # String | Filter by type, when applicable
+  start_date: Date.parse(""), # Date | Get historical data on or after this date
+  end_date: Date.parse(""), # Date | Get historical date on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -252,12 +252,12 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "\"AAPL\"" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
-  start_date: Date.parse("\"2018-01-01\""), # Date | Return price adjustments on or after the date
-  end_date: Date.parse("\"2019-01-01\""), # Date | Return price adjustments on or before the date
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  start_date: Date.parse("2018-01-01"), # Date | Return price adjustments on or after the date
+  end_date: Date.parse("2019-01-01"), # Date | Return price adjustments on or before the date
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -300,13 +300,13 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "\"AAPL\"" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
-  start_date: Date.parse("\"2018-01-01\""), # Date | Return prices on or after the date
-  end_date: Date.parse("\"2019-01-01\""), # Date | Return prices on or before the date
+  start_date: Date.parse("2018-01-01"), # Date | Return prices on or after the date
+  end_date: Date.parse("2019-01-01"), # Date | Return prices on or before the date
   frequency: "daily", # String | Return stock prices in the given frequency
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -397,7 +397,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-query = "\"Apple\"" # String | 
+query = "Apple" # String | 
 
 
 begin

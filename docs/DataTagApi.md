@@ -35,7 +35,7 @@ opts = {
   parent: "parent_example", # String | ID of tag parent
   statement_code: "statement_code_example", # String | Statement Code
   fs_template: "industrial", # String | Template
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -81,7 +81,7 @@ end
 dataTag_api = Intrinio::DataTagApi.new
 
 opts = { 
-  next_page: "\"\"" # String | Gets the next page of data from a previous API call
+  next_page: "" # String | Gets the next page of data from a previous API call
 }
 
 begin
