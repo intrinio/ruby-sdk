@@ -27,9 +27,9 @@ end
 
 dataPoint_api = Intrinio::DataPointApi.new
 
-identifier = "identifier_example" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-tag = "tag_example" # String | An Intrinio data tag ID or code-name
+tag = "marketcap" # String | An Intrinio data tag ID or code-name
 
 
 begin
@@ -70,9 +70,9 @@ end
 
 dataPoint_api = Intrinio::DataPointApi.new
 
-identifier = "identifier_example" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-tag = "tag_example" # String | An Intrinio data tag ID or code-name
+tag = "marketcap" # String | An Intrinio data tag ID or code-name
 
 
 begin

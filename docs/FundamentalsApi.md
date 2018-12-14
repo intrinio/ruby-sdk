@@ -29,7 +29,7 @@ end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
 
-id = "id_example" # String | The Intrinio ID for the Fundamental
+id = "fun_ge9LlE" # String | The Intrinio ID for the Fundamental
 
 
 begin
@@ -69,7 +69,7 @@ end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
 
-id = "id_example" # String | The Intrinio ID for the Fundamental
+id = "fun_ge9LlE" # String | The Intrinio ID for the Fundamental
 
 
 begin
@@ -109,7 +109,7 @@ end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
 
-id = "id_example" # String | The Intrinio ID for the Fundamental
+id = "fun_ge9LlE" # String | The Intrinio ID for the Fundamental
 
 
 begin
@@ -149,13 +149,13 @@ end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-statement_code = "statement_code_example" # String | The statement code
+statement_code = "income_statement" # String | The statement code
 
-fiscal_year = 56 # Integer | The fiscal year
+fiscal_year = 2017 # Integer | The fiscal year
 
-fiscal_period = "fiscal_period_example" # String | The fiscal period
+fiscal_period = "FY" # String | The fiscal period
 
 
 begin

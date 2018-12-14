@@ -102,7 +102,7 @@ module Intrinio
     # @option opts [String] :statement_code Only of the given statement code
     # @option opts [String] :type Only of the given type
     # @option opts [Date] :start_date Only on or after the given date
-    # @option opts [Date] :end_date Only on or after the given date
+    # @option opts [Date] :end_date Only on or before the given date
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [ApiResponseCompanyFundamentals]
     def filter_company_fundamentals(identifier, opts = {})
@@ -121,7 +121,7 @@ module Intrinio
     # @option opts [String] :statement_code Only of the given statement code
     # @option opts [String] :type Only of the given type
     # @option opts [Date] :start_date Only on or after the given date
-    # @option opts [Date] :end_date Only on or after the given date
+    # @option opts [Date] :end_date Only on or before the given date
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [Array<(ApiResponseCompanyFundamentals, Fixnum, Hash)>] ApiResponseCompanyFundamentals data, response status code and response headers
     def filter_company_fundamentals_with_http_info(identifier, opts = {})

@@ -30,10 +30,10 @@ end
 dataTag_api = Intrinio::DataTagApi.new
 
 opts = { 
-  tag: "tag_example", # String | Tag
-  type: "type_example", # String | Type
-  parent: "parent_example", # String | ID of tag parent
-  statement_code: "statement_code_example", # String | Statement Code
+  tag: "", # String | Tag
+  type: "", # String | Type
+  parent: "", # String | ID of tag parent
+  statement_code: "income_statement", # String | Statement Code
   fs_template: "industrial", # String | Template
   next_page: "" # String | Gets the next page of data from a previous API call
 }
@@ -121,7 +121,7 @@ end
 
 dataTag_api = Intrinio::DataTagApi.new
 
-identifier = "identifier_example" # String | The Intrinio ID or the code-name of the Data Tag
+identifier = "marketcap" # String | The Intrinio ID or the code-name of the Data Tag
 
 
 begin
@@ -161,7 +161,7 @@ end
 
 dataTag_api = Intrinio::DataTagApi.new
 
-query = "query_example" # String | 
+query = "revenue" # String | 
 
 
 begin

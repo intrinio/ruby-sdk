@@ -40,12 +40,12 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
-  last_filing_date: Date.parse("2013-10-20"), # Date | Last filing date
-  sic: "sic_example", # String | Standard Industrial Classification code
-  template: "template_example", # String | Template
-  sector: "sector_example", # String | Industry sector
-  industry_category: "industry_category_example", # String | Industry category
-  industry_group: "industry_group_example", # String | Industry group
+  last_filing_date: Date.parse("2011-07-15"), # Date | Last filing date
+  sic: "3350", # String | Standard Industrial Classification code
+  template: "industrial", # String | Template
+  sector: "Basic Materials", # String | Industry sector
+  industry_category: "Metals & Mining", # String | Industry category
+  industry_group: "Aluminum", # String | Industry group
   next_page: "" # String | Gets the next page of data from a previous API call
 }
 
@@ -92,17 +92,17 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  filed_after: Date.parse("2013-10-20"), # Date | Filed on or after this date
-  filed_before: Date.parse("2013-10-20"), # Date | Filed on or before this date
-  reported_only: true, # BOOLEAN | Only as-reported fundamentals
-  fiscal_year: 56, # Integer | Only for the given fiscal year
-  statement_code: "statement_code_example", # String | Only of the given statement code
-  type: "type_example", # String | Only of the given type
-  start_date: Date.parse("2013-10-20"), # Date | Only on or after the given date
-  end_date: Date.parse("2013-10-20"), # Date | Only on or after the given date
+  filed_after: Date.parse("2017-01-01"), # Date | Filed on or after this date
+  filed_before: Date.parse("2018-01-01"), # Date | Filed on or before this date
+  reported_only: false, # BOOLEAN | Only as-reported fundamentals
+  fiscal_year: 2017, # Integer | Only for the given fiscal year
+  statement_code: "", # String | Only of the given statement code
+  type: "", # String | Only of the given type
+  start_date: Date.parse("2017-01-01"), # Date | Only on or after the given date
+  end_date: Date.parse("2018-01-01"), # Date | Only on or before the given date
   next_page: "" # String | Gets the next page of data from a previous API call
 }
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
  **statement_code** | **String**| Only of the given statement code | [optional] 
  **type** | **String**| Only of the given type | [optional] 
  **start_date** | **Date**| Only on or after the given date | [optional] 
- **end_date** | **Date**| Only on or after the given date | [optional] 
+ **end_date** | **Date**| Only on or before the given date | [optional] 
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -230,7 +230,7 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 
 begin
@@ -270,9 +270,9 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-tag = "tag_example" # String | An Intrinio data tag
+tag = "marketcap" # String | An Intrinio data tag
 
 
 begin
@@ -313,9 +313,9 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-tag = "tag_example" # String | An Intrinio data tag
+tag = "marketcap" # String | An Intrinio data tag
 
 
 begin
@@ -356,7 +356,7 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
   next_page: "" # String | Gets the next page of data from a previous API call
@@ -400,7 +400,7 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
   next_page: "" # String | Gets the next page of data from a previous API call
@@ -444,14 +444,14 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-tag = "tag_example" # String | Item
+tag = "marketcap" # String | Item
 
 opts = { 
-  type: "type_example", # String | Filter by type, when applicable
-  start_date: Date.parse("2013-10-20"), # Date | Get historical data on or after this date
-  end_date: Date.parse("2013-10-20"), # Date | Get historical data on or before this date
+  type: "", # String | Filter by type, when applicable
+  start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
+  end_date: Date.parse("2019-01-01"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
   next_page: "" # String | Gets the next page of data from a previous API call
 }
@@ -499,7 +499,7 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
   next_page: "" # String | Gets the next page of data from a previous API call
@@ -543,7 +543,7 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
   next_page: "" # String | Gets the next page of data from a previous API call
@@ -587,13 +587,13 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-identifier = "identifier_example" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-statement_code = "statement_code_example" # String | The statement code
+statement_code = "income_statement" # String | The statement code
 
-fiscal_period = "fiscal_period_example" # String | The fiscal period
+fiscal_period = "FY" # String | The fiscal period
 
-fiscal_year = 56 # Integer | The fiscal year
+fiscal_year = 2017 # Integer | The fiscal year
 
 
 begin
@@ -636,7 +636,7 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-query = "query_example" # String | Search parameters
+query = "Apple" # String | Search parameters
 
 
 begin
