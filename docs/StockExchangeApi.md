@@ -152,7 +152,7 @@ identifier = "identifier_example" # String | A Stock Exchange identifier (MIC or
 
 opts = { 
   date: Date.parse("2013-10-20"), # Date | The date for which to return price adjustments
-  next_page: "next_page_example" # String | Gets the next page of data from a previous API call
+  next_page: "\"\"" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -198,7 +198,7 @@ identifier = "identifier_example" # String | A Stock Exchange identifier (MIC or
 
 opts = { 
   date: Date.parse("2013-10-20"), # Date | The date for which to return prices
-  next_page: "next_page_example" # String | Gets the next page of data from a previous API call
+  next_page: "\"\"" # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -243,7 +243,7 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "identifier_example" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
-  next_page: "next_page_example" # String | Gets the next page of data from a previous API call
+  next_page: "\"\"" # String | Gets the next page of data from a previous API call
 }
 
 begin

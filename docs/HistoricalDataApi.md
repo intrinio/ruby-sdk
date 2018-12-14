@@ -35,7 +35,7 @@ opts = {
   start_date: Date.parse("2013-10-20"), # Date | Get historical data on or after this date
   end_date: Date.parse("2013-10-20"), # Date | Get historical date on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
-  next_page: "next_page_example" # String | Gets the next page of data from a previous API call
+  next_page: "\"\"" # String | Gets the next page of data from a previous API call
 }
 
 begin
