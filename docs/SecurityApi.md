@@ -4,13 +4,16 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_securities**](SecurityApi.md#get_all_securities) | **GET** /securities | Get All Securiites
-[**get_security_by_id**](SecurityApi.md#get_security_by_id) | **GET** /securities/{identifier} | Get a Security by ID
-[**get_security_data_point_number**](SecurityApi.md#get_security_data_point_number) | **GET** /securities/{identifier}/data_point/{tag}/number | Get Security Data Point (Number)
-[**get_security_data_point_text**](SecurityApi.md#get_security_data_point_text) | **GET** /securities/{identifier}/data_point/{tag}/text | Get Security Data Point (Text)
-[**get_security_historical_data**](SecurityApi.md#get_security_historical_data) | **GET** /securities/{identifier}/historical_data/{tag} | Get Security Historical Data
-[**get_security_stock_price_adjustments**](SecurityApi.md#get_security_stock_price_adjustments) | **GET** /securities/{identifier}/prices/adjustments | Get Stock Price Adjustments for Security
-[**get_security_stock_prices**](SecurityApi.md#get_security_stock_prices) | **GET** /securities/{identifier}/prices | Get Stock Prices for Security
+[**get_all_securities**](SecurityApi.md#get_all_securities) | **GET** /securities | All Securities
+[**get_security_by_id**](SecurityApi.md#get_security_by_id) | **GET** /securities/{identifier} | Lookup Security
+[**get_security_data_point_number**](SecurityApi.md#get_security_data_point_number) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
+[**get_security_data_point_text**](SecurityApi.md#get_security_data_point_text) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
+[**get_security_historical_data**](SecurityApi.md#get_security_historical_data) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**get_security_latest_dividend_record**](SecurityApi.md#get_security_latest_dividend_record) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
+[**get_security_latest_earnings_record**](SecurityApi.md#get_security_latest_earnings_record) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
+[**get_security_realtime_price**](SecurityApi.md#get_security_realtime_price) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+[**get_security_stock_price_adjustments**](SecurityApi.md#get_security_stock_price_adjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
+[**get_security_stock_prices**](SecurityApi.md#get_security_stock_prices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**screen_securities**](SecurityApi.md#screen_securities) | **POST** /securities/screen | Screen Securities
 [**search_securities**](SecurityApi.md#search_securities) | **GET** /securities/search | Search Securities
 
@@ -18,7 +21,7 @@ Method | HTTP request | Description
 # **get_all_securities**
 > ApiResponseSecurities get_all_securities(opts)
 
-Get All Securiites
+All Securities
 
 ### Example
 ```ruby
@@ -57,7 +60,9 @@ Name | Type | Description  | Notes
 # **get_security_by_id**
 > Security get_security_by_id(identifier)
 
-Get a Security by ID
+Lookup Security
+
+Returns the Security with the given `identifier`
 
 ### Example
 ```ruby
@@ -95,7 +100,7 @@ Name | Type | Description  | Notes
 # **get_security_data_point_number**
 > Float get_security_data_point_number(identifier, tag)
 
-Get Security Data Point (Number)
+Data Point (Number) for Security
 
 Returns a numeric value for the given `tag` for the Security with the given `identifier`
 
@@ -138,7 +143,7 @@ Name | Type | Description  | Notes
 # **get_security_data_point_text**
 > String get_security_data_point_text(identifier, tag)
 
-Get Security Data Point (Text)
+Data Point (Text) for Security
 
 Returns a text value for the given `tag` for the Security with the given `identifier`
 
@@ -181,7 +186,7 @@ Name | Type | Description  | Notes
 # **get_security_historical_data**
 > ApiResponseSecurityHistoricalData get_security_historical_data(identifier, tag, opts)
 
-Get Security Historical Data
+Historical Data for Security
 
 Returns historical values for the given `tag` and the Security with the given `identifier`
 
@@ -202,6 +207,7 @@ identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP,
 tag = "volume" # String | An Intrinio data tag ID or code-name
 
 opts = { 
+  frequency: "daily", # String | Return historical data in the given frequency
   type: nil, # String | Filter by type, when applicable
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical date on or before this date
@@ -223,6 +229,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **String**| Filter by type, when applicable | [optional] 
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical date on or before this date | [optional] 
@@ -233,12 +240,136 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
 
+# **get_security_latest_dividend_record**
+> DividendRecord get_security_latest_dividend_record(identifier)
+
+Lastest Dividend Record for Security
+
+Returns the latest available dividend information for the Security with the given `identifier`
+
+### Example
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR API KEY'
+end
+
+security_api = Intrinio::SecurityApi.new
+
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+
+begin
+  result = security_api.get_security_latest_dividend_record(identifier)
+  p result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling SecurityApi->get_security_latest_dividend_record: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+
+### Return type
+
+[**DividendRecord**](DividendRecord.md)
+
+# **get_security_latest_earnings_record**
+> EarningsRecord get_security_latest_earnings_record(identifier)
+
+Lastest Earnings Record for Security
+
+Returns latest available earnings information for the Security with the given `identifier`
+
+### Example
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR API KEY'
+end
+
+security_api = Intrinio::SecurityApi.new
+
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+
+begin
+  result = security_api.get_security_latest_earnings_record(identifier)
+  p result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling SecurityApi->get_security_latest_earnings_record: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+
+### Return type
+
+[**EarningsRecord**](EarningsRecord.md)
+
+# **get_security_realtime_price**
+> RealtimeStockPrice get_security_realtime_price(identifier, opts)
+
+Realtime Stock Price for Security
+
+Return the realtime stock price for the Security with the given `identifier`
+
+### Example
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR API KEY'
+end
+
+security_api = Intrinio::SecurityApi.new
+
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+opts = { 
+  source: nil # String | Return the realtime price from the specified data source
+}
+
+begin
+  result = security_api.get_security_realtime_price(identifier, opts)
+  p result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling SecurityApi->get_security_realtime_price: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **source** | **String**| Return the realtime price from the specified data source | [optional] 
+
+### Return type
+
+[**RealtimeStockPrice**](RealtimeStockPrice.md)
+
 # **get_security_stock_price_adjustments**
 > ApiResponseSecurityStockPriceAdjustments get_security_stock_price_adjustments(identifier, opts)
 
-Get Stock Price Adjustments for Security
+Stock Price Adjustments by Security
 
-Return stock price adjustments for the Security with the given `identifier`
+Returns stock price adjustments for the Security with the given `identifier`
 
 ### Example
 ```ruby
@@ -284,9 +415,9 @@ Name | Type | Description  | Notes
 # **get_security_stock_prices**
 > ApiResponseSecurityStockPrices get_security_stock_prices(identifier, opts)
 
-Get Stock Prices for Security
+Stock Prices by Security
 
-Return stock prices for the Security with the given `identifier`
+Return end-of-day stock prices for the Security with the given `identifier`
 
 ### Example
 ```ruby
@@ -336,7 +467,7 @@ Name | Type | Description  | Notes
 
 Screen Securities
 
-Screen securities using complex logic
+Screen Securities using complex logic
 
 ### Example
 ```ruby

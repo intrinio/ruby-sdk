@@ -4,14 +4,14 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_data_point_number**](DataPointApi.md#get_data_point_number) | **GET** /data_point/{identifier}/{tag}/number | Get a Data Point (Number)
-[**get_data_point_text**](DataPointApi.md#get_data_point_text) | **GET** /data_point/{identifier}/{tag}/text | Get a Data Point (Text)
+[**get_data_point_number**](DataPointApi.md#get_data_point_number) | **GET** /data_point/{identifier}/{tag}/number | Data Point (Number)
+[**get_data_point_text**](DataPointApi.md#get_data_point_text) | **GET** /data_point/{identifier}/{tag}/text | Data Point (Text)
 
 
 # **get_data_point_number**
 > Float get_data_point_number(identifier, tag)
 
-Get a Data Point (Number)
+Data Point (Number)
 
 Returns a numeric value for the given `tag` and the entity with the given `identifier`
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 # **get_data_point_text**
 > String get_data_point_text(identifier, tag)
 
-Get a Data Point (Text)
+Data Point (Text)
 
 Returns a text value for the given `tag` and the entity with the given `identifier`
 

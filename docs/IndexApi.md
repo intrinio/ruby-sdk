@@ -4,21 +4,21 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_economic_indices**](IndexApi.md#get_all_economic_indices) | **GET** /indices/economic | Get All Economic Indices
-[**get_all_sic_indices**](IndexApi.md#get_all_sic_indices) | **GET** /indices/sic | Get All SIC Indices
-[**get_all_stock_market_indices**](IndexApi.md#get_all_stock_market_indices) | **GET** /indices/stock_market | Get All Stock Market Indices
-[**get_economic_index_by_id**](IndexApi.md#get_economic_index_by_id) | **GET** /indices/economic/{identifier} | Get an Economic Index by ID
-[**get_economic_index_data_point_number**](IndexApi.md#get_economic_index_data_point_number) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Get Economic Index Data Point (Number)
-[**get_economic_index_data_point_text**](IndexApi.md#get_economic_index_data_point_text) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Get Economic Index Data Point (Text)
-[**get_economic_index_historical_data**](IndexApi.md#get_economic_index_historical_data) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Get Economic Index Historical Data
-[**get_sic_index_by_id**](IndexApi.md#get_sic_index_by_id) | **GET** /indices/sic/{identifier} | Get an SIC Index by ID
-[**get_sic_index_data_point_number**](IndexApi.md#get_sic_index_data_point_number) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Get SIC Index Data Point (Number)
-[**get_sic_index_data_point_text**](IndexApi.md#get_sic_index_data_point_text) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Get SIC Index Data Point (Text)
-[**get_sic_index_historical_data**](IndexApi.md#get_sic_index_historical_data) | **GET** /indices/sic/{identifier}/historical_data/{tag} | Get SIC Index Historical Data
-[**get_stock_market_index_by_id**](IndexApi.md#get_stock_market_index_by_id) | **GET** /indices/stock_market/{identifier} | Get a Stock Market Index by ID
-[**get_stock_market_index_data_point_number**](IndexApi.md#get_stock_market_index_data_point_number) | **GET** /indices/stock_market/{identifier}/data_point/{tag}/number | Get Stock Market Index Data Point (Number)
-[**get_stock_market_index_data_point_text**](IndexApi.md#get_stock_market_index_data_point_text) | **GET** /indices/stock_market/{identifier}/data_point/{tag}/text | Get Stock Market Index Data Point (Text)
-[**get_stock_market_index_historical_data**](IndexApi.md#get_stock_market_index_historical_data) | **GET** /indices/stock_market/{identifier}/historical_data/{tag} | Get Stock Market Index Historical Data
+[**get_all_economic_indices**](IndexApi.md#get_all_economic_indices) | **GET** /indices/economic | All Economic Indices
+[**get_all_sic_indices**](IndexApi.md#get_all_sic_indices) | **GET** /indices/sic | All SIC Indices
+[**get_all_stock_market_indices**](IndexApi.md#get_all_stock_market_indices) | **GET** /indices/stock_market | All Stock Market Indices
+[**get_economic_index_by_id**](IndexApi.md#get_economic_index_by_id) | **GET** /indices/economic/{identifier} | Lookup Economic Index
+[**get_economic_index_data_point_number**](IndexApi.md#get_economic_index_data_point_number) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Data Point (Number) for an Economic Index
+[**get_economic_index_data_point_text**](IndexApi.md#get_economic_index_data_point_text) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
+[**get_economic_index_historical_data**](IndexApi.md#get_economic_index_historical_data) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
+[**get_sic_index_by_id**](IndexApi.md#get_sic_index_by_id) | **GET** /indices/sic/{identifier} | Lookup SIC Index
+[**get_sic_index_data_point_number**](IndexApi.md#get_sic_index_data_point_number) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Data Point (Number) for an SIC Index
+[**get_sic_index_data_point_text**](IndexApi.md#get_sic_index_data_point_text) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Data Point (Text) for an SIC Index
+[**get_sic_index_historical_data**](IndexApi.md#get_sic_index_historical_data) | **GET** /indices/sic/{identifier}/historical_data/{tag} | Historical Data for an SIC Index
+[**get_stock_market_index_by_id**](IndexApi.md#get_stock_market_index_by_id) | **GET** /indices/stock_market/{identifier} | Lookup Stock Market Index
+[**get_stock_market_index_data_point_number**](IndexApi.md#get_stock_market_index_data_point_number) | **GET** /indices/stock_market/{identifier}/data_point/{tag}/number | Data Point (Number) for Stock Market Index
+[**get_stock_market_index_data_point_text**](IndexApi.md#get_stock_market_index_data_point_text) | **GET** /indices/stock_market/{identifier}/data_point/{tag}/text | Data Point (Text) for Stock Market Index
+[**get_stock_market_index_historical_data**](IndexApi.md#get_stock_market_index_historical_data) | **GET** /indices/stock_market/{identifier}/historical_data/{tag} | Historical Data for Stock Market Index
 [**search_economic_indices**](IndexApi.md#search_economic_indices) | **GET** /indices/economic/search | Search Economic Indices
 [**search_sic_indices**](IndexApi.md#search_sic_indices) | **GET** /indices/sic/search | Search SIC Indices
 [**search_stock_markets_indices**](IndexApi.md#search_stock_markets_indices) | **GET** /indices/stock_market/search | Search Stock Market Indices
@@ -27,7 +27,7 @@ Method | HTTP request | Description
 # **get_all_economic_indices**
 > ApiResponseEconomicIndices get_all_economic_indices(opts)
 
-Get All Economic Indices
+All Economic Indices
 
 ### Example
 ```ruby
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 # **get_all_sic_indices**
 > ApiResponseSICIndices get_all_sic_indices(opts)
 
-Get All SIC Indices
+All SIC Indices
 
 ### Example
 ```ruby
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 # **get_all_stock_market_indices**
 > ApiResponseStockMarketIndices get_all_stock_market_indices(opts)
 
-Get All Stock Market Indices
+All Stock Market Indices
 
 ### Example
 ```ruby
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 # **get_economic_index_by_id**
 > EconomicIndex get_economic_index_by_id(identifier)
 
-Get an Economic Index by ID
+Lookup Economic Index
 
 ### Example
 ```ruby
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 # **get_economic_index_data_point_number**
 > Float get_economic_index_data_point_number(identifier, tag)
 
-Get Economic Index Data Point (Number)
+Data Point (Number) for an Economic Index
 
 Returns a numeric value for the given `tag` for the Economic Index with the given `identifier`
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 # **get_economic_index_data_point_text**
 > String get_economic_index_data_point_text(identifier, tag)
 
-Get Economic Index Data Point (Text)
+Data Point (Text) for an Economic Index
 
 Returns a text value for the given `tag` for the Economic Index with the given `identifier`
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 # **get_economic_index_historical_data**
 > ApiResponseEconomicIndexHistoricalData get_economic_index_historical_data(identifier, tag, opts)
 
-Get Economic Index Historical Data
+Historical Data for an Economic Index
 
 Returns historical values for the given `tag` and the Economic Index with the given `identifier`
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 # **get_sic_index_by_id**
 > SICIndex get_sic_index_by_id(identifier)
 
-Get an SIC Index by ID
+Lookup SIC Index
 
 ### Example
 ```ruby
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 # **get_sic_index_data_point_number**
 > Float get_sic_index_data_point_number(identifier, tag)
 
-Get SIC Index Data Point (Number)
+Data Point (Number) for an SIC Index
 
 Returns a numeric value for the given `tag` for the SIC Index with the given `identifier`
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 # **get_sic_index_data_point_text**
 > String get_sic_index_data_point_text(identifier, tag)
 
-Get SIC Index Data Point (Text)
+Data Point (Text) for an SIC Index
 
 Returns a text value for the given `tag` for the SIC Index with the given `identifier`
 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 # **get_sic_index_historical_data**
 > ApiResponseSICIndexHistoricalData get_sic_index_historical_data(identifier, tag, opts)
 
-Get SIC Index Historical Data
+Historical Data for an SIC Index
 
 Returns historical values for the given `tag` and the SIC Index with the given `identifier`
 
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
 # **get_stock_market_index_by_id**
 > StockMarketIndex get_stock_market_index_by_id(identifier)
 
-Get a Stock Market Index by ID
+Lookup Stock Market Index
 
 ### Example
 ```ruby
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 # **get_stock_market_index_data_point_number**
 > Float get_stock_market_index_data_point_number(identifier, tag)
 
-Get Stock Market Index Data Point (Number)
+Data Point (Number) for Stock Market Index
 
 Returns a numeric value for the given `tag` for the Stock Market Index with the given `identifier`
 
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 # **get_stock_market_index_data_point_text**
 > String get_stock_market_index_data_point_text(identifier, tag)
 
-Get Stock Market Index Data Point (Text)
+Data Point (Text) for Stock Market Index
 
 Returns a text value for the given `tag` for the Stock Market Index with the given `identifier`
 
@@ -626,7 +626,7 @@ Name | Type | Description  | Notes
 # **get_stock_market_index_historical_data**
 > ApiResponseStockMarketIndexHistoricalData get_stock_market_index_historical_data(identifier, tag, opts)
 
-Get Stock Market Index Historical Data
+Historical Data for Stock Market Index
 
 Returns historical values for the given `tag` and the Stock Market Index with the given `identifier`
 

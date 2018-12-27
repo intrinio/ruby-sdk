@@ -5,18 +5,18 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**filter_companies**](CompanyApi.md#filter_companies) | **GET** /companies/filter | Filter Companies
-[**filter_company_fundamentals**](CompanyApi.md#filter_company_fundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals for a Company
-[**get_all_companies**](CompanyApi.md#get_all_companies) | **GET** /companies | Get All Companies
-[**get_all_company_news**](CompanyApi.md#get_all_company_news) | **GET** /companies/news | Get All Company News
-[**get_company**](CompanyApi.md#get_company) | **GET** /companies/{identifier} | Get a Company by ID
-[**get_company_data_point_number**](CompanyApi.md#get_company_data_point_number) | **GET** /companies/{identifier}/data_point/{tag}/number | Get Company Data Point (Number)
-[**get_company_data_point_text**](CompanyApi.md#get_company_data_point_text) | **GET** /companies/{identifier}/data_point/{tag}/text | Get Company Data Point (Text)
-[**get_company_filings**](CompanyApi.md#get_company_filings) | **GET** /companies/{identifier}/filings | Get Filings for a Company
-[**get_company_fundamentals**](CompanyApi.md#get_company_fundamentals) | **GET** /companies/{identifier}/fundamentals | Get All Fundamentals for a Company
-[**get_company_historical_data**](CompanyApi.md#get_company_historical_data) | **GET** /companies/{identifier}/historical_data/{tag} | Get Company Historical Data
-[**get_company_news**](CompanyApi.md#get_company_news) | **GET** /companies/{identifier}/news | Get News for a Company
-[**get_company_securities**](CompanyApi.md#get_company_securities) | **GET** /companies/{identifier}/securities | Get Securities by Company
-[**lookup_company_fundamental**](CompanyApi.md#lookup_company_fundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup a Fundamental for a Company
+[**filter_company_fundamentals**](CompanyApi.md#filter_company_fundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals by Company
+[**get_all_companies**](CompanyApi.md#get_all_companies) | **GET** /companies | All Companies
+[**get_all_company_news**](CompanyApi.md#get_all_company_news) | **GET** /companies/news | All News
+[**get_company**](CompanyApi.md#get_company) | **GET** /companies/{identifier} | Lookup Company
+[**get_company_data_point_number**](CompanyApi.md#get_company_data_point_number) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
+[**get_company_data_point_text**](CompanyApi.md#get_company_data_point_text) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
+[**get_company_filings**](CompanyApi.md#get_company_filings) | **GET** /companies/{identifier}/filings | All Filings by Company
+[**get_company_fundamentals**](CompanyApi.md#get_company_fundamentals) | **GET** /companies/{identifier}/fundamentals | All Fundamentals by Company
+[**get_company_historical_data**](CompanyApi.md#get_company_historical_data) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
+[**get_company_news**](CompanyApi.md#get_company_news) | **GET** /companies/{identifier}/news | All News by Company
+[**get_company_securities**](CompanyApi.md#get_company_securities) | **GET** /companies/{identifier}/securities | All Securities by Company
+[**lookup_company_fundamental**](CompanyApi.md#lookup_company_fundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 [**search_companies**](CompanyApi.md#search_companies) | **GET** /companies/search | Search Companies
 
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 # **filter_company_fundamentals**
 > ApiResponseCompanyFundamentals filter_company_fundamentals(identifier, opts)
 
-Filter Fundamentals for a Company
+Filter Fundamentals by Company
 
 Returns Fundamentals for the Company with the given `identifier` and matching the specified filters
 
@@ -136,7 +136,9 @@ Name | Type | Description  | Notes
 # **get_all_companies**
 > ApiResponseCompanies get_all_companies(opts)
 
-Get All Companies
+All Companies
+
+Returns all Companies
 
 ### Example
 ```ruby
@@ -175,9 +177,9 @@ Name | Type | Description  | Notes
 # **get_all_company_news**
 > ApiResponseNews get_all_company_news(opts)
 
-Get All Company News
+All News
 
-Returns all news for all companies
+Returns all News for all Companies
 
 ### Example
 ```ruby
@@ -216,7 +218,9 @@ Name | Type | Description  | Notes
 # **get_company**
 > Company get_company(identifier)
 
-Get a Company by ID
+Lookup Company
+
+Returns the Company with the given `identifier`
 
 ### Example
 ```ruby
@@ -254,7 +258,7 @@ Name | Type | Description  | Notes
 # **get_company_data_point_number**
 > Float get_company_data_point_number(identifier, tag)
 
-Get Company Data Point (Number)
+Data Point (Number) for Company
 
 Returns a numeric value for the given `tag` for the Company with the given `identifier`
 
@@ -297,7 +301,7 @@ Name | Type | Description  | Notes
 # **get_company_data_point_text**
 > String get_company_data_point_text(identifier, tag)
 
-Get Company Data Point (Text)
+Data Point (Text) for Company
 
 Returns a text value for the given `tag` for the Company with the given `identifier`
 
@@ -340,7 +344,7 @@ Name | Type | Description  | Notes
 # **get_company_filings**
 > ApiResponseCompanyFilings get_company_filings(identifier, opts)
 
-Get Filings for a Company
+All Filings by Company
 
 Returns a complete list of SEC filings for the Company with the given `identifier`
 
@@ -384,7 +388,7 @@ Name | Type | Description  | Notes
 # **get_company_fundamentals**
 > ApiResponseCompanyFundamentals get_company_fundamentals(identifier, opts)
 
-Get All Fundamentals for a Company
+All Fundamentals by Company
 
 Returns all Fundamentals for the Company with the given `identifier`
 
@@ -428,7 +432,7 @@ Name | Type | Description  | Notes
 # **get_company_historical_data**
 > ApiResponseCompanyHistoricalData get_company_historical_data(identifier, tag, opts)
 
-Get Company Historical Data
+Historical Data for Company
 
 Returns historical values for the given `tag` and the Company with the given `identifier`
 
@@ -446,9 +450,10 @@ company_api = Intrinio::CompanyApi.new
 
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-tag = "marketcap" # String | Item
+tag = "marketcap" # String | An Intrinio data-tag
 
 opts = { 
+  frequency: "daily", # String | Return historical data in the given frequency
   type: nil, # String | Filter by type, when applicable
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical data on or before this date
@@ -469,7 +474,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| Item | 
+ **tag** | **String**| An Intrinio data-tag | 
+ **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **String**| Filter by type, when applicable | [optional] 
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical data on or before this date | [optional] 
@@ -483,7 +489,7 @@ Name | Type | Description  | Notes
 # **get_company_news**
 > ApiResponseCompanyNews get_company_news(identifier, opts)
 
-Get News for a Company
+All News by Company
 
 Returns news for the Company with the given `identifier`
 
@@ -527,9 +533,9 @@ Name | Type | Description  | Notes
 # **get_company_securities**
 > ApiResponseCompanySecurities get_company_securities(identifier, opts)
 
-Get Securities by Company
+All Securities by Company
 
-Return Securities for the Company with `identifier`
+Returns Securities for the Company with the given `identifier`
 
 ### Example
 ```ruby
@@ -571,7 +577,7 @@ Name | Type | Description  | Notes
 # **lookup_company_fundamental**
 > Fundamental lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
 
-Lookup a Fundamental for a Company
+Lookup Fundamental by Company
 
 Returns the Fundamental for the Company with the given `identifier` and with the given parameters
 
