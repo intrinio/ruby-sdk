@@ -30,9 +30,6 @@ module Intrinio
     # The ratio of the stock split, if a stock split occurred.
     attr_accessor :split_ratio
 
-    # The Security of the stock price
-    attr_accessor :security
-
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -41,8 +38,7 @@ module Intrinio
         :'factor' => :'factor',
         :'dividend' => :'dividend',
         :'dividend_currency' => :'dividend_currency',
-        :'split_ratio' => :'split_ratio',
-        :'security' => :'security'
+        :'split_ratio' => :'split_ratio'
       }
     end
 
@@ -53,8 +49,7 @@ module Intrinio
         :'factor' => :'Float',
         :'dividend' => :'Float',
         :'dividend_currency' => :'String',
-        :'split_ratio' => :'Float',
-        :'security' => :'SecuritySummary'
+        :'split_ratio' => :'Float'
       }
     end
 
@@ -86,10 +81,6 @@ module Intrinio
         self.split_ratio = attributes[:'split_ratio']
       end
 
-      if attributes.has_key?(:'security')
-        self.security = attributes[:'security']
-      end
-
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -114,8 +105,7 @@ module Intrinio
           factor == o.factor &&
           dividend == o.dividend &&
           dividend_currency == o.dividend_currency &&
-          split_ratio == o.split_ratio &&
-          security == o.security
+          split_ratio == o.split_ratio
     end
 
     # @see the `==` method
@@ -127,7 +117,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [date, factor, dividend, dividend_currency, split_ratio, security].hash
+      [date, factor, dividend, dividend_currency, split_ratio].hash
     end
 
     # Builds the object from hash

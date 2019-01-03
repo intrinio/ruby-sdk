@@ -37,7 +37,7 @@ module Intrinio
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'stock_price_adjustments' => :'Array<StockPriceAdjustment>',
+        :'stock_price_adjustments' => :'Array<StockPriceAdjustmentSummary>',
         :'security' => :'SecuritySummary',
         :'next_page' => :'String'
       }

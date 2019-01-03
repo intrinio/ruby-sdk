@@ -86,8 +86,8 @@ module Intrinio
       return data, status_code, headers
     end
 
-    # Filter SEC filing notes
-    # Returns SEC filing notes matching the supplied criteria
+    # Filter Filing Notes
+    # Returns Filing Notes that match the specified filters
     # @param [Hash] opts the optional parameters
     # @option opts [String] :company A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     # @option opts [String] :report_type Notes contained in filings that match the given report type
@@ -102,8 +102,8 @@ module Intrinio
       return data
     end
 
-    # Filter SEC filing notes
-    # Returns SEC filing notes matching the supplied criteria
+    # Filter Filing Notes
+    # Returns Filing Notes that match the specified filters
     # @param [Hash] opts the optional parameters
     # @option opts [String] :company A Company identifier (Ticker, CIK, LEI, Intrinio ID)
     # @option opts [String] :report_type Notes contained in filings that match the given report type
@@ -207,8 +207,8 @@ module Intrinio
       return data, status_code, headers
     end
 
-    # Get All SEC filing notes
-    # Return All notes from SEC Filings, most-recent first
+    # All Filing Notes
+    # Return all Notes from all Filings, most-recent first
     # @param [Hash] opts the optional parameters
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [ApiResponseFilingNotes]
@@ -217,8 +217,8 @@ module Intrinio
       return data
     end
 
-    # Get All SEC filing notes
-    # Return All notes from SEC Filings, most-recent first
+    # All Filing Notes
+    # Return all Notes from all Filings, most-recent first
     # @param [Hash] opts the optional parameters
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [Array<(ApiResponseFilingNotes, Fixnum, Hash)>] ApiResponseFilingNotes data, response status code and response headers
@@ -310,7 +310,7 @@ module Intrinio
       return data, status_code, headers
     end
 
-    # Get an SEC filing note by ID
+    # Filing Note by ID
     # 
     # @param identifier The Intrinio ID of the filing note
     # @param [Hash] opts the optional parameters
@@ -321,7 +321,7 @@ module Intrinio
       return data
     end
 
-    # Get an SEC filing note by ID
+    # Filing Note by ID
     # 
     # @param identifier The Intrinio ID of the filing note
     # @param [Hash] opts the optional parameters
@@ -369,7 +369,7 @@ module Intrinio
       return data, status_code, headers
     end
 
-    # Returns the content of an SEC filing note as originally filed
+    # Filing Note HTML
     # 
     # @param identifier The Intrinio ID of the filing note
     # @param [Hash] opts the optional parameters
@@ -379,7 +379,7 @@ module Intrinio
       return data
     end
 
-    # Returns the content of an SEC filing note as originally filed
+    # Filing Note HTML
     # 
     # @param identifier The Intrinio ID of the filing note
     # @param [Hash] opts the optional parameters
@@ -422,7 +422,7 @@ module Intrinio
       return data, status_code, headers
     end
 
-    # Returns the content of an SEC filing note stripped of HTML
+    # Filing Note Text
     # 
     # @param identifier The Intrinio ID of the filing note
     # @param [Hash] opts the optional parameters
@@ -432,7 +432,7 @@ module Intrinio
       return data
     end
 
-    # Returns the content of an SEC filing note stripped of HTML
+    # Filing Note Text
     # 
     # @param identifier The Intrinio ID of the filing note
     # @param [Hash] opts the optional parameters
@@ -476,7 +476,7 @@ module Intrinio
     end
 
     # Search Filing Notes
-    # Searches SEC filing notes using the text in `query`
+    # Searches for Filing Notes using the `query`
     # @param query Search for notes that contain all or parts of this text
     # @param [Hash] opts the optional parameters
     # @option opts [Date] :filing_start_date Limit search to filings on or after this date
@@ -489,7 +489,7 @@ module Intrinio
     end
 
     # Search Filing Notes
-    # Searches SEC filing notes using the text in &#x60;query&#x60;
+    # Searches for Filing Notes using the &#x60;query&#x60;
     # @param query Search for notes that contain all or parts of this text
     # @param [Hash] opts the optional parameters
     # @option opts [Date] :filing_start_date Limit search to filings on or after this date

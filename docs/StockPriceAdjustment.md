@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **dividend** | **Float** | The dividend amount, if a dividend was paid. | [optional] 
 **dividend_currency** | **String** | The currency of the dividend, if known. | [optional] 
 **split_ratio** | **Float** | The ratio of the stock split, if a stock split occurred. | [optional] 
+**security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the stock price | [optional] 
 
 

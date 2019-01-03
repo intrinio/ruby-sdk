@@ -5,13 +5,13 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**filter_filings**](FilingApi.md#filter_filings) | **GET** /filings/filter | Filter Filings
-[**filter_notes**](FilingApi.md#filter_notes) | **GET** /filings/notes/filter | Filter SEC filing notes
+[**filter_notes**](FilingApi.md#filter_notes) | **GET** /filings/notes/filter | Filter Filing Notes
 [**get_all_filings**](FilingApi.md#get_all_filings) | **GET** /filings | All Filings
-[**get_all_notes**](FilingApi.md#get_all_notes) | **GET** /filings/notes | Get All SEC filing notes
+[**get_all_notes**](FilingApi.md#get_all_notes) | **GET** /filings/notes | All Filing Notes
 [**get_filing_by_id**](FilingApi.md#get_filing_by_id) | **GET** /filings/{id} | Lookup Filing
-[**get_note**](FilingApi.md#get_note) | **GET** /filings/notes/{identifier} | Get an SEC filing note by ID
-[**get_note_html**](FilingApi.md#get_note_html) | **GET** /filings/notes/{identifier}/html | Returns the content of an SEC filing note as originally filed
-[**get_note_text**](FilingApi.md#get_note_text) | **GET** /filings/notes/{identifier}/text | Returns the content of an SEC filing note stripped of HTML
+[**get_note**](FilingApi.md#get_note) | **GET** /filings/notes/{identifier} | Filing Note by ID
+[**get_note_html**](FilingApi.md#get_note_html) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
+[**get_note_text**](FilingApi.md#get_note_text) | **GET** /filings/notes/{identifier}/text | Filing Note Text
 [**search_notes**](FilingApi.md#search_notes) | **GET** /filings/notes/search | Search Filing Notes
 
 
@@ -68,9 +68,9 @@ Name | Type | Description  | Notes
 # **filter_notes**
 > ApiResponseFilingNotes filter_notes(opts)
 
-Filter SEC filing notes
+Filter Filing Notes
 
-Returns SEC filing notes matching the supplied criteria
+Returns Filing Notes that match the specified filters
 
 ### Example
 ```ruby
@@ -162,9 +162,9 @@ Name | Type | Description  | Notes
 # **get_all_notes**
 > ApiResponseFilingNotes get_all_notes(opts)
 
-Get All SEC filing notes
+All Filing Notes
 
-Return All notes from SEC Filings, most-recent first
+Return all Notes from all Filings, most-recent first
 
 ### Example
 ```ruby
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 # **get_note**
 > FilingNote get_note(identifier, opts)
 
-Get an SEC filing note by ID
+Filing Note by ID
 
 ### Example
 ```ruby
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 # **get_note_html**
 > String get_note_html(identifier)
 
-Returns the content of an SEC filing note as originally filed
+Filing Note HTML
 
 ### Example
 ```ruby
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 # **get_note_text**
 > String get_note_text(identifier)
 
-Returns the content of an SEC filing note stripped of HTML
+Filing Note Text
 
 ### Example
 ```ruby
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 Search Filing Notes
 
-Searches SEC filing notes using the text in `query`
+Searches for Filing Notes using the `query`
 
 ### Example
 ```ruby
