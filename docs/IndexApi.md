@@ -42,6 +42,7 @@ end
 index_api = Intrinio::IndexApi.new
 
 opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -57,6 +58,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -81,6 +83,7 @@ end
 index_api = Intrinio::IndexApi.new
 
 opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -96,6 +99,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -120,6 +124,7 @@ end
 index_api = Intrinio::IndexApi.new
 
 opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -135,6 +140,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -293,6 +299,7 @@ opts = {
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -314,6 +321,7 @@ Name | Type | Description  | Notes
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical data on or before this date | [optional] 
  **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -472,6 +480,7 @@ opts = {
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -493,6 +502,7 @@ Name | Type | Description  | Notes
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical data on or before this date | [optional] 
  **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -651,6 +661,7 @@ opts = {
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -672,6 +683,7 @@ Name | Type | Description  | Notes
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical data on or before this date | [optional] 
  **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -679,7 +691,7 @@ Name | Type | Description  | Notes
 [**ApiResponseStockMarketIndexHistoricalData**](ApiResponseStockMarketIndexHistoricalData.md)
 
 # **search_economic_indices**
-> ApiResponseEconomicIndices search_economic_indices(query)
+> ApiResponseEconomicIndicesSearch search_economic_indices(query, opts)
 
 Search Economic Indices
 
@@ -699,9 +711,12 @@ index_api = Intrinio::IndexApi.new
 
 query = "GDP" # String | Search query
 
+opts = { 
+  page_size: 100 # Float | The number of results to return
+}
 
 begin
-  result = index_api.search_economic_indices(query)
+  result = index_api.search_economic_indices(query, opts)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->search_economic_indices: #{e}"
@@ -713,13 +728,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
+[**ApiResponseEconomicIndicesSearch**](ApiResponseEconomicIndicesSearch.md)
 
 # **search_sic_indices**
-> ApiResponseSICIndices search_sic_indices(query)
+> ApiResponseSICIndicesSearch search_sic_indices(query, opts)
 
 Search SIC Indices
 
@@ -739,9 +755,12 @@ index_api = Intrinio::IndexApi.new
 
 query = "agriculture" # String | Search query
 
+opts = { 
+  page_size: 100 # Float | The number of results to return
+}
 
 begin
-  result = index_api.search_sic_indices(query)
+  result = index_api.search_sic_indices(query, opts)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->search_sic_indices: #{e}"
@@ -753,13 +772,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseSICIndices**](ApiResponseSICIndices.md)
+[**ApiResponseSICIndicesSearch**](ApiResponseSICIndicesSearch.md)
 
 # **search_stock_markets_indices**
-> ApiResponseStockMarketIndices search_stock_markets_indices(query)
+> ApiResponseStockMarketIndicesSearch search_stock_markets_indices(query, opts)
 
 Search Stock Market Indices
 
@@ -779,9 +799,12 @@ index_api = Intrinio::IndexApi.new
 
 query = "dow" # String | Search query
 
+opts = { 
+  page_size: 100 # Float | The number of results to return
+}
 
 begin
-  result = index_api.search_stock_markets_indices(query)
+  result = index_api.search_stock_markets_indices(query, opts)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->search_stock_markets_indices: #{e}"
@@ -793,8 +816,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseStockMarketIndices**](ApiResponseStockMarketIndices.md)
+[**ApiResponseStockMarketIndicesSearch**](ApiResponseStockMarketIndicesSearch.md)
 

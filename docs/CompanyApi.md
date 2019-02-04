@@ -4,8 +4,6 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**filter_companies**](CompanyApi.md#filter_companies) | **GET** /companies/filter | Filter Companies
-[**filter_company_fundamentals**](CompanyApi.md#filter_company_fundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals by Company
 [**get_all_companies**](CompanyApi.md#get_all_companies) | **GET** /companies | All Companies
 [**get_all_company_news**](CompanyApi.md#get_all_company_news) | **GET** /companies/news | All News
 [**get_company**](CompanyApi.md#get_company) | **GET** /companies/{identifier} | Lookup Company
@@ -20,125 +18,12 @@ Method | HTTP request | Description
 [**search_companies**](CompanyApi.md#search_companies) | **GET** /companies/search | Search Companies
 
 
-# **filter_companies**
-> ApiResponseCompanies filter_companies(opts)
-
-Filter Companies
-
-Returns Companies matching the specified filters
-
-### Example
-```ruby
-# Load the gem
-require 'intrinio-sdk'
-
-# Setup authorization
-Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
-end
-
-company_api = Intrinio::CompanyApi.new
-
-opts = { 
-  last_filing_date: nil, # Date | Last filing date
-  sic: "3350", # String | Standard Industrial Classification code
-  template: "industrial", # String | Template
-  sector: "Basic Materials", # String | Industry sector
-  industry_category: "Metals & Mining", # String | Industry category
-  industry_group: "Aluminum", # String | Industry group
-  next_page: nil # String | Gets the next page of data from a previous API call
-}
-
-begin
-  result = company_api.filter_companies(opts)
-  p result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->filter_companies: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **last_filing_date** | **Date**| Last filing date | [optional] 
- **sic** | **String**| Standard Industrial Classification code | [optional] 
- **template** | **String**| Template | [optional] 
- **sector** | **String**| Industry sector | [optional] 
- **industry_category** | **String**| Industry category | [optional] 
- **industry_group** | **String**| Industry group | [optional] 
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseCompanies**](ApiResponseCompanies.md)
-
-# **filter_company_fundamentals**
-> ApiResponseCompanyFundamentals filter_company_fundamentals(identifier, opts)
-
-Filter Fundamentals by Company
-
-Returns Fundamentals for the Company with the given `identifier` and matching the specified filters
-
-### Example
-```ruby
-# Load the gem
-require 'intrinio-sdk'
-
-# Setup authorization
-Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
-end
-
-company_api = Intrinio::CompanyApi.new
-
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-opts = { 
-  filed_after: nil, # Date | Filed on or after this date
-  filed_before: nil, # Date | Filed on or before this date
-  reported_only: false, # BOOLEAN | Only as-reported fundamentals
-  fiscal_year: 2017, # Integer | Only for the given fiscal year
-  statement_code: nil, # String | Only of the given statement code
-  type: nil, # String | Only of the given type
-  start_date: nil, # Date | Only on or after the given date
-  end_date: nil, # Date | Only on or before the given date
-  next_page: nil # String | Gets the next page of data from a previous API call
-}
-
-begin
-  result = company_api.filter_company_fundamentals(identifier, opts)
-  p result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->filter_company_fundamentals: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **filed_after** | **Date**| Filed on or after this date | [optional] 
- **filed_before** | **Date**| Filed on or before this date | [optional] 
- **reported_only** | **BOOLEAN**| Only as-reported fundamentals | [optional] 
- **fiscal_year** | **Integer**| Only for the given fiscal year | [optional] 
- **statement_code** | **String**| Only of the given statement code | [optional] 
- **type** | **String**| Only of the given type | [optional] 
- **start_date** | **Date**| Only on or after the given date | [optional] 
- **end_date** | **Date**| Only on or before the given date | [optional] 
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseCompanyFundamentals**](ApiResponseCompanyFundamentals.md)
-
 # **get_all_companies**
 > ApiResponseCompanies get_all_companies(opts)
 
 All Companies
 
-Returns all Companies
+Returns all Companies. When parameters are specified, returns matching companies.
 
 ### Example
 ```ruby
@@ -153,6 +38,13 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
+  latest_filing_date: nil, # Date | Last filing date
+  sic: "3350", # String | Standard Industrial Classification code
+  template: "industrial", # String | Template
+  sector: "Basic Materials", # String | Industry sector
+  industry_category: "Metals & Mining", # String | Industry category
+  industry_group: "Aluminum", # String | Industry group
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -168,6 +60,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **latest_filing_date** | **Date**| Last filing date | [optional] 
+ **sic** | **String**| Standard Industrial Classification code | [optional] 
+ **template** | **String**| Template | [optional] 
+ **sector** | **String**| Industry sector | [optional] 
+ **industry_category** | **String**| Industry category | [optional] 
+ **industry_group** | **String**| Industry group | [optional] 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -194,6 +93,7 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -209,6 +109,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -363,6 +264,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -379,6 +281,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -390,7 +293,7 @@ Name | Type | Description  | Notes
 
 All Fundamentals by Company
 
-Returns all Fundamentals for the Company with the given `identifier`
+Returns all Fundamentals for the Company with the given `identifier`. Returns Fundamentals matching parameters when supplied.
 
 ### Example
 ```ruby
@@ -407,6 +310,15 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
+  filed_after: nil, # Date | Filed on or after this date
+  filed_before: nil, # Date | Filed on or before this date
+  reported_only: false, # BOOLEAN | Only as-reported fundamentals
+  fiscal_year: 2017, # Integer | Only for the given fiscal year
+  statement_code: nil, # String | Only of the given statement code
+  type: nil, # String | Only of the given type
+  start_date: nil, # Date | Only on or after the given date
+  end_date: nil, # Date | Only on or before the given date
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -423,6 +335,15 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **filed_after** | **Date**| Filed on or after this date | [optional] 
+ **filed_before** | **Date**| Filed on or before this date | [optional] 
+ **reported_only** | **BOOLEAN**| Only as-reported fundamentals | [optional] 
+ **fiscal_year** | **Integer**| Only for the given fiscal year | [optional] 
+ **statement_code** | **String**| Only of the given statement code | [optional] 
+ **type** | **String**| Only of the given type | [optional] 
+ **start_date** | **Date**| Only on or after the given date | [optional] 
+ **end_date** | **Date**| Only on or before the given date | [optional] 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -458,6 +379,7 @@ opts = {
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -480,6 +402,7 @@ Name | Type | Description  | Notes
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical data on or before this date | [optional] 
  **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -508,6 +431,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -524,6 +448,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -624,7 +549,7 @@ Name | Type | Description  | Notes
 [**Fundamental**](Fundamental.md)
 
 # **search_companies**
-> ApiResponseCompanies search_companies(query)
+> ApiResponseCompaniesSearch search_companies(query, opts)
 
 Search Companies
 
@@ -644,9 +569,12 @@ company_api = Intrinio::CompanyApi.new
 
 query = "Apple" # String | Search parameters
 
+opts = { 
+  page_size: 100 # Float | The number of results to return
+}
 
 begin
-  result = company_api.search_companies(query)
+  result = company_api.search_companies(query, opts)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->search_companies: #{e}"
@@ -658,8 +586,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search parameters | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseCompanies**](ApiResponseCompanies.md)
+[**ApiResponseCompaniesSearch**](ApiResponseCompaniesSearch.md)
 

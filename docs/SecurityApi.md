@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_security_data_point_number**](SecurityApi.md#get_security_data_point_number) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**get_security_data_point_text**](SecurityApi.md#get_security_data_point_text) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**get_security_historical_data**](SecurityApi.md#get_security_historical_data) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**get_security_intraday_prices**](SecurityApi.md#get_security_intraday_prices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 [**get_security_latest_dividend_record**](SecurityApi.md#get_security_latest_dividend_record) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
 [**get_security_latest_earnings_record**](SecurityApi.md#get_security_latest_earnings_record) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
 [**get_security_realtime_price**](SecurityApi.md#get_security_realtime_price) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
@@ -36,6 +37,7 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -51,6 +53,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -212,6 +215,7 @@ opts = {
   start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical date on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -234,11 +238,64 @@ Name | Type | Description  | Notes
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical date on or before this date | [optional] 
  **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
+
+# **get_security_intraday_prices**
+> ApiResponseSecurityIntradayPrices get_security_intraday_prices(identifier, opts)
+
+Intraday Stock Prices for Security
+
+Return intraday stock prices for the Security with the given `identifier`
+
+### Example
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR API KEY'
+end
+
+security_api = Intrinio::SecurityApi.new
+
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+opts = { 
+  source: nil, # String | Return intraday prices from the specified data source
+  start_date: Date.parse("2018-01-01"), # Date | Return intraday prices starting at the specified date
+  start_time: "4200", # String | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC)
+  end_date: Date.parse("2018-01-01"), # Date | Return intraday prices stopping at the specified date
+  end_time: "4200" # String | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC)
+}
+
+begin
+  result = security_api.get_security_intraday_prices(identifier, opts)
+  p result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling SecurityApi->get_security_intraday_prices: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **source** | **String**| Return intraday prices from the specified data source | [optional] 
+ **start_date** | **Date**| Return intraday prices starting at the specified date | [optional] 
+ **start_time** | **String**| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional] 
+ **end_date** | **Date**| Return intraday prices stopping at the specified date | [optional] 
+ **end_time** | **String**| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional] 
+
+### Return type
+
+[**ApiResponseSecurityIntradayPrices**](ApiResponseSecurityIntradayPrices.md)
 
 # **get_security_latest_dividend_record**
 > DividendRecord get_security_latest_dividend_record(identifier)
@@ -388,6 +445,7 @@ identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP,
 opts = { 
   start_date: Date.parse("2018-01-01"), # Date | Return price adjustments on or after the date
   end_date: Date.parse("2019-01-01"), # Date | Return price adjustments on or before the date
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -406,6 +464,7 @@ Name | Type | Description  | Notes
  **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **start_date** | **Date**| Return price adjustments on or after the date | [optional] 
  **end_date** | **Date**| Return price adjustments on or before the date | [optional] 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -437,6 +496,7 @@ opts = {
   start_date: Date.parse("2018-01-01"), # Date | Return prices on or after the date
   end_date: Date.parse("2019-01-01"), # Date | Return prices on or before the date
   frequency: "daily", # String | Return stock prices in the given frequency
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -456,6 +516,7 @@ Name | Type | Description  | Notes
  **start_date** | **Date**| Return prices on or after the date | [optional] 
  **end_date** | **Date**| Return prices on or before the date | [optional] 
  **frequency** | **String**| Return stock prices in the given frequency | [optional] [default to daily]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -485,7 +546,8 @@ opts = {
   logic: Intrinio::SecurityScreenGroup.new, # SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
   order_column: "order_column_example", # String | Results returned sorted by this column
   order_direction: "asc", # String | Sort order to use with the order_column
-  primary_only: false # BOOLEAN | Return only primary securities
+  primary_only: false, # BOOLEAN | Return only primary securities
+  page_size: 100 # Float | The number of results to return
 }
 
 begin
@@ -504,13 +566,14 @@ Name | Type | Description  | Notes
  **order_column** | **String**| Results returned sorted by this column | [optional] 
  **order_direction** | **String**| Sort order to use with the order_column | [optional] [default to asc]
  **primary_only** | **BOOLEAN**| Return only primary securities | [optional] [default to false]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**Array&lt;SecurityScreenResult&gt;**](SecurityScreenResult.md)
 
 # **search_securities**
-> ApiResponseSecurities search_securities(query)
+> ApiResponseSecuritiesSearch search_securities(query, opts)
 
 Search Securities
 
@@ -530,9 +593,12 @@ security_api = Intrinio::SecurityApi.new
 
 query = "Apple" # String | 
 
+opts = { 
+  page_size: 100 # Float | The number of results to return
+}
 
 begin
-  result = security_api.search_securities(query)
+  result = security_api.search_securities(query, opts)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling SecurityApi->search_securities: #{e}"
@@ -544,8 +610,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**|  | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseSecurities**](ApiResponseSecurities.md)
+[**ApiResponseSecuritiesSearch**](ApiResponseSecuritiesSearch.md)
 

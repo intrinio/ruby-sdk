@@ -35,6 +35,7 @@ opts = {
   start_date: Date.parse("2015-01-01"), # Date | Get historical data on or after this date
   end_date: Date.parse("2019-01-01"), # Date | Get historical date on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
  **end_date** | **Date**| Get historical date on or before this date | [optional] 
  **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type

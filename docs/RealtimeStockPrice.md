@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **exchange_volume** | **Float** | The number of shares exchanged during the trading day on the exchange. | [optional] 
 **market_volume** | **Float** | The number of shares exchanged during the trading day for the whole market. | [optional] 
 **updated_on** | **DateTime** | The date and time when the data was last updated. | [optional] 
-**source** | **String** | Source of the realtime quote. | [optional] 
+**source** | **String** | The source of the data. | [optional] 
 **security** | [**RealtimeStockPriceSecurity**](RealtimeStockPriceSecurity.md) |  | [optional] 
 
 

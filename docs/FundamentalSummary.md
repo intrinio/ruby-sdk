@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **type** | **String** | The type of Fundamental | [optional] 
 **start_date** | **Date** | The period start date | [optional] 
 **end_date** | **Date** | The period start date | [optional] 
-**filing_date** | **Date** | The date and time when the Fundamental was filed with the SEC | [optional] 
+**filing_date** | **DateTime** | The date and time when the Fundamental was filed with the SEC | [optional] 
 
 

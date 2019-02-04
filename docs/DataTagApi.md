@@ -4,18 +4,17 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**filter_data_tags**](DataTagApi.md#filter_data_tags) | **GET** /data_tags/filter | Filter Data Tags
 [**get_all_data_tags**](DataTagApi.md#get_all_data_tags) | **GET** /data_tags | All Data Tags
 [**get_data_tag_by_id**](DataTagApi.md#get_data_tag_by_id) | **GET** /data_tags/{identifier} | Lookup Data Tag
 [**search_data_tags**](DataTagApi.md#search_data_tags) | **GET** /data_tags/search | Search Data Tags
 
 
-# **filter_data_tags**
-> ApiResponseDataTags filter_data_tags(opts)
+# **get_all_data_tags**
+> ApiResponseDataTags get_all_data_tags(opts)
 
-Filter Data Tags
+All Data Tags
 
-Returns Data Tags that match the given filters
+Returns all Data Tags. Returns Data Tags matching parameters when specified.
 
 ### Example
 ```ruby
@@ -35,52 +34,7 @@ opts = {
   parent: nil, # String | ID of tag parent
   statement_code: "income_statement", # String | Statement Code
   fs_template: "industrial", # String | Template
-  next_page: nil # String | Gets the next page of data from a previous API call
-}
-
-begin
-  result = dataTag_api.filter_data_tags(opts)
-  p result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling DataTagApi->filter_data_tags: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tag** | **String**| Tag | [optional] 
- **type** | **String**| Type | [optional] 
- **parent** | **String**| ID of tag parent | [optional] 
- **statement_code** | **String**| Statement Code | [optional] 
- **fs_template** | **String**| Template | [optional] [default to industrial]
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseDataTags**](ApiResponseDataTags.md)
-
-# **get_all_data_tags**
-> ApiResponseDataTags get_all_data_tags(opts)
-
-All Data Tags
-
-Returns All Data Tags
-
-### Example
-```ruby
-# Load the gem
-require 'intrinio-sdk'
-
-# Setup authorization
-Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
-end
-
-dataTag_api = Intrinio::DataTagApi.new
-
-opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -96,6 +50,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **tag** | **String**| Tag | [optional] 
+ **type** | **String**| Type | [optional] 
+ **parent** | **String**| ID of tag parent | [optional] 
+ **statement_code** | **String**| Statement Code | [optional] 
+ **fs_template** | **String**| Template | [optional] [default to industrial]
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -143,7 +103,7 @@ Name | Type | Description  | Notes
 [**DataTag**](DataTag.md)
 
 # **search_data_tags**
-> ApiResponseDataTags search_data_tags(query)
+> ApiResponseDataTagsSearch search_data_tags(query, opts)
 
 Search Data Tags
 
@@ -163,9 +123,12 @@ dataTag_api = Intrinio::DataTagApi.new
 
 query = "revenue" # String | 
 
+opts = { 
+  page_size: 100 # Float | The number of results to return
+}
 
 begin
-  result = dataTag_api.search_data_tags(query)
+  result = dataTag_api.search_data_tags(query, opts)
   p result
 rescue Intrinio::ApiError => e
   puts "Exception when calling DataTagApi->search_data_tags: #{e}"
@@ -177,8 +140,9 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**|  | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseDataTags**](ApiResponseDataTags.md)
+[**ApiResponseDataTagsSearch**](ApiResponseDataTagsSearch.md)
 

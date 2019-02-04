@@ -4,7 +4,6 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**filter_stock_exchanges**](StockExchangeApi.md#filter_stock_exchanges) | **GET** /stock_exchanges/filter | Filter Stock Exchanges
 [**get_all_stock_exchanges**](StockExchangeApi.md#get_all_stock_exchanges) | **GET** /stock_exchanges | All Stock Exchanges
 [**get_stock_exchange_by_id**](StockExchangeApi.md#get_stock_exchange_by_id) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
 [**get_stock_exchange_price_adjustments**](StockExchangeApi.md#get_stock_exchange_price_adjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
@@ -13,12 +12,12 @@ Method | HTTP request | Description
 [**get_stock_exchange_securities**](StockExchangeApi.md#get_stock_exchange_securities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
 
 
-# **filter_stock_exchanges**
-> ApiResponseStockExchanges filter_stock_exchanges(opts)
+# **get_all_stock_exchanges**
+> ApiResponseStockExchanges get_all_stock_exchanges(opts)
 
-Filter Stock Exchanges
+All Stock Exchanges
 
-Returns Stock Exchanges matching the given filters
+Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
 
 ### Example
 ```ruby
@@ -35,14 +34,15 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 opts = { 
   city: "city_example", # String | Filter by city
   country: "CHINA", # String | Filter by country
-  country_code: "country_code_example" # String | Filter by ISO country code
+  country_code: "country_code_example", # String | Filter by ISO country code
+  page_size: 100 # Float | The number of results to return
 }
 
 begin
-  result = stockExchange_api.filter_stock_exchanges(opts)
+  result = stockExchange_api.get_all_stock_exchanges(opts)
   p result
 rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->filter_stock_exchanges: #{e}"
+  puts "Exception when calling StockExchangeApi->get_all_stock_exchanges: #{e}"
 end
 ```
 
@@ -53,40 +53,7 @@ Name | Type | Description  | Notes
  **city** | **String**| Filter by city | [optional] 
  **country** | **String**| Filter by country | [optional] 
  **country_code** | **String**| Filter by ISO country code | [optional] 
-
-### Return type
-
-[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
-
-# **get_all_stock_exchanges**
-> ApiResponseStockExchanges get_all_stock_exchanges
-
-All Stock Exchanges
-
-Returns all Stock Exchanges
-
-### Example
-```ruby
-# Load the gem
-require 'intrinio-sdk'
-
-# Setup authorization
-Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR API KEY'
-end
-
-stockExchange_api = Intrinio::StockExchangeApi.new
-
-begin
-  result = stockExchange_api.get_all_stock_exchanges
-  p result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->get_all_stock_exchanges: #{e}"
-end
-```
-
-### Parameters
-This endpoint does not need any parameter.
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
@@ -155,6 +122,7 @@ identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID
 
 opts = { 
   date: Date.parse("2018-08-14"), # Date | The date for which to return price adjustments
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -172,6 +140,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **date** | **Date**| The date for which to return price adjustments | [optional] 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -201,6 +170,7 @@ identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID
 
 opts = { 
   date: Date.parse("2018-08-14"), # Date | The date for which to return prices
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -218,6 +188,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **date** | **Date**| The date for which to return prices | [optional] 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -247,6 +218,7 @@ identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID
 
 opts = { 
   source: nil, # String | Return realtime prices from the specified data source
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -264,6 +236,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **source** | **String**| Return realtime prices from the specified data source | [optional] 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -292,6 +265,7 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
+  page_size: 100, # Float | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -308,6 +282,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
+ **page_size** | **Float**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
