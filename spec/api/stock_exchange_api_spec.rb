@@ -34,7 +34,7 @@ describe 'StockExchangeApi' do
 
   # unit tests for get_all_stock_exchanges
   # All Stock Exchanges
-  # Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+  # Returns all Stock Exchanges matching the specified parameters
   # @param [Hash] opts the optional parameters
   # @option opts [String] :city Filter by city
   # @option opts [String] :country Filter by country

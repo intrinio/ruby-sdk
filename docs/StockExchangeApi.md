@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 All Stock Exchanges
 
-Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+Returns all Stock Exchanges matching the specified parameters
 
 ### Example
 ```ruby
@@ -78,7 +78,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "XSHG" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 
 begin
@@ -118,7 +118,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   date: Date.parse("2018-08-14"), # Date | The date for which to return price adjustments
@@ -166,7 +166,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   date: Date.parse("2018-08-14"), # Date | The date for which to return prices
@@ -214,7 +214,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   source: nil, # String | Return realtime prices from the specified data source
@@ -262,7 +262,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   page_size: 100, # Float | The number of results to return

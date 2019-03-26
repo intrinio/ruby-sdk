@@ -69,7 +69,7 @@ end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
 
-id = "fun_ge9LlE" # String | The Intrinio ID for the Fundamental
+id = "AAPL-income_statement-2018-Q1" # String | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
 
 
 begin
@@ -84,7 +84,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| The Intrinio ID for the Fundamental | 
+ **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
 
 ### Return type
 
@@ -109,7 +109,7 @@ end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
 
-id = "fun_ge9LlE" # String | The Intrinio ID for the Fundamental
+id = "AAPL-income_statement-2018-Q1" # String | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
 
 
 begin
@@ -124,7 +124,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| The Intrinio ID for the Fundamental | 
+ **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
 
 ### Return type
 

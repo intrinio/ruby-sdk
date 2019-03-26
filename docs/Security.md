@@ -30,5 +30,6 @@ Name | Type | Description | Notes
 **last_stock_price_adjustment** | **Date** | The date of the last stock price adjustment (dividend, split, etc) | [optional] 
 **last_corporate_action** | **Date** | The date of the last corporate action | [optional] 
 **previous_tickers** | **Array&lt;String&gt;** | Previous tickers used by this security | [optional] 
+**listing_exchange_mic** | **String** | The MIC code of the exchange on which this security primarily trades | [optional] 
 
 

@@ -78,9 +78,9 @@ describe 'CompanyApi' do
 
   # unit tests for get_company_data_point_number
   # Data Point (Number) for Company
-  # Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
-  # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  # @param tag An Intrinio data tag
+  # $$v2_company_data_point_number_description$$
+  # @param identifier $$v2_company_data_point_identifier_description$$
+  # @param tag $$v2_company_data_point_item_description$$
   # @param [Hash] opts the optional parameters
   # @return [Float]
   describe 'get_company_data_point_number test' do
@@ -91,9 +91,9 @@ describe 'CompanyApi' do
 
   # unit tests for get_company_data_point_text
   # Data Point (Text) for Company
-  # Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
-  # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  # @param tag An Intrinio data tag
+  # $$v2_company_data_point_text_description$$
+  # @param identifier $$v2_company_data_point_identifier_description$$
+  # @param tag $$v2_company_data_point_item_description$$
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'get_company_data_point_text test' do
@@ -140,9 +140,9 @@ describe 'CompanyApi' do
 
   # unit tests for get_company_historical_data
   # Historical Data for Company
-  # Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
-  # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  # @param tag An Intrinio data-tag
+  # $$v2_company_historical_data_description$$
+  # @param identifier $$v2_company_historical_data_identifier_description$$
+  # @param tag $$v2_company_historical_data_item_description$$
   # @param [Hash] opts the optional parameters
   # @option opts [String] :frequency Return historical data in the given frequency
   # @option opts [String] :type Filter by type, when applicable

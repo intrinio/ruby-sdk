@@ -47,7 +47,7 @@ describe 'FundamentalsApi' do
   # unit tests for get_fundamental_reported_financials
   # Reported Financials
   # Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
-  # @param id The Intrinio ID for the Fundamental
+  # @param id The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
   # @param [Hash] opts the optional parameters
   # @return [ApiResponseReportedFinancials]
   describe 'get_fundamental_reported_financials test' do
@@ -59,7 +59,7 @@ describe 'FundamentalsApi' do
   # unit tests for get_fundamental_standardized_financials
   # Standardized Financials
   # Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
-  # @param id The Intrinio ID for the Fundamental
+  # @param id The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
   # @param [Hash] opts the optional parameters
   # @return [ApiResponseStandardizedFinancials]
   describe 'get_fundamental_standardized_financials test' do

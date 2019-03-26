@@ -34,9 +34,9 @@ describe 'DataPointApi' do
 
   # unit tests for get_data_point_number
   # Data Point (Number)
-  # Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
-  # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-  # @param tag An Intrinio data tag ID or code-name
+  # $$v2_data_point_number_description$$
+  # @param identifier $$v2_data_point_identifier_description$$
+  # @param tag $$v2_data_point_item_description$$
   # @param [Hash] opts the optional parameters
   # @return [Float]
   describe 'get_data_point_number test' do
@@ -47,9 +47,9 @@ describe 'DataPointApi' do
 
   # unit tests for get_data_point_text
   # Data Point (Text)
-  # Returns a text value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
-  # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-  # @param tag An Intrinio data tag ID or code-name
+  # $$v2_data_point_text_description$$
+  # @param identifier $$v2_data_point_identifier_description$$
+  # @param tag $$v2_data_point_item_description$$
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'get_data_point_text test' do

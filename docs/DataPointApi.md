@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Data Point (Number)
 
-Returns a numeric value for the given `tag` and the entity with the given `identifier`
+$$v2_data_point_number_description$$
 
 ### Example
 ```ruby
@@ -27,9 +27,9 @@ end
 
 dataPoint_api = Intrinio::DataPointApi.new
 
-identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+identifier = "$$v2_data_point_identifier_default$$" # String | $$v2_data_point_identifier_description$$
 
-tag = "marketcap" # String | An Intrinio data tag ID or code-name
+tag = "$$v2_data_point_item_number_default$$" # String | $$v2_data_point_item_description$$
 
 
 begin
@@ -44,8 +44,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **identifier** | **String**| $$v2_data_point_identifier_description$$ | 
+ **tag** | **String**| $$v2_data_point_item_description$$ | 
 
 ### Return type
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 Data Point (Text)
 
-Returns a text value for the given `tag` and the entity with the given `identifier`
+$$v2_data_point_text_description$$
 
 ### Example
 ```ruby
@@ -70,9 +70,9 @@ end
 
 dataPoint_api = Intrinio::DataPointApi.new
 
-identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+identifier = "$$v2_data_point_identifier_default$$" # String | $$v2_data_point_identifier_description$$
 
-tag = "marketcap" # String | An Intrinio data tag ID or code-name
+tag = "$$v2_data_point_item_text_default$$" # String | $$v2_data_point_item_description$$
 
 
 begin
@@ -87,8 +87,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **identifier** | **String**| $$v2_data_point_identifier_description$$ | 
+ **tag** | **String**| $$v2_data_point_item_description$$ | 
 
 ### Return type
 
