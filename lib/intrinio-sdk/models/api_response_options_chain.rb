@@ -16,20 +16,20 @@ module Intrinio
 
   class ApiResponseOptionsChain
     # A list of options for the provided expiration date their respective option prices.
-    attr_accessor :chains
+    attr_accessor :chain
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'chains' => :'chains'
+        :'chain' => :'chain'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'chains' => :'Array<OptionChain>'
+        :'chain' => :'Array<OptionChain>'
       }
     end
 
@@ -41,9 +41,9 @@ module Intrinio
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'chains')
-        if (value = attributes[:'chains']).is_a?(Array)
-          self.chains = value
+      if attributes.has_key?(:'chain')
+        if (value = attributes[:'chain']).is_a?(Array)
+          self.chain = value
         end
       end
 
@@ -67,7 +67,7 @@ module Intrinio
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          chains == o.chains
+          chain == o.chain
     end
 
     # @see the `==` method
@@ -79,7 +79,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [chains].hash
+      [chain].hash
     end
 
     # Builds the object from hash

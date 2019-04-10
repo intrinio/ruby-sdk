@@ -112,7 +112,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 
 begin
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 Data Point (Number) for Security
 
-$$v2_security_data_point_number_description$$
+Returns a numeric value for the given `tag` for the Security with the given `identifier`
 
 ### Example
 ```ruby
@@ -152,9 +152,9 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_security_data_point_identifier_default$$" # String | $$v2_security_data_point_identifier_description$$
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-tag = "$$v2_security_data_point_item_number_default$$" # String | $$v2_security_data_point_item_description$$
+tag = "close_price" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
 
 
 begin
@@ -169,8 +169,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| $$v2_security_data_point_identifier_description$$ | 
- **tag** | **String**| $$v2_security_data_point_item_description$$ | 
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
 
 ### Return type
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 Data Point (Text) for Security
 
-$$v2_security_data_point_text_description$$
+Returns a text value for the given `tag` for the Security with the given `identifier`
 
 ### Example
 ```ruby
@@ -195,9 +195,9 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_security_data_point_identifier_default$$" # String | $$v2_security_data_point_identifier_description$$
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-tag = "$$v2_security_data_point_item_text_default$$" # String | An Intrinio data tag ID or code-name
+tag = "figi" # String | An Intrinio data tag ID or code-name
 
 
 begin
@@ -212,7 +212,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| $$v2_security_data_point_identifier_description$$ | 
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 Historical Data for Security
 
-$$v2_security_historical_data_description$$
+Returns historical values for the given `tag` and the Security with the given `identifier`
 
 ### Example
 ```ruby
@@ -238,9 +238,9 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_security_historical_data_identifier_default$$" # String | $$v2_security_historical_data_identifier_description$$
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-tag = "$$v2_security_historical_data_item_default$$" # String | $$v2_security_data_point_item_description$$
+tag = "adj_close_price" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
 
 opts = { 
   frequency: "daily", # String | Return historical data in the given frequency
@@ -264,8 +264,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| $$v2_security_historical_data_identifier_description$$ | 
- **tag** | **String**| $$v2_security_data_point_item_description$$ | 
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
  **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **String**| Filter by type, when applicable | [optional] 
  **start_date** | **Date**| Get historical data on or after this date | [optional] 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 Intraday Stock Prices for Security
 
-$$v2_security_intraday_prices_description$$
+Return intraday stock prices for the Security with the given `identifier`
 
 ### Example
 ```ruby
@@ -297,7 +297,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   source: nil, # String | Return intraday prices from the specified data source
@@ -349,7 +349,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 
 begin
@@ -389,7 +389,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 
 begin
@@ -429,7 +429,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -479,7 +479,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 22, # Integer | The number of observations, per period, to calculate Average Daily Trading Volume
@@ -531,7 +531,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Average Directional Index
@@ -583,7 +583,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   short_period: 5, # Integer | The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator
@@ -637,7 +637,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Average True Range
@@ -689,7 +689,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Bollinger Bands
@@ -745,7 +745,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Commodity Channel Index
@@ -799,7 +799,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Chaikin Money Flow
@@ -851,7 +851,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Donchian Channel
@@ -905,7 +905,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Detrended Price Oscillator
@@ -959,7 +959,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Ease of Movement
@@ -1011,7 +1011,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -1061,7 +1061,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   low_period: 9, # Integer | The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo
@@ -1117,7 +1117,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 10, # Integer | The number of observations, per period, to calculate Kelter Channel
@@ -1169,14 +1169,13 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   roc1: 10, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA1
   roc2: 15, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA2
-  roc3: 15, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA2
-  roc4: 20, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA3
-  roc5: 30, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA4
+  roc3: 20, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA3
+  roc4: 30, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA4
   sma1: 10, # Integer | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1
   sma2: 10, # Integer | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2
   sma3: 10, # Integer | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3
@@ -1203,9 +1202,8 @@ Name | Type | Description  | Notes
  **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **roc1** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA1 | [optional] [default to 10]
  **roc2** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA2 | [optional] [default to 15]
- **roc3** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA2 | [optional] [default to 15]
- **roc4** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA3 | [optional] [default to 20]
- **roc5** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA4 | [optional] [default to 30]
+ **roc3** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA3 | [optional] [default to 20]
+ **roc4** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA4 | [optional] [default to 30]
  **sma1** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10]
  **sma2** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10]
  **sma3** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10]
@@ -1239,7 +1237,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   fast_period: 12, # Integer | The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence
@@ -1297,7 +1295,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Money Flow Index
@@ -1349,7 +1347,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   ema_period: 9, # Integer | The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index
@@ -1403,7 +1401,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -1453,7 +1451,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -1503,7 +1501,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 10, # Integer | The number of observations, per period, to calculate On-balance Volume Mean
@@ -1555,7 +1553,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Relative Strength Index
@@ -1609,7 +1607,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Simple Moving Average
@@ -1663,7 +1661,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate %K of Stochastic Oscillator
@@ -1717,7 +1715,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 15, # Integer | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average
@@ -1769,7 +1767,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   low_period: 13, # Integer | The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index
@@ -1825,7 +1823,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   short_period: 7, # Integer | The number of observations, per period, to calculate the short period for Ultimate Oscillator
@@ -1887,7 +1885,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Vortex Indicator
@@ -1939,7 +1937,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -1989,7 +1987,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -2039,7 +2037,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to look-back when calculating Williams %R
@@ -2091,7 +2089,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   source: nil # String | Return the realtime price from the specified data source
@@ -2135,7 +2133,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: Date.parse("2018-01-01"), # Date | Return price adjustments on or after the date
@@ -2185,7 +2183,7 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: Date.parse("2018-01-01"), # Date | Return prices on or after the date

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Historical Data
 
-$$v2_historical_data_description$$
+Returns historical values for the given `tag` and the entity represented by the given `identifier`
 
 ### Example
 ```ruby
@@ -26,9 +26,9 @@ end
 
 historicalData_api = Intrinio::HistoricalDataApi.new
 
-identifier = "$$v2_historical_data_identifier_default$$" # String | $$v2_historical_data_identifier_description$$
+identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-tag = "$$v2_historical_data_item_default$$" # String | $$v2_historical_data_item_description$$
+tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
 
 opts = { 
   frequency: "daily", # String | Return historical data in the given frequency
@@ -52,8 +52,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| $$v2_historical_data_identifier_description$$ | 
- **tag** | **String**| $$v2_historical_data_item_description$$ | 
+ **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
  **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **String**| Filter by type, when applicable | [optional] 
  **start_date** | **Date**| Get historical data on or after this date | [optional] 

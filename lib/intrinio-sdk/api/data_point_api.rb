@@ -21,9 +21,9 @@ module Intrinio
     end
 
     # Data Point (Number)
-    # $$v2_data_point_number_description$$
-    # @param identifier $$v2_data_point_identifier_description$$
-    # @param tag $$v2_data_point_item_description$$
+    # Returns a numeric value for the given `tag` and the entity with the given `identifier``
+    # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Float]
     def get_data_point_number(identifier, tag, opts = {})
@@ -32,9 +32,9 @@ module Intrinio
     end
 
     # Data Point (Number)
-    # $$v2_data_point_number_description$$
-    # @param identifier $$v2_data_point_identifier_description$$
-    # @param tag $$v2_data_point_item_description$$
+    # Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;&#x60;
+    # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Array<(Float, Fixnum, Hash)>] Float data, response status code and response headers
     def get_data_point_number_with_http_info(identifier, tag, opts = {})
@@ -80,9 +80,9 @@ module Intrinio
     end
 
     # Data Point (Text)
-    # $$v2_data_point_text_description$$
-    # @param identifier $$v2_data_point_identifier_description$$
-    # @param tag $$v2_data_point_item_description$$
+    # Returns a text value for the given `tag` for the Security with the given `identifier`
+    # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [String]
     def get_data_point_text(identifier, tag, opts = {})
@@ -91,9 +91,9 @@ module Intrinio
     end
 
     # Data Point (Text)
-    # $$v2_data_point_text_description$$
-    # @param identifier $$v2_data_point_identifier_description$$
-    # @param tag $$v2_data_point_item_description$$
+    # Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+    # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def get_data_point_text_with_http_info(identifier, tag, opts = {})

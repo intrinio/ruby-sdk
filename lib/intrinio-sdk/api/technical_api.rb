@@ -1109,9 +1109,8 @@ module Intrinio
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :roc1 The number of observations, per period, to calculate the rate-of-change for RCMA1 (default to 10)
     # @option opts [Integer] :roc2 The number of observations, per period, to calculate the rate-of-change for RCMA2 (default to 15)
-    # @option opts [Integer] :roc3 The number of observations, per period, to calculate the rate-of-change for RCMA2 (default to 15)
-    # @option opts [Integer] :roc4 The number of observations, per period, to calculate the rate-of-change for RCMA3 (default to 20)
-    # @option opts [Integer] :roc5 The number of observations, per period, to calculate the rate-of-change for RCMA4 (default to 30)
+    # @option opts [Integer] :roc3 The number of observations, per period, to calculate the rate-of-change for RCMA3 (default to 20)
+    # @option opts [Integer] :roc4 The number of observations, per period, to calculate the rate-of-change for RCMA4 (default to 30)
     # @option opts [Integer] :sma1 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (default to 10)
     # @option opts [Integer] :sma2 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (default to 10)
     # @option opts [Integer] :sma3 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (default to 10)
@@ -1133,9 +1132,8 @@ module Intrinio
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :roc1 The number of observations, per period, to calculate the rate-of-change for RCMA1
     # @option opts [Integer] :roc2 The number of observations, per period, to calculate the rate-of-change for RCMA2
-    # @option opts [Integer] :roc3 The number of observations, per period, to calculate the rate-of-change for RCMA2
-    # @option opts [Integer] :roc4 The number of observations, per period, to calculate the rate-of-change for RCMA3
-    # @option opts [Integer] :roc5 The number of observations, per period, to calculate the rate-of-change for RCMA4
+    # @option opts [Integer] :roc3 The number of observations, per period, to calculate the rate-of-change for RCMA3
+    # @option opts [Integer] :roc4 The number of observations, per period, to calculate the rate-of-change for RCMA4
     # @option opts [Integer] :sma1 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1
     # @option opts [Integer] :sma2 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2
     # @option opts [Integer] :sma3 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3
@@ -1154,8 +1152,8 @@ module Intrinio
       if @api_client.config.client_side_validation && identifier.nil?
         fail ArgumentError, "Missing the required parameter 'identifier' when calling TechnicalApi.get_security_price_technicals_kst"
       end
-      if @api_client.config.client_side_validation && !opts[:'roc5'].nil? && opts[:'roc5'] < 3
-        fail ArgumentError, 'invalid value for "opts[:"roc5"]" when calling TechnicalApi.get_security_price_technicals_kst, must be greater than or equal to 3.'
+      if @api_client.config.client_side_validation && !opts[:'roc4'].nil? && opts[:'roc4'] < 3
+        fail ArgumentError, 'invalid value for "opts[:"roc4"]" when calling TechnicalApi.get_security_price_technicals_kst, must be greater than or equal to 3.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'sma4'].nil? && opts[:'sma4'] < 3
@@ -1176,9 +1174,8 @@ module Intrinio
       query_params = {}
       query_params[:'roc1'] = opts[:'roc1'] if !opts[:'roc1'].nil?
       query_params[:'roc2'] = opts[:'roc2'] if !opts[:'roc2'].nil?
-      query_params[:'roc2'] = opts[:'roc3'] if !opts[:'roc3'].nil?
-      query_params[:'roc3'] = opts[:'roc4'] if !opts[:'roc4'].nil?
-      query_params[:'roc4'] = opts[:'roc5'] if !opts[:'roc5'].nil?
+      query_params[:'roc3'] = opts[:'roc3'] if !opts[:'roc3'].nil?
+      query_params[:'roc4'] = opts[:'roc4'] if !opts[:'roc4'].nil?
       query_params[:'sma1'] = opts[:'sma1'] if !opts[:'sma1'].nil?
       query_params[:'sma2'] = opts[:'sma2'] if !opts[:'sma2'].nil?
       query_params[:'sma3'] = opts[:'sma3'] if !opts[:'sma3'].nil?

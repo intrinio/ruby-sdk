@@ -131,9 +131,9 @@ module Intrinio
     end
 
     # Data Point (Number) for Security
-    # $$v2_security_data_point_number_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns a numeric value for the given `tag` for the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Float]
     def get_security_data_point_number(identifier, tag, opts = {})
@@ -142,9 +142,9 @@ module Intrinio
     end
 
     # Data Point (Number) for Security
-    # $$v2_security_data_point_number_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Array<(Float, Fixnum, Hash)>] Float data, response status code and response headers
     def get_security_data_point_number_with_http_info(identifier, tag, opts = {})
@@ -190,8 +190,8 @@ module Intrinio
     end
 
     # Data Point (Text) for Security
-    # $$v2_security_data_point_text_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
+    # Returns a text value for the given `tag` for the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
     # @return [String]
@@ -201,8 +201,8 @@ module Intrinio
     end
 
     # Data Point (Text) for Security
-    # $$v2_security_data_point_text_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
+    # Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
@@ -249,9 +249,9 @@ module Intrinio
     end
 
     # Historical Data for Security
-    # $$v2_security_historical_data_description$$
-    # @param identifier $$v2_security_historical_data_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns historical values for the given `tag` and the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :frequency Return historical data in the given frequency (default to daily)
     # @option opts [String] :type Filter by type, when applicable
@@ -267,9 +267,9 @@ module Intrinio
     end
 
     # Historical Data for Security
-    # $$v2_security_historical_data_description$$
-    # @param identifier $$v2_security_historical_data_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :frequency Return historical data in the given frequency
     # @option opts [String] :type Filter by type, when applicable
@@ -339,7 +339,7 @@ module Intrinio
     end
 
     # Intraday Stock Prices for Security
-    # $$v2_security_intraday_prices_description$$
+    # Return intraday stock prices for the Security with the given `identifier`
     # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :source Return intraday prices from the specified data source
@@ -354,7 +354,7 @@ module Intrinio
     end
 
     # Intraday Stock Prices for Security
-    # $$v2_security_intraday_prices_description$$
+    # Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
     # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :source Return intraday prices from the specified data source
@@ -1604,9 +1604,8 @@ module Intrinio
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :roc1 The number of observations, per period, to calculate the rate-of-change for RCMA1 (default to 10)
     # @option opts [Integer] :roc2 The number of observations, per period, to calculate the rate-of-change for RCMA2 (default to 15)
-    # @option opts [Integer] :roc3 The number of observations, per period, to calculate the rate-of-change for RCMA2 (default to 15)
-    # @option opts [Integer] :roc4 The number of observations, per period, to calculate the rate-of-change for RCMA3 (default to 20)
-    # @option opts [Integer] :roc5 The number of observations, per period, to calculate the rate-of-change for RCMA4 (default to 30)
+    # @option opts [Integer] :roc3 The number of observations, per period, to calculate the rate-of-change for RCMA3 (default to 20)
+    # @option opts [Integer] :roc4 The number of observations, per period, to calculate the rate-of-change for RCMA4 (default to 30)
     # @option opts [Integer] :sma1 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (default to 10)
     # @option opts [Integer] :sma2 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (default to 10)
     # @option opts [Integer] :sma3 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (default to 10)
@@ -1628,9 +1627,8 @@ module Intrinio
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :roc1 The number of observations, per period, to calculate the rate-of-change for RCMA1
     # @option opts [Integer] :roc2 The number of observations, per period, to calculate the rate-of-change for RCMA2
-    # @option opts [Integer] :roc3 The number of observations, per period, to calculate the rate-of-change for RCMA2
-    # @option opts [Integer] :roc4 The number of observations, per period, to calculate the rate-of-change for RCMA3
-    # @option opts [Integer] :roc5 The number of observations, per period, to calculate the rate-of-change for RCMA4
+    # @option opts [Integer] :roc3 The number of observations, per period, to calculate the rate-of-change for RCMA3
+    # @option opts [Integer] :roc4 The number of observations, per period, to calculate the rate-of-change for RCMA4
     # @option opts [Integer] :sma1 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1
     # @option opts [Integer] :sma2 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2
     # @option opts [Integer] :sma3 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3
@@ -1649,8 +1647,8 @@ module Intrinio
       if @api_client.config.client_side_validation && identifier.nil?
         fail ArgumentError, "Missing the required parameter 'identifier' when calling SecurityApi.get_security_price_technicals_kst"
       end
-      if @api_client.config.client_side_validation && !opts[:'roc5'].nil? && opts[:'roc5'] < 3
-        fail ArgumentError, 'invalid value for "opts[:"roc5"]" when calling SecurityApi.get_security_price_technicals_kst, must be greater than or equal to 3.'
+      if @api_client.config.client_side_validation && !opts[:'roc4'].nil? && opts[:'roc4'] < 3
+        fail ArgumentError, 'invalid value for "opts[:"roc4"]" when calling SecurityApi.get_security_price_technicals_kst, must be greater than or equal to 3.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'sma4'].nil? && opts[:'sma4'] < 3
@@ -1671,9 +1669,8 @@ module Intrinio
       query_params = {}
       query_params[:'roc1'] = opts[:'roc1'] if !opts[:'roc1'].nil?
       query_params[:'roc2'] = opts[:'roc2'] if !opts[:'roc2'].nil?
-      query_params[:'roc2'] = opts[:'roc3'] if !opts[:'roc3'].nil?
-      query_params[:'roc3'] = opts[:'roc4'] if !opts[:'roc4'].nil?
-      query_params[:'roc4'] = opts[:'roc5'] if !opts[:'roc5'].nil?
+      query_params[:'roc3'] = opts[:'roc3'] if !opts[:'roc3'].nil?
+      query_params[:'roc4'] = opts[:'roc4'] if !opts[:'roc4'].nil?
       query_params[:'sma1'] = opts[:'sma1'] if !opts[:'sma1'].nil?
       query_params[:'sma2'] = opts[:'sma2'] if !opts[:'sma2'].nil?
       query_params[:'sma3'] = opts[:'sma3'] if !opts[:'sma3'].nil?
