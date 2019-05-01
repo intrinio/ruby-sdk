@@ -9,7 +9,17 @@ Method | HTTP request | Description
 [**get_forex_prices**](ForexApi.md#get_forex_prices) | **GET** /forex/prices/{pair}/{timeframe} | Forex Currency Prices
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/forex/currencies)
+
+[//]: # (DOC_LINK:ForexApi.md#get_forex_currencies)
+
 # **get_forex_currencies**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_forex_currencies_v2)
+
 > ApiResponseForexCurrencies get_forex_currencies
 
 Forex Currencies
@@ -17,6 +27,9 @@ Forex Currencies
 Returns a list of forex currencies for which prices are available.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -36,6 +49,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 This endpoint does not need any parameter.
 
@@ -43,7 +58,19 @@ This endpoint does not need any parameter.
 
 [**ApiResponseForexCurrencies**](ApiResponseForexCurrencies.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/forex/pairs)
+
+[//]: # (DOC_LINK:ForexApi.md#get_forex_pairs)
+
 # **get_forex_pairs**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_forex_pairs_v2)
+
 > ApiResponseForexPairs get_forex_pairs
 
 Forex Currency Pairs
@@ -51,6 +78,9 @@ Forex Currency Pairs
 Returns a list of currency pairs used to request foreign exchange (forex) market price data. The currency that is used as the reference is called quote currency and the currency that is quoted in relation is called the base currency. For example, in the pair code “EURGBP” with a price of 0.88, one Euro (base currency) can be exchanged for 0.88 British Pounds (quote currency).
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -70,6 +100,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 This endpoint does not need any parameter.
 
@@ -77,7 +109,19 @@ This endpoint does not need any parameter.
 
 [**ApiResponseForexPairs**](ApiResponseForexPairs.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/forex/prices/{pair}/{timeframe})
+
+[//]: # (DOC_LINK:ForexApi.md#get_forex_prices)
+
 # **get_forex_prices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_forex_prices_v2)
+
 > ApiResponseForexPrices get_forex_prices(pair, timeframe, opts)
 
 Forex Currency Prices
@@ -85,6 +129,9 @@ Forex Currency Prices
 Provides a list of forex price quotes for a given forex currency pair and timeframe.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -102,10 +149,10 @@ timeframe = "D1" # String | The time interval for the quotes
 
 opts = { 
   timezone: "UTC", # String | Returns trading times in this timezone
-  start_date: "2018-01-01", # String | Return Forex Prices on or after this date
-  start_time: "14:20:00", # String | Return Forex Prices at or after this time (24-hour)
-  end_date: "2019-01-01", # String | Return Forex Prices on or before this date
-  end_time: "21:01:21", # String | Return Forex Prices at or before this time (24-hour)
+  start_date: nil, # Date | Return Forex Prices on or after this date
+  start_time: nil, # String | Return Forex Prices at or after this time (24-hour)
+  end_date: nil, # Date | Return Forex Prices on or before this date
+  end_time: nil, # String | Return Forex Prices at or before this time (24-hour)
   page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
@@ -118,6 +165,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -125,9 +174,9 @@ Name | Type | Description  | Notes
  **pair** | **String**| The Forex Currency Pair code | 
  **timeframe** | **String**| The time interval for the quotes | 
  **timezone** | **String**| Returns trading times in this timezone | [optional] [default to UTC]
- **start_date** | **String**| Return Forex Prices on or after this date | [optional] 
+ **start_date** | **Date**| Return Forex Prices on or after this date | [optional] 
  **start_time** | **String**| Return Forex Prices at or after this time (24-hour) | [optional] 
- **end_date** | **String**| Return Forex Prices on or before this date | [optional] 
+ **end_date** | **Date**| Return Forex Prices on or before this date | [optional] 
  **end_time** | **String**| Return Forex Prices at or before this time (24-hour) | [optional] 
  **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
@@ -135,4 +184,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseForexPrices**](ApiResponseForexPrices.md)
+
+[//]: # (END_OPERATION)
 

@@ -9,12 +9,25 @@ Method | HTTP request | Description
 [**get_municipality_financials**](MunicipalityApi.md#get_municipality_financials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities)
+
+[//]: # (DOC_LINK:MunicipalityApi.md#get_all_municipalities)
+
 # **get_all_municipalities**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_municipalities_v2)
+
 > ApiResponseMunicipalities get_all_municipalities(opts)
 
 All Municipalities
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -50,6 +63,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -72,7 +87,19 @@ Name | Type | Description  | Notes
 
 [**ApiResponseMunicipalities**](ApiResponseMunicipalities.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities/{id})
+
+[//]: # (DOC_LINK:MunicipalityApi.md#get_municipality_by_id)
+
 # **get_municipality_by_id**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_municipality_by_id_v2)
+
 > Municipality get_municipality_by_id(id)
 
 Municipality by ID
@@ -80,6 +107,9 @@ Municipality by ID
 Returns the Municipality with the given ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -102,6 +132,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -112,7 +144,19 @@ Name | Type | Description  | Notes
 
 [**Municipality**](Municipality.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities/{id}/financials)
+
+[//]: # (DOC_LINK:MunicipalityApi.md#get_municipality_financials)
+
 # **get_municipality_financials**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_municipality_financials_v2)
+
 > ApiResponseMunicipalitiyFinancials get_municipality_financials(id, opts)
 
 Financials for a Municipality
@@ -120,6 +164,9 @@ Financials for a Municipality
 Returns financial statement data for the Municipality with the given ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -145,6 +192,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -155,4 +204,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseMunicipalitiyFinancials**](ApiResponseMunicipalitiyFinancials.md)
+
+[//]: # (END_OPERATION)
 

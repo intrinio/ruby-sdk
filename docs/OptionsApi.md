@@ -10,7 +10,17 @@ Method | HTTP request | Description
 [**get_options_prices**](OptionsApi.md#get_options_prices) | **GET** /options/prices/{identifier} | Option Prices
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/{symbol})
+
+[//]: # (DOC_LINK:OptionsApi.md#get_options)
+
 # **get_options**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_v2)
+
 > ApiResponseOptions get_options(symbol, opts)
 
 Options
@@ -18,6 +28,9 @@ Options
 Returns the master list of option contracts for a given symbol.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -39,7 +52,7 @@ opts = {
   expiration: "2019-03-01", # String | The expiration date of the option contract. This will return options contracts with expiration dates on this date.
   expiration_after: "2019-01-01", # String | The expiration date of the option contract. This will return options contracts with expiration dates after this date.
   expiration_before: "2019-12-31", # String | The expiration date of the option contract. This will return options contracts with expiration dates before this date.
-  page_size: 100, # Float | The number of results to return
+  page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -50,6 +63,8 @@ rescue Intrinio::ApiError => e
   puts "Exception when calling OptionsApi->get_options: #{e}"
 end
 ```
+
+[//]: # (END_CODE_EXAMPLE)
 
 ### Parameters
 
@@ -63,14 +78,26 @@ Name | Type | Description  | Notes
  **expiration** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates on this date. | [optional] 
  **expiration_after** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional] 
  **expiration_before** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional] 
- **page_size** | **Float**| The number of results to return | [optional] [default to 100]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseOptions**](ApiResponseOptions.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/chain/{symbol}/{expiration})
+
+[//]: # (DOC_LINK:OptionsApi.md#get_options_chain)
+
 # **get_options_chain**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_chain_v2)
+
 > ApiResponseOptionsChain get_options_chain(symbol, expiration, opts)
 
 Options Chain
@@ -78,6 +105,9 @@ Options Chain
 Returns all options contracts and their prices for the given symbol and expiration date.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -99,7 +129,7 @@ opts = {
   strike_greater_than: 190.0, # Float | The strike price of the option contract. This will return options contracts with strike prices greater than this price.
   strike_less_than: 150.0, # Float | The strike price of the option contract. This will return options contracts with strike prices less than this price.
   moneyness: "in_the_money", # String | The moneyness of the options contracts to return. 'all' will return all options contracts. 'in_the_money' will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). 'out_of_they_money' will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). 'near_the_money' will return options contracts that are $0.50 or less away from being in the money.
-  page_size: 100 # Float | The number of results to return
+  page_size: 100 # Integer | The number of results to return
 }
 
 begin
@@ -109,6 +139,8 @@ rescue Intrinio::ApiError => e
   puts "Exception when calling OptionsApi->get_options_chain: #{e}"
 end
 ```
+
+[//]: # (END_CODE_EXAMPLE)
 
 ### Parameters
 
@@ -121,13 +153,25 @@ Name | Type | Description  | Notes
  **strike_greater_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional] 
  **strike_less_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional] 
  **moneyness** | **String**| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. | [optional] 
- **page_size** | **Float**| The number of results to return | [optional] [default to 100]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseOptionsChain**](ApiResponseOptionsChain.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/expirations/{symbol})
+
+[//]: # (DOC_LINK:OptionsApi.md#get_options_expirations)
+
 # **get_options_expirations**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_expirations_v2)
+
 > ApiResponseOptionsExpirations get_options_expirations(symbol, opts)
 
 Options Expirations
@@ -135,6 +179,9 @@ Options Expirations
 Returns all option contract expiration dates for a given symbol.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -161,6 +208,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -173,7 +222,19 @@ Name | Type | Description  | Notes
 
 [**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/prices/{identifier})
+
+[//]: # (DOC_LINK:OptionsApi.md#get_options_prices)
+
 # **get_options_prices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_prices_v2)
+
 > ApiResponseOptionPrices get_options_prices(identifier, opts)
 
 Option Prices
@@ -181,6 +242,9 @@ Option Prices
 Returns all option prices for a given option contract identifier.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -197,7 +261,7 @@ identifier = "null" # String | The Intrinio ID or code of the options contract t
 opts = { 
   start_date: "2019-01-01", # String | Return option contract prices on or after this date.
   end_date: "2019-12-31", # String | Return option contract prices on or before this date.
-  page_size: 100, # Float | The number of results to return
+  page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -209,6 +273,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -216,10 +282,12 @@ Name | Type | Description  | Notes
  **identifier** | **String**| The Intrinio ID or code of the options contract to request prices for. | 
  **start_date** | **String**| Return option contract prices on or after this date. | [optional] 
  **end_date** | **String**| Return option contract prices on or before this date. | [optional] 
- **page_size** | **Float**| The number of results to return | [optional] [default to 100]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseOptionPrices**](ApiResponseOptionPrices.md)
+
+[//]: # (END_OPERATION)
 

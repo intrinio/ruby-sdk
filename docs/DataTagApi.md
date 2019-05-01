@@ -9,7 +9,17 @@ Method | HTTP request | Description
 [**search_data_tags**](DataTagApi.md#search_data_tags) | **GET** /data_tags/search | Search Data Tags
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags)
+
+[//]: # (DOC_LINK:DataTagApi.md#get_all_data_tags)
+
 # **get_all_data_tags**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_data_tags_v2)
+
 > ApiResponseDataTags get_all_data_tags(opts)
 
 All Data Tags
@@ -17,6 +27,9 @@ All Data Tags
 Returns all Data Tags. Returns Data Tags matching parameters when specified.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -34,7 +47,7 @@ opts = {
   parent: nil, # String | ID of tag parent
   statement_code: "income_statement", # String | Statement Code
   fs_template: "industrial", # String | Template
-  page_size: 100, # Float | The number of results to return
+  page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -46,6 +59,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -55,14 +70,26 @@ Name | Type | Description  | Notes
  **parent** | **String**| ID of tag parent | [optional] 
  **statement_code** | **String**| Statement Code | [optional] 
  **fs_template** | **String**| Template | [optional] [default to industrial]
- **page_size** | **Float**| The number of results to return | [optional] [default to 100]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseDataTags**](ApiResponseDataTags.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags/{identifier})
+
+[//]: # (DOC_LINK:DataTagApi.md#get_data_tag_by_id)
+
 # **get_data_tag_by_id**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_data_tag_by_id_v2)
+
 > DataTag get_data_tag_by_id(identifier)
 
 Lookup Data Tag
@@ -70,6 +97,9 @@ Lookup Data Tag
 Returns the Data Tag with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -92,6 +122,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -102,7 +134,19 @@ Name | Type | Description  | Notes
 
 [**DataTag**](DataTag.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags/search)
+
+[//]: # (DOC_LINK:DataTagApi.md#search_data_tags)
+
 # **search_data_tags**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_data_tags_v2)
+
 > ApiResponseDataTagsSearch search_data_tags(query, opts)
 
 Search Data Tags
@@ -110,6 +154,9 @@ Search Data Tags
 Searches for Data Tags matching the text `query`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -124,7 +171,7 @@ dataTag_api = Intrinio::DataTagApi.new
 query = "revenue" # String | 
 
 opts = { 
-  page_size: 100 # Float | The number of results to return
+  page_size: 100 # Integer | The number of results to return
 }
 
 begin
@@ -135,14 +182,18 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**|  | 
- **page_size** | **Float**| The number of results to return | [optional] [default to 100]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseDataTagsSearch**](ApiResponseDataTagsSearch.md)
+
+[//]: # (END_OPERATION)
 

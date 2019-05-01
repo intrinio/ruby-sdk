@@ -13,7 +13,17 @@ Method | HTTP request | Description
 [**search_notes**](FilingApi.md#search_notes) | **GET** /filings/notes/search | Search Filing Notes
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings)
+
+[//]: # (DOC_LINK:FilingApi.md#get_all_filings)
+
 # **get_all_filings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_filings_v2)
+
 > ApiResponseFilings get_all_filings(company, opts)
 
 All Filings
@@ -21,6 +31,9 @@ All Filings
 Returns all Filings. Returns Filings matching parameters when supplied.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -37,8 +50,8 @@ company = "AAPL" # String | Filings for the given `company` identifier (ticker, 
 opts = { 
   report_type: nil, # String | Filter by report type
   start_date: Date.parse("2015-01-01"), # Date | Filed on or after the given date
-  end_date: Date.parse("2019-01-01"), # Date | Filed before or after the given date
-  page_size: 100, # Float | The number of results to return
+  end_date: nil, # Date | Filed before or after the given date
+  page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -50,6 +63,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -58,14 +73,26 @@ Name | Type | Description  | Notes
  **report_type** | **String**| Filter by report type | [optional] 
  **start_date** | **Date**| Filed on or after the given date | [optional] 
  **end_date** | **Date**| Filed before or after the given date | [optional] 
- **page_size** | **Float**| The number of results to return | [optional] [default to 100]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseFilings**](ApiResponseFilings.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes)
+
+[//]: # (DOC_LINK:FilingApi.md#get_all_notes)
+
 # **get_all_notes**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_notes_v2)
+
 > ApiResponseFilingNotes get_all_notes(opts)
 
 All Filing Notes
@@ -73,6 +100,9 @@ All Filing Notes
 Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -91,7 +121,7 @@ opts = {
   filing_end_date: Date.parse("2018-11-15"), # Date | Limit search to filings on or before this date
   period_ended_start_date: Date.parse("2018-07-15"), # Date | Limit search to filings with a period end date on or after this date
   period_ended_end_date: Date.parse("2018-11-15"), # Date | Limit search to filings with a period end date on or before this date
-  page_size: 100, # Float | The number of results to return
+  page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
@@ -103,6 +133,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -113,14 +145,26 @@ Name | Type | Description  | Notes
  **filing_end_date** | **Date**| Limit search to filings on or before this date | [optional] 
  **period_ended_start_date** | **Date**| Limit search to filings with a period end date on or after this date | [optional] 
  **period_ended_end_date** | **Date**| Limit search to filings with a period end date on or before this date | [optional] 
- **page_size** | **Float**| The number of results to return | [optional] [default to 100]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/{id})
+
+[//]: # (DOC_LINK:FilingApi.md#get_filing_by_id)
+
 # **get_filing_by_id**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_filing_by_id_v2)
+
 > Filing get_filing_by_id(id)
 
 Lookup Filing
@@ -128,6 +172,9 @@ Lookup Filing
 Returns the Filing with the given `identifier`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -150,6 +197,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -160,12 +209,27 @@ Name | Type | Description  | Notes
 
 [**Filing**](Filing.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier})
+
+[//]: # (DOC_LINK:FilingApi.md#get_note)
+
 # **get_note**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_note_v2)
+
 > FilingNote get_note(identifier, opts)
 
 Filing Note by ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -191,6 +255,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -202,12 +268,27 @@ Name | Type | Description  | Notes
 
 [**FilingNote**](FilingNote.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier}/html)
+
+[//]: # (DOC_LINK:FilingApi.md#get_note_html)
+
 # **get_note_html**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_note_html_v2)
+
 > String get_note_html(identifier)
 
 Filing Note HTML
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -230,6 +311,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -240,12 +323,27 @@ Name | Type | Description  | Notes
 
 **String**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier}/text)
+
+[//]: # (DOC_LINK:FilingApi.md#get_note_text)
+
 # **get_note_text**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_note_text_v2)
+
 > String get_note_text(identifier)
 
 Filing Note Text
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -268,6 +366,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -278,7 +378,19 @@ Name | Type | Description  | Notes
 
 **String**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/search)
+
+[//]: # (DOC_LINK:FilingApi.md#search_notes)
+
 # **search_notes**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_notes_v2)
+
 > ApiResponseFilingNotesSearch search_notes(query, opts)
 
 Search Filing Notes
@@ -286,6 +398,9 @@ Search Filing Notes
 Searches for Filing Notes using the `query`
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -302,8 +417,8 @@ query = "inflation" # String | Search for notes that contain all or parts of thi
 opts = { 
   filing_start_date: Date.parse("2018-07-15"), # Date | Limit search to filings on or after this date
   filing_end_date: Date.parse("2018-11-30"), # Date | Limit search to filings on or before this date
-  page_size: 100, # Float | The number of results to return
-  page_size2: 100 # Float | The number of results to return
+  page_size: 100, # Integer | The number of results to return
+  page_size2: 100 # Integer | The number of results to return
 }
 
 begin
@@ -314,6 +429,8 @@ rescue Intrinio::ApiError => e
 end
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -321,10 +438,12 @@ Name | Type | Description  | Notes
  **query** | **String**| Search for notes that contain all or parts of this text | 
  **filing_start_date** | **Date**| Limit search to filings on or after this date | [optional] 
  **filing_end_date** | **Date**| Limit search to filings on or before this date | [optional] 
- **page_size** | **Float**| The number of results to return | [optional] [default to 100]
- **page_size2** | **Float**| The number of results to return | [optional] [default to 100]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **page_size2** | **Integer**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseFilingNotesSearch**](ApiResponseFilingNotesSearch.md)
+
+[//]: # (END_OPERATION)
 
