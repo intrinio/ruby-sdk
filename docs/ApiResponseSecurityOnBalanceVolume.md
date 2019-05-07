@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseSecurityOnBalanceVolume
+## Intrinio::ApiResponseSecurityOnBalanceVolume
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;OnBalanceVolumeTechnicalValue&gt;**](OnBalanceVolumeTechnicalValue.md) |  | [optional] 

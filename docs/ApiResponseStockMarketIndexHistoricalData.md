@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseStockMarketIndexHistoricalData
+## Intrinio::ApiResponseStockMarketIndexHistoricalData
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **historical_data** | [**Array&lt;HistoricalData&gt;**](HistoricalData.md) |  | [optional] 

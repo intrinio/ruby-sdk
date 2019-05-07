@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCryptoBookBids
+## Intrinio::ApiResponseCryptoBookBids
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bids** | [**Array&lt;CryptoBookEntry&gt;**](CryptoBookEntry.md) | The bid prices and their respective sizes, in descending order of price. | [optional] 

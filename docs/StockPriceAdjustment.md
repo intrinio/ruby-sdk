@@ -1,6 +1,6 @@
-# Intrinio::StockPriceAdjustment
+## Intrinio::StockPriceAdjustment
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date** | **Date** | The date on which the adjustment occurred. The adjustment should be applied to all stock prices before this date. | [optional] 

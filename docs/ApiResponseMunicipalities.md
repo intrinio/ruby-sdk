@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseMunicipalities
+## Intrinio::ApiResponseMunicipalities
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **municipalities** | [**Array&lt;Municipality&gt;**](Municipality.md) |  | [optional] 

@@ -1,6 +1,6 @@
-# Intrinio::DataTag
+## Intrinio::DataTag
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for the Data Tag | [optional] 

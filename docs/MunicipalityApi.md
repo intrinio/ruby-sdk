@@ -10,19 +10,23 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:get_all_municipalities_v2)
 
 [//]: # (ENDPOINT:/municipalities)
 
-[//]: # (DOC_LINK:MunicipalityApi.md#get_all_municipalities)
+[//]: # (DOCUMENT_LINK:MunicipalityApi.md#get_all_municipalities)
 
-# **get_all_municipalities**
+## **get_all_municipalities**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_municipalities_v2)
 
 > ApiResponseMunicipalities get_all_municipalities(opts)
 
-All Municipalities
+#### All Municipalities
+
+
 
 ### Example
 
@@ -82,7 +86,7 @@ Name | Type | Description  | Notes
  **enrollment_greater_than** | **Float**| Return municipalities with an enrollment greater than the given number | [optional] 
  **enrollment_less_than** | **Float**| Return municipalities with an enrollment less than the given number | [optional] 
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
-
+<br/>
 ### Return type
 
 [**ApiResponseMunicipalities**](ApiResponseMunicipalities.md)
@@ -90,19 +94,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:get_municipality_by_id_v2)
 
 [//]: # (ENDPOINT:/municipalities/{id})
 
-[//]: # (DOC_LINK:MunicipalityApi.md#get_municipality_by_id)
+[//]: # (DOCUMENT_LINK:MunicipalityApi.md#get_municipality_by_id)
 
-# **get_municipality_by_id**
+## **get_municipality_by_id**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_municipality_by_id_v2)
 
 > Municipality get_municipality_by_id(id)
 
-Municipality by ID
+#### Municipality by ID
+
 
 Returns the Municipality with the given ID
 
@@ -139,7 +146,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| An Intrinio ID of a Municipality | 
-
+<br/>
 ### Return type
 
 [**Municipality**](Municipality.md)
@@ -147,19 +154,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:get_municipality_financials_v2)
 
 [//]: # (ENDPOINT:/municipalities/{id}/financials)
 
-[//]: # (DOC_LINK:MunicipalityApi.md#get_municipality_financials)
+[//]: # (DOCUMENT_LINK:MunicipalityApi.md#get_municipality_financials)
 
-# **get_municipality_financials**
+## **get_municipality_financials**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_municipality_financials_v2)
 
 > ApiResponseMunicipalitiyFinancials get_municipality_financials(id, opts)
 
-Financials for a Municipality
+#### Financials for a Municipality
+
 
 Returns financial statement data for the Municipality with the given ID
 
@@ -200,7 +210,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| An Intrinio ID of a Municipality | 
  **fiscal_year** | **Float**| Return financials for the given fiscal year | [optional] 
-
+<br/>
 ### Return type
 
 [**ApiResponseMunicipalitiyFinancials**](ApiResponseMunicipalitiyFinancials.md)

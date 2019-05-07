@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCryptoAverageDailyTradingVolume
+## Intrinio::ApiResponseCryptoAverageDailyTradingVolume
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;AverageDailyTradingVolumeTechnicalValue&gt;**](AverageDailyTradingVolumeTechnicalValue.md) |  | [optional] 

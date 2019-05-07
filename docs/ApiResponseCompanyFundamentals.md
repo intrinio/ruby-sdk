@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCompanyFundamentals
+## Intrinio::ApiResponseCompanyFundamentals
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fundamentals** | [**Array&lt;FundamentalSummary&gt;**](FundamentalSummary.md) |  | [optional] 

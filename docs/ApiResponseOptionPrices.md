@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseOptionPrices
+## Intrinio::ApiResponseOptionPrices
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **prices** | [**Array&lt;OptionPrice&gt;**](OptionPrice.md) | A list of option prices in descending order by date | [optional] 

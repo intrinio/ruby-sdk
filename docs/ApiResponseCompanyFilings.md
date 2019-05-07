@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCompanyFilings
+## Intrinio::ApiResponseCompanyFilings
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filings** | [**Array&lt;FilingSummary&gt;**](FilingSummary.md) |  | [optional] 

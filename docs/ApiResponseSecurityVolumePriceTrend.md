@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseSecurityVolumePriceTrend
+## Intrinio::ApiResponseSecurityVolumePriceTrend
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;VolumePriceTrendTechnicalValue&gt;**](VolumePriceTrendTechnicalValue.md) |  | [optional] 

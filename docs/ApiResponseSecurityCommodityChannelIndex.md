@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseSecurityCommodityChannelIndex
+## Intrinio::ApiResponseSecurityCommodityChannelIndex
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;CommodityChannelIndexTechnicalValue&gt;**](CommodityChannelIndexTechnicalValue.md) |  | [optional] 

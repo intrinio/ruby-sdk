@@ -1,6 +1,6 @@
-# Intrinio::CryptoBid
+## Intrinio::CryptoBid
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **price** | **Float** | The bid price of the book entry. | [optional] 

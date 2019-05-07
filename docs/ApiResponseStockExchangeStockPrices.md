@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseStockExchangeStockPrices
+## Intrinio::ApiResponseStockExchangeStockPrices
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stock_prices** | [**Array&lt;StockPrice&gt;**](StockPrice.md) | The stock prices for all Securities traded on the Stock Exchange on the given date | [optional] 

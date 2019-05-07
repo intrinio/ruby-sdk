@@ -1,6 +1,6 @@
-# Intrinio::RealtimeStockPrice
+## Intrinio::RealtimeStockPrice
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **last_price** | **Float** | The price of the last trade. | [optional] 

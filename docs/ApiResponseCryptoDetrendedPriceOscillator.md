@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCryptoDetrendedPriceOscillator
+## Intrinio::ApiResponseCryptoDetrendedPriceOscillator
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;DetrendedPriceOscillatorTechnicalValue&gt;**](DetrendedPriceOscillatorTechnicalValue.md) |  | [optional] 

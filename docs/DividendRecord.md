@@ -1,6 +1,6 @@
-# Intrinio::DividendRecord
+## Intrinio::DividendRecord
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ex_dividend** | **Float** | Amount of dividend in US dollars | [optional] 

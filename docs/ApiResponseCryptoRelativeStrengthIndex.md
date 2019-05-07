@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCryptoRelativeStrengthIndex
+## Intrinio::ApiResponseCryptoRelativeStrengthIndex
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;RelativeStrengthIndexTechnicalValue&gt;**](RelativeStrengthIndexTechnicalValue.md) |  | [optional] 

@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseSecurityAwesomeOscillator
+## Intrinio::ApiResponseSecurityAwesomeOscillator
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;AwesomeOscillatorTechnicalValue&gt;**](AwesomeOscillatorTechnicalValue.md) |  | [optional] 

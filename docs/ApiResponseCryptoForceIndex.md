@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCryptoForceIndex
+## Intrinio::ApiResponseCryptoForceIndex
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;ForceIndexTechnicalValue&gt;**](ForceIndexTechnicalValue.md) |  | [optional] 

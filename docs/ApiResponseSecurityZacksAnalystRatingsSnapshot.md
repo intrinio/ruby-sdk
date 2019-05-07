@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseSecurityZacksAnalystRatingsSnapshot
+## Intrinio::ApiResponseSecurityZacksAnalystRatingsSnapshot
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **snapshots** | [**Array&lt;ZacksAnalystRatingSnapshot&gt;**](ZacksAnalystRatingSnapshot.md) |  | [optional] 

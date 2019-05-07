@@ -10,19 +10,22 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:get_zacks_analyst_ratings_v2)
 
 [//]: # (ENDPOINT:/zacks/analyst_ratings)
 
-[//]: # (DOC_LINK:ZacksApi.md#get_zacks_analyst_ratings)
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_analyst_ratings)
 
-# **get_zacks_analyst_ratings**
+## **get_zacks_analyst_ratings**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_zacks_analyst_ratings_v2)
 
 > ApiResponseZacksAnalystRatings get_zacks_analyst_ratings(opts)
 
-Zacks Analyst Ratings
+#### Zacks Analyst Ratings
+
 
 Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
 
@@ -96,7 +99,7 @@ Name | Type | Description  | Notes
  **total_less** | **Integer**| Return only records with fewer than this many recommendations, regardless of type | [optional] 
  **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
-
+<br/>
 ### Return type
 
 [**ApiResponseZacksAnalystRatings**](ApiResponseZacksAnalystRatings.md)
@@ -104,19 +107,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:get_zacks_eps_surprises_v2)
 
 [//]: # (ENDPOINT:/zacks/eps_surprises)
 
-[//]: # (DOC_LINK:ZacksApi.md#get_zacks_eps_surprises)
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_eps_surprises)
 
-# **get_zacks_eps_surprises**
+## **get_zacks_eps_surprises**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_zacks_eps_surprises_v2)
 
 > ApiResponseZacksEPSSurprises get_zacks_eps_surprises(opts)
 
-Zacks EPS Surprises
+#### Zacks EPS Surprises
+
 
 Returns Zacks eps surprise data for all Securities.
 
@@ -184,7 +190,7 @@ Name | Type | Description  | Notes
  **eps_std_dev_estimate_less** | **Float**| Return only records with an EPS standard deviation less than this value | [optional] 
  **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
-
+<br/>
 ### Return type
 
 [**ApiResponseZacksEPSSurprises**](ApiResponseZacksEPSSurprises.md)
@@ -192,19 +198,22 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:get_zacks_sales_surprises_v2)
 
 [//]: # (ENDPOINT:/zacks/sales_surprises)
 
-[//]: # (DOC_LINK:ZacksApi.md#get_zacks_sales_surprises)
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_sales_surprises)
 
-# **get_zacks_sales_surprises**
+## **get_zacks_sales_surprises**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_zacks_sales_surprises_v2)
 
 > ApiResponseZacksSalesSurprises get_zacks_sales_surprises(opts)
 
-Zacks Sales Surprises
+#### Zacks Sales Surprises
+
 
 Returns Zacks sales surprise data for all Securities.
 
@@ -272,7 +281,7 @@ Name | Type | Description  | Notes
  **sales_std_dev_estimate_less** | **Float**| Return only records with a sales standard deviation less than this value | [optional] 
  **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
  **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
-
+<br/>
 ### Return type
 
 [**ApiResponseZacksSalesSurprises**](ApiResponseZacksSalesSurprises.md)

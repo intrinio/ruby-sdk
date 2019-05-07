@@ -1,6 +1,6 @@
-# Intrinio::ForexCurrency
+## Intrinio::ForexCurrency
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | The ISO 4217 currency code | [optional] 

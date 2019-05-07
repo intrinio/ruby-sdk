@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseMunicipalitiyFinancials
+## Intrinio::ApiResponseMunicipalitiyFinancials
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **financials** | [**Array&lt;MunicipalityFinancial&gt;**](MunicipalityFinancial.md) |  | [optional] 

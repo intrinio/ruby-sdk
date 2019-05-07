@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCryptoKnowSureThing
+## Intrinio::ApiResponseCryptoKnowSureThing
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;KnowSureThingTechnicalValue&gt;**](KnowSureThingTechnicalValue.md) |  | [optional] 

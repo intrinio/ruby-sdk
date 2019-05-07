@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseCryptoNegativeVolumeIndex
+## Intrinio::ApiResponseCryptoNegativeVolumeIndex
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;NegativeVolumeIndexTechnicalValue&gt;**](NegativeVolumeIndexTechnicalValue.md) |  | [optional] 

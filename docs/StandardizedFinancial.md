@@ -1,6 +1,6 @@
-# Intrinio::StandardizedFinancial
+## Intrinio::StandardizedFinancial
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data_tag** | [**DataTagSummary**](DataTagSummary.md) |  | [optional] 

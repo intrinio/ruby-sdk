@@ -1,6 +1,6 @@
-# Intrinio::ApiResponseSecurityChaikinMoneyFlow
+## Intrinio::ApiResponseSecurityChaikinMoneyFlow
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;ChaikinMoneyFlowTechnicalValue&gt;**](ChaikinMoneyFlowTechnicalValue.md) |  | [optional] 
