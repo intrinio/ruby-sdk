@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityWilliamsR
+### Intrinio::ApiResponseSecurityWilliamsR
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;WilliamsRTechnicalValue&gt;**](WilliamsRTechnicalValue.md) |  | [optional] 

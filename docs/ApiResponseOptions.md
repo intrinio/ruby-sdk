@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseOptions
+### Intrinio::ApiResponseOptions
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **options** | [**Array&lt;Option&gt;**](Option.md) | A list of options contracts with the given symbol | [optional] 

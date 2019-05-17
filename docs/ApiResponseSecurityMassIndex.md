@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityMassIndex
+### Intrinio::ApiResponseSecurityMassIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;MassIndexTechnicalValue&gt;**](MassIndexTechnicalValue.md) |  | [optional] 

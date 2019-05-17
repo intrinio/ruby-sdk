@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityAccumulationDistributionIndex
+### Intrinio::ApiResponseSecurityAccumulationDistributionIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;AccumulationDistributionIndexTechnicalValue&gt;**](AccumulationDistributionIndexTechnicalValue.md) |  | [optional] 

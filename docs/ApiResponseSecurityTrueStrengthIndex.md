@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityTrueStrengthIndex
+### Intrinio::ApiResponseSecurityTrueStrengthIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;TrueStrengthIndexTechnicalValue&gt;**](TrueStrengthIndexTechnicalValue.md) |  | [optional] 

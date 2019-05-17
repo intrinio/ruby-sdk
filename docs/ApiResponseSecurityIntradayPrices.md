@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityIntradayPrices
+### Intrinio::ApiResponseSecurityIntradayPrices
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **intraday_prices** | [**Array&lt;IntradayStockPrice&gt;**](IntradayStockPrice.md) | The intraday stock prices for the Security | [optional] 

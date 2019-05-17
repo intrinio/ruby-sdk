@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSICIndicesSearch
+### Intrinio::ApiResponseSICIndicesSearch
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **indices** | [**Array&lt;SICIndex&gt;**](SICIndex.md) |  | [optional] 

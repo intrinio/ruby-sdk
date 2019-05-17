@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseStandardizedFinancials
+### Intrinio::ApiResponseStandardizedFinancials
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **standardized_financials** | [**Array&lt;StandardizedFinancial&gt;**](StandardizedFinancial.md) |  | [optional] 

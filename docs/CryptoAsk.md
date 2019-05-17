@@ -1,6 +1,6 @@
-## Intrinio::CryptoAsk
+### Intrinio::CryptoAsk
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **price** | **Float** | The ask price of the book entry. | [optional] 

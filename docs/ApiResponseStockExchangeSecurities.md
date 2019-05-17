@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseStockExchangeSecurities
+### Intrinio::ApiResponseStockExchangeSecurities
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **securities** | [**Array&lt;SecuritySummary&gt;**](SecuritySummary.md) | The securities traded on the Stock Exchange | [optional] 

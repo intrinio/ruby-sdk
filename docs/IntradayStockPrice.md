@@ -1,6 +1,6 @@
-## Intrinio::IntradayStockPrice
+### Intrinio::IntradayStockPrice
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **time** | **DateTime** | The timestamp that the &#x60;last_price&#x60; represents. | [optional] 

@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityUltimateOscillator
+### Intrinio::ApiResponseSecurityUltimateOscillator
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;UltimateOscillatorTechnicalValue&gt;**](UltimateOscillatorTechnicalValue.md) |  | [optional] 

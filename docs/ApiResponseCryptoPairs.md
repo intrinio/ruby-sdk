@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseCryptoPairs
+### Intrinio::ApiResponseCryptoPairs
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pairs** | [**Array&lt;CryptoPair&gt;**](CryptoPair.md) | A list of Crypto Currency Pairs for the given Crypto Exchange and Crypto Currency sorted alphabetically by code. | [optional] 

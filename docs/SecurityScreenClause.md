@@ -1,6 +1,6 @@
-## Intrinio::SecurityScreenClause
+### Intrinio::SecurityScreenClause
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **field** | **String** | The field to use when screening, such as an Intrinio Data Tag | [optional] 

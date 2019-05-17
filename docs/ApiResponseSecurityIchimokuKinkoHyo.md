@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityIchimokuKinkoHyo
+### Intrinio::ApiResponseSecurityIchimokuKinkoHyo
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;IchimokuKinkoHyoTechnicalValue&gt;**](IchimokuKinkoHyoTechnicalValue.md) |  | [optional] 

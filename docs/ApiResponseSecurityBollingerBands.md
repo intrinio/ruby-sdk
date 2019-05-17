@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityBollingerBands
+### Intrinio::ApiResponseSecurityBollingerBands
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;BollingerBandsTechnicalValue&gt;**](BollingerBandsTechnicalValue.md) |  | [optional] 

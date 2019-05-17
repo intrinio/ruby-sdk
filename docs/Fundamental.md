@@ -1,6 +1,6 @@
-## Intrinio::Fundamental
+### Intrinio::Fundamental
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID of the Fundamental | [optional] 

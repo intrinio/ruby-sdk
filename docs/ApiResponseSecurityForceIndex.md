@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityForceIndex
+### Intrinio::ApiResponseSecurityForceIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;ForceIndexTechnicalValue&gt;**](ForceIndexTechnicalValue.md) |  | [optional] 

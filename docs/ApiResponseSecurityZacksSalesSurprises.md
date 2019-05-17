@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityZacksSalesSurprises
+### Intrinio::ApiResponseSecurityZacksSalesSurprises
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **sales_surprises** | [**Array&lt;ZacksSalesSurpriseSummary&gt;**](ZacksSalesSurpriseSummary.md) |  | [optional] 

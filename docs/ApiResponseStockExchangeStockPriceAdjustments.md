@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseStockExchangeStockPriceAdjustments
+### Intrinio::ApiResponseStockExchangeStockPriceAdjustments
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stock_price_adjustments** | [**Array&lt;StockPriceAdjustment&gt;**](StockPriceAdjustment.md) | The stock price adjustments for all Securities traded on the Stock Exchange on the given date | [optional] 

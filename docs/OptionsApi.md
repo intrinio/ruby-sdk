@@ -13,6 +13,16 @@ Method | HTTP request | Description
 
 [//]: # (START_OPERATION)
 
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptions)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptions.md)
+
 [//]: # (OPERATION:get_options_v2)
 
 [//]: # (ENDPOINT:/options/{symbol})
@@ -23,12 +33,16 @@ Method | HTTP request | Description
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseOptions get_options(symbol, opts)
 
 #### Options
 
 
 Returns the master list of option contracts for a given symbol.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -69,21 +83,29 @@ end
 
 [//]: # (END_CODE_EXAMPLE)
 
+[//]: # (START_DEFINITION)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **symbol** | **String**| The option symbol, corresponding to the underlying security. | 
- **type** | **String**| The option contract type. | [optional] 
- **strike** | **Float**| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional] 
- **strike_greater_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional] 
- **strike_less_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional] 
- **expiration** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates on this date. | [optional] 
- **expiration_after** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional] 
- **expiration_before** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional] 
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
+ **symbol** | **String**| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **type** | **String**| The option contract type. | [optional]  &nbsp;
+ **strike** | **Float**| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
+ **strike_greater_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
+ **strike_less_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **expiration** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates on this date. | [optional]  &nbsp;
+ **expiration_after** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional]  &nbsp;
+ **expiration_before** | **String**| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional]  &nbsp;
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
+
 ### Return type
 
 [**ApiResponseOptions**](ApiResponseOptions.md)
@@ -92,6 +114,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_chain)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsChain)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsChain.md)
 
 [//]: # (OPERATION:get_options_chain_v2)
 
@@ -103,12 +135,16 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_chain_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseOptionsChain get_options_chain(symbol, expiration, opts)
 
 #### Options Chain
 
 
 Returns all options contracts and their prices for the given symbol and expiration date.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -148,19 +184,27 @@ end
 
 [//]: # (END_CODE_EXAMPLE)
 
+[//]: # (START_DEFINITION)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **symbol** | **String**| The option symbol, corresponding to the underlying security. | 
- **expiration** | **String**| The expiration date of the options contract | 
- **type** | **String**| The option contract type. | [optional] 
- **strike** | **Float**| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional] 
- **strike_greater_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional] 
- **strike_less_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional] 
- **moneyness** | **String**| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. | [optional] 
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **symbol** | **String**| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **expiration** | **String**| The expiration date of the options contract |  &nbsp;
+ **type** | **String**| The option contract type. | [optional]  &nbsp;
+ **strike** | **Float**| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
+ **strike_greater_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
+ **strike_less_than** | **Float**| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **moneyness** | **String**| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. | [optional]  &nbsp;
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
+
 ### Return type
 
 [**ApiResponseOptionsChain**](ApiResponseOptionsChain.md)
@@ -169,6 +213,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_expirations)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsExpirations)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsExpirations.md)
 
 [//]: # (OPERATION:get_options_expirations_v2)
 
@@ -180,12 +234,16 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_expirations_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseOptionsExpirations get_options_expirations(symbol, opts)
 
 #### Options Expirations
 
 
 Returns all option contract expiration dates for a given symbol.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -219,14 +277,22 @@ end
 
 [//]: # (END_CODE_EXAMPLE)
 
+[//]: # (START_DEFINITION)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **symbol** | **String**| The option symbol, corresponding to the underlying security. | 
- **after** | **String**| Return option contract expiration dates after this date. | [optional] 
- **before** | **String**| Return option contract expiration dates before this date. | [optional] 
+ **symbol** | **String**| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **after** | **String**| Return option contract expiration dates after this date. | [optional]  &nbsp;
+ **before** | **String**| Return option contract expiration dates before this date. | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
+
 ### Return type
 
 [**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
@@ -235,6 +301,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_prices)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionPrices)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionPrices.md)
 
 [//]: # (OPERATION:get_options_prices_v2)
 
@@ -246,12 +322,16 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_prices_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseOptionPrices get_options_prices(identifier, opts)
 
 #### Option Prices
 
 
 Returns all option prices for a given option contract identifier.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -287,16 +367,24 @@ end
 
 [//]: # (END_CODE_EXAMPLE)
 
+[//]: # (START_DEFINITION)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| The Intrinio ID or code of the options contract to request prices for. | 
- **start_date** | **String**| Return option contract prices on or after this date. | [optional] 
- **end_date** | **String**| Return option contract prices on or before this date. | [optional] 
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
+ **identifier** | **String**| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **start_date** | **String**| Return option contract prices on or after this date. | [optional]  &nbsp;
+ **end_date** | **String**| Return option contract prices on or before this date. | [optional]  &nbsp;
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
+
 ### Return type
 
 [**ApiResponseOptionPrices**](ApiResponseOptionPrices.md)

@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityDonchianChannel
+### Intrinio::ApiResponseSecurityDonchianChannel
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;DonchianChannelTechnicalValue&gt;**](DonchianChannelTechnicalValue.md) |  | [optional] 

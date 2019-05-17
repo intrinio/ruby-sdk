@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseCryptoKeltnerChannel
+### Intrinio::ApiResponseCryptoKeltnerChannel
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;KeltnerChannelTechnicalValue&gt;**](KeltnerChannelTechnicalValue.md) |  | [optional] 

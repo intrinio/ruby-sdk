@@ -13,6 +13,16 @@ Method | HTTP request | Description
 
 [//]: # (START_OPERATION)
 
+[//]: # (CLASS:Intrinio::FundamentalsApi)
+
+[//]: # (METHOD:get_fundamental_by_id)
+
+[//]: # (RETURN_TYPE:Intrinio::Fundamental)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:Fundamental.md)
+
 [//]: # (OPERATION:get_fundamental_by_id_v2)
 
 [//]: # (ENDPOINT:/fundamentals/{id})
@@ -23,12 +33,16 @@ Method | HTTP request | Description
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_fundamental_by_id_v2)
 
+[//]: # (START_OVERVIEW)
+
 > Fundamental get_fundamental_by_id(id)
 
 #### Fundamental by ID
 
 
 Returns detailed fundamental data for the given `id`.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -58,12 +72,20 @@ end
 
 [//]: # (END_CODE_EXAMPLE)
 
+[//]: # (START_DEFINITION)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| The Intrinio ID for the Fundamental | 
+ **id** | **String**| The Intrinio ID for the Fundamental |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
+
 ### Return type
 
 [**Fundamental**](Fundamental.md)
@@ -72,6 +94,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::FundamentalsApi)
+
+[//]: # (METHOD:get_fundamental_reported_financials)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseReportedFinancials)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseReportedFinancials.md)
 
 [//]: # (OPERATION:get_fundamental_reported_financials_v2)
 
@@ -83,12 +115,16 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_fundamental_reported_financials_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseReportedFinancials get_fundamental_reported_financials(id)
 
 #### Reported Financials
 
 
 Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -118,12 +154,20 @@ end
 
 [//]: # (END_CODE_EXAMPLE)
 
+[//]: # (START_DEFINITION)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
+ **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
+
 ### Return type
 
 [**ApiResponseReportedFinancials**](ApiResponseReportedFinancials.md)
@@ -132,6 +176,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::FundamentalsApi)
+
+[//]: # (METHOD:get_fundamental_standardized_financials)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseStandardizedFinancials)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStandardizedFinancials.md)
 
 [//]: # (OPERATION:get_fundamental_standardized_financials_v2)
 
@@ -143,12 +197,16 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_fundamental_standardized_financials_v2)
 
+[//]: # (START_OVERVIEW)
+
 > ApiResponseStandardizedFinancials get_fundamental_standardized_financials(id)
 
 #### Standardized Financials
 
 
 Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -178,12 +236,20 @@ end
 
 [//]: # (END_CODE_EXAMPLE)
 
+[//]: # (START_DEFINITION)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
+ **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
+
 ### Return type
 
 [**ApiResponseStandardizedFinancials**](ApiResponseStandardizedFinancials.md)
@@ -192,6 +258,16 @@ Name | Type | Description  | Notes
 
 
 [//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::FundamentalsApi)
+
+[//]: # (METHOD:lookup_fundamental)
+
+[//]: # (RETURN_TYPE:Intrinio::Fundamental)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:Fundamental.md)
 
 [//]: # (OPERATION:lookup_fundamental_v2)
 
@@ -203,12 +279,16 @@ Name | Type | Description  | Notes
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookup_fundamental_v2)
 
+[//]: # (START_OVERVIEW)
+
 > Fundamental lookup_fundamental(identifier, statement_code, fiscal_year, fiscal_period)
 
 #### Lookup Fundamental
 
 
 Returns the Fundamental for the Company with the given `identifier` and with the given parameters
+
+[//]: # (END_OVERVIEW)
 
 ### Example
 
@@ -244,15 +324,23 @@ end
 
 [//]: # (END_CODE_EXAMPLE)
 
+[//]: # (START_DEFINITION)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **statement_code** | **String**| The statement code | 
- **fiscal_year** | **Integer**| The fiscal year | 
- **fiscal_period** | **String**| The fiscal period | 
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **statement_code** | **String**| The statement code |  &nbsp;
+ **fiscal_year** | **Integer**| The fiscal year |  &nbsp;
+ **fiscal_period** | **String**| The fiscal period |  &nbsp;
 <br/>
+
+[//]: # (END_PARAMETERS)
+
 ### Return type
 
 [**Fundamental**](Fundamental.md)

@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseCryptoStochasticOscillator
+### Intrinio::ApiResponseCryptoStochasticOscillator
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;StochasticOscillatorTechnicalValue&gt;**](StochasticOscillatorTechnicalValue.md) |  | [optional] 

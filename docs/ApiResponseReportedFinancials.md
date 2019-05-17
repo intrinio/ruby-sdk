@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseReportedFinancials
+### Intrinio::ApiResponseReportedFinancials
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **reported_financials** | [**Array&lt;ReportedFinancial&gt;**](ReportedFinancial.md) |  | [optional] 

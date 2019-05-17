@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityAverageDirectionalIndex
+### Intrinio::ApiResponseSecurityAverageDirectionalIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;AverageDirectionalIndexTechnicalValue&gt;**](AverageDirectionalIndexTechnicalValue.md) |  | [optional] 

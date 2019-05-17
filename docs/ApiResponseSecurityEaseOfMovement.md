@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityEaseOfMovement
+### Intrinio::ApiResponseSecurityEaseOfMovement
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;EaseOfMovementTechnicalValue&gt;**](EaseOfMovementTechnicalValue.md) |  | [optional] 

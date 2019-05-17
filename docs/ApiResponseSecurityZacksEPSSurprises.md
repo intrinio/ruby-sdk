@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseSecurityZacksEPSSurprises
+### Intrinio::ApiResponseSecurityZacksEPSSurprises
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eps_surprises** | [**Array&lt;ZacksEPSSurpriseSummary&gt;**](ZacksEPSSurpriseSummary.md) |  | [optional] 

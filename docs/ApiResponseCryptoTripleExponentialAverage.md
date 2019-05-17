@@ -1,6 +1,6 @@
-## Intrinio::ApiResponseCryptoTripleExponentialAverage
+### Intrinio::ApiResponseCryptoTripleExponentialAverage
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;TripleExponentialAverageTechnicalValue&gt;**](TripleExponentialAverageTechnicalValue.md) |  | [optional] 

@@ -1,6 +1,6 @@
-## Intrinio::MunicipalityFinancial
+### Intrinio::MunicipalityFinancial
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fiscal_year** | **Float** | The fiscal year from which the financial data came from | [optional] 
