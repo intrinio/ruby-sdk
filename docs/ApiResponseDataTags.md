@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseDataTags
+# Intrinio::ApiResponseDataTags
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tags** | [**Array&lt;DataTag&gt;**](DataTag.md) |  | [optional] 

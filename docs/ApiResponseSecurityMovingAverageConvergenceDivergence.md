@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseSecurityMovingAverageConvergenceDivergence
+# Intrinio::ApiResponseSecurityMovingAverageConvergenceDivergence
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;MovingAverageConvergenceDivergenceTechnicalValue&gt;**](MovingAverageConvergenceDivergenceTechnicalValue.md) |  | [optional] 

@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseZacksAnalystRatings
+# Intrinio::ApiResponseZacksAnalystRatings
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **analyst_ratings** | [**Array&lt;ZacksAnalystRating&gt;**](ZacksAnalystRating.md) |  | [optional] 

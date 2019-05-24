@@ -24,43 +24,12 @@ Method | HTTP request | Description
 [**search_stock_markets_indices**](IndexApi.md#search_stock_markets_indices) | **GET** /indices/stock_market/search | Search Stock Market Indices
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_all_economic_indices)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseEconomicIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndices.md)
-
-[//]: # (OPERATION:get_all_economic_indices_v2)
-
-[//]: # (ENDPOINT:/indices/economic)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_all_economic_indices)
-
-## **get_all_economic_indices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_economic_indices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_all_economic_indices**
 > ApiResponseEconomicIndices get_all_economic_indices(opts)
 
-#### All Economic Indices
-
-
-
-[//]: # (END_OVERVIEW)
+All Economic Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -85,66 +54,23 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_all_sic_indices)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseSICIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndices.md)
-
-[//]: # (OPERATION:get_all_sic_indices_v2)
-
-[//]: # (ENDPOINT:/indices/sic)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_all_sic_indices)
-
-## **get_all_sic_indices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_sic_indices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_all_sic_indices**
 > ApiResponseSICIndices get_all_sic_indices(opts)
 
-#### All SIC Indices
-
-
-
-[//]: # (END_OVERVIEW)
+All SIC Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -169,66 +95,23 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSICIndices**](ApiResponseSICIndices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_all_stock_market_indices)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseStockMarketIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndices.md)
-
-[//]: # (OPERATION:get_all_stock_market_indices_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_all_stock_market_indices)
-
-## **get_all_stock_market_indices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_stock_market_indices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_all_stock_market_indices**
 > ApiResponseStockMarketIndices get_all_stock_market_indices(opts)
 
-#### All Stock Market Indices
-
-
-
-[//]: # (END_OVERVIEW)
+All Stock Market Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -253,66 +136,23 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseStockMarketIndices**](ApiResponseStockMarketIndices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_economic_index_by_id)
-
-[//]: # (RETURN_TYPE:Intrinio::EconomicIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:EconomicIndex.md)
-
-[//]: # (OPERATION:get_economic_index_by_id_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_economic_index_by_id)
-
-## **get_economic_index_by_id**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_economic_index_by_id_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_economic_index_by_id**
 > EconomicIndex get_economic_index_by_id(identifier)
 
-#### Lookup Economic Index
-
-
-
-[//]: # (END_OVERVIEW)
+Lookup Economic Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -335,66 +175,24 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**EconomicIndex**](EconomicIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_economic_index_data_point_number)
-
-[//]: # (RETURN_TYPE:Intrinio::Float)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:get_economic_index_data_point_number_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_economic_index_data_point_number)
-
-## **get_economic_index_data_point_number**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_economic_index_data_point_number_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_economic_index_data_point_number**
 > Float get_economic_index_data_point_number(identifier, tag)
 
-#### Data Point (Number) for an Economic Index
-
+Data Point (Number) for an Economic Index
 
 Returns a numeric value for the given `tag` for the Economic Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -419,67 +217,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
 
 ### Return type
 
 **Float**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_economic_index_data_point_text)
-
-[//]: # (RETURN_TYPE:Intrinio::String)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:get_economic_index_data_point_text_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_economic_index_data_point_text)
-
-## **get_economic_index_data_point_text**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_economic_index_data_point_text_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_economic_index_data_point_text**
 > String get_economic_index_data_point_text(identifier, tag)
 
-#### Data Point (Text) for an Economic Index
-
+Data Point (Text) for an Economic Index
 
 Returns a text value for the given `tag` for the Economic Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -504,67 +260,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **String**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_economic_index_historical_data)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseEconomicIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndexHistoricalData.md)
-
-[//]: # (OPERATION:get_economic_index_historical_data_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_economic_index_historical_data)
-
-## **get_economic_index_historical_data**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_economic_index_historical_data_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_economic_index_historical_data**
 > ApiResponseEconomicIndexHistoricalData get_economic_index_historical_data(identifier, tag, opts)
 
-#### Historical Data for an Economic Index
-
+Historical Data for an Economic Index
 
 Returns historical values for the given `tag` and the Economic Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -597,72 +311,29 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
- **type** | **String**| Filter by type, when applicable | [optional]  &nbsp;
- **start_date** | **Date**| Get historical data on or after this date | [optional]  &nbsp;
- **end_date** | **Date**| Get historical data on or before this date | [optional]  &nbsp;
- **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
+ **type** | **String**| Filter by type, when applicable | [optional] 
+ **start_date** | **Date**| Get historical data on or after this date | [optional] 
+ **end_date** | **Date**| Get historical data on or before this date | [optional] 
+ **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_sic_index_by_id)
-
-[//]: # (RETURN_TYPE:Intrinio::SICIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:SICIndex.md)
-
-[//]: # (OPERATION:get_sic_index_by_id_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_sic_index_by_id)
-
-## **get_sic_index_by_id**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_sic_index_by_id_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_sic_index_by_id**
 > SICIndex get_sic_index_by_id(identifier)
 
-#### Lookup SIC Index
-
-
-
-[//]: # (END_OVERVIEW)
+Lookup SIC Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -685,66 +356,24 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**SICIndex**](SICIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_sic_index_data_point_number)
-
-[//]: # (RETURN_TYPE:Intrinio::Float)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:get_sic_index_data_point_number_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_sic_index_data_point_number)
-
-## **get_sic_index_data_point_number**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_sic_index_data_point_number_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_sic_index_data_point_number**
 > Float get_sic_index_data_point_number(identifier, tag)
 
-#### Data Point (Number) for an SIC Index
-
+Data Point (Number) for an SIC Index
 
 Returns a numeric value for the given `tag` for the SIC Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -769,67 +398,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **Float**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_sic_index_data_point_text)
-
-[//]: # (RETURN_TYPE:Intrinio::String)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:get_sic_index_data_point_text_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_sic_index_data_point_text)
-
-## **get_sic_index_data_point_text**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_sic_index_data_point_text_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_sic_index_data_point_text**
 > String get_sic_index_data_point_text(identifier, tag)
 
-#### Data Point (Text) for an SIC Index
-
+Data Point (Text) for an SIC Index
 
 Returns a text value for the given `tag` for the SIC Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -854,67 +441,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **String**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_sic_index_historical_data)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseSICIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndexHistoricalData.md)
-
-[//]: # (OPERATION:get_sic_index_historical_data_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_sic_index_historical_data)
-
-## **get_sic_index_historical_data**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_sic_index_historical_data_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_sic_index_historical_data**
 > ApiResponseSICIndexHistoricalData get_sic_index_historical_data(identifier, tag, opts)
 
-#### Historical Data for an SIC Index
-
+Historical Data for an SIC Index
 
 Returns historical values for the given `tag` and the SIC Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -947,72 +492,29 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
- **type** | **String**| Filter by type, when applicable | [optional]  &nbsp;
- **start_date** | **Date**| Get historical data on or after this date | [optional]  &nbsp;
- **end_date** | **Date**| Get historical data on or before this date | [optional]  &nbsp;
- **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **type** | **String**| Filter by type, when applicable | [optional] 
+ **start_date** | **Date**| Get historical data on or after this date | [optional] 
+ **end_date** | **Date**| Get historical data on or before this date | [optional] 
+ **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSICIndexHistoricalData**](ApiResponseSICIndexHistoricalData.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_stock_market_index_by_id)
-
-[//]: # (RETURN_TYPE:Intrinio::StockMarketIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:StockMarketIndex.md)
-
-[//]: # (OPERATION:get_stock_market_index_by_id_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_stock_market_index_by_id)
-
-## **get_stock_market_index_by_id**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_market_index_by_id_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_stock_market_index_by_id**
 > StockMarketIndex get_stock_market_index_by_id(identifier)
 
-#### Lookup Stock Market Index
-
-
-
-[//]: # (END_OVERVIEW)
+Lookup Stock Market Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1035,66 +537,24 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**StockMarketIndex**](StockMarketIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_stock_market_index_data_point_number)
-
-[//]: # (RETURN_TYPE:Intrinio::Float)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:get_stock_market_index_data_point_number_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_stock_market_index_data_point_number)
-
-## **get_stock_market_index_data_point_number**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_market_index_data_point_number_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_stock_market_index_data_point_number**
 > Float get_stock_market_index_data_point_number(identifier, tag)
 
-#### Data Point (Number) for Stock Market Index
-
+Data Point (Number) for Stock Market Index
 
 Returns a numeric value for the given `tag` for the Stock Market Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1119,67 +579,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **Float**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_stock_market_index_data_point_text)
-
-[//]: # (RETURN_TYPE:Intrinio::String)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:get_stock_market_index_data_point_text_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_stock_market_index_data_point_text)
-
-## **get_stock_market_index_data_point_text**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_market_index_data_point_text_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_stock_market_index_data_point_text**
 > String get_stock_market_index_data_point_text(identifier, tag)
 
-#### Data Point (Text) for Stock Market Index
-
+Data Point (Text) for Stock Market Index
 
 Returns a text value for the given `tag` for the Stock Market Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1204,67 +622,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **String**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:get_stock_market_index_historical_data)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseStockMarketIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndexHistoricalData.md)
-
-[//]: # (OPERATION:get_stock_market_index_historical_data_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#get_stock_market_index_historical_data)
-
-## **get_stock_market_index_historical_data**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_market_index_historical_data_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_stock_market_index_historical_data**
 > ApiResponseStockMarketIndexHistoricalData get_stock_market_index_historical_data(identifier, tag, opts)
 
-#### Historical Data for Stock Market Index
-
+Historical Data for Stock Market Index
 
 Returns historical values for the given `tag` and the Stock Market Index with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1297,73 +673,31 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
- **type** | **String**| Filter by type, when applicable | [optional]  &nbsp;
- **start_date** | **Date**| Get historical data on or after this date | [optional]  &nbsp;
- **end_date** | **Date**| Get historical data on or before this date | [optional]  &nbsp;
- **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **type** | **String**| Filter by type, when applicable | [optional] 
+ **start_date** | **Date**| Get historical data on or after this date | [optional] 
+ **end_date** | **Date**| Get historical data on or before this date | [optional] 
+ **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseStockMarketIndexHistoricalData**](ApiResponseStockMarketIndexHistoricalData.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:search_economic_indices)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseEconomicIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndicesSearch.md)
-
-[//]: # (OPERATION:search_economic_indices_v2)
-
-[//]: # (ENDPOINT:/indices/economic/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#search_economic_indices)
-
-## **search_economic_indices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_economic_indices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **search_economic_indices**
 > ApiResponseEconomicIndicesSearch search_economic_indices(query, opts)
 
-#### Search Economic Indices
-
+Search Economic Indices
 
 Searches for indices using the text in `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1389,67 +723,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**| Search query |  &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **String**| Search query | 
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseEconomicIndicesSearch**](ApiResponseEconomicIndicesSearch.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:search_sic_indices)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseSICIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndicesSearch.md)
-
-[//]: # (OPERATION:search_sic_indices_v2)
-
-[//]: # (ENDPOINT:/indices/sic/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#search_sic_indices)
-
-## **search_sic_indices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_sic_indices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **search_sic_indices**
 > ApiResponseSICIndicesSearch search_sic_indices(query, opts)
 
-#### Search SIC Indices
-
+Search SIC Indices
 
 Searches for indices using the text in `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1475,67 +767,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**| Search query |  &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **String**| Search query | 
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseSICIndicesSearch**](ApiResponseSICIndicesSearch.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::IndexApi)
-
-[//]: # (METHOD:search_stock_markets_indices)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseStockMarketIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndicesSearch.md)
-
-[//]: # (OPERATION:search_stock_markets_indices_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#search_stock_markets_indices)
-
-## **search_stock_markets_indices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_stock_markets_indices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **search_stock_markets_indices**
 > ApiResponseStockMarketIndicesSearch search_stock_markets_indices(query, opts)
 
-#### Search Stock Market Indices
-
+Search Stock Market Indices
 
 Searches for indices using the text in `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1561,26 +811,14 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**| Search query |  &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **String**| Search query | 
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseStockMarketIndicesSearch**](ApiResponseStockMarketIndicesSearch.md)
-
-[//]: # (END_OPERATION)
 

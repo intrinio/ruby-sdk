@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseSecurityHistoricalData
+# Intrinio::ApiResponseSecurityHistoricalData
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **historical_data** | [**Array&lt;HistoricalData&gt;**](HistoricalData.md) |  | [optional] 

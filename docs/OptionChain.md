@@ -1,6 +1,6 @@
-### Intrinio::OptionChain
+# Intrinio::OptionChain
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **option** | [**Option**](Option.md) |  | [optional] 

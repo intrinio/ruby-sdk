@@ -1,6 +1,6 @@
-### Intrinio::HistoricalData
+# Intrinio::HistoricalData
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date** | **Date** | The date that the value is present | [optional] 

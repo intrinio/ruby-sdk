@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseSecurityStockPrices
+# Intrinio::ApiResponseSecurityStockPrices
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stock_prices** | [**Array&lt;StockPriceSummary&gt;**](StockPriceSummary.md) | The stock prices for the Security | [optional] 

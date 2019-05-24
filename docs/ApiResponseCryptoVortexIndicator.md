@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseCryptoVortexIndicator
+# Intrinio::ApiResponseCryptoVortexIndicator
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;VortexIndicatorTechnicalValue&gt;**](VortexIndicatorTechnicalValue.md) |  | [optional] 

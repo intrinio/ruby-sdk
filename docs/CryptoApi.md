@@ -46,44 +46,14 @@ Method | HTTP request | Description
 [**get_crypto_stats**](CryptoApi.md#get_crypto_stats) | **GET** /crypto/stats | Crypto Stats
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_book_asks)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoBookAsks)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoBookAsks.md)
-
-[//]: # (OPERATION:get_crypto_book_asks_v2)
-
-[//]: # (ENDPOINT:/crypto/book/asks)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_book_asks)
-
-## **get_crypto_book_asks**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_book_asks_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_book_asks**
 > ApiResponseCryptoBookAsks get_crypto_book_asks(opts)
 
-#### Crypto Book Asks
-
+Crypto Book Asks
 
 Returns the entire ask order book for a given Crypto Currency Pair and Crypto Exchange.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -109,68 +79,26 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return the order book asks for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return the order book asks for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return the order book asks for the given Crypto Currency. | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return the order book asks for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return the order book asks for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return the order book asks for the given Crypto Currency. | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoBookAsks**](ApiResponseCryptoBookAsks.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_book_bids)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoBookBids)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoBookBids.md)
-
-[//]: # (OPERATION:get_crypto_book_bids_v2)
-
-[//]: # (ENDPOINT:/crypto/book/bids)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_book_bids)
-
-## **get_crypto_book_bids**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_book_bids_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_book_bids**
 > ApiResponseCryptoBookBids get_crypto_book_bids(opts)
 
-#### Crypto Book Bids
-
+Crypto Book Bids
 
 Returns the entire bid order book for a given Crypto Currency Pair and Crypto Exchange.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -196,68 +124,26 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return the order book bids for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return the order book bids for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return the order book bids for the given Crypto Currency. | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return the order book bids for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return the order book bids for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return the order book bids for the given Crypto Currency. | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoBookBids**](ApiResponseCryptoBookBids.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_book_summary)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoBook)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoBook.md)
-
-[//]: # (OPERATION:get_crypto_book_summary_v2)
-
-[//]: # (ENDPOINT:/crypto/book)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_book_summary)
-
-## **get_crypto_book_summary**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_book_summary_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_book_summary**
 > ApiResponseCryptoBook get_crypto_book_summary(opts)
 
-#### Crypto Book Summary
-
+Crypto Book Summary
 
 Returns the order book summary (bid/ask prices and size) for a given Crypto Currency Pair and Crypto Exchange.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -284,69 +170,27 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **levels** | **Integer**| The number of prices/levels to return on each side. For example, the max of 50 levels will return up to 50 bid prices and 50 ask prices. | [optional]  &nbsp;
- **pair** | **String**| Return the order book summary for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return the order book summary for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return the order book summary for the given Crypto Currency. | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **levels** | **Integer**| The number of prices/levels to return on each side. For example, the max of 50 levels will return up to 50 bid prices and 50 ask prices. | [optional] 
+ **pair** | **String**| Return the order book summary for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return the order book summary for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return the order book summary for the given Crypto Currency. | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoBook**](ApiResponseCryptoBook.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_currencies)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoCurrencies)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoCurrencies.md)
-
-[//]: # (OPERATION:get_crypto_currencies_v2)
-
-[//]: # (ENDPOINT:/crypto/currencies)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_currencies)
-
-## **get_crypto_currencies**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_currencies_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_currencies**
 > ApiResponseCryptoCurrencies get_crypto_currencies(opts)
 
-#### Crypto Currencies
-
+Crypto Currencies
 
 Returns a list of Crypto Currencies for which prices are available.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -370,66 +214,24 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchange** | **String**| Returns Crypto Currencies traded on the given Crypto Exchange. | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **exchange** | **String**| Returns Crypto Currencies traded on the given Crypto Exchange. | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoCurrencies**](ApiResponseCryptoCurrencies.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_exchanges)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoExchanges)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoExchanges.md)
-
-[//]: # (OPERATION:get_crypto_exchanges_v2)
-
-[//]: # (ENDPOINT:/crypto/exchanges)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_exchanges)
-
-## **get_crypto_exchanges**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_exchanges_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_exchanges**
 > ApiResponseCryptoExchanges get_crypto_exchanges(opts)
 
-#### Crypto Exchanges
-
+Crypto Exchanges
 
 Returns a list of Crypto Exchanges for which prices are available.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -453,66 +255,24 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Filter exchanges based on whether or not prices are available on the exchange for the crypto currency pair. | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Filter exchanges based on whether or not prices are available on the exchange for the crypto currency pair. | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoExchanges**](ApiResponseCryptoExchanges.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_pairs)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoPairs)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoPairs.md)
-
-[//]: # (OPERATION:get_crypto_pairs_v2)
-
-[//]: # (ENDPOINT:/crypto/pairs)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_pairs)
-
-## **get_crypto_pairs**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_pairs_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_pairs**
 > ApiResponseCryptoPairs get_crypto_pairs(opts)
 
-#### Crypto Pairs
-
+Crypto Pairs
 
 Returns a list of Crypto Currency Pairs for which data is available.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -539,69 +299,27 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchange** | **String**| Return pairs traded on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return pairs with one side being the given Crypto Currency. | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **exchange** | **String**| Return pairs traded on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return pairs with one side being the given Crypto Currency. | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoPairs**](ApiResponseCryptoPairs.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_adi)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoAccumulationDistributionIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAccumulationDistributionIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_adi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/adi)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_adi)
-
-## **get_crypto_price_technicals_adi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_adi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_adi**
 > ApiResponseCryptoAccumulationDistributionIndex get_crypto_price_technicals_adi(opts)
 
-#### Accumulation/Distribution Index
-
+Accumulation/Distribution Index
 
 Returns the Accumulation/Distribution Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -635,76 +353,34 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAccumulationDistributionIndex**](ApiResponseCryptoAccumulationDistributionIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_adtv)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoAverageDailyTradingVolume)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAverageDailyTradingVolume.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_adtv_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/adtv)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_adtv)
-
-## **get_crypto_price_technicals_adtv**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_adtv_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_adtv**
 > ApiResponseCryptoAverageDailyTradingVolume get_crypto_price_technicals_adtv(opts)
 
-#### Average Daily Trading Volume
-
+Average Daily Trading Volume
 
 Returns the Average Daily Trading Volume values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -739,77 +415,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Average Daily Trading Volume. | [optional] [default to 22] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Average Daily Trading Volume. | [optional] [default to 22]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAverageDailyTradingVolume**](ApiResponseCryptoAverageDailyTradingVolume.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_adx)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoAverageDirectionalIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAverageDirectionalIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_adx_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/adx)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_adx)
-
-## **get_crypto_price_technicals_adx**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_adx_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_adx**
 > ApiResponseCryptoAverageDirectionalIndex get_crypto_price_technicals_adx(opts)
 
-#### Average Directional Index
-
+Average Directional Index
 
 Returns the Average Directional Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -844,77 +478,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Average Directional Index. | [optional] [default to 22] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Average Directional Index. | [optional] [default to 22]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAverageDirectionalIndex**](ApiResponseCryptoAverageDirectionalIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_ao)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoAwesomeOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAwesomeOscillator.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_ao_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/ao)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_ao)
-
-## **get_crypto_price_technicals_ao**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_ao_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_ao**
 > ApiResponseCryptoAwesomeOscillator get_crypto_price_technicals_ao(opts)
 
-#### Awesome Oscillator
-
+Awesome Oscillator
 
 Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -950,78 +542,36 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **short_period** | **Integer**| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. | [optional] [default to 5] &nbsp;
- **long_period** | **Integer**| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. | [optional] [default to 34] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **short_period** | **Integer**| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator. | [optional] [default to 5]
+ **long_period** | **Integer**| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator. | [optional] [default to 34]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAwesomeOscillator**](ApiResponseCryptoAwesomeOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_atr)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoAverageTrueRange)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoAverageTrueRange.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_atr_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/atr)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_atr)
-
-## **get_crypto_price_technicals_atr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_atr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_atr**
 > ApiResponseCryptoAverageTrueRange get_crypto_price_technicals_atr(opts)
 
-#### Average True Range
-
+Average True Range
 
 Returns the Average True Range values of Crypto Currency Prices for Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1056,77 +606,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Average True Range. | [optional] [default to 22] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Average True Range. | [optional] [default to 22]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoAverageTrueRange**](ApiResponseCryptoAverageTrueRange.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_bb)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoBollingerBands)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoBollingerBands.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_bb_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/bb)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_bb)
-
-## **get_crypto_price_technicals_bb**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_bb_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_bb**
 > ApiResponseCryptoBollingerBands get_crypto_price_technicals_bb(opts)
 
-#### Bollinger Bands
-
+Bollinger Bands
 
 Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1163,79 +671,37 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Bollinger Bands. | [optional] [default to 20] &nbsp;
- **standard_deviations** | **Float**| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. | [optional] [default to 2.0] &nbsp;
- **price_key** | **String**| The Crypto Currency Price field to use when calculating Bollinger Bands. | [optional] [default to close] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Bollinger Bands. | [optional] [default to 20]
+ **standard_deviations** | **Float**| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands. | [optional] [default to 2.0]
+ **price_key** | **String**| The Crypto Currency Price field to use when calculating Bollinger Bands. | [optional] [default to close]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoBollingerBands**](ApiResponseCryptoBollingerBands.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_cci)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoCommodityChannelIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoCommodityChannelIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_cci_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/cci)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_cci)
-
-## **get_crypto_price_technicals_cci**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_cci_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_cci**
 > ApiResponseCryptoCommodityChannelIndex get_crypto_price_technicals_cci(opts)
 
-#### Commodity Channel Index
-
+Commodity Channel Index
 
 Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1271,78 +737,36 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Commodity Channel Index. | [optional] [default to 20] &nbsp;
- **constant** | **Float**| The number of observations, per period, to calculate Commodity Channel Index. | [optional] [default to 0.015] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Commodity Channel Index. | [optional] [default to 20]
+ **constant** | **Float**| The number of observations, per period, to calculate Commodity Channel Index. | [optional] [default to 0.015]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoCommodityChannelIndex**](ApiResponseCryptoCommodityChannelIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_cmf)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoChaikinMoneyFlow)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoChaikinMoneyFlow.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_cmf_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/cmf)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_cmf)
-
-## **get_crypto_price_technicals_cmf**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_cmf_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_cmf**
 > ApiResponseCryptoChaikinMoneyFlow get_crypto_price_technicals_cmf(opts)
 
-#### Chaikin Money Flow
-
+Chaikin Money Flow
 
 Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1377,77 +801,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Chaikin Money Flow. | [optional] [default to 20] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Chaikin Money Flow. | [optional] [default to 20]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoChaikinMoneyFlow**](ApiResponseCryptoChaikinMoneyFlow.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_dc)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoDonchianChannel)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoDonchianChannel.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_dc_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/dc)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_dc)
-
-## **get_crypto_price_technicals_dc**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_dc_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_dc**
 > ApiResponseCryptoDonchianChannel get_crypto_price_technicals_dc(opts)
 
-#### Donchian Channel
-
+Donchian Channel
 
 Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1483,78 +865,36 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Donchian Channel. | [optional] [default to 20] &nbsp;
- **price_key** | **String**| The Crypto Currency Price field to use when calculating Donchian Channel. | [optional] [default to close] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Donchian Channel. | [optional] [default to 20]
+ **price_key** | **String**| The Crypto Currency Price field to use when calculating Donchian Channel. | [optional] [default to close]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoDonchianChannel**](ApiResponseCryptoDonchianChannel.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_dpo)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoDetrendedPriceOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoDetrendedPriceOscillator.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_dpo_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/dpo)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_dpo)
-
-## **get_crypto_price_technicals_dpo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_dpo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_dpo**
 > ApiResponseCryptoDetrendedPriceOscillator get_crypto_price_technicals_dpo(opts)
 
-#### Detrended Price Oscillator
-
+Detrended Price Oscillator
 
 Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1590,78 +930,36 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Detrended Price Oscillator. | [optional] [default to 20] &nbsp;
- **price_key** | **String**| The Crypto Currency Price field to use when calculating Detrended Price Oscillator. | [optional] [default to close] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Detrended Price Oscillator. | [optional] [default to 20]
+ **price_key** | **String**| The Crypto Currency Price field to use when calculating Detrended Price Oscillator. | [optional] [default to close]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoDetrendedPriceOscillator**](ApiResponseCryptoDetrendedPriceOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_eom)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoEaseOfMovement)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoEaseOfMovement.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_eom_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/eom)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_eom)
-
-## **get_crypto_price_technicals_eom**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_eom_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_eom**
 > ApiResponseCryptoEaseOfMovement get_crypto_price_technicals_eom(opts)
 
-#### Ease of Movement
-
+Ease of Movement
 
 Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1696,77 +994,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Ease of Movement. | [optional] [default to 20] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Ease of Movement. | [optional] [default to 20]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoEaseOfMovement**](ApiResponseCryptoEaseOfMovement.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_fi)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoForceIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoForceIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_fi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/fi)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_fi)
-
-## **get_crypto_price_technicals_fi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_fi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_fi**
 > ApiResponseCryptoForceIndex get_crypto_price_technicals_fi(opts)
 
-#### Force Index
-
+Force Index
 
 Returns the Force Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1800,76 +1056,34 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoForceIndex**](ApiResponseCryptoForceIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_ichimoku)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoIchimokuKinkoHyo)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoIchimokuKinkoHyo.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_ichimoku_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/ichimoku)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_ichimoku)
-
-## **get_crypto_price_technicals_ichimoku**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_ichimoku_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_ichimoku**
 > ApiResponseCryptoIchimokuKinkoHyo get_crypto_price_technicals_ichimoku(opts)
 
-#### Ichimoku Kinko Hyo
-
+Ichimoku Kinko Hyo
 
 Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1906,79 +1120,37 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **low_period** | **Integer**| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. | [optional] [default to 9] &nbsp;
- **medium_period** | **Integer**| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. | [optional] [default to 26] &nbsp;
- **high_period** | **Integer**| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. | [optional] [default to 52] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **low_period** | **Integer**| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo. | [optional] [default to 9]
+ **medium_period** | **Integer**| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo. | [optional] [default to 26]
+ **high_period** | **Integer**| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo. | [optional] [default to 52]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoIchimokuKinkoHyo**](ApiResponseCryptoIchimokuKinkoHyo.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_kc)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoKeltnerChannel)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoKeltnerChannel.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_kc_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/kc)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_kc)
-
-## **get_crypto_price_technicals_kc**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_kc_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_kc**
 > ApiResponseCryptoKeltnerChannel get_crypto_price_technicals_kc(opts)
 
-#### Keltner Channel
-
+Keltner Channel
 
 Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2013,77 +1185,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Kelter Channel. | [optional] [default to 10] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Kelter Channel. | [optional] [default to 10]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoKeltnerChannel**](ApiResponseCryptoKeltnerChannel.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_kst)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoKnowSureThing)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoKnowSureThing.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_kst_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/kst)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_kst)
-
-## **get_crypto_price_technicals_kst**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_kst_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_kst**
 > ApiResponseCryptoKnowSureThing get_crypto_price_technicals_kst(opts)
 
-#### Know Sure Thing
-
+Know Sure Thing
 
 Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2126,85 +1256,43 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **roc1** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA1. | [optional] [default to 10] &nbsp;
- **roc2** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA2. | [optional] [default to 15] &nbsp;
- **roc3** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA3. | [optional] [default to 20] &nbsp;
- **roc4** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA4. | [optional] [default to 30] &nbsp;
- **sma1** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. | [optional] [default to 10] &nbsp;
- **sma2** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. | [optional] [default to 10] &nbsp;
- **sma3** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. | [optional] [default to 10] &nbsp;
- **sma4** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. | [optional] [default to 15] &nbsp;
- **price_key** | **String**| The Crypto Currency Price field to use when calculating Know Sure Thing. | [optional] [default to close] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **roc1** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA1. | [optional] [default to 10]
+ **roc2** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA2. | [optional] [default to 15]
+ **roc3** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA3. | [optional] [default to 20]
+ **roc4** | **Integer**| The number of observations, per period, to calculate the rate-of-change for RCMA4. | [optional] [default to 30]
+ **sma1** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1. | [optional] [default to 10]
+ **sma2** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2. | [optional] [default to 10]
+ **sma3** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3. | [optional] [default to 10]
+ **sma4** | **Integer**| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4. | [optional] [default to 15]
+ **price_key** | **String**| The Crypto Currency Price field to use when calculating Know Sure Thing. | [optional] [default to close]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoKnowSureThing**](ApiResponseCryptoKnowSureThing.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_macd)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoMovingAverageConvergenceDivergence)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoMovingAverageConvergenceDivergence.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_macd_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/macd)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_macd)
-
-## **get_crypto_price_technicals_macd**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_macd_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_macd**
 > ApiResponseCryptoMovingAverageConvergenceDivergence get_crypto_price_technicals_macd(opts)
 
-#### Moving Average Convergence Divergence
-
+Moving Average Convergence Divergence
 
 Returns the Moving Average Convergence Divergence values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2242,80 +1330,38 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **fast_period** | **Integer**| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. | [optional] [default to 12] &nbsp;
- **slow_period** | **Integer**| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. | [optional] [default to 26] &nbsp;
- **signal_period** | **Integer**| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. | [optional] [default to 9] &nbsp;
- **price_key** | **String**| The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. | [optional] [default to close] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **fast_period** | **Integer**| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence. | [optional] [default to 12]
+ **slow_period** | **Integer**| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence. | [optional] [default to 26]
+ **signal_period** | **Integer**| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence. | [optional] [default to 9]
+ **price_key** | **String**| The Crypto Currency Price field to use when calculating Moving Average Convergence Divergence. | [optional] [default to close]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoMovingAverageConvergenceDivergence**](ApiResponseCryptoMovingAverageConvergenceDivergence.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_mfi)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoMoneyFlowIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoMoneyFlowIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_mfi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/mfi)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_mfi)
-
-## **get_crypto_price_technicals_mfi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_mfi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_mfi**
 > ApiResponseCryptoMoneyFlowIndex get_crypto_price_technicals_mfi(opts)
 
-#### Money Flow Index
-
+Money Flow Index
 
 Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2350,77 +1396,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Money Flow Index. | [optional] [default to 14] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Money Flow Index. | [optional] [default to 14]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoMoneyFlowIndex**](ApiResponseCryptoMoneyFlowIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_mi)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoMassIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoMassIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_mi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/mi)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_mi)
-
-## **get_crypto_price_technicals_mi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_mi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_mi**
 > ApiResponseCryptoMassIndex get_crypto_price_technicals_mi(opts)
 
-#### Mass Index
-
+Mass Index
 
 Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2456,78 +1460,36 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **ema_period** | **Integer**| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. | [optional] [default to 9] &nbsp;
- **sum_period** | **Integer**| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. | [optional] [default to 25] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **ema_period** | **Integer**| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index. | [optional] [default to 9]
+ **sum_period** | **Integer**| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index. | [optional] [default to 25]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoMassIndex**](ApiResponseCryptoMassIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_nvi)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoNegativeVolumeIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoNegativeVolumeIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_nvi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/nvi)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_nvi)
-
-## **get_crypto_price_technicals_nvi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_nvi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_nvi**
 > ApiResponseCryptoNegativeVolumeIndex get_crypto_price_technicals_nvi(opts)
 
-#### Negative Volume Index
-
+Negative Volume Index
 
 Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2561,76 +1523,34 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoNegativeVolumeIndex**](ApiResponseCryptoNegativeVolumeIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_obv)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoOnBalanceVolume)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoOnBalanceVolume.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_obv_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/obv)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_obv)
-
-## **get_crypto_price_technicals_obv**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_obv_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_obv**
 > ApiResponseCryptoOnBalanceVolume get_crypto_price_technicals_obv(opts)
 
-#### On-balance Volume
-
+On-balance Volume
 
 Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2664,76 +1584,34 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoOnBalanceVolume**](ApiResponseCryptoOnBalanceVolume.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_obv_mean)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoOnBalanceVolumeMean)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoOnBalanceVolumeMean.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_obv_mean_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/obv_mean)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_obv_mean)
-
-## **get_crypto_price_technicals_obv_mean**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_obv_mean_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_obv_mean**
 > ApiResponseCryptoOnBalanceVolumeMean get_crypto_price_technicals_obv_mean(opts)
 
-#### On-balance Volume Mean
-
+On-balance Volume Mean
 
 Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2768,77 +1646,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate On-balance Volume Mean. | [optional] [default to 10] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate On-balance Volume Mean. | [optional] [default to 10]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoOnBalanceVolumeMean**](ApiResponseCryptoOnBalanceVolumeMean.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_rsi)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoRelativeStrengthIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoRelativeStrengthIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_rsi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/rsi)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_rsi)
-
-## **get_crypto_price_technicals_rsi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_rsi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_rsi**
 > ApiResponseCryptoRelativeStrengthIndex get_crypto_price_technicals_rsi(opts)
 
-#### Relative Strength Index
-
+Relative Strength Index
 
 Returns the Relative Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2874,78 +1710,36 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Relative Strength Index. | [optional] [default to 14] &nbsp;
- **price_key** | **String**| The Crypto Currency Price field to use when calculating Relative Strength Index. | [optional] [default to close] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Relative Strength Index. | [optional] [default to 14]
+ **price_key** | **String**| The Crypto Currency Price field to use when calculating Relative Strength Index. | [optional] [default to close]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoRelativeStrengthIndex**](ApiResponseCryptoRelativeStrengthIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_sma)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoSimpleMovingAverage)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoSimpleMovingAverage.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_sma_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/sma)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_sma)
-
-## **get_crypto_price_technicals_sma**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_sma_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_sma**
 > ApiResponseCryptoSimpleMovingAverage get_crypto_price_technicals_sma(opts)
 
-#### Simple Moving Average
-
+Simple Moving Average
 
 Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -2981,78 +1775,36 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Simple Moving Average. | [optional] [default to 20] &nbsp;
- **price_key** | **String**| The Crypto Currency Price field to use when calculating Simple Moving Average. | [optional] [default to close] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Simple Moving Average. | [optional] [default to 20]
+ **price_key** | **String**| The Crypto Currency Price field to use when calculating Simple Moving Average. | [optional] [default to close]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoSimpleMovingAverage**](ApiResponseCryptoSimpleMovingAverage.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_sr)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoStochasticOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoStochasticOscillator.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_sr_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/sr)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_sr)
-
-## **get_crypto_price_technicals_sr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_sr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_sr**
 > ApiResponseCryptoStochasticOscillator get_crypto_price_technicals_sr(opts)
 
-#### Stochastic Oscillator
-
+Stochastic Oscillator
 
 Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3088,78 +1840,36 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate %K of Stochastic Oscillator. | [optional] [default to 14] &nbsp;
- **signal_period** | **Integer**| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. | [optional] [default to 3] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate %K of Stochastic Oscillator. | [optional] [default to 14]
+ **signal_period** | **Integer**| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator. | [optional] [default to 3]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoStochasticOscillator**](ApiResponseCryptoStochasticOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_trix)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoTripleExponentialAverage)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoTripleExponentialAverage.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_trix_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/trix)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_trix)
-
-## **get_crypto_price_technicals_trix**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_trix_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_trix**
 > ApiResponseCryptoTripleExponentialAverage get_crypto_price_technicals_trix(opts)
 
-#### Triple Exponential Average
-
+Triple Exponential Average
 
 Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3194,77 +1904,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. | [optional] [default to 15] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average. | [optional] [default to 15]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoTripleExponentialAverage**](ApiResponseCryptoTripleExponentialAverage.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_tsi)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoTrueStrengthIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoTrueStrengthIndex.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_tsi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/tsi)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_tsi)
-
-## **get_crypto_price_technicals_tsi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_tsi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_tsi**
 > ApiResponseCryptoTrueStrengthIndex get_crypto_price_technicals_tsi(opts)
 
-#### True Strength Index
-
+True Strength Index
 
 Returns the True Strength Index values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3301,79 +1969,37 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **low_period** | **Integer**| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. | [optional] [default to 13] &nbsp;
- **high_period** | **Integer**| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. | [optional] [default to 25] &nbsp;
- **price_key** | **String**| The Crypto Currency Price field to use when calculating True Strength Index. | [optional] [default to close] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **low_period** | **Integer**| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index. | [optional] [default to 13]
+ **high_period** | **Integer**| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index. | [optional] [default to 25]
+ **price_key** | **String**| The Crypto Currency Price field to use when calculating True Strength Index. | [optional] [default to close]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoTrueStrengthIndex**](ApiResponseCryptoTrueStrengthIndex.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_uo)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoUltimateOscillator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoUltimateOscillator.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_uo_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/uo)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_uo)
-
-## **get_crypto_price_technicals_uo**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_uo_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_uo**
 > ApiResponseCryptoUltimateOscillator get_crypto_price_technicals_uo(opts)
 
-#### Ultimate Oscillator
-
+Ultimate Oscillator
 
 Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3413,82 +2039,40 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **short_period** | **Integer**| The number of observations, per period, to calculate the short period for Ultimate Oscillator. | [optional] [default to 7] &nbsp;
- **medium_period** | **Integer**| The number of observations, per period, to calculate the medium period for Ultimate Oscillator. | [optional] [default to 14] &nbsp;
- **long_period** | **Integer**| The number of observations, per period, to calculate the long period for Ultimate Oscillator. | [optional] [default to 28] &nbsp;
- **short_weight** | **Float**| The weight of short Buying Pressure average for Ultimate Oscillator. | [optional] [default to 4.0] &nbsp;
- **medium_weight** | **Float**| The weight of medium Buying Pressure average for Ultimate Oscillator. | [optional] [default to 2.0] &nbsp;
- **long_weight** | **Float**| The weight of long Buying Pressure average for Ultimate Oscillator. | [optional] [default to 1.0] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **short_period** | **Integer**| The number of observations, per period, to calculate the short period for Ultimate Oscillator. | [optional] [default to 7]
+ **medium_period** | **Integer**| The number of observations, per period, to calculate the medium period for Ultimate Oscillator. | [optional] [default to 14]
+ **long_period** | **Integer**| The number of observations, per period, to calculate the long period for Ultimate Oscillator. | [optional] [default to 28]
+ **short_weight** | **Float**| The weight of short Buying Pressure average for Ultimate Oscillator. | [optional] [default to 4.0]
+ **medium_weight** | **Float**| The weight of medium Buying Pressure average for Ultimate Oscillator. | [optional] [default to 2.0]
+ **long_weight** | **Float**| The weight of long Buying Pressure average for Ultimate Oscillator. | [optional] [default to 1.0]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoUltimateOscillator**](ApiResponseCryptoUltimateOscillator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_vi)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoVortexIndicator)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoVortexIndicator.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_vi_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/vi)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_vi)
-
-## **get_crypto_price_technicals_vi**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_vi_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_vi**
 > ApiResponseCryptoVortexIndicator get_crypto_price_technicals_vi(opts)
 
-#### Vortex Indicator
-
+Vortex Indicator
 
 Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3523,77 +2107,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to calculate Vortex Indicator. | [optional] [default to 14] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to calculate Vortex Indicator. | [optional] [default to 14]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoVortexIndicator**](ApiResponseCryptoVortexIndicator.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_vpt)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoVolumePriceTrend)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoVolumePriceTrend.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_vpt_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/vpt)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_vpt)
-
-## **get_crypto_price_technicals_vpt**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_vpt_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_vpt**
 > ApiResponseCryptoVolumePriceTrend get_crypto_price_technicals_vpt(opts)
 
-#### Volume-price Trend
-
+Volume-price Trend
 
 Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3627,76 +2169,34 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoVolumePriceTrend**](ApiResponseCryptoVolumePriceTrend.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_vwap)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoVolumeWeightedAveragePrice)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoVolumeWeightedAveragePrice.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_vwap_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/vwap)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_vwap)
-
-## **get_crypto_price_technicals_vwap**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_vwap_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_vwap**
 > ApiResponseCryptoVolumeWeightedAveragePrice get_crypto_price_technicals_vwap(opts)
 
-#### Volume Weighted Average Price
-
+Volume Weighted Average Price
 
 Returns the Volume Weighted Average Price values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3730,76 +2230,34 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoVolumeWeightedAveragePrice**](ApiResponseCryptoVolumeWeightedAveragePrice.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_price_technicals_wr)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoWilliamsR)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoWilliamsR.md)
-
-[//]: # (OPERATION:get_crypto_price_technicals_wr_v2)
-
-[//]: # (ENDPOINT:/crypto/prices/technicals/wr)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_price_technicals_wr)
-
-## **get_crypto_price_technicals_wr**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_wr_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_price_technicals_wr**
 > ApiResponseCryptoWilliamsR get_crypto_price_technicals_wr(opts)
 
-#### Williams %R
-
+Williams %R
 
 Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency Pair
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3834,77 +2292,35 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return technicals for the given Crypto Currency. | [optional]  &nbsp;
- **period** | **Integer**| The number of observations, per period, to look-back when calculating Williams %R. | [optional] [default to 14] &nbsp;
- **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1] &nbsp;
- **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return technicals on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return technicals on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return technicals for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return technicals for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return technicals for the given Crypto Currency. | [optional] 
+ **period** | **Integer**| The number of observations, per period, to look-back when calculating Williams %R. | [optional] [default to 14]
+ **timeframe** | **String**| The time interval for the prices when calculating technicals. | [optional] [default to d1]
+ **timezone** | **String**| Return technical date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return technicals on or after this date. | [optional] 
+ **start_time** | **String**| Return technicals at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return technicals on or before this date. | [optional] 
+ **end_time** | **String**| Return technicals at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoWilliamsR**](ApiResponseCryptoWilliamsR.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_prices)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoPrices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoPrices.md)
-
-[//]: # (OPERATION:get_crypto_prices_v2)
-
-[//]: # (ENDPOINT:/crypto/prices)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_prices)
-
-## **get_crypto_prices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_prices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_prices**
 > ApiResponseCryptoPrices get_crypto_prices(timeframe, opts)
 
-#### Crypto Prices
-
+Crypto Prices
 
 Returns a list of available Crypto Currency Prices.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -3939,76 +2355,34 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **timeframe** | **String**| The time interval for the prices. | [default to d1] &nbsp;
- **pair** | **String**| Return prices for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return prices for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return prices for the given Crypto Currency. | [optional]  &nbsp;
- **timezone** | **String**| Return price date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC] &nbsp;
- **start_date** | **Date**| Return Crypto Prices on or after this date. | [optional]  &nbsp;
- **start_time** | **String**| Return Crypto Prices at or after this time (24-hour). | [optional]  &nbsp;
- **end_date** | **Date**| Return Crypto Prices on or before this date. | [optional]  &nbsp;
- **end_time** | **String**| Return Crypto Prices at or before this time (24-hour). | [optional]  &nbsp;
- **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **timeframe** | **String**| The time interval for the prices. | [default to d1]
+ **pair** | **String**| Return prices for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return prices for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return prices for the given Crypto Currency. | [optional] 
+ **timezone** | **String**| Return price date/times in this timezone, also interpret start/end date/time parameters in this timezone. | [optional] [default to UTC]
+ **start_date** | **Date**| Return Crypto Prices on or after this date. | [optional] 
+ **start_time** | **String**| Return Crypto Prices at or after this time (24-hour). | [optional] 
+ **end_date** | **Date**| Return Crypto Prices on or before this date. | [optional] 
+ **end_time** | **String**| Return Crypto Prices at or before this time (24-hour). | [optional] 
+ **page_size** | **Integer**| An integer greater than or equal to 1 for specifying the number of results on each page. | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoPrices**](ApiResponseCryptoPrices.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_snapshot)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoSnapshot)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoSnapshot.md)
-
-[//]: # (OPERATION:get_crypto_snapshot_v2)
-
-[//]: # (ENDPOINT:/crypto/snapshot)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_snapshot)
-
-## **get_crypto_snapshot**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_snapshot_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_snapshot**
 > ApiResponseCryptoSnapshot get_crypto_snapshot(opts)
 
-#### Crypto Snapshot
-
+Crypto Snapshot
 
 Returns a market snapshot over that last 24 hours for the given currency pair and exchange.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -4034,68 +2408,26 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pair** | **String**| Return the snapshot for the given Crypto Currency Pair. | [optional]  &nbsp;
- **exchange** | **String**| Return the snapshot for a Crypto Currency on the given Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Return the snapshot for the given Crypto Currency. | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pair** | **String**| Return the snapshot for the given Crypto Currency Pair. | [optional] 
+ **exchange** | **String**| Return the snapshot for a Crypto Currency on the given Crypto Exchange. | [optional] 
+ **currency** | **String**| Return the snapshot for the given Crypto Currency. | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoSnapshot**](ApiResponseCryptoSnapshot.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CryptoApi)
-
-[//]: # (METHOD:get_crypto_stats)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCryptoStats)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCryptoStats.md)
-
-[//]: # (OPERATION:get_crypto_stats_v2)
-
-[//]: # (ENDPOINT:/crypto/stats)
-
-[//]: # (DOCUMENT_LINK:CryptoApi.md#get_crypto_stats)
-
-## **get_crypto_stats**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_stats_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_crypto_stats**
 > ApiResponseCryptoStats get_crypto_stats(opts)
 
-#### Crypto Stats
-
+Crypto Stats
 
 Returns available stats on Crypto Currencies.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -4120,26 +2452,14 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchange** | **String**| Returns stats for Crypto Currencies that trade on the specified Crypto Exchange. | [optional]  &nbsp;
- **currency** | **String**| Returns stats for the specified Crypto Currency. | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **exchange** | **String**| Returns stats for Crypto Currencies that trade on the specified Crypto Exchange. | [optional] 
+ **currency** | **String**| Returns stats for the specified Crypto Currency. | [optional] 
 
 ### Return type
 
 [**ApiResponseCryptoStats**](ApiResponseCryptoStats.md)
-
-[//]: # (END_OPERATION)
 

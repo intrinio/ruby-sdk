@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseCryptoMoneyFlowIndex
+# Intrinio::ApiResponseCryptoMoneyFlowIndex
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;MoneyFlowIndexTechnicalValue&gt;**](MoneyFlowIndexTechnicalValue.md) |  | [optional] 

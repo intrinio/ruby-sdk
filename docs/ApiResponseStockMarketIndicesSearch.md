@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseStockMarketIndicesSearch
+# Intrinio::ApiResponseStockMarketIndicesSearch
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **indices** | [**Array&lt;StockMarketIndexSummary&gt;**](StockMarketIndexSummary.md) |  | [optional] 

@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseForexPrices
+# Intrinio::ApiResponseForexPrices
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **prices** | [**Array&lt;ForexPrice&gt;**](ForexPrice.md) |  | [optional] 

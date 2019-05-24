@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseCryptoAverageDirectionalIndex
+# Intrinio::ApiResponseCryptoAverageDirectionalIndex
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;AverageDirectionalIndexTechnicalValue&gt;**](AverageDirectionalIndexTechnicalValue.md) |  | [optional] 

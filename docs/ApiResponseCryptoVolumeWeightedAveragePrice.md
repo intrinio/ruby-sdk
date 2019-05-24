@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseCryptoVolumeWeightedAveragePrice
+# Intrinio::ApiResponseCryptoVolumeWeightedAveragePrice
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;VolumeWeightedAveragePriceValue&gt;**](VolumeWeightedAveragePriceValue.md) |  | [optional] 

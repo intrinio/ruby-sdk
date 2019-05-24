@@ -1,6 +1,6 @@
-### Intrinio::CryptoBookEntry
+# Intrinio::CryptoBookEntry
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **price** | **Float** | The price of the book entry. | [optional] 

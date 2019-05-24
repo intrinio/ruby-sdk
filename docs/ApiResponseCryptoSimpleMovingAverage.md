@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseCryptoSimpleMovingAverage
+# Intrinio::ApiResponseCryptoSimpleMovingAverage
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;SimpleMovingAverageTechnicalValue&gt;**](SimpleMovingAverageTechnicalValue.md) |  | [optional] 

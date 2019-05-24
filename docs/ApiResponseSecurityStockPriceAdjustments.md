@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseSecurityStockPriceAdjustments
+# Intrinio::ApiResponseSecurityStockPriceAdjustments
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stock_price_adjustments** | [**Array&lt;StockPriceAdjustmentSummary&gt;**](StockPriceAdjustmentSummary.md) | The stock price adjustments for the Security | [optional] 

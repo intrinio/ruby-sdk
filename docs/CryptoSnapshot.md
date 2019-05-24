@@ -1,6 +1,6 @@
-### Intrinio::CryptoSnapshot
+# Intrinio::CryptoSnapshot
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **last_updated** | **String** | UTC timestamp of when the snapshot was last updated. | [optional] 

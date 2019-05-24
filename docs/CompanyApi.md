@@ -18,44 +18,14 @@ Method | HTTP request | Description
 [**search_companies**](CompanyApi.md#search_companies) | **GET** /companies/search | Search Companies
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_all_companies)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanies)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanies.md)
-
-[//]: # (OPERATION:get_all_companies_v2)
-
-[//]: # (ENDPOINT:/companies)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_all_companies)
-
-## **get_all_companies**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_companies_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_all_companies**
 > ApiResponseCompanies get_all_companies(opts)
 
-#### All Companies
-
+All Companies
 
 Returns all Companies. When parameters are specified, returns matching companies.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -86,73 +56,31 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **latest_filing_date** | **Date**| Last filing date | [optional]  &nbsp;
- **sic** | **String**| Standard Industrial Classification code | [optional]  &nbsp;
- **template** | **String**| Template | [optional]  &nbsp;
- **sector** | **String**| Industry sector | [optional]  &nbsp;
- **industry_category** | **String**| Industry category | [optional]  &nbsp;
- **industry_group** | **String**| Industry group | [optional]  &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **latest_filing_date** | **Date**| Last filing date | [optional] 
+ **sic** | **String**| Standard Industrial Classification code | [optional] 
+ **template** | **String**| Template | [optional] 
+ **sector** | **String**| Industry sector | [optional] 
+ **industry_category** | **String**| Industry category | [optional] 
+ **industry_group** | **String**| Industry group | [optional] 
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanies**](ApiResponseCompanies.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_all_company_news)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseNews)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseNews.md)
-
-[//]: # (OPERATION:get_all_company_news_v2)
-
-[//]: # (ENDPOINT:/companies/news)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_all_company_news)
-
-## **get_all_company_news**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_company_news_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_all_company_news**
 > ApiResponseNews get_all_company_news(opts)
 
-#### All News
-
+All News
 
 Returns all News for all Companies
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -177,67 +105,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseNews**](ApiResponseNews.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_company)
-
-[//]: # (RETURN_TYPE:Intrinio::Company)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:Company.md)
-
-[//]: # (OPERATION:get_company_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier})
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company)
-
-## **get_company**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_company**
 > Company get_company(identifier)
 
-#### Lookup Company
-
+Lookup Company
 
 Returns the Company with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -260,66 +146,24 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
 
 ### Return type
 
 [**Company**](Company.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_company_data_point_number)
-
-[//]: # (RETURN_TYPE:Intrinio::Float)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:get_company_data_point_number_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_data_point_number)
-
-## **get_company_data_point_number**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_data_point_number_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_company_data_point_number**
 > Float get_company_data_point_number(identifier, tag)
 
-#### Data Point (Number) for Company
-
+Data Point (Number) for Company
 
 Returns a numeric value for the given `tag` for the Company with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -344,67 +188,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
 
 ### Return type
 
 **Float**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_company_data_point_text)
-
-[//]: # (RETURN_TYPE:Intrinio::String)
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:get_company_data_point_text_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_data_point_text)
-
-## **get_company_data_point_text**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_data_point_text_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_company_data_point_text**
 > String get_company_data_point_text(identifier, tag)
 
-#### Data Point (Text) for Company
-
+Data Point (Text) for Company
 
 Returns a text value for the given `tag` for the Company with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -429,67 +231,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
 
 ### Return type
 
 **String**
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_company_filings)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanyFilings)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyFilings.md)
-
-[//]: # (OPERATION:get_company_filings_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/filings)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_filings)
-
-## **get_company_filings**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_filings_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_company_filings**
 > ApiResponseCompanyFilings get_company_filings(identifier, opts)
 
-#### All Filings by Company
-
+All Filings by Company
 
 Returns a complete list of SEC filings for the Company with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -504,6 +264,9 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
+  report_type: nil, # String | Filter by report type. Separate values with commas to return multiple report types.
+  start_date: Date.parse("2015-01-01"), # Date | Filed on or after the given date
+  end_date: nil, # Date | Filed before or after the given date
   page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
@@ -516,68 +279,29 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **report_type** | **String**| Filter by report type. Separate values with commas to return multiple report types. | [optional] 
+ **start_date** | **Date**| Filed on or after the given date | [optional] 
+ **end_date** | **Date**| Filed before or after the given date | [optional] 
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanyFilings**](ApiResponseCompanyFilings.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_company_fundamentals)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanyFundamentals)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyFundamentals.md)
-
-[//]: # (OPERATION:get_company_fundamentals_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/fundamentals)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_fundamentals)
-
-## **get_company_fundamentals**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_fundamentals_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_company_fundamentals**
 > ApiResponseCompanyFundamentals get_company_fundamentals(identifier, opts)
 
-#### All Fundamentals by Company
-
+All Fundamentals by Company
 
 Returns all Fundamentals for the Company with the given `identifier`. Returns Fundamentals matching parameters when supplied.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -612,76 +336,34 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **filed_after** | **Date**| Filed on or after this date | [optional]  &nbsp;
- **filed_before** | **Date**| Filed on or before this date | [optional]  &nbsp;
- **reported_only** | **BOOLEAN**| Only as-reported fundamentals | [optional]  &nbsp;
- **fiscal_year** | **Integer**| Only for the given fiscal year | [optional]  &nbsp;
- **statement_code** | **String**| Only of the given statement code | [optional]  &nbsp;
- **type** | **String**| Only of the given type | [optional]  &nbsp;
- **start_date** | **Date**| Only on or after the given date | [optional]  &nbsp;
- **end_date** | **Date**| Only on or before the given date | [optional]  &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **filed_after** | **Date**| Filed on or after this date | [optional] 
+ **filed_before** | **Date**| Filed on or before this date | [optional] 
+ **reported_only** | **BOOLEAN**| Only as-reported fundamentals | [optional] 
+ **fiscal_year** | **Integer**| Only for the given fiscal year | [optional] 
+ **statement_code** | **String**| Only of the given statement code | [optional] 
+ **type** | **String**| Only of the given type | [optional] 
+ **start_date** | **Date**| Only on or after the given date | [optional] 
+ **end_date** | **Date**| Only on or before the given date | [optional] 
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanyFundamentals**](ApiResponseCompanyFundamentals.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_company_historical_data)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanyHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyHistoricalData.md)
-
-[//]: # (OPERATION:get_company_historical_data_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_historical_data)
-
-## **get_company_historical_data**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_historical_data_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_company_historical_data**
 > ApiResponseCompanyHistoricalData get_company_historical_data(identifier, tag, opts)
 
-#### Historical Data for Company
-
+Historical Data for Company
 
 Returns historical values for the given `tag` and the Company with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -715,74 +397,32 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
- **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
- **type** | **String**| Filter by type, when applicable | [optional]  &nbsp;
- **start_date** | **Date**| Get historical data on or after this date | [optional]  &nbsp;
- **end_date** | **Date**| Get historical data on or before this date | [optional]  &nbsp;
- **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+ **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
+ **type** | **String**| Filter by type, when applicable | [optional] 
+ **start_date** | **Date**| Get historical data on or after this date | [optional] 
+ **end_date** | **Date**| Get historical data on or before this date | [optional] 
+ **sort_order** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanyHistoricalData**](ApiResponseCompanyHistoricalData.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_company_news)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanyNews)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyNews.md)
-
-[//]: # (OPERATION:get_company_news_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/news)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_news)
-
-## **get_company_news**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_news_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_company_news**
 > ApiResponseCompanyNews get_company_news(identifier, opts)
 
-#### All News by Company
-
+All News by Company
 
 Returns news for the Company with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -809,68 +449,26 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanyNews**](ApiResponseCompanyNews.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:get_company_securities)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanySecurities)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanySecurities.md)
-
-[//]: # (OPERATION:get_company_securities_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/securities)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_securities)
-
-## **get_company_securities**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_securities_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **get_company_securities**
 > ApiResponseCompanySecurities get_company_securities(identifier, opts)
 
-#### All Securities by Company
-
+All Securities by Company
 
 Returns Securities for the Company with the given `identifier`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -896,67 +494,25 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **next_page** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **next_page** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanySecurities**](ApiResponseCompanySecurities.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:lookup_company_fundamental)
-
-[//]: # (RETURN_TYPE:Intrinio::Fundamental)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:Fundamental.md)
-
-[//]: # (OPERATION:lookup_company_fundamental_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period})
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#lookup_company_fundamental)
-
-## **lookup_company_fundamental**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookup_company_fundamental_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **lookup_company_fundamental**
 > Fundamental lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
 
-#### Lookup Fundamental by Company
-
+Lookup Fundamental by Company
 
 Returns the Fundamental for the Company with the given `identifier` and with the given parameters
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -985,69 +541,27 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **statement_code** | **String**| The statement code |  &nbsp;
- **fiscal_period** | **String**| The fiscal period |  &nbsp;
- **fiscal_year** | **Integer**| The fiscal year |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **statement_code** | **String**| The statement code | 
+ **fiscal_period** | **String**| The fiscal period | 
+ **fiscal_year** | **Integer**| The fiscal year | 
 
 ### Return type
 
 [**Fundamental**](Fundamental.md)
 
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::CompanyApi)
-
-[//]: # (METHOD:search_companies)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompaniesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompaniesSearch.md)
-
-[//]: # (OPERATION:search_companies_v2)
-
-[//]: # (ENDPOINT:/companies/search)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#search_companies)
-
-## **search_companies**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_companies_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **search_companies**
 > ApiResponseCompaniesSearch search_companies(query, opts)
 
-#### Search Companies
-
+Search Companies
 
 Searches for Companies matching the text `query`
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
@@ -1073,26 +587,14 @@ rescue Intrinio::ApiError => e
 end
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**| Search parameters |  &nbsp;
- **page_size** | **Integer**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **String**| Search parameters | 
+ **page_size** | **Integer**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseCompaniesSearch**](ApiResponseCompaniesSearch.md)
-
-[//]: # (END_OPERATION)
 

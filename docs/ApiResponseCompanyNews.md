@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseCompanyNews
+# Intrinio::ApiResponseCompanyNews
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **news** | [**Array&lt;CompanyNews&gt;**](CompanyNews.md) |  | [optional] 

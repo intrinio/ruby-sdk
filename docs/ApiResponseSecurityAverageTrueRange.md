@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseSecurityAverageTrueRange
+# Intrinio::ApiResponseSecurityAverageTrueRange
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;AverageTrueRangeTechnicalValue&gt;**](AverageTrueRangeTechnicalValue.md) |  | [optional] 

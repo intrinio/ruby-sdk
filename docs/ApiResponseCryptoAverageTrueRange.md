@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseCryptoAverageTrueRange
+# Intrinio::ApiResponseCryptoAverageTrueRange
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**Array&lt;AverageTrueRangeTechnicalValue&gt;**](AverageTrueRangeTechnicalValue.md) |  | [optional] 

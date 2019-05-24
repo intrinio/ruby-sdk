@@ -1,6 +1,6 @@
-### Intrinio::ApiResponseOptionsExpirations
+# Intrinio::ApiResponseOptionsExpirations
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **expirations** | **Array&lt;String&gt;** | A list of option expiration dates in descending order | [optional] 
