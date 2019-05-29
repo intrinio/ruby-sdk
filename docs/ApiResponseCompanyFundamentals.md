@@ -1,10 +1,28 @@
-# Intrinio::ApiResponseCompanyFundamentals
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**fundamentals** | [**Array&lt;FundamentalSummary&gt;**](FundamentalSummary.md) |  | [optional] 
-**company** | [**CompanySummary**](CompanySummary.md) |  | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseCompanyFundamentals)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseCompanyFundamentals
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**fundamentals** | [**Array&lt;FundamentalSummary&gt;**](FundamentalSummary.md) |  &nbsp;
+**company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::FundamentalSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::CompanySummary)
+
 
 

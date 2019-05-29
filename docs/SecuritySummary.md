@@ -1,17 +1,29 @@
-# Intrinio::SecuritySummary
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The Intrinio ID for Security | [optional] 
-**company_id** | **String** | The Intrinio ID for the Company for which the Security is issued | [optional] 
-**name** | **String** | The name of the Security | [optional] 
-**code** | **String** | A 2-3 digit code classifying the Security | [optional] 
-**currency** | **String** | The currency in which the Security is traded on the exchange | [optional] 
-**ticker** | **String** | The common/local ticker of the Security | [optional] 
-**composite_ticker** | **String** | The country-composite ticker of the Security | [optional] 
-**figi** | **String** | The OpenFIGI identifier | [optional] 
-**composite_figi** | **String** | The country-composite OpenFIGI identifier | [optional] 
-**share_class_figi** | **String** | The global-composite OpenFIGI identifier | [optional] 
+
+[//]: # (CLASS:Intrinio::SecuritySummary)
+
+[//]: # (KIND:object)
+
+### Intrinio::SecuritySummary
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**id** | String | The Intrinio ID for Security &nbsp;
+**company_id** | String | The Intrinio ID for the Company for which the Security is issued &nbsp;
+**name** | String | The name of the Security &nbsp;
+**code** | String | A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;) &nbsp;
+**currency** | String | The currency in which the Security is traded on the exchange &nbsp;
+**ticker** | String | The common/local ticker of the Security &nbsp;
+**composite_ticker** | String | The country-composite ticker of the Security &nbsp;
+**figi** | String | The OpenFIGI identifier &nbsp;
+**composite_figi** | String | The country-composite OpenFIGI identifier &nbsp;
+**share_class_figi** | String | The global-composite OpenFIGI identifier &nbsp;
+
+[//]: # (END_DEFINITION)
+
 
 

@@ -1,9 +1,21 @@
-# Intrinio::SimpleMovingAverageTechnicalValue
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**date_time** | **DateTime** | The date_time of the observation | [optional] 
-**sma** | **Float** | The Simple Moving Average calculation value | [optional] 
+
+[//]: # (CLASS:Intrinio::SimpleMovingAverageTechnicalValue)
+
+[//]: # (KIND:object)
+
+### Intrinio::SimpleMovingAverageTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**date_time** | DateTime | The date_time of the observation &nbsp;
+**sma** | Float | The Simple Moving Average calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 
 

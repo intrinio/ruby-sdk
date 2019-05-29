@@ -1,9 +1,24 @@
-# Intrinio::ApiResponseEconomicIndices
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**indices** | [**Array&lt;EconomicIndexSummary&gt;**](EconomicIndexSummary.md) |  | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseEconomicIndices)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseEconomicIndices
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**indices** | [**Array&lt;EconomicIndexSummary&gt;**](EconomicIndexSummary.md) |  &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::EconomicIndexSummary)
+
 
 

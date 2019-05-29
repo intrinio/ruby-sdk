@@ -1,10 +1,28 @@
-# Intrinio::ApiResponseReportedFinancials
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**reported_financials** | [**Array&lt;ReportedFinancial&gt;**](ReportedFinancial.md) |  | [optional] 
-**fundamental** | [**Fundamental**](Fundamental.md) |  | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseReportedFinancials)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseReportedFinancials
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**reported_financials** | [**Array&lt;ReportedFinancial&gt;**](ReportedFinancial.md) |  &nbsp;
+**fundamental** | [**Fundamental**](Fundamental.md) |  &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::ReportedFinancial)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::Fundamental)
+
 
 

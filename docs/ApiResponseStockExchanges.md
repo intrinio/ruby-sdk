@@ -1,9 +1,24 @@
-# Intrinio::ApiResponseStockExchanges
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**stock_exchanges** | [**Array&lt;StockExchange&gt;**](StockExchange.md) |  | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseStockExchanges)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseStockExchanges
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**stock_exchanges** | [**Array&lt;StockExchange&gt;**](StockExchange.md) |  &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::StockExchange)
+
 
 

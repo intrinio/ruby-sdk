@@ -1,10 +1,28 @@
-# Intrinio::ApiResponseSecurityZacksSalesSurprises
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**sales_surprises** | [**Array&lt;ZacksSalesSurpriseSummary&gt;**](ZacksSalesSurpriseSummary.md) |  | [optional] 
-**security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseSecurityZacksSalesSurprises)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseSecurityZacksSalesSurprises
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**sales_surprises** | [**Array&lt;ZacksSalesSurpriseSummary&gt;**](ZacksSalesSurpriseSummary.md) |  &nbsp;
+**security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::ZacksSalesSurpriseSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::SecuritySummary)
+
 
 

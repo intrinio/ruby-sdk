@@ -1,16 +1,28 @@
-# Intrinio::ZacksAnalystRatingSummary
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The Intrinio ID for the record | [optional] 
-**date** | **Date** | The date of the Zacks Analyst Rating. | [optional] 
-**mean** | **Float** | The mean (average) weighing of analyst recommendations, from 1 (strong buy) to 5 (strong sell). | [optional] 
-**strong_buys** | **Integer** | The number of analysts recommending Strong Buy. | [optional] 
-**buys** | **Integer** | The number of analysts recommending Buy. | [optional] 
-**holds** | **Integer** | The number of analysts recommending Hold. | [optional] 
-**sells** | **Integer** | The number of analysts recommending Sell. | [optional] 
-**strong_sells** | **Integer** | The number of analysts recommending Strong Sell. | [optional] 
-**total** | **Integer** | The total number of analyst recommendations. | [optional] 
+
+[//]: # (CLASS:Intrinio::ZacksAnalystRatingSummary)
+
+[//]: # (KIND:object)
+
+### Intrinio::ZacksAnalystRatingSummary
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**id** | String | The Intrinio ID for the record &nbsp;
+**date** | Date | The date of the Zacks Analyst Rating. &nbsp;
+**mean** | Float | The mean (average) weighing of analyst recommendations, from 1 (strong buy) to 5 (strong sell). &nbsp;
+**strong_buys** | Integer | The number of analysts recommending Strong Buy. &nbsp;
+**buys** | Integer | The number of analysts recommending Buy. &nbsp;
+**holds** | Integer | The number of analysts recommending Hold. &nbsp;
+**sells** | Integer | The number of analysts recommending Sell. &nbsp;
+**strong_sells** | Integer | The number of analysts recommending Strong Sell. &nbsp;
+**total** | Integer | The total number of analyst recommendations. &nbsp;
+
+[//]: # (END_DEFINITION)
+
 
 

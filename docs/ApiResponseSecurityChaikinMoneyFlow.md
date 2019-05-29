@@ -1,11 +1,32 @@
-# Intrinio::ApiResponseSecurityChaikinMoneyFlow
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**technicals** | [**Array&lt;ChaikinMoneyFlowTechnicalValue&gt;**](ChaikinMoneyFlowTechnicalValue.md) |  | [optional] 
-**indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator | [optional] 
-**security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Stock Price | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseSecurityChaikinMoneyFlow)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseSecurityChaikinMoneyFlow
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**technicals** | [**Array&lt;ChaikinMoneyFlowTechnicalValue&gt;**](ChaikinMoneyFlowTechnicalValue.md) |  &nbsp;
+**indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator &nbsp;
+**security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Stock Price &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::ChaikinMoneyFlowTechnicalValue)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::TechnicalIndicator)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::SecuritySummary)
+
 
 

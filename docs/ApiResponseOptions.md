@@ -1,9 +1,24 @@
-# Intrinio::ApiResponseOptions
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**options** | [**Array&lt;Option&gt;**](Option.md) | A list of options contracts with the given symbol | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseOptions)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseOptions
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**options** | [**Array&lt;Option&gt;**](Option.md) | A list of options contracts with the given symbol &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::Option)
+
 
 

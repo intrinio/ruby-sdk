@@ -1,9 +1,21 @@
-# Intrinio::MoneyFlowIndexTechnicalValue
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**date_time** | **DateTime** | The date_time of the observation | [optional] 
-**mfi** | **Float** | The Money Flow Index calculation value | [optional] 
+
+[//]: # (CLASS:Intrinio::MoneyFlowIndexTechnicalValue)
+
+[//]: # (KIND:object)
+
+### Intrinio::MoneyFlowIndexTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**date_time** | DateTime | The date_time of the observation &nbsp;
+**mfi** | Float | The Money Flow Index calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 
 

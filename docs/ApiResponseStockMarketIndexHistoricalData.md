@@ -1,10 +1,28 @@
-# Intrinio::ApiResponseStockMarketIndexHistoricalData
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**historical_data** | [**Array&lt;HistoricalData&gt;**](HistoricalData.md) |  | [optional] 
-**index** | [**StockMarketIndexSummary**](StockMarketIndexSummary.md) |  | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseStockMarketIndexHistoricalData)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseStockMarketIndexHistoricalData
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**historical_data** | [**Array&lt;HistoricalData&gt;**](HistoricalData.md) |  &nbsp;
+**index** | [**StockMarketIndexSummary**](StockMarketIndexSummary.md) |  &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::HistoricalData)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::StockMarketIndexSummary)
+
 
 

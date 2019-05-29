@@ -1,10 +1,28 @@
-# Intrinio::ApiResponseCompanySecurities
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**securities** | [**Array&lt;SecuritySummary&gt;**](SecuritySummary.md) |  | [optional] 
-**company** | [**CompanySummary**](CompanySummary.md) |  | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseCompanySecurities)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseCompanySecurities
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**securities** | [**Array&lt;SecuritySummary&gt;**](SecuritySummary.md) |  &nbsp;
+**company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::SecuritySummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::CompanySummary)
+
 
 

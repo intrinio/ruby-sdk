@@ -1,9 +1,21 @@
-# Intrinio::KnowSureThingTechnicalValue
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**date_time** | **DateTime** | The date_time of the observation | [optional] 
-**kst** | **Float** | The Know Sure Thing calculation value | [optional] 
+
+[//]: # (CLASS:Intrinio::KnowSureThingTechnicalValue)
+
+[//]: # (KIND:object)
+
+### Intrinio::KnowSureThingTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**date_time** | DateTime | The date_time of the observation &nbsp;
+**kst** | Float | The Know Sure Thing calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 
 

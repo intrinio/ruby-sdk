@@ -1,17 +1,32 @@
-# Intrinio::DividendRecord
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**ex_dividend** | **Float** | Amount of dividend in US dollars | [optional] 
-**currency** | **String** | The 3-digit currency code the dividend amount was reported in | [optional] 
-**announcement_date** | **Date** | Date dividend was announced | [optional] 
-**record_date** | **Date** | Date before which holders-of-record will receive the dividend | [optional] 
-**pay_date** | **Date** | Date the divdiend was paid | [optional] 
-**frequency** | **String** | Identifies payment frequency of announced dividend | [optional] 
-**status** | **String** | Status of the dividend | [optional] 
-**forward_yield** | **Float** | The forward dividend yield | [optional] 
-**forward_rate** | **Float** | The forward dividend rate | [optional] 
-**security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
+
+[//]: # (CLASS:Intrinio::DividendRecord)
+
+[//]: # (KIND:object)
+
+### Intrinio::DividendRecord
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**ex_dividend** | Float | Amount of dividend in US dollars &nbsp;
+**currency** | String | The 3-digit currency code the dividend amount was reported in &nbsp;
+**announcement_date** | Date | Date dividend was announced &nbsp;
+**record_date** | Date | Date before which holders-of-record will receive the dividend &nbsp;
+**pay_date** | Date | Date the divdiend was paid &nbsp;
+**frequency** | String | Identifies payment frequency of announced dividend &nbsp;
+**status** | String | Status of the dividend &nbsp;
+**forward_yield** | Float | The forward dividend yield &nbsp;
+**forward_rate** | Float | The forward dividend rate &nbsp;
+**security** | [**SecuritySummary**](SecuritySummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::SecuritySummary)
+
 
 

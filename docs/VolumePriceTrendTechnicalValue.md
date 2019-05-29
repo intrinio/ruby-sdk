@@ -1,9 +1,21 @@
-# Intrinio::VolumePriceTrendTechnicalValue
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**date_time** | **DateTime** | The date_time of the observation | [optional] 
-**vpt** | **Float** | The Volume-price Trend calculation value | [optional] 
+
+[//]: # (CLASS:Intrinio::VolumePriceTrendTechnicalValue)
+
+[//]: # (KIND:object)
+
+### Intrinio::VolumePriceTrendTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**date_time** | DateTime | The date_time of the observation &nbsp;
+**vpt** | Float | The Volume-price Trend calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
 
 

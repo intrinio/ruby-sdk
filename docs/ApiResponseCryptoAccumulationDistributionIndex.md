@@ -1,13 +1,37 @@
-# Intrinio::ApiResponseCryptoAccumulationDistributionIndex
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**technicals** | [**Array&lt;AccumulationDistributionIndexTechnicalValue&gt;**](AccumulationDistributionIndexTechnicalValue.md) |  | [optional] 
-**indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator | [optional] 
-**pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 
-**exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
-**timeframe** | **String** | The time interval for the crypto currency prices | [optional] 
-**next_page** | **String** | The token required to request the next page of the data | [optional] 
+
+[//]: # (CLASS:Intrinio::ApiResponseCryptoAccumulationDistributionIndex)
+
+[//]: # (KIND:object)
+
+### Intrinio::ApiResponseCryptoAccumulationDistributionIndex
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**technicals** | [**Array&lt;AccumulationDistributionIndexTechnicalValue&gt;**](AccumulationDistributionIndexTechnicalValue.md) |  &nbsp;
+**indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator &nbsp;
+**pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  &nbsp;
+**exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  &nbsp;
+**timeframe** | String | The time interval for the crypto currency prices &nbsp;
+**next_page** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::AccumulationDistributionIndexTechnicalValue)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::TechnicalIndicator)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::CryptoPairSummary)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::CryptoExchangeSummary)
+
 
 
