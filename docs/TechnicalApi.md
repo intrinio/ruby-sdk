@@ -89,7 +89,7 @@ Method | HTTP request | Description
 
 ## **get_crypto_price_technicals_adi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_adi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_adi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -109,6 +109,7 @@ Returns the Accumulation/Distribution Index values of Crypto Currency Prices for
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -133,7 +134,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_adi(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_adi: #{e}"
 end
@@ -192,7 +193,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_adtv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_adtv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_adtv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -212,6 +213,7 @@ Returns the Average Daily Trading Volume values of Crypto Currency Prices for a 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -237,7 +239,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_adtv(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_adtv: #{e}"
 end
@@ -297,7 +299,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_adx**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_adx_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_adx_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -317,6 +319,7 @@ Returns the Average Directional Index values of Crypto Currency Prices for a Cry
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -342,7 +345,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_adx(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_adx: #{e}"
 end
@@ -402,7 +405,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_ao**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_ao_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_ao_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -422,6 +425,7 @@ Returns the Awesome Oscillator values of Crypto Currency Prices for a Crypto Cur
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -448,7 +452,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_ao(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_ao: #{e}"
 end
@@ -509,7 +513,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_atr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_atr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_atr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -529,6 +533,7 @@ Returns the Average True Range values of Crypto Currency Prices for Crypto Curre
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -554,7 +559,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_atr(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_atr: #{e}"
 end
@@ -614,7 +619,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_bb**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_bb_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_bb_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -634,6 +639,7 @@ Returns the Bollinger Bands values of Crypto Currency Prices for a Crypto Curren
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -661,7 +667,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_bb(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_bb: #{e}"
 end
@@ -723,7 +729,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_cci**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_cci_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_cci_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -743,6 +749,7 @@ Returns the Commodity Channel Index values of Crypto Currency Prices for Crypto 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -769,7 +776,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_cci(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_cci: #{e}"
 end
@@ -830,7 +837,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_cmf**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_cmf_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_cmf_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -850,6 +857,7 @@ Returns the Chaikin Money Flow values of Crypto Currency Prices for a Crypto Cur
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -875,7 +883,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_cmf(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_cmf: #{e}"
 end
@@ -935,7 +943,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_dc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_dc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_dc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -955,6 +963,7 @@ Returns the Donchian Channel values of Crypto Currency Prices for a Crypto Curre
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -981,7 +990,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_dc(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_dc: #{e}"
 end
@@ -1042,7 +1051,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_dpo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_dpo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_dpo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1062,6 +1071,7 @@ Returns the Detrended Price Oscillator values of Crypto Currency Prices for a Cr
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1088,7 +1098,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_dpo(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_dpo: #{e}"
 end
@@ -1149,7 +1159,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_eom**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_eom_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_eom_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1169,6 +1179,7 @@ Returns the Ease of Movement values of Crypto Currency Prices for a Crypto Curre
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1194,7 +1205,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_eom(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_eom: #{e}"
 end
@@ -1254,7 +1265,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_fi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_fi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_fi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1274,6 +1285,7 @@ Returns the Force Index values of Crypto Currency Prices for a Crypto Currency P
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1298,7 +1310,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_fi(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_fi: #{e}"
 end
@@ -1357,7 +1369,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_ichimoku**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_ichimoku_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_ichimoku_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1377,6 +1389,7 @@ Returns the Ichimoku Kinko Hyo values of Crypto Currency Prices for a Crypto Cur
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1404,7 +1417,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_ichimoku(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_ichimoku: #{e}"
 end
@@ -1466,7 +1479,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_kc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_kc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_kc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1486,6 +1499,7 @@ Returns the Keltner Channel values of Crypto Currency Prices for a Crypto Curren
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1511,7 +1525,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_kc(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_kc: #{e}"
 end
@@ -1571,7 +1585,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_kst**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_kst_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_kst_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1591,6 +1605,7 @@ Returns the Know Sure Thing values of Crypto Currency Prices for a Crypto Curren
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1624,7 +1639,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_kst(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_kst: #{e}"
 end
@@ -1692,7 +1707,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_macd**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_macd_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_macd_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1712,6 +1727,7 @@ Returns the Moving Average Convergence Divergence values of Crypto Currency Pric
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1740,7 +1756,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_macd(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_macd: #{e}"
 end
@@ -1803,7 +1819,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_mfi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_mfi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_mfi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1823,6 +1839,7 @@ Returns the Money Flow Index values of Crypto Currency Prices for a Crypto Curre
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1848,7 +1865,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_mfi(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_mfi: #{e}"
 end
@@ -1908,7 +1925,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_mi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_mi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_mi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1928,6 +1945,7 @@ Returns the Mass Index values of Crypto Currency Prices for a Crypto Currency Pa
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1954,7 +1972,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_mi(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_mi: #{e}"
 end
@@ -2015,7 +2033,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_nvi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_nvi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_nvi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2035,6 +2053,7 @@ Returns the Negative Volume Index values of Crypto Currency Prices for a Crypto 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2059,7 +2078,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_nvi(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_nvi: #{e}"
 end
@@ -2118,7 +2137,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_obv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_obv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_obv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2138,6 +2157,7 @@ Returns the On-balance Volume values of Crypto Currency Prices for a Crypto Curr
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2162,7 +2182,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_obv(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_obv: #{e}"
 end
@@ -2221,7 +2241,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_obv_mean**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_obv_mean_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_obv_mean_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2241,6 +2261,7 @@ Returns the On-balance Volume Mean values of Crypto Currency Prices for a Crypto
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2266,7 +2287,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_obv_mean(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_obv_mean: #{e}"
 end
@@ -2326,7 +2347,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_rsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_rsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_rsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2346,6 +2367,7 @@ Returns the Relative Strength Index values of Crypto Currency Prices for a Crypt
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2372,7 +2394,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_rsi(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_rsi: #{e}"
 end
@@ -2433,7 +2455,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_sma**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_sma_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_sma_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2453,6 +2475,7 @@ Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2479,7 +2502,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_sma(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_sma: #{e}"
 end
@@ -2540,7 +2563,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_sr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_sr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_sr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2560,6 +2583,7 @@ Returns the Stochastic Oscillator values of Crypto Currency Prices for a Crypto 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2586,7 +2610,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_sr(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_sr: #{e}"
 end
@@ -2647,7 +2671,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_trix**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_trix_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_trix_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2667,6 +2691,7 @@ Returns the Simple Moving Average values of Crypto Currency Prices for a Crypto 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2692,7 +2717,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_trix(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_trix: #{e}"
 end
@@ -2752,7 +2777,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_tsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_tsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_tsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2772,6 +2797,7 @@ Returns the True Strength Index values of Crypto Currency Prices for a Crypto Cu
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2799,7 +2825,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_tsi(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_tsi: #{e}"
 end
@@ -2861,7 +2887,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_uo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_uo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_uo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2881,6 +2907,7 @@ Returns the Ultimate Oscillator values of Crypto Currency Prices for a Crypto Cu
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -2911,7 +2938,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_uo(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_uo: #{e}"
 end
@@ -2976,7 +3003,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_vi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_vi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_vi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2996,6 +3023,7 @@ Returns the Vortex Indicator values of Crypto Currency Prices for a Crypto Curre
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3021,7 +3049,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_vi(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_vi: #{e}"
 end
@@ -3081,7 +3109,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_vpt**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_vpt_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_vpt_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3101,6 +3129,7 @@ Returns the Volume-price Trend values of Crypto Currency Prices for a Crypto Cur
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3125,7 +3154,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_vpt(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_vpt: #{e}"
 end
@@ -3184,7 +3213,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_vwap**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_vwap_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_vwap_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3204,6 +3233,7 @@ Returns the Volume Weighted Average Price values of Crypto Currency Prices for a
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3228,7 +3258,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_vwap(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_vwap: #{e}"
 end
@@ -3287,7 +3317,7 @@ Name | Type | Description  | Notes
 
 ## **get_crypto_price_technicals_wr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_crypto_price_technicals_wr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_crypto_price_technicals_wr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3307,6 +3337,7 @@ Returns the Williams %R values of Crypto Currency Prices for a Crypto Currency P
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3332,7 +3363,7 @@ opts = {
 
 begin
   result = technical_api.get_crypto_price_technicals_wr(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_crypto_price_technicals_wr: #{e}"
 end
@@ -3392,7 +3423,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_adi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_adi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_adi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3412,6 +3443,7 @@ Returns the Accumulation/Distribution Index values of Stock Prices for the Secur
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3431,7 +3463,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_adi(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_adi: #{e}"
 end
@@ -3484,7 +3516,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_adtv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_adtv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_adtv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3504,6 +3536,7 @@ Returns the Average Daily Trading Volume values of Stock Prices for the Security
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3524,7 +3557,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_adtv(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_adtv: #{e}"
 end
@@ -3578,7 +3611,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_adx**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_adx_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_adx_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3598,6 +3631,7 @@ Returns the Average Directional Index values of Stock Prices for the Security wi
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3618,7 +3652,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_adx(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_adx: #{e}"
 end
@@ -3672,7 +3706,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_ao**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_ao_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_ao_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3692,6 +3726,7 @@ Returns the Awesome Oscillator values of Stock Prices for the Security with the 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3713,7 +3748,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_ao(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_ao: #{e}"
 end
@@ -3768,7 +3803,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_atr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_atr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_atr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3788,6 +3823,7 @@ Returns the Average True Range values of Stock Prices for the Security with the 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3808,7 +3844,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_atr(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_atr: #{e}"
 end
@@ -3862,7 +3898,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_bb**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_bb_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_bb_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3882,6 +3918,7 @@ Returns the Bollinger Bands values of Stock Prices for the Security with the giv
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -3904,7 +3941,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_bb(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_bb: #{e}"
 end
@@ -3960,7 +3997,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_cci**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_cci_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_cci_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3980,6 +4017,7 @@ Returns the Commodity Channel Index values of Stock Prices for the Security with
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4001,7 +4039,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_cci(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_cci: #{e}"
 end
@@ -4056,7 +4094,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_cmf**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_cmf_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_cmf_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4076,6 +4114,7 @@ Returns the Chaikin Money Flow values of Stock Prices for the Security with the 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4096,7 +4135,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_cmf(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_cmf: #{e}"
 end
@@ -4150,7 +4189,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_dc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_dc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_dc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4170,6 +4209,7 @@ Returns the Donchian Channel values of Stock Prices for the Security with the gi
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4191,7 +4231,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_dc(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_dc: #{e}"
 end
@@ -4246,7 +4286,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_dpo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_dpo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_dpo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4266,6 +4306,7 @@ Returns the Detrended Price Oscillator values of Stock Prices for the Security w
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4287,7 +4328,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_dpo(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_dpo: #{e}"
 end
@@ -4342,7 +4383,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_eom**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_eom_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_eom_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4362,6 +4403,7 @@ Returns the Ease of Movement values of Stock Prices for the Security with the gi
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4382,7 +4424,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_eom(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_eom: #{e}"
 end
@@ -4436,7 +4478,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_fi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_fi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_fi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4456,6 +4498,7 @@ Returns the Force Index values of Stock Prices for the Security with the given `
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4475,7 +4518,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_fi(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_fi: #{e}"
 end
@@ -4528,7 +4571,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_ichimoku**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_ichimoku_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_ichimoku_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4548,6 +4591,7 @@ Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4570,7 +4614,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_ichimoku(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_ichimoku: #{e}"
 end
@@ -4626,7 +4670,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_kc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_kc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_kc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4646,6 +4690,7 @@ Returns the Keltner Channel values of Stock Prices for the Security with the giv
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4666,7 +4711,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_kc(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_kc: #{e}"
 end
@@ -4720,7 +4765,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_kst**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_kst_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_kst_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4740,6 +4785,7 @@ Returns the Know Sure Thing values of Stock Prices for the Security with the giv
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4768,7 +4814,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_kst(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_kst: #{e}"
 end
@@ -4830,7 +4876,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_macd**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_macd_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_macd_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4850,6 +4896,7 @@ Returns the Moving Average Convergence Divergence values of Stock Prices for the
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4873,7 +4920,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_macd(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_macd: #{e}"
 end
@@ -4930,7 +4977,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_mfi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_mfi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_mfi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4950,6 +4997,7 @@ Returns the Money Flow Index values of Stock Prices for the Security with the gi
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -4970,7 +5018,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_mfi(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_mfi: #{e}"
 end
@@ -5024,7 +5072,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_mi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_mi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_mi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5044,6 +5092,7 @@ Returns the Mass Index values of Stock Prices for the Security with the given `i
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5065,7 +5114,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_mi(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_mi: #{e}"
 end
@@ -5120,7 +5169,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_nvi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_nvi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_nvi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5140,6 +5189,7 @@ Returns the Negative Volume Index values of Stock Prices for the Security with t
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5159,7 +5209,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_nvi(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_nvi: #{e}"
 end
@@ -5212,7 +5262,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_obv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_obv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_obv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5232,6 +5282,7 @@ Returns the On-balance Volume values of Stock Prices for the Security with the g
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5251,7 +5302,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_obv(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_obv: #{e}"
 end
@@ -5304,7 +5355,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_obv_mean**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_obv_mean_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_obv_mean_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5324,6 +5375,7 @@ Returns the On-balance Volume Mean values of Stock Prices for the Security with 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5344,7 +5396,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_obv_mean(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_obv_mean: #{e}"
 end
@@ -5398,7 +5450,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_rsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_rsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_rsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5418,6 +5470,7 @@ Returns the Relative Strength Index values of Stock Prices for the Security with
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5439,7 +5492,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_rsi(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_rsi: #{e}"
 end
@@ -5494,7 +5547,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_sma**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_sma_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_sma_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5514,6 +5567,7 @@ Returns the Simple Moving Average values of Stock Prices for the Security with t
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5535,7 +5589,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_sma(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_sma: #{e}"
 end
@@ -5590,7 +5644,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_sr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_sr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_sr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5610,6 +5664,7 @@ Returns the Stochastic Oscillator values of Stock Prices for the Security with t
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5631,7 +5686,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_sr(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_sr: #{e}"
 end
@@ -5686,7 +5741,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_trix**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_trix_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_trix_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5706,6 +5761,7 @@ Returns the Simple Moving Average values of Stock Prices for the Security with t
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5726,7 +5782,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_trix(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_trix: #{e}"
 end
@@ -5780,7 +5836,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_tsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_tsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_tsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5800,6 +5856,7 @@ Returns the True Strength Index values of Stock Prices for the Security with the
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5822,7 +5879,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_tsi(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_tsi: #{e}"
 end
@@ -5878,7 +5935,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_uo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_uo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_uo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -5898,6 +5955,7 @@ Returns the Ultimate Oscillator values of Stock Prices for the Security with the
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -5923,7 +5981,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_uo(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_uo: #{e}"
 end
@@ -5982,7 +6040,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_vi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_vi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_vi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6002,6 +6060,7 @@ Returns the Vortex Indicator values of Stock Prices for the Security with the gi
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -6022,7 +6081,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_vi(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_vi: #{e}"
 end
@@ -6076,7 +6135,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_vpt**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_vpt_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_vpt_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6096,6 +6155,7 @@ Returns the Volume-price Trend values of Stock Prices for the Security with the 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -6115,7 +6175,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_vpt(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_vpt: #{e}"
 end
@@ -6168,7 +6228,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_vwap**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_vwap_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_vwap_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6188,6 +6248,7 @@ Returns the Volume Weighted Average Price values of Stock Prices for the Securit
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -6207,7 +6268,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_vwap(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_vwap: #{e}"
 end
@@ -6260,7 +6321,7 @@ Name | Type | Description  | Notes
 
 ## **get_security_price_technicals_wr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_security_price_technicals_wr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_price_technicals_wr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -6280,6 +6341,7 @@ Returns the Williams %R values of Stock Prices for the Security with the given `
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -6300,7 +6362,7 @@ opts = {
 
 begin
   result = technical_api.get_security_price_technicals_wr(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling TechnicalApi->get_security_price_technicals_wr: #{e}"
 end

@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 ## **get_historical_data**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_historical_data_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_historical_data_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -48,6 +48,7 @@ Returns historical values for the given `tag` and the entity represented by the 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -72,7 +73,7 @@ opts = {
 
 begin
   result = historicalData_api.get_historical_data(identifier, tag, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling HistoricalDataApi->get_historical_data: #{e}"
 end

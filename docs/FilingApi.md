@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 ## **get_all_filings**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_filings_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_filings_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -55,6 +55,7 @@ Returns all Filings. Returns Filings matching parameters when supplied.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -75,7 +76,7 @@ opts = {
 
 begin
   result = filing_api.get_all_filings(company, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FilingApi->get_all_filings: #{e}"
 end
@@ -129,7 +130,7 @@ Name | Type | Description  | Notes
 
 ## **get_all_notes**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_notes_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_notes_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -149,6 +150,7 @@ Return all Notes from all Filings, most-recent first. Returns notes matching par
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -170,7 +172,7 @@ opts = {
 
 begin
   result = filing_api.get_all_notes(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FilingApi->get_all_notes: #{e}"
 end
@@ -226,7 +228,7 @@ Name | Type | Description  | Notes
 
 ## **get_filing_by_id**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_filing_by_id_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_filing_by_id_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -246,6 +248,7 @@ Returns the Filing with the given `identifier`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -259,7 +262,7 @@ id = "fil_7Kn2P6" # String | The Intrinio ID of the Filing
 
 begin
   result = filing_api.get_filing_by_id(id)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FilingApi->get_filing_by_id: #{e}"
 end
@@ -308,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## **get_filing_fundamentals**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_filing_fundamentals_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_filing_fundamentals_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -328,6 +331,7 @@ Returns all Fundamentals for the SEC Filing with the given `identifier`. Returns
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -350,7 +354,7 @@ opts = {
 
 begin
   result = filing_api.get_filing_fundamentals(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FilingApi->get_filing_fundamentals: #{e}"
 end
@@ -406,7 +410,7 @@ Name | Type | Description  | Notes
 
 ## **get_note**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_note_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_note_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -425,6 +429,7 @@ Name | Type | Description  | Notes
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -441,7 +446,7 @@ opts = {
 
 begin
   result = filing_api.get_note(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FilingApi->get_note: #{e}"
 end
@@ -491,7 +496,7 @@ Name | Type | Description  | Notes
 
 ## **get_note_html**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_note_html_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_note_html_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -510,6 +515,7 @@ Name | Type | Description  | Notes
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -523,7 +529,7 @@ identifier = "xbn_3fghz" # String | The Intrinio ID of the filing note
 
 begin
   result = filing_api.get_note_html(identifier)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FilingApi->get_note_html: #{e}"
 end
@@ -572,7 +578,7 @@ Name | Type | Description  | Notes
 
 ## **get_note_text**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_note_text_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_note_text_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -591,6 +597,7 @@ Name | Type | Description  | Notes
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -604,7 +611,7 @@ identifier = "xbn_3fghz" # String | The Intrinio ID of the filing note
 
 begin
   result = filing_api.get_note_text(identifier)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FilingApi->get_note_text: #{e}"
 end
@@ -653,7 +660,7 @@ Name | Type | Description  | Notes
 
 ## **search_notes**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_notes_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/search_notes_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -673,6 +680,7 @@ Searches for Filing Notes using the `query`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -692,7 +700,7 @@ opts = {
 
 begin
   result = filing_api.search_notes(query, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FilingApi->search_notes: #{e}"
 end

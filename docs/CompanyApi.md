@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**get_company_filings**](CompanyApi.md#get_company_filings) | **GET** /companies/{identifier}/filings | All Filings by Company
 [**get_company_fundamentals**](CompanyApi.md#get_company_fundamentals) | **GET** /companies/{identifier}/fundamentals | All Fundamentals by Company
 [**get_company_historical_data**](CompanyApi.md#get_company_historical_data) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
+[**get_company_ipos**](CompanyApi.md#get_company_ipos) | **GET** /companies/ipos | IPOs
 [**get_company_news**](CompanyApi.md#get_company_news) | **GET** /companies/{identifier}/news | All News by Company
 [**get_company_securities**](CompanyApi.md#get_company_securities) | **GET** /companies/{identifier}/securities | All Securities by Company
 [**lookup_company_fundamental**](CompanyApi.md#lookup_company_fundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
@@ -39,7 +40,7 @@ Method | HTTP request | Description
 
 ## **get_all_companies**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_companies_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_companies_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -59,6 +60,7 @@ Returns all Companies. When parameters are specified, returns matching companies
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -69,18 +71,20 @@ company_api = Intrinio::CompanyApi.new
 
 opts = { 
   latest_filing_date: nil, # Date | Last filing date
-  sic: nil, # String | Standard Industrial Classification code
-  template: nil, # String | Template
-  sector: nil, # String | Industry sector
-  industry_category: nil, # String | Industry category
-  industry_group: nil, # String | Industry group
+  sic: nil, # String | Return companies with the given Standard Industrial Classification code
+  template: nil, # String | Return companies with the given financial statement template
+  sector: nil, # String | Return companies in the given industry sector
+  industry_category: nil, # String | Return companies in the given industry category
+  industry_group: nil, # String | Return companies in the given industry group
+  has_fundamentals: true, # BOOLEAN | Return only companies that have fundamentals when true
+  has_stock_prices: true, # BOOLEAN | Return only companies that have stock prices when true
   page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
   result = company_api.get_all_companies(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_all_companies: #{e}"
 end
@@ -98,11 +102,13 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **latest_filing_date** | Date| Last filing date | [optional]  &nbsp;
- **sic** | String| Standard Industrial Classification code | [optional]  &nbsp;
- **template** | String| Template | [optional]  &nbsp;
- **sector** | String| Industry sector | [optional]  &nbsp;
- **industry_category** | String| Industry category | [optional]  &nbsp;
- **industry_group** | String| Industry group | [optional]  &nbsp;
+ **sic** | String| Return companies with the given Standard Industrial Classification code | [optional]  &nbsp;
+ **template** | String| Return companies with the given financial statement template | [optional]  &nbsp;
+ **sector** | String| Return companies in the given industry sector | [optional]  &nbsp;
+ **industry_category** | String| Return companies in the given industry category | [optional]  &nbsp;
+ **industry_group** | String| Return companies in the given industry group | [optional]  &nbsp;
+ **has_fundamentals** | BOOLEAN| Return only companies that have fundamentals when true | [optional]  &nbsp;
+ **has_stock_prices** | BOOLEAN| Return only companies that have stock prices when true | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -136,7 +142,7 @@ Name | Type | Description  | Notes
 
 ## **get_all_company_news**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_company_news_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_company_news_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -156,6 +162,7 @@ Returns all News for all Companies
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -171,7 +178,7 @@ opts = {
 
 begin
   result = company_api.get_all_company_news(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_all_company_news: #{e}"
 end
@@ -221,7 +228,7 @@ Name | Type | Description  | Notes
 
 ## **get_company**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -241,6 +248,7 @@ Returns the Company with the given `identifier`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -254,7 +262,7 @@ identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio 
 
 begin
   result = company_api.get_company(identifier)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_company: #{e}"
 end
@@ -303,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## **get_company_data_point_number**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_data_point_number_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_data_point_number_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -323,6 +331,7 @@ Returns a numeric value for the given `tag` for the Company with the given `iden
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -338,7 +347,7 @@ tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://d
 
 begin
   result = company_api.get_company_data_point_number(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_company_data_point_number: #{e}"
 end
@@ -388,7 +397,7 @@ Name | Type | Description  | Notes
 
 ## **get_company_data_point_text**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_data_point_text_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_data_point_text_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -408,6 +417,7 @@ Returns a text value for the given `tag` for the Company with the given `identif
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -423,7 +433,7 @@ tag = "ceo" # String | An Intrinio data tag ID or code (<a href='https://data.in
 
 begin
   result = company_api.get_company_data_point_text(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_company_data_point_text: #{e}"
 end
@@ -473,7 +483,7 @@ Name | Type | Description  | Notes
 
 ## **get_company_filings**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_filings_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_filings_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -493,6 +503,7 @@ Returns a complete list of SEC filings for the Company with the given `identifie
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -513,7 +524,7 @@ opts = {
 
 begin
   result = company_api.get_company_filings(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_company_filings: #{e}"
 end
@@ -567,7 +578,7 @@ Name | Type | Description  | Notes
 
 ## **get_company_fundamentals**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_fundamentals_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_fundamentals_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -587,6 +598,7 @@ Returns all Fundamentals for the Company with the given `identifier`. Returns Fu
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -612,7 +624,7 @@ opts = {
 
 begin
   result = company_api.get_company_fundamentals(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_company_fundamentals: #{e}"
 end
@@ -671,7 +683,7 @@ Name | Type | Description  | Notes
 
 ## **get_company_historical_data**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_historical_data_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_historical_data_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -691,6 +703,7 @@ Returns historical values for the given `tag` and the Company with the given `id
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -705,9 +718,9 @@ tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://d
 
 opts = { 
   frequency: "daily", # String | Return historical data in the given frequency
-  type: nil, # String | Filter by type, when applicable
-  start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
-  end_date: nil, # Date | Get historical data on or before this date
+  type: nil, # String | Return historical data for given fiscal period type
+  start_date: Date.parse("2018-01-01"), # Date | Return historical data on or after this date
+  end_date: nil, # Date | Return historical data on or before this date
   sort_order: "desc", # String | Sort by date `asc` or `desc`
   page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
@@ -715,7 +728,7 @@ opts = {
 
 begin
   result = company_api.get_company_historical_data(identifier, tag, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_company_historical_data: #{e}"
 end
@@ -735,9 +748,9 @@ Name | Type | Description  | Notes
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
  **frequency** | String| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
- **type** | String| Filter by type, when applicable | [optional]  &nbsp;
- **start_date** | Date| Get historical data on or after this date | [optional]  &nbsp;
- **end_date** | Date| Get historical data on or before this date | [optional]  &nbsp;
+ **type** | String| Return historical data for given fiscal period type | [optional]  &nbsp;
+ **start_date** | Date| Return historical data on or after this date | [optional]  &nbsp;
+ **end_date** | Date| Return historical data on or before this date | [optional]  &nbsp;
  **sort_order** | String| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
@@ -748,6 +761,92 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanyHistoricalData**](ApiResponseCompanyHistoricalData.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::CompanyApi)
+
+[//]: # (METHOD:get_company_ipos)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseInitialPublicOfferings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseInitialPublicOfferings.md)
+
+[//]: # (OPERATION:get_company_ipos_v2)
+
+[//]: # (ENDPOINT:/companies/ipos)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_ipos)
+
+## **get_company_ipos**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_ipos_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseInitialPublicOfferings get_company_ipos(opts)
+
+#### IPOs
+
+
+Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \"going public\" is initiated by an IPO, at which point the company's stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+end
+
+company_api = Intrinio::CompanyApi.new
+
+opts = { 
+  page_size: 100, # Integer | The number of results to return
+  next_page: nil # String | Gets the next page of data from a previous API call
+}
+
+begin
+  result = company_api.get_company_ipos(opts)
+  pp result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling CompanyApi->get_company_ipos: #{e}"
+end
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseInitialPublicOfferings**](ApiResponseInitialPublicOfferings.md)
 
 [//]: # (END_OPERATION)
 
@@ -772,7 +871,7 @@ Name | Type | Description  | Notes
 
 ## **get_company_news**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_news_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_news_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -792,6 +891,7 @@ Returns news for the Company with the given `identifier`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -809,7 +909,7 @@ opts = {
 
 begin
   result = company_api.get_company_news(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_company_news: #{e}"
 end
@@ -860,7 +960,7 @@ Name | Type | Description  | Notes
 
 ## **get_company_securities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_company_securities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_securities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -880,6 +980,7 @@ Returns Securities for the Company with the given `identifier`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -896,7 +997,7 @@ opts = {
 
 begin
   result = company_api.get_company_securities(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->get_company_securities: #{e}"
 end
@@ -946,7 +1047,7 @@ Name | Type | Description  | Notes
 
 ## **lookup_company_fundamental**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookup_company_fundamental_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/lookup_company_fundamental_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -966,6 +1067,7 @@ Returns the Fundamental for the Company with the given `identifier` and with the
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -985,7 +1087,7 @@ fiscal_year = 2017 # Integer | The fiscal year
 
 begin
   result = company_api.lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->lookup_company_fundamental: #{e}"
 end
@@ -1037,7 +1139,7 @@ Name | Type | Description  | Notes
 
 ## **search_companies**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_companies_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/search_companies_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1057,6 +1159,7 @@ Searches for Companies matching the text `query`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1073,7 +1176,7 @@ opts = {
 
 begin
   result = company_api.search_companies(query, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling CompanyApi->search_companies: #{e}"
 end

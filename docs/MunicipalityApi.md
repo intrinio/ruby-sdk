@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 ## **get_all_municipalities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_municipalities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_municipalities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -49,6 +49,7 @@ Method | HTTP request | Description
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -75,7 +76,7 @@ opts = {
 
 begin
   result = municipality_api.get_all_municipalities(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling MunicipalityApi->get_all_municipalities: #{e}"
 end
@@ -136,7 +137,7 @@ Name | Type | Description  | Notes
 
 ## **get_municipality_by_id**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_municipality_by_id_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_municipality_by_id_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -156,6 +157,7 @@ Returns the Municipality with the given ID
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -169,7 +171,7 @@ id = "mun_Xn7x4z" # String | An Intrinio ID of a Municipality
 
 begin
   result = municipality_api.get_municipality_by_id(id)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling MunicipalityApi->get_municipality_by_id: #{e}"
 end
@@ -218,7 +220,7 @@ Name | Type | Description  | Notes
 
 ## **get_municipality_financials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_municipality_financials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_municipality_financials_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -238,6 +240,7 @@ Returns financial statement data for the Municipality with the given ID
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -254,7 +257,7 @@ opts = {
 
 begin
   result = municipality_api.get_municipality_financials(id, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling MunicipalityApi->get_municipality_financials: #{e}"
 end

@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 ## **get_all_data_tags**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_data_tags_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_data_tags_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -50,6 +50,7 @@ Returns all Data Tags. Returns Data Tags matching parameters when specified.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -70,7 +71,7 @@ opts = {
 
 begin
   result = dataTag_api.get_all_data_tags(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling DataTagApi->get_all_data_tags: #{e}"
 end
@@ -125,7 +126,7 @@ Name | Type | Description  | Notes
 
 ## **get_data_tag_by_id**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_data_tag_by_id_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_data_tag_by_id_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -145,6 +146,7 @@ Returns the Data Tag with the given `identifier`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -158,7 +160,7 @@ identifier = "marketcap" # String | The Intrinio ID or the code-name of the Data
 
 begin
   result = dataTag_api.get_data_tag_by_id(identifier)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling DataTagApi->get_data_tag_by_id: #{e}"
 end
@@ -207,7 +209,7 @@ Name | Type | Description  | Notes
 
 ## **search_data_tags**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_data_tags_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/search_data_tags_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -227,6 +229,7 @@ Searches for Data Tags matching the text `query`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -243,7 +246,7 @@ opts = {
 
 begin
   result = dataTag_api.search_data_tags(query, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling DataTagApi->search_data_tags: #{e}"
 end

@@ -31,7 +31,7 @@ Method | HTTP request | Description
 
 ## **get_options**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -51,6 +51,7 @@ Returns the master list of option contracts for a given symbol.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -75,7 +76,7 @@ opts = {
 
 begin
   result = options_api.get_options(symbol, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling OptionsApi->get_options: #{e}"
 end
@@ -133,7 +134,7 @@ Name | Type | Description  | Notes
 
 ## **get_options_chain**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_chain_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_chain_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -153,6 +154,7 @@ Returns all options contracts and their prices for the given symbol and expirati
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -176,7 +178,7 @@ opts = {
 
 begin
   result = options_api.get_options_chain(symbol, expiration, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling OptionsApi->get_options_chain: #{e}"
 end
@@ -232,7 +234,7 @@ Name | Type | Description  | Notes
 
 ## **get_options_expirations**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_expirations_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_expirations_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -252,6 +254,7 @@ Returns all option contract expiration dates for a given symbol.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -269,7 +272,7 @@ opts = {
 
 begin
   result = options_api.get_options_expirations(symbol, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling OptionsApi->get_options_expirations: #{e}"
 end
@@ -320,7 +323,7 @@ Name | Type | Description  | Notes
 
 ## **get_options_prices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_options_prices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_prices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -340,6 +343,7 @@ Returns all option prices for a given option contract identifier.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -359,7 +363,7 @@ opts = {
 
 begin
   result = options_api.get_options_prices(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling OptionsApi->get_options_prices: #{e}"
 end

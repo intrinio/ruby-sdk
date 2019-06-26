@@ -45,7 +45,7 @@ Method | HTTP request | Description
 
 ## **get_all_economic_indices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_economic_indices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_economic_indices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -64,6 +64,7 @@ Method | HTTP request | Description
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -79,7 +80,7 @@ opts = {
 
 begin
   result = index_api.get_all_economic_indices(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_all_economic_indices: #{e}"
 end
@@ -129,7 +130,7 @@ Name | Type | Description  | Notes
 
 ## **get_all_sic_indices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_sic_indices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_sic_indices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -148,6 +149,7 @@ Name | Type | Description  | Notes
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -163,7 +165,7 @@ opts = {
 
 begin
   result = index_api.get_all_sic_indices(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_all_sic_indices: #{e}"
 end
@@ -213,7 +215,7 @@ Name | Type | Description  | Notes
 
 ## **get_all_stock_market_indices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_stock_market_indices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_stock_market_indices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -232,6 +234,7 @@ Name | Type | Description  | Notes
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -247,7 +250,7 @@ opts = {
 
 begin
   result = index_api.get_all_stock_market_indices(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_all_stock_market_indices: #{e}"
 end
@@ -297,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## **get_economic_index_by_id**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_economic_index_by_id_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_economic_index_by_id_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -316,6 +319,7 @@ Name | Type | Description  | Notes
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -329,7 +333,7 @@ identifier = "$GDP" # String | An Index Identifier (symbol, Intrinio ID)
 
 begin
   result = index_api.get_economic_index_by_id(identifier)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_economic_index_by_id: #{e}"
 end
@@ -378,7 +382,7 @@ Name | Type | Description  | Notes
 
 ## **get_economic_index_data_point_number**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_economic_index_data_point_number_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_economic_index_data_point_number_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -398,6 +402,7 @@ Returns a numeric value for the given `tag` for the Economic Index with the give
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -413,7 +418,7 @@ tag = "level" # String | An Intrinio data tag <a href='https://data.intrinio.com
 
 begin
   result = index_api.get_economic_index_data_point_number(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_economic_index_data_point_number: #{e}"
 end
@@ -463,7 +468,7 @@ Name | Type | Description  | Notes
 
 ## **get_economic_index_data_point_text**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_economic_index_data_point_text_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_economic_index_data_point_text_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -483,6 +488,7 @@ Returns a text value for the given `tag` for the Economic Index with the given `
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -498,7 +504,7 @@ tag = "level" # String | An Intrinio data tag ID or code-name
 
 begin
   result = index_api.get_economic_index_data_point_text(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_economic_index_data_point_text: #{e}"
 end
@@ -548,7 +554,7 @@ Name | Type | Description  | Notes
 
 ## **get_economic_index_historical_data**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_economic_index_historical_data_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_economic_index_historical_data_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -568,6 +574,7 @@ Returns historical values for the given `tag` and the Economic Index with the gi
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -591,7 +598,7 @@ opts = {
 
 begin
   result = index_api.get_economic_index_historical_data(identifier, tag, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_economic_index_historical_data: #{e}"
 end
@@ -647,7 +654,7 @@ Name | Type | Description  | Notes
 
 ## **get_sic_index_by_id**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_sic_index_by_id_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_sic_index_by_id_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -666,6 +673,7 @@ Name | Type | Description  | Notes
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -679,7 +687,7 @@ identifier = "$SIC.1" # String | An Index Identifier (symbol, Intrinio ID)
 
 begin
   result = index_api.get_sic_index_by_id(identifier)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_sic_index_by_id: #{e}"
 end
@@ -728,7 +736,7 @@ Name | Type | Description  | Notes
 
 ## **get_sic_index_data_point_number**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_sic_index_data_point_number_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_sic_index_data_point_number_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -748,6 +756,7 @@ Returns a numeric value for the given `tag` for the SIC Index with the given `id
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -763,7 +772,7 @@ tag = "level" # String | An Intrinio data tag ID or code-name
 
 begin
   result = index_api.get_sic_index_data_point_number(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_sic_index_data_point_number: #{e}"
 end
@@ -813,7 +822,7 @@ Name | Type | Description  | Notes
 
 ## **get_sic_index_data_point_text**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_sic_index_data_point_text_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_sic_index_data_point_text_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -833,6 +842,7 @@ Returns a text value for the given `tag` for the SIC Index with the given `ident
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -848,7 +858,7 @@ tag = "level" # String | An Intrinio data tag ID or code-name
 
 begin
   result = index_api.get_sic_index_data_point_text(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_sic_index_data_point_text: #{e}"
 end
@@ -898,7 +908,7 @@ Name | Type | Description  | Notes
 
 ## **get_sic_index_historical_data**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_sic_index_historical_data_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_sic_index_historical_data_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -918,6 +928,7 @@ Returns historical values for the given `tag` and the SIC Index with the given `
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -941,7 +952,7 @@ opts = {
 
 begin
   result = index_api.get_sic_index_historical_data(identifier, tag, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_sic_index_historical_data: #{e}"
 end
@@ -997,7 +1008,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_market_index_by_id**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_market_index_by_id_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_market_index_by_id_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1016,6 +1027,7 @@ Name | Type | Description  | Notes
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1029,7 +1041,7 @@ identifier = "$DJI" # String | An Index Identifier (symbol, Intrinio ID)
 
 begin
   result = index_api.get_stock_market_index_by_id(identifier)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_stock_market_index_by_id: #{e}"
 end
@@ -1078,7 +1090,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_market_index_data_point_number**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_market_index_data_point_number_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_market_index_data_point_number_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1098,6 +1110,7 @@ Returns a numeric value for the given `tag` for the Stock Market Index with the 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1113,7 +1126,7 @@ tag = "level" # String | An Intrinio data tag ID or code-name
 
 begin
   result = index_api.get_stock_market_index_data_point_number(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_stock_market_index_data_point_number: #{e}"
 end
@@ -1163,7 +1176,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_market_index_data_point_text**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_market_index_data_point_text_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_market_index_data_point_text_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1183,6 +1196,7 @@ Returns a text value for the given `tag` for the Stock Market Index with the giv
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1198,7 +1212,7 @@ tag = "level" # String | An Intrinio data tag ID or code-name
 
 begin
   result = index_api.get_stock_market_index_data_point_text(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_stock_market_index_data_point_text: #{e}"
 end
@@ -1248,7 +1262,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_market_index_historical_data**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_market_index_historical_data_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_market_index_historical_data_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1268,6 +1282,7 @@ Returns historical values for the given `tag` and the Stock Market Index with th
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1291,7 +1306,7 @@ opts = {
 
 begin
   result = index_api.get_stock_market_index_historical_data(identifier, tag, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->get_stock_market_index_historical_data: #{e}"
 end
@@ -1347,7 +1362,7 @@ Name | Type | Description  | Notes
 
 ## **search_economic_indices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_economic_indices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/search_economic_indices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1367,6 +1382,7 @@ Searches for indices using the text in `query`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1383,7 +1399,7 @@ opts = {
 
 begin
   result = index_api.search_economic_indices(query, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->search_economic_indices: #{e}"
 end
@@ -1433,7 +1449,7 @@ Name | Type | Description  | Notes
 
 ## **search_sic_indices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_sic_indices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/search_sic_indices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1453,6 +1469,7 @@ Searches for indices using the text in `query`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1469,7 +1486,7 @@ opts = {
 
 begin
   result = index_api.search_sic_indices(query, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->search_sic_indices: #{e}"
 end
@@ -1519,7 +1536,7 @@ Name | Type | Description  | Notes
 
 ## **search_stock_markets_indices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/search_stock_markets_indices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/search_stock_markets_indices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1539,6 +1556,7 @@ Searches for indices using the text in `query`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -1555,7 +1573,7 @@ opts = {
 
 begin
   result = index_api.search_stock_markets_indices(query, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling IndexApi->search_stock_markets_indices: #{e}"
 end

@@ -33,7 +33,7 @@ Method | HTTP request | Description
 
 ## **get_all_stock_exchanges**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_all_stock_exchanges_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_stock_exchanges_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -53,6 +53,7 @@ Returns all Stock Exchanges matching the specified parameters
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -70,7 +71,7 @@ opts = {
 
 begin
   result = stockExchange_api.get_all_stock_exchanges(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling StockExchangeApi->get_all_stock_exchanges: #{e}"
 end
@@ -122,7 +123,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_exchange_by_id**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_exchange_by_id_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_exchange_by_id_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -142,6 +143,7 @@ Returns the Stock Exchange with the given `identifier`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -155,7 +157,7 @@ identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID
 
 begin
   result = stockExchange_api.get_stock_exchange_by_id(identifier)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling StockExchangeApi->get_stock_exchange_by_id: #{e}"
 end
@@ -204,7 +206,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_exchange_price_adjustments**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_exchange_price_adjustments_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_exchange_price_adjustments_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -224,6 +226,7 @@ Returns stock price adjustments for the Stock Exchange with the given `identifie
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -242,7 +245,7 @@ opts = {
 
 begin
   result = stockExchange_api.get_stock_exchange_price_adjustments(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling StockExchangeApi->get_stock_exchange_price_adjustments: #{e}"
 end
@@ -294,7 +297,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_exchange_prices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_exchange_prices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_exchange_prices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -314,6 +317,7 @@ Returns end-of-day stock prices for Securities on the Stock Exchange with `ident
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -332,7 +336,7 @@ opts = {
 
 begin
   result = stockExchange_api.get_stock_exchange_prices(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling StockExchangeApi->get_stock_exchange_prices: #{e}"
 end
@@ -384,7 +388,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_exchange_realtime_prices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_exchange_realtime_prices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_exchange_realtime_prices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -404,6 +408,7 @@ Returns realtime stock prices for the Stock Exchange with the given `identifier`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -415,14 +420,14 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
-  source: nil, # String | Return realtime prices from the specified data source
+  source: nil, # String | Return realtime prices from the specified data source. If no source is specified, all sources are used.
   page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
   result = stockExchange_api.get_stock_exchange_realtime_prices(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling StockExchangeApi->get_stock_exchange_realtime_prices: #{e}"
 end
@@ -440,7 +445,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **source** | String| Return realtime prices from the specified data source | [optional]  &nbsp;
+ **source** | String| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -474,7 +479,7 @@ Name | Type | Description  | Notes
 
 ## **get_stock_exchange_securities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_stock_exchange_securities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_stock_exchange_securities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -494,6 +499,7 @@ Returns Securities traded on the Stock Exchange with `identifier`
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -511,7 +517,7 @@ opts = {
 
 begin
   result = stockExchange_api.get_stock_exchange_securities(identifier, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling StockExchangeApi->get_stock_exchange_securities: #{e}"
 end

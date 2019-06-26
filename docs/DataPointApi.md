@@ -29,7 +29,7 @@ Method | HTTP request | Description
 
 ## **get_data_point_number**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_data_point_number_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_data_point_number_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -49,6 +49,7 @@ Returns a numeric value for the given `tag` and the entity with the given `ident
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -64,7 +65,7 @@ tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://d
 
 begin
   result = dataPoint_api.get_data_point_number(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling DataPointApi->get_data_point_number: #{e}"
 end
@@ -114,7 +115,7 @@ Name | Type | Description  | Notes
 
 ## **get_data_point_text**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_data_point_text_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_data_point_text_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -134,6 +135,7 @@ Returns a text value for the given `tag` for the Security with the given `identi
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -149,7 +151,7 @@ tag = "ceo" # String | An Intrinio data tag ID or code (<a href='https://data.in
 
 begin
   result = dataPoint_api.get_data_point_text(identifier, tag)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling DataPointApi->get_data_point_text: #{e}"
 end

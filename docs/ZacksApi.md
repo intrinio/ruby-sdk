@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 ## **get_zacks_analyst_ratings**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_zacks_analyst_ratings_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_analyst_ratings_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -50,6 +50,7 @@ Returns buy, sell, and hold recommendations from analysts at brokerages for all 
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -82,7 +83,7 @@ opts = {
 
 begin
   result = zacks_api.get_zacks_analyst_ratings(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling ZacksApi->get_zacks_analyst_ratings: #{e}"
 end
@@ -149,7 +150,7 @@ Name | Type | Description  | Notes
 
 ## **get_zacks_eps_surprises**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_zacks_eps_surprises_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_eps_surprises_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -169,6 +170,7 @@ Returns Zacks eps surprise data for all Securities.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -198,7 +200,7 @@ opts = {
 
 begin
   result = zacks_api.get_zacks_eps_surprises(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling ZacksApi->get_zacks_eps_surprises: #{e}"
 end
@@ -262,7 +264,7 @@ Name | Type | Description  | Notes
 
 ## **get_zacks_sales_surprises**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_zacks_sales_surprises_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_sales_surprises_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -282,6 +284,7 @@ Returns Zacks sales surprise data for all Securities.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -311,7 +314,7 @@ opts = {
 
 begin
   result = zacks_api.get_zacks_sales_surprises(opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling ZacksApi->get_zacks_sales_surprises: #{e}"
 end

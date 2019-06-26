@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 ## **get_forex_currencies**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_forex_currencies_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_forex_currencies_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -50,6 +50,7 @@ Returns a list of forex currencies for which prices are available.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -60,7 +61,7 @@ forex_api = Intrinio::ForexApi.new
 
 begin
   result = forex_api.get_forex_currencies
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling ForexApi->get_forex_currencies: #{e}"
 end
@@ -106,7 +107,7 @@ This endpoint does not need any parameter.
 
 ## **get_forex_pairs**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_forex_pairs_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_forex_pairs_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -126,6 +127,7 @@ Returns a list of currency pairs used to request foreign exchange (forex) market
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -136,7 +138,7 @@ forex_api = Intrinio::ForexApi.new
 
 begin
   result = forex_api.get_forex_pairs
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling ForexApi->get_forex_pairs: #{e}"
 end
@@ -182,7 +184,7 @@ This endpoint does not need any parameter.
 
 ## **get_forex_prices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_forex_prices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_forex_prices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -202,6 +204,7 @@ Provides a list of forex price quotes for a given forex currency pair and timefr
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -226,7 +229,7 @@ opts = {
 
 begin
   result = forex_api.get_forex_prices(pair, timeframe, opts)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling ForexApi->get_forex_prices: #{e}"
 end

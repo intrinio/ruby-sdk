@@ -31,7 +31,7 @@ Method | HTTP request | Description
 
 ## **get_fundamental_by_id**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_fundamental_by_id_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_fundamental_by_id_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -51,6 +51,7 @@ Returns detailed fundamental data for the given `id`.
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -64,7 +65,7 @@ id = "fun_ge9LlE" # String | The Intrinio ID for the Fundamental
 
 begin
   result = fundamentals_api.get_fundamental_by_id(id)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FundamentalsApi->get_fundamental_by_id: #{e}"
 end
@@ -113,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## **get_fundamental_reported_financials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_fundamental_reported_financials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_fundamental_reported_financials_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -133,6 +134,7 @@ Returns the As-Reported Financials directly from the financial statements of the
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -146,7 +148,7 @@ id = "AAPL-income_statement-2018-Q1" # String | The Intrinio ID or lookup code (
 
 begin
   result = fundamentals_api.get_fundamental_reported_financials(id)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FundamentalsApi->get_fundamental_reported_financials: #{e}"
 end
@@ -195,7 +197,7 @@ Name | Type | Description  | Notes
 
 ## **get_fundamental_standardized_financials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/get_fundamental_standardized_financials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_fundamental_standardized_financials_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -204,7 +206,7 @@ Name | Type | Description  | Notes
 #### Standardized Financials
 
 
-Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
+Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies' fundamentals.
 
 [//]: # (END_OVERVIEW)
 
@@ -215,6 +217,7 @@ Returns professional-grade historical financial data. This data is standardized,
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -228,7 +231,7 @@ id = "AAPL-income_statement-2018-Q1" # String | The Intrinio ID or lookup code (
 
 begin
   result = fundamentals_api.get_fundamental_standardized_financials(id)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FundamentalsApi->get_fundamental_standardized_financials: #{e}"
 end
@@ -277,7 +280,7 @@ Name | Type | Description  | Notes
 
 ## **lookup_fundamental**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookup_fundamental_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/lookup_fundamental_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -297,6 +300,7 @@ Returns the Fundamental for the Company with the given `identifier` and with the
 ```ruby
 # Load the gem
 require 'intrinio-sdk'
+require 'pp'
 
 # Setup authorization
 Intrinio.configure do |config|
@@ -316,7 +320,7 @@ fiscal_period = "FY" # String | The fiscal period
 
 begin
   result = fundamentals_api.lookup_fundamental(identifier, statement_code, fiscal_year, fiscal_period)
-  p result
+  pp result
 rescue Intrinio::ApiError => e
   puts "Exception when calling FundamentalsApi->lookup_fundamental: #{e}"
 end
