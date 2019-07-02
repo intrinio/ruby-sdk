@@ -112,6 +112,7 @@ module Intrinio
     # @param symbol The option symbol, corresponding to the underlying security.
     # @param expiration The expiration date of the options contract
     # @param [Hash] opts the optional parameters
+    # @option opts [Date] :date The date of the option price. Returns option prices on this date.
     # @option opts [String] :type The option contract type.
     # @option opts [Float] :strike The strike price of the option contract. This will return options contracts with strike price equal to this price.
     # @option opts [Float] :strike_greater_than The strike price of the option contract. This will return options contracts with strike prices greater than this price.
@@ -129,6 +130,7 @@ module Intrinio
     # @param symbol The option symbol, corresponding to the underlying security.
     # @param expiration The expiration date of the options contract
     # @param [Hash] opts the optional parameters
+    # @option opts [Date] :date The date of the option price. Returns option prices on this date.
     # @option opts [String] :type The option contract type.
     # @option opts [Float] :strike The strike price of the option contract. This will return options contracts with strike price equal to this price.
     # @option opts [Float] :strike_greater_than The strike price of the option contract. This will return options contracts with strike prices greater than this price.
@@ -163,6 +165,7 @@ module Intrinio
 
       # query parameters
       query_params = {}
+      query_params[:'date'] = opts[:'date'] if !opts[:'date'].nil?
       query_params[:'type'] = opts[:'type'] if !opts[:'type'].nil?
       query_params[:'strike'] = opts[:'strike'] if !opts[:'strike'].nil?
       query_params[:'strike_greater_than'] = opts[:'strike_greater_than'] if !opts[:'strike_greater_than'].nil?

@@ -167,6 +167,12 @@ describe 'CompanyApi' do
   # IPOs
   # Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :ticker Return IPOs with the given ticker (typically the IPO for the company)
+  # @option opts [String] :status Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand
+  # @option opts [Date] :start_date Return IPOs on or after the given date
+  # @option opts [Date] :end_date Return IPOs on or before the given date
+  # @option opts [Integer] :offer_amount_greater_than Return IPOs with an offer dollar amount greater than the given amount
+  # @option opts [Integer] :offer_amount_less_than Return IPOs with an offer dollar amount less than the given amount
   # @option opts [Integer] :page_size The number of results to return
   # @option opts [String] :next_page Gets the next page of data from a previous API call
   # @return [ApiResponseInitialPublicOfferings]

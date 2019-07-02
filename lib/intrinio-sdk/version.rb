@@ -11,5 +11,5 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 =end
 
 module Intrinio
-  VERSION = "3.2.0"
+  VERSION = "3.3.0"
 end

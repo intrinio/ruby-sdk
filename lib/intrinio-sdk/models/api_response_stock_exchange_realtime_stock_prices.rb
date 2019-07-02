@@ -21,12 +21,16 @@ module Intrinio
     # The Stock Exchange resolved from the given identifier
     attr_accessor :stock_exchange
 
+    # The token required to request the next page of the data
+    attr_accessor :next_page
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'stock_prices' => :'stock_prices',
-        :'stock_exchange' => :'stock_exchange'
+        :'stock_exchange' => :'stock_exchange',
+        :'next_page' => :'next_page'
       }
     end
 
@@ -34,7 +38,8 @@ module Intrinio
     def self.swagger_types
       {
         :'stock_prices' => :'Array<RealtimeStockPrice>',
-        :'stock_exchange' => :'StockExchange'
+        :'stock_exchange' => :'StockExchange',
+        :'next_page' => :'String'
       }
     end
 
@@ -54,6 +59,10 @@ module Intrinio
 
       if attributes.has_key?(:'stock_exchange')
         self.stock_exchange = attributes[:'stock_exchange']
+      end
+
+      if attributes.has_key?(:'next_page')
+        self.next_page = attributes[:'next_page']
       end
 
     end
@@ -77,7 +86,8 @@ module Intrinio
       return true if self.equal?(o)
       self.class == o.class &&
           stock_prices == o.stock_prices &&
-          stock_exchange == o.stock_exchange
+          stock_exchange == o.stock_exchange &&
+          next_page == o.next_page
     end
 
     # @see the `==` method
@@ -89,7 +99,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [stock_prices, stock_exchange].hash
+      [stock_prices, stock_exchange, next_page].hash
     end
 
     # Builds the object from hash

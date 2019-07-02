@@ -593,6 +593,12 @@ module Intrinio
     # IPOs
     # Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \"going public\" is initiated by an IPO, at which point the company's stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :ticker Return IPOs with the given ticker (typically the IPO for the company)
+    # @option opts [String] :status Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand
+    # @option opts [Date] :start_date Return IPOs on or after the given date
+    # @option opts [Date] :end_date Return IPOs on or before the given date
+    # @option opts [Integer] :offer_amount_greater_than Return IPOs with an offer dollar amount greater than the given amount
+    # @option opts [Integer] :offer_amount_less_than Return IPOs with an offer dollar amount less than the given amount
     # @option opts [Integer] :page_size The number of results to return (default to 100)
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [ApiResponseInitialPublicOfferings]
@@ -604,12 +610,21 @@ module Intrinio
     # IPOs
     # Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :ticker Return IPOs with the given ticker (typically the IPO for the company)
+    # @option opts [String] :status Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand
+    # @option opts [Date] :start_date Return IPOs on or after the given date
+    # @option opts [Date] :end_date Return IPOs on or before the given date
+    # @option opts [Integer] :offer_amount_greater_than Return IPOs with an offer dollar amount greater than the given amount
+    # @option opts [Integer] :offer_amount_less_than Return IPOs with an offer dollar amount less than the given amount
     # @option opts [Integer] :page_size The number of results to return
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [Array<(ApiResponseInitialPublicOfferings, Fixnum, Hash)>] ApiResponseInitialPublicOfferings data, response status code and response headers
     def get_company_ipos_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CompanyApi.get_company_ipos ..."
+      end
+      if @api_client.config.client_side_validation && opts[:'status'] && !['upcoming', 'priced', 'withdrawn'].include?(opts[:'status'])
+        fail ArgumentError, 'invalid value for "status", must be one of upcoming, priced, withdrawn'
       end
       if @api_client.config.client_side_validation && !opts[:'page_size'].nil? && opts[:'page_size'] > 10000
         fail ArgumentError, 'invalid value for "opts[:"page_size"]" when calling CompanyApi.get_company_ipos, must be smaller than or equal to 10000.'
@@ -620,6 +635,12 @@ module Intrinio
 
       # query parameters
       query_params = {}
+      query_params[:'ticker'] = opts[:'ticker'] if !opts[:'ticker'].nil?
+      query_params[:'status'] = opts[:'status'] if !opts[:'status'].nil?
+      query_params[:'start_date'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'end_date'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'offer_amount_greater_than'] = opts[:'offer_amount_greater_than'] if !opts[:'offer_amount_greater_than'].nil?
+      query_params[:'offer_amount_less_than'] = opts[:'offer_amount_less_than'] if !opts[:'offer_amount_less_than'].nil?
       query_params[:'page_size'] = opts[:'page_size'] if !opts[:'page_size'].nil?
       query_params[:'next_page'] = opts[:'next_page'] if !opts[:'next_page'].nil?
 
