@@ -12,14 +12,14 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**news** | [**Array&lt;CompanyNews&gt;**](CompanyNews.md) |  &nbsp;
+**news** | [**Array&lt;CompanyNewsSummary&gt;**](CompanyNewsSummary.md) |  &nbsp;
 **company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
 **next_page** | String | The token required to request the next page of the data &nbsp;
 
 [//]: # (END_DEFINITION)
 
 
-[//]: # (CONTAINED_CLASS:Intrinio::CompanyNews)
+[//]: # (CONTAINED_CLASS:Intrinio::CompanyNewsSummary)
 
 
 [//]: # (CONTAINED_CLASS:Intrinio::CompanySummary)

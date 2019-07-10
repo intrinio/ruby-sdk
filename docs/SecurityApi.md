@@ -4497,7 +4497,7 @@ opts = {
   order_column: "order_column_example", # String | Results returned sorted by this column
   order_direction: "asc", # String | Sort order to use with the order_column
   primary_only: false, # BOOLEAN | Return only primary securities
-  page_size: 100 # Integer | The number of results to return
+  page_size: 100 # Integer | The number of results to return. Maximum for this endpoint is 50000.
 }
 
 begin
@@ -4523,7 +4523,7 @@ Name | Type | Description  | Notes
  **order_column** | String| Results returned sorted by this column | [optional]  &nbsp;
  **order_direction** | String| Sort order to use with the order_column | [optional] [default to asc] &nbsp;
  **primary_only** | BOOLEAN| Return only primary securities | [optional] [default to false] &nbsp;
- **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **page_size** | Integer| The number of results to return. Maximum for this endpoint is 50000. | [optional] [default to 100] &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

@@ -694,8 +694,7 @@ query = "inflation" # String | Search for notes that contain all or parts of thi
 opts = { 
   filing_start_date: Date.parse("2018-07-15"), # Date | Limit search to filings on or after this date
   filing_end_date: Date.parse("2018-11-30"), # Date | Limit search to filings on or before this date
-  page_size: 100, # Integer | The number of results to return
-  page_size2: 100 # Integer | The number of results to return
+  page_size: 100 # Integer | The number of results to return
 }
 
 begin
@@ -721,7 +720,6 @@ Name | Type | Description  | Notes
  **filing_start_date** | Date| Limit search to filings on or after this date | [optional]  &nbsp;
  **filing_end_date** | Date| Limit search to filings on or before this date | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
- **page_size2** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
