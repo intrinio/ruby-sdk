@@ -13,7 +13,7 @@
 Name | Type | Description
 ------------ | ------------- | -------------
 **filing_notes** | [**Array&lt;FilingNoteSummary&gt;**](FilingNoteSummary.md) |  &nbsp;
-**next_page** | String | The token required to request the next page of the data &nbsp;
+**next_page** | String | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

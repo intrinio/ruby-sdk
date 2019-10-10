@@ -67,7 +67,7 @@ filing_api = Intrinio::FilingApi.new
 company = "AAPL" # String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  report_type: nil, # String | Filter by report type. Separate values with commas to return multiple The filing <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>.
+  report_type: nil, # String | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>.
   start_date: Date.parse("2015-01-01"), # Date | Filed on or after the given date
   end_date: nil, # Date | Filed before or after the given date
   page_size: 100, # Integer | The number of results to return
@@ -94,7 +94,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company** | String| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **report_type** | String| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
+ **report_type** | String| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
  **start_date** | Date| Filed on or after the given date | [optional]  &nbsp;
  **end_date** | Date| Filed before or after the given date | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
@@ -161,11 +161,11 @@ filing_api = Intrinio::FilingApi.new
 
 opts = { 
   company: "AAPL", # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  report_type: "10-Q", # String | Notes contained in filings that match the given <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>
-  filing_start_date: Date.parse("2018-07-15"), # Date | Limit search to filings on or after this date
-  filing_end_date: Date.parse("2018-11-15"), # Date | Limit search to filings on or before this date
-  period_ended_start_date: Date.parse("2018-07-15"), # Date | Limit search to filings with a period end date on or after this date
-  period_ended_end_date: Date.parse("2018-11-15"), # Date | Limit search to filings with a period end date on or before this date
+  report_type: "10-Q", # String | Notes contained in filings that match the given <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>
+  filing_start_date: nil, # Date | Limit search to filings on or after this date
+  filing_end_date: nil, # Date | Limit search to filings on or before this date
+  period_ended_start_date: nil, # Date | Limit search to filings with a period end date on or after this date
+  period_ended_end_date: nil, # Date | Limit search to filings with a period end date on or before this date
   page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
@@ -190,7 +190,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
- **report_type** | String| Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; | [optional]  &nbsp;
+ **report_type** | String| Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; | [optional]  &nbsp;
  **filing_start_date** | Date| Limit search to filings on or after this date | [optional]  &nbsp;
  **filing_end_date** | Date| Limit search to filings on or before this date | [optional]  &nbsp;
  **period_ended_start_date** | Date| Limit search to filings with a period end date on or after this date | [optional]  &nbsp;
@@ -438,7 +438,7 @@ end
 
 filing_api = Intrinio::FilingApi.new
 
-identifier = "xbn_3fghz" # String | The Intrinio ID of the filing note
+identifier = "xbn_ydK3QL" # String | The Intrinio ID of the filing note
 
 opts = { 
   content_format: "text" # String | Returns content in html (as filed) or plain text
@@ -524,7 +524,7 @@ end
 
 filing_api = Intrinio::FilingApi.new
 
-identifier = "xbn_3fghz" # String | The Intrinio ID of the filing note
+identifier = "xbn_ydK3QL" # String | The Intrinio ID of the filing note
 
 
 begin
@@ -606,7 +606,7 @@ end
 
 filing_api = Intrinio::FilingApi.new
 
-identifier = "xbn_3fghz" # String | The Intrinio ID of the filing note
+identifier = "xbn_ydK3QL" # String | The Intrinio ID of the filing note
 
 
 begin

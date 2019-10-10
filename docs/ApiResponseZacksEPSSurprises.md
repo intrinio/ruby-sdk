@@ -13,7 +13,7 @@
 Name | Type | Description
 ------------ | ------------- | -------------
 **eps_surprises** | [**Array&lt;ZacksEPSSurprise&gt;**](ZacksEPSSurprise.md) | Zacks EPS Surprise data for a Security in descending order by actual reported date &nbsp;
-**next_page** | String | The token required to request the next page of the data &nbsp;
+**next_page** | String | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

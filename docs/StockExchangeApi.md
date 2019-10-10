@@ -63,9 +63,9 @@ end
 stockExchange_api = Intrinio::StockExchangeApi.new
 
 opts = { 
-  city: "city_example", # String | Filter by city
-  country: "CHINA", # String | Filter by country
-  country_code: "country_code_example", # String | Filter by ISO country code
+  city: "New York", # String | Filter by city
+  country: "UNITED STATES OF AMERICA", # String | Filter by country
+  country_code: "US", # String | Filter by ISO country code
   page_size: 100 # Integer | The number of results to return
 }
 

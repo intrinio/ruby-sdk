@@ -515,7 +515,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 opts = { 
-  report_type: nil, # String | Filter by <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types.
+  report_type: nil, # String | Filter by <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types.
   start_date: Date.parse("2015-01-01"), # Date | Filed on or after the given date
   end_date: nil, # Date | Filed before or after the given date
   page_size: 100, # Integer | The number of results to return
@@ -542,7 +542,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **report_type** | String| Filter by &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. | [optional]  &nbsp;
+ **report_type** | String| Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. | [optional]  &nbsp;
  **start_date** | Date| Filed on or after the given date | [optional]  &nbsp;
  **end_date** | Date| Filed before or after the given date | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;

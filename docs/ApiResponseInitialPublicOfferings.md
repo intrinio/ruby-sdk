@@ -13,7 +13,7 @@
 Name | Type | Description
 ------------ | ------------- | -------------
 **initial_public_offerings** | [**Array&lt;CompanyInitialPublicOffering&gt;**](CompanyInitialPublicOffering.md) |  &nbsp;
-**next_page** | String | The token required to request the next page of the data &nbsp;
+**next_page** | String | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

@@ -107,7 +107,7 @@ security_api = Intrinio::SecurityApi.new
 opts = { 
   active: true, # BOOLEAN | When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings).
   delisted: false, # BOOLEAN | When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted.
-  code: nil, # String | Return securities classified with the given code (<a href=\"/documentation/security_codes\" target=\"_blank\">reference</a>).
+  code: nil, # String | Return securities classified with the given code (<a href=\"https://docs.intrinio.com/documentation/security_codes\" target=\"_blank\">reference</a>).
   currency: nil, # String | Return securities traded in the given 3-digit ISO 4217 currency code (<a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">reference</a>).
   ticker: nil, # String | Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity.
   name: nil, # String | Return securities with the given text in their name (not case sensitive).
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **active** | BOOLEAN| When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). | [optional]  &nbsp;
  **delisted** | BOOLEAN| When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. | [optional]  &nbsp;
- **code** | String| Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **code** | String| Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **currency** | String| Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **ticker** | String| Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. | [optional]  &nbsp;
  **name** | String| Return securities with the given text in their name (not case sensitive). | [optional]  &nbsp;
@@ -583,10 +583,12 @@ identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP,
 
 opts = { 
   source: nil, # String | Return intraday prices from the specified data source
-  start_date: Date.parse("2018-01-01"), # Date | Return intraday prices starting at the specified date
-  start_time: "4200", # String | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC)
-  end_date: Date.parse("2018-01-01"), # Date | Return intraday prices stopping at the specified date
-  end_time: "4200" # String | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC)
+  start_date: nil, # Date | Return intraday prices starting at the specified date
+  start_time: nil, # String | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC)
+  end_date: nil, # Date | Return intraday prices stopping at the specified date
+  end_time: nil, # String | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC)
+  page_size: 100, # Integer | The number of results to return
+  next_page: nil # String | Gets the next page of data from a previous API call
 }
 
 begin
@@ -614,6 +616,8 @@ Name | Type | Description  | Notes
  **start_time** | String| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional]  &nbsp;
  **end_date** | Date| Return intraday prices stopping at the specified date | [optional]  &nbsp;
  **end_time** | String| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -4493,8 +4497,8 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = { 
-  logic: Intrinio::SecurityScreenGroup.new, # SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
-  order_column: "order_column_example", # String | Results returned sorted by this column
+  logic: Intrinio::SecurityScreenGroup.new, # SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"https://docs.intrinio.com/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
+  order_column: "marketcap", # String | Results returned sorted by this column
   order_direction: "asc", # String | Sort order to use with the order_column
   primary_only: false, # BOOLEAN | Return only primary securities
   page_size: 100 # Integer | The number of results to return. Maximum for this endpoint is 50000.
@@ -4519,7 +4523,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
+ **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
  **order_column** | String| Results returned sorted by this column | [optional]  &nbsp;
  **order_direction** | String| Sort order to use with the order_column | [optional] [default to asc] &nbsp;
  **primary_only** | BOOLEAN| Return only primary securities | [optional] [default to false] &nbsp;
