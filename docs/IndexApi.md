@@ -99,7 +99,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -184,7 +183,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -269,7 +267,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -351,7 +348,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -437,7 +433,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -523,7 +518,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -623,7 +617,6 @@ Name | Type | Description  | Notes
  **sort_order** | String| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -705,7 +698,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -791,7 +783,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -877,7 +868,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -977,7 +967,6 @@ Name | Type | Description  | Notes
  **sort_order** | String| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1059,7 +1048,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1145,7 +1133,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1231,7 +1218,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1331,7 +1317,6 @@ Name | Type | Description  | Notes
  **sort_order** | String| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1418,7 +1403,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String| Search query |  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1505,7 +1489,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String| Search query |  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1592,7 +1575,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String| Search query |  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

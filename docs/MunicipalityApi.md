@@ -106,7 +106,6 @@ Name | Type | Description  | Notes
  **enrollment_greater_than** | Float| Return municipalities with an enrollment greater than the given number | [optional]  &nbsp;
  **enrollment_less_than** | Float| Return municipalities with an enrollment less than the given number | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -189,7 +188,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | String| An Intrinio ID of a Municipality |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -276,7 +274,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | String| An Intrinio ID of a Municipality |  &nbsp;
  **fiscal_year** | Float| Return financials for the given fiscal year | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

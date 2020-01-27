@@ -95,7 +95,6 @@ Name | Type | Description  | Notes
  **fs_template** | String| Template | [optional] [default to industrial] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -178,7 +177,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID or the code-name of the Data Tag |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -265,7 +263,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String|  |  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

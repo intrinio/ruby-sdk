@@ -76,7 +76,6 @@ end
 [//]: # (START_PARAMETERS)
 
 This endpoint does not need any parameter.
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -153,7 +152,6 @@ end
 [//]: # (START_PARAMETERS)
 
 This endpoint does not need any parameter.
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -255,7 +253,6 @@ Name | Type | Description  | Notes
  **end_time** | String| Return Forex Prices at or before this time (24-hour) | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

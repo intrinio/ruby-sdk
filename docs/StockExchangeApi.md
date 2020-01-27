@@ -92,7 +92,6 @@ Name | Type | Description  | Notes
  **country** | String| Filter by country | [optional]  &nbsp;
  **country_code** | String| Filter by ISO country code | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -175,7 +174,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -266,7 +264,6 @@ Name | Type | Description  | Notes
  **date** | Date| The date for which to return price adjustments | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -357,7 +354,6 @@ Name | Type | Description  | Notes
  **date** | Date| The date for which to return prices | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -448,7 +444,6 @@ Name | Type | Description  | Notes
  **source** | String| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -537,7 +532,6 @@ Name | Type | Description  | Notes
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

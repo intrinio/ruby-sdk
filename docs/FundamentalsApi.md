@@ -83,7 +83,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | String| The Intrinio ID for the Fundamental |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -166,7 +165,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | String| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -249,7 +247,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | String| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -341,7 +338,6 @@ Name | Type | Description  | Notes
  **statement_code** | String| The statement code |  &nbsp;
  **fiscal_year** | Integer| The fiscal year |  &nbsp;
  **fiscal_period** | String| The fiscal period |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

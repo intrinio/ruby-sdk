@@ -119,7 +119,6 @@ Name | Type | Description  | Notes
  **total_less** | Integer| Return only records with fewer than this many recommendations, regardless of type | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -233,7 +232,6 @@ Name | Type | Description  | Notes
  **eps_std_dev_estimate_less** | Float| Return only records with an EPS standard deviation less than this value | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -347,7 +345,6 @@ Name | Type | Description  | Notes
  **sales_std_dev_estimate_less** | Float| Return only records with a sales standard deviation less than this value | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

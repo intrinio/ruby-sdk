@@ -99,7 +99,6 @@ Name | Type | Description  | Notes
  **end_date** | Date| Filed before or after the given date | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -197,7 +196,6 @@ Name | Type | Description  | Notes
  **period_ended_end_date** | Date| Limit search to filings with a period end date on or before this date | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -280,7 +278,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | String| The Intrinio ID of the Filing |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -379,7 +376,6 @@ Name | Type | Description  | Notes
  **start_date** | Date| Returns fundamentals on or after the given date | [optional]  &nbsp;
  **end_date** | Date| Returns fundamentals on or before the given date | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -465,7 +461,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID of the filing note |  &nbsp;
  **content_format** | String| Returns content in html (as filed) or plain text | [optional] [default to text] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -547,7 +542,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID of the filing note |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -629,7 +623,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID of the filing note |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -720,7 +713,6 @@ Name | Type | Description  | Notes
  **filing_start_date** | Date| Limit search to filings on or after this date | [optional]  &nbsp;
  **filing_end_date** | Date| Limit search to filings on or before this date | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

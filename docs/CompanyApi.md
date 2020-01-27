@@ -70,7 +70,7 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = { 
-  latest_filing_date: nil, # Date | Last filing date
+  latest_filing_date: nil, # Date | Return companies whose latest 10-Q or 10-K was filed on or after this date
   sic: nil, # String | Return companies with the given Standard Industrial Classification code
   template: nil, # String | Return companies with the given financial statement template
   sector: nil, # String | Return companies in the given industry sector
@@ -101,7 +101,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **latest_filing_date** | Date| Last filing date | [optional]  &nbsp;
+ **latest_filing_date** | Date| Return companies whose latest 10-Q or 10-K was filed on or after this date | [optional]  &nbsp;
  **sic** | String| Return companies with the given Standard Industrial Classification code | [optional]  &nbsp;
  **template** | String| Return companies with the given financial statement template | [optional]  &nbsp;
  **sector** | String| Return companies in the given industry sector | [optional]  &nbsp;
@@ -111,7 +111,6 @@ Name | Type | Description  | Notes
  **has_stock_prices** | BOOLEAN| Return only companies that have stock prices when true | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -197,7 +196,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -280,7 +278,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -366,7 +363,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -452,7 +448,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -547,7 +542,6 @@ Name | Type | Description  | Notes
  **end_date** | Date| Filed before or after the given date | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -652,7 +646,6 @@ Name | Type | Description  | Notes
  **end_date** | Date| Only on or before the given date | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -754,7 +747,6 @@ Name | Type | Description  | Notes
  **sort_order** | String| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -852,7 +844,6 @@ Name | Type | Description  | Notes
  **offer_amount_less_than** | Integer| Return IPOs with an offer dollar amount less than the given amount | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -941,7 +932,6 @@ Name | Type | Description  | Notes
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1028,7 +1018,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1120,7 +1109,6 @@ Name | Type | Description  | Notes
  **statement_code** | String| The statement code |  &nbsp;
  **fiscal_period** | String| The fiscal period |  &nbsp;
  **fiscal_year** | Integer| The fiscal year |  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -1207,7 +1195,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String| Search parameters |  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

@@ -103,7 +103,6 @@ Name | Type | Description  | Notes
  **expiration_before** | String| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -205,7 +204,6 @@ Name | Type | Description  | Notes
  **strike_less_than** | Float| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **moneyness** | String| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -294,7 +292,6 @@ Name | Type | Description  | Notes
  **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
  **after** | String| Return option contract expiration dates after this date. | [optional]  &nbsp;
  **before** | String| Return option contract expiration dates before this date. | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 
@@ -354,7 +351,7 @@ end
 
 options_api = Intrinio::OptionsApi.new
 
-identifier = "null" # String | The Intrinio ID or code of the options contract to request prices for.
+identifier = "identifier_example" # String | The Intrinio ID or code of the options contract to request prices for.
 
 opts = { 
   start_date: "2019-01-01", # String | Return option contract prices on or after this date.
@@ -387,7 +384,6 @@ Name | Type | Description  | Notes
  **end_date** | String| Return option contract prices on or before this date. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
 
 [//]: # (END_PARAMETERS)
 

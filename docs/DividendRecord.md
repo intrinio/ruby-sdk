@@ -21,6 +21,7 @@ Name | Type | Description
 **status** | String | Status of the dividend &nbsp;
 **forward_yield** | Float | The forward dividend yield &nbsp;
 **forward_rate** | Float | The forward dividend rate &nbsp;
+**last_ex_dividend_date** | Date | The last reported day the stock starts trading without the value of its next dividend payment &nbsp;
 **security** | [**SecuritySummary**](SecuritySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
