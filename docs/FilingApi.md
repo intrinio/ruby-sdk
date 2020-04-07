@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**get_all_notes**](FilingApi.md#get_all_notes) | **GET** /filings/notes | All Filing Notes
 [**get_filing_by_id**](FilingApi.md#get_filing_by_id) | **GET** /filings/{id} | Lookup Filing
 [**get_filing_fundamentals**](FilingApi.md#get_filing_fundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
+[**get_filing_html**](FilingApi.md#get_filing_html) | **GET** /filings/{identifier}/html | Filing Html
+[**get_filing_text**](FilingApi.md#get_filing_text) | **GET** /filings/{identifier}/text | Filing Text
 [**get_note**](FilingApi.md#get_note) | **GET** /filings/notes/{identifier} | Filing Note by ID
 [**get_note_html**](FilingApi.md#get_note_html) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
 [**get_note_text**](FilingApi.md#get_note_text) | **GET** /filings/notes/{identifier}/text | Filing Note Text
@@ -70,6 +72,8 @@ opts = {
   report_type: nil, # String | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>.
   start_date: Date.parse("2015-01-01"), # Date | Filed on or after the given date
   end_date: nil, # Date | Filed before or after the given date
+  industry_category: nil, # String | Return companies in the given industry category
+  industry_group: nil, # String | Return companies in the given industry group
   page_size: 100, # Integer | The number of results to return
   next_page: nil # String | Gets the next page of data from a previous API call
 }
@@ -97,6 +101,8 @@ Name | Type | Description  | Notes
  **report_type** | String| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
  **start_date** | Date| Filed on or after the given date | [optional]  &nbsp;
  **end_date** | Date| Filed before or after the given date | [optional]  &nbsp;
+ **industry_category** | String| Return companies in the given industry category | [optional]  &nbsp;
+ **industry_group** | String| Return companies in the given industry group | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
@@ -382,6 +388,168 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseFilingFundamentals**](ApiResponseFilingFundamentals.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::FilingApi)
+
+[//]: # (METHOD:get_filing_html)
+
+[//]: # (RETURN_TYPE:String)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
+
+[//]: # (OPERATION:get_filing_html_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/html)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#get_filing_html)
+
+## **get_filing_html**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_filing_html_v2)
+
+[//]: # (START_OVERVIEW)
+
+> String get_filing_html(identifier)
+
+#### Filing Html
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+end
+
+filing_api = Intrinio::FilingApi.new
+
+identifier = "fil_B73xBG" # String | A Filing identifier
+
+
+begin
+  result = filing_api.get_filing_html(identifier)
+  pp result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling FilingApi->get_filing_html: #{e}"
+end
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Filing identifier |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+**String**
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::FilingApi)
+
+[//]: # (METHOD:get_filing_text)
+
+[//]: # (RETURN_TYPE:String)
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
+
+[//]: # (OPERATION:get_filing_text_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/text)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#get_filing_text)
+
+## **get_filing_text**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_filing_text_v2)
+
+[//]: # (START_OVERVIEW)
+
+> String get_filing_text(identifier)
+
+#### Filing Text
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+end
+
+filing_api = Intrinio::FilingApi.new
+
+identifier = "fil_B73xBG" # String | A Filing identifier
+
+
+begin
+  result = filing_api.get_filing_text(identifier)
+  pp result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling FilingApi->get_filing_text: #{e}"
+end
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Filing identifier |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+**String**
 
 [//]: # (END_OPERATION)
 
