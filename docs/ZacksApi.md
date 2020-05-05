@@ -8,6 +8,10 @@ Method | HTTP request | Description
 [**get_zacks_eps_estimates**](ZacksApi.md#get_zacks_eps_estimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
 [**get_zacks_eps_growth_rates**](ZacksApi.md#get_zacks_eps_growth_rates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 [**get_zacks_eps_surprises**](ZacksApi.md#get_zacks_eps_surprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
+[**get_zacks_etf_holdings**](ZacksApi.md#get_zacks_etf_holdings) | **GET** /zacks/etf_holdings | Zacks ETF Holdings
+[**get_zacks_institutional_holding_companies**](ZacksApi.md#get_zacks_institutional_holding_companies) | **GET** /zacks/institutional_holdings/companies | Zacks Institutional Holding Companies
+[**get_zacks_institutional_holding_owners**](ZacksApi.md#get_zacks_institutional_holding_owners) | **GET** /zacks/institutional_holdings/owners | Zacks Institutional Holding Owners
+[**get_zacks_institutional_holdings**](ZacksApi.md#get_zacks_institutional_holdings) | **GET** /zacks/institutional_holdings | Zacks Institutional Holdings
 [**get_zacks_long_term_growth_rates**](ZacksApi.md#get_zacks_long_term_growth_rates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
 [**get_zacks_sales_surprises**](ZacksApi.md#get_zacks_sales_surprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
 [**get_zacks_target_price_consensuses**](ZacksApi.md#get_zacks_target_price_consensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
@@ -432,6 +436,362 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksEPSSurprises**](ApiResponseZacksEPSSurprises.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ZacksApi)
+
+[//]: # (METHOD:get_zacks_etf_holdings)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseZacksETFHoldings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksETFHoldings.md)
+
+[//]: # (OPERATION:get_zacks_etf_holdings_v2)
+
+[//]: # (ENDPOINT:/zacks/etf_holdings)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_etf_holdings)
+
+## **get_zacks_etf_holdings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_etf_holdings_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksETFHoldings get_zacks_etf_holdings(opts)
+
+#### Zacks ETF Holdings
+
+
+Returns Zacks ETF holdings data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+end
+
+zacks_api = Intrinio::ZacksApi.new
+
+opts = { 
+  etf_ticker: nil, # String | Return holdings of the ETF with the given ticker
+  holding_symbol: nil, # String | Return holdings where the instrument being held has the given trading symbol
+  weight_greater: nil, # Float | Return on the holdings with a weight greater than
+  weight_less: nil, # Float | Return on the holdings with a weight less than
+  page_size: 100, # Integer | The number of results to return
+  next_page: nil # String | Gets the next page of data from a previous API call
+}
+
+begin
+  result = zacks_api.get_zacks_etf_holdings(opts)
+  pp result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling ZacksApi->get_zacks_etf_holdings: #{e}"
+end
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **etf_ticker** | String| Return holdings of the ETF with the given ticker | [optional]  &nbsp;
+ **holding_symbol** | String| Return holdings where the instrument being held has the given trading symbol | [optional]  &nbsp;
+ **weight_greater** | Float| Return on the holdings with a weight greater than | [optional]  &nbsp;
+ **weight_less** | Float| Return on the holdings with a weight less than | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksETFHoldings**](ApiResponseZacksETFHoldings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ZacksApi)
+
+[//]: # (METHOD:get_zacks_institutional_holding_companies)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseZacksInstitutionalHoldingCompanies)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldingCompanies.md)
+
+[//]: # (OPERATION:get_zacks_institutional_holding_companies_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings/companies)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_institutional_holding_companies)
+
+## **get_zacks_institutional_holding_companies**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_institutional_holding_companies_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldingCompanies get_zacks_institutional_holding_companies(opts)
+
+#### Zacks Institutional Holding Companies
+
+
+Returns Zacks institutional holding companies data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+end
+
+zacks_api = Intrinio::ZacksApi.new
+
+opts = { 
+  ticker: nil, # String | Return companies with the given ticker
+  page_size: 100, # Integer | The number of results to return
+  next_page: nil # String | Gets the next page of data from a previous API call
+}
+
+begin
+  result = zacks_api.get_zacks_institutional_holding_companies(opts)
+  pp result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling ZacksApi->get_zacks_institutional_holding_companies: #{e}"
+end
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ticker** | String| Return companies with the given ticker | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldingCompanies**](ApiResponseZacksInstitutionalHoldingCompanies.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ZacksApi)
+
+[//]: # (METHOD:get_zacks_institutional_holding_owners)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseZacksInstitutionalHoldingOwners)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldingOwners.md)
+
+[//]: # (OPERATION:get_zacks_institutional_holding_owners_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings/owners)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_institutional_holding_owners)
+
+## **get_zacks_institutional_holding_owners**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_institutional_holding_owners_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldingOwners get_zacks_institutional_holding_owners(opts)
+
+#### Zacks Institutional Holding Owners
+
+
+Returns Zacks institutional holding owners data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+end
+
+zacks_api = Intrinio::ZacksApi.new
+
+opts = { 
+  cik: nil, # String | Return owners with the given Central Index Key (CIK)
+  page_size: 100, # Integer | The number of results to return
+  next_page: nil # String | Gets the next page of data from a previous API call
+}
+
+begin
+  result = zacks_api.get_zacks_institutional_holding_owners(opts)
+  pp result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling ZacksApi->get_zacks_institutional_holding_owners: #{e}"
+end
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cik** | String| Return owners with the given Central Index Key (CIK) | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldingOwners**](ApiResponseZacksInstitutionalHoldingOwners.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ZacksApi)
+
+[//]: # (METHOD:get_zacks_institutional_holdings)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseZacksInstitutionalHoldings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldings.md)
+
+[//]: # (OPERATION:get_zacks_institutional_holdings_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_institutional_holdings)
+
+## **get_zacks_institutional_holdings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_institutional_holdings_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldings get_zacks_institutional_holdings(opts)
+
+#### Zacks Institutional Holdings
+
+
+Returns Zacks institutional holdings data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+end
+
+zacks_api = Intrinio::ZacksApi.new
+
+opts = { 
+  ticker: nil, # String | Return holdings where the company being held has the given ticker
+  owner_cik: nil, # String | Return holdings where the owner/holder has the given Central Index Key (CIK)
+  page_size: 100, # Integer | The number of results to return
+  next_page: nil # String | Gets the next page of data from a previous API call
+}
+
+begin
+  result = zacks_api.get_zacks_institutional_holdings(opts)
+  pp result
+rescue Intrinio::ApiError => e
+  puts "Exception when calling ZacksApi->get_zacks_institutional_holdings: #{e}"
+end
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ticker** | String| Return holdings where the company being held has the given ticker | [optional]  &nbsp;
+ **owner_cik** | String| Return holdings where the owner/holder has the given Central Index Key (CIK) | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldings**](ApiResponseZacksInstitutionalHoldings.md)
 
 [//]: # (END_OPERATION)
 
