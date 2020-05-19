@@ -87,7 +87,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -179,7 +179,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 22, # Integer | The number of observations, per period, to calculate Average Daily Trading Volume
@@ -273,7 +273,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Average Directional Index
@@ -367,7 +367,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   short_period: 5, # Integer | The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator
@@ -463,7 +463,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Average True Range
@@ -557,7 +557,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Bollinger Bands
@@ -655,7 +655,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Commodity Channel Index
@@ -751,7 +751,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Chaikin Money Flow
@@ -845,7 +845,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Donchian Channel
@@ -941,7 +941,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Detrended Price Oscillator
@@ -1037,7 +1037,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Ease of Movement
@@ -1131,7 +1131,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -1223,7 +1223,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   low_period: 9, # Integer | The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo
@@ -1321,7 +1321,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 10, # Integer | The number of observations, per period, to calculate Kelter Channel
@@ -1415,7 +1415,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   roc1: 10, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA1
@@ -1525,7 +1525,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   fast_period: 12, # Integer | The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence
@@ -1625,7 +1625,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Money Flow Index
@@ -1719,7 +1719,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   ema_period: 9, # Integer | The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index
@@ -1815,7 +1815,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -1907,7 +1907,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -1999,7 +1999,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 10, # Integer | The number of observations, per period, to calculate On-balance Volume Mean
@@ -2093,7 +2093,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Relative Strength Index
@@ -2189,7 +2189,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 20, # Integer | The number of observations, per period, to calculate Simple Moving Average
@@ -2285,7 +2285,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate %K of Stochastic Oscillator
@@ -2381,7 +2381,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 15, # Integer | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average
@@ -2475,7 +2475,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   low_period: 13, # Integer | The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index
@@ -2573,7 +2573,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   short_period: 7, # Integer | The number of observations, per period, to calculate the short period for Ultimate Oscillator
@@ -2677,7 +2677,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to calculate Vortex Indicator
@@ -2771,7 +2771,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -2863,7 +2863,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   start_date: "2018-01-01", # String | Return technical indicator values on or after the date
@@ -2955,7 +2955,7 @@ end
 
 technical_api = Intrinio::TechnicalApi.new
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+identifier = "$$v2_ticker_default$$" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 opts = { 
   period: 14, # Integer | The number of observations, per period, to look-back when calculating Williams %R

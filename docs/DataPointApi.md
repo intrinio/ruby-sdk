@@ -38,7 +38,7 @@ Method | HTTP request | Description
 #### Data Point (Number)
 
 
-Returns a numeric value for the given `tag` and the entity with the given `identifier`
+$$v2_data_point_number_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -58,9 +58,9 @@ end
 
 dataPoint_api = Intrinio::DataPointApi.new
 
-identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+identifier = "$$v2_data_point_identifier_default$$" # String | $$v2_data_point_identifier_description$$
 
-tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+tag = "$$v2_data_point_item_number_default$$" # String | $$v2_data_point_item_description$$
 
 
 begin
@@ -82,8 +82,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_data_point_item_description$$ |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 #### Data Point (Text)
 
 
-Returns a text value for the given `tag` for the Security with the given `identifier`
+$$v2_data_point_text_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -143,9 +143,9 @@ end
 
 dataPoint_api = Intrinio::DataPointApi.new
 
-identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+identifier = "$$v2_data_point_identifier_default$$" # String | $$v2_data_point_identifier_description$$
 
-tag = "ceo" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+tag = "$$v2_data_point_item_text_default$$" # String | $$v2_data_point_item_description$$
 
 
 begin
@@ -167,8 +167,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_data_point_item_description$$ |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 

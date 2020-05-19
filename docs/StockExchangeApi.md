@@ -151,7 +151,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 
 begin
@@ -233,7 +233,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   date: Date.parse("2018-08-14"), # Date | The date for which to return price adjustments
@@ -323,7 +323,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   date: Date.parse("2018-08-14"), # Date | The date for which to return prices
@@ -413,7 +413,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   source: nil, # String | Return realtime prices from the specified data source. If no source is specified, all sources are used.
@@ -503,7 +503,7 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
+identifier = "$$v2_mic_default$$" # String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 opts = { 
   page_size: 100, # Integer | The number of results to return
