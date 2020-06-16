@@ -179,9 +179,9 @@ module Intrinio
     end
 
     # Data Point (Number) for Security
-    # $$v2_security_data_point_number_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns a numeric value for the given `tag` for the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Float]
     def get_security_data_point_number(identifier, tag, opts = {})
@@ -190,9 +190,9 @@ module Intrinio
     end
 
     # Data Point (Number) for Security
-    # $$v2_security_data_point_number_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Array<(Float, Fixnum, Hash)>] Float data, response status code and response headers
     def get_security_data_point_number_with_http_info(identifier, tag, opts = {})
@@ -238,8 +238,8 @@ module Intrinio
     end
 
     # Data Point (Text) for Security
-    # $$v2_security_data_point_text_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
+    # Returns a text value for the given `tag` for the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
     # @return [String]
@@ -249,8 +249,8 @@ module Intrinio
     end
 
     # Data Point (Text) for Security
-    # $$v2_security_data_point_text_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
+    # Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
@@ -297,9 +297,9 @@ module Intrinio
     end
 
     # Historical Data for Security
-    # $$v2_security_historical_data_description$$
-    # @param identifier $$v2_security_historical_data_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns historical values for the given `tag` and the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :frequency Return historical data in the given frequency (default to daily)
     # @option opts [String] :type Filter by type, when applicable
@@ -315,9 +315,9 @@ module Intrinio
     end
 
     # Historical Data for Security
-    # $$v2_security_historical_data_description$$
-    # @param identifier $$v2_security_historical_data_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :frequency Return historical data in the given frequency
     # @option opts [String] :type Filter by type, when applicable
@@ -387,7 +387,7 @@ module Intrinio
     end
 
     # Intraday Stock Prices for Security
-    # $$v2_security_intraday_prices_description$$
+    # Return intraday stock prices for the Security with the given `identifier`
     # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :source Return intraday prices from the specified data source
@@ -404,7 +404,7 @@ module Intrinio
     end
 
     # Intraday Stock Prices for Security
-    # $$v2_security_intraday_prices_description$$
+    # Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
     # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :source Return intraday prices from the specified data source
@@ -423,8 +423,8 @@ module Intrinio
       if @api_client.config.client_side_validation && identifier.nil?
         fail ArgumentError, "Missing the required parameter 'identifier' when calling SecurityApi.get_security_intraday_prices"
       end
-      if @api_client.config.client_side_validation && opts[:'source'] && !['$$v2_stock_price_intraday_sources_enum$$'].include?(opts[:'source'])
-        fail ArgumentError, 'invalid value for "source", must be one of $$v2_stock_price_intraday_sources_enum$$'
+      if @api_client.config.client_side_validation && opts[:'source'] && !['iex', 'bats'].include?(opts[:'source'])
+        fail ArgumentError, 'invalid value for "source", must be one of iex, bats'
       end
       if @api_client.config.client_side_validation && !opts[:'page_size'].nil? && opts[:'page_size'] > 10000
         fail ArgumentError, 'invalid value for "opts[:"page_size"]" when calling SecurityApi.get_security_intraday_prices, must be smaller than or equal to 10000.'
@@ -3046,8 +3046,8 @@ module Intrinio
       if @api_client.config.client_side_validation && identifier.nil?
         fail ArgumentError, "Missing the required parameter 'identifier' when calling SecurityApi.get_security_realtime_price"
       end
-      if @api_client.config.client_side_validation && opts[:'source'] && !['$$v2_stock_price_realtime_sources_enum$$'].include?(opts[:'source'])
-        fail ArgumentError, 'invalid value for "source", must be one of $$v2_stock_price_realtime_sources_enum$$'
+      if @api_client.config.client_side_validation && opts[:'source'] && !['iex', 'bats', 'bats_delayed', 'utp_delayed', 'cta_a_delayed', 'cta_b_delayed'].include?(opts[:'source'])
+        fail ArgumentError, 'invalid value for "source", must be one of iex, bats, bats_delayed, utp_delayed, cta_a_delayed, cta_b_delayed'
       end
       # resource path
       local_var_path = "/securities/{identifier}/prices/realtime".sub('{' + 'identifier' + '}', identifier.to_s)

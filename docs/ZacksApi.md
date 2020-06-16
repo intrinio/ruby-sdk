@@ -68,7 +68,7 @@ end
 zacks_api = Intrinio::ZacksApi.new
 
 opts = { 
-  identifier: "$$v2_ticker_default$$", # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+  identifier: "AAPL", # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
   start_date: nil, # Date | Limit ratings to those on or after this date
   end_date: nil, # Date | Limit ratings to those on or before this date
   mean_greater: nil, # Float | Return only records with a mean (average) higher than this value

@@ -297,8 +297,8 @@ module Intrinio
       if @api_client.config.client_side_validation && identifier.nil?
         fail ArgumentError, "Missing the required parameter 'identifier' when calling StockExchangeApi.get_stock_exchange_realtime_prices"
       end
-      if @api_client.config.client_side_validation && opts[:'source'] && !['$$v2_stock_price_realtime_sources_enum$$'].include?(opts[:'source'])
-        fail ArgumentError, 'invalid value for "source", must be one of $$v2_stock_price_realtime_sources_enum$$'
+      if @api_client.config.client_side_validation && opts[:'source'] && !['iex', 'bats', 'bats_delayed', 'utp_delayed', 'cta_a_delayed', 'cta_b_delayed'].include?(opts[:'source'])
+        fail ArgumentError, 'invalid value for "source", must be one of iex, bats, bats_delayed, utp_delayed, cta_a_delayed, cta_b_delayed'
       end
       if @api_client.config.client_side_validation && !opts[:'page_size'].nil? && opts[:'page_size'] > 10000
         fail ArgumentError, 'invalid value for "opts[:"page_size"]" when calling StockExchangeApi.get_stock_exchange_realtime_prices, must be smaller than or equal to 10000.'

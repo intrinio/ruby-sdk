@@ -47,7 +47,7 @@ describe 'ApiResponseSecurityIntradayPrices' do
   describe 'test attribute "source"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["$$v2_stock_price_intraday_sources_enum$$"])
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["iex", "bats"])
        #validator.allowable_values.each do |value|
        #  expect { @instance.source = value }.not_to raise_error
        #end
