@@ -11,5 +11,5 @@ Swagger Codegen version: unset
 =end
 
 module Intrinio
-  VERSION = "5.6.0"
+  VERSION = "5.6.1"
 end
