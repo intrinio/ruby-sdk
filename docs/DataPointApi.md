@@ -57,18 +57,11 @@ Intrinio.configure do |config|
 end
 
 dataPoint_api = Intrinio::DataPointApi.new
+identifier = "AAPL"
+tag = "marketcap"
 
-identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-
-tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-
-
-begin
-  result = dataPoint_api.get_data_point_number(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling DataPointApi->get_data_point_number: #{e}"
-end
+result = dataPoint_api.get_data_point_number(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -142,18 +135,11 @@ Intrinio.configure do |config|
 end
 
 dataPoint_api = Intrinio::DataPointApi.new
+identifier = "AAPL"
+tag = "ceo"
 
-identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-
-tag = "ceo" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-
-
-begin
-  result = dataPoint_api.get_data_point_text(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling DataPointApi->get_data_point_text: #{e}"
-end
+result = dataPoint_api.get_data_point_text(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

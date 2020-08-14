@@ -56,13 +56,8 @@ Intrinio.configure do |config|
 end
 
 bulkDownloads_api = Intrinio::BulkDownloadsApi.new
-
-begin
-  result = bulkDownloads_api.get_bulk_download_links
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling BulkDownloadsApi->get_bulk_download_links: #{e}"
-end
+result = bulkDownloads_api.get_bulk_download_links
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

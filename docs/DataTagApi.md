@@ -59,22 +59,18 @@ end
 
 dataTag_api = Intrinio::DataTagApi.new
 
-opts = { 
-  tag: nil, # String | Tag
-  type: nil, # String | Type
-  parent: nil, # String | ID of tag parent
-  statement_code: "income_statement", # String | Statement Code
-  fs_template: "industrial", # String | Template
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  tag: nil,
+  type: nil,
+  parent: nil,
+  statement_code: "income_statement",
+  fs_template: "industrial",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = dataTag_api.get_all_data_tags(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling DataTagApi->get_all_data_tags: #{e}"
-end
+result = dataTag_api.get_all_data_tags(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -153,16 +149,10 @@ Intrinio.configure do |config|
 end
 
 dataTag_api = Intrinio::DataTagApi.new
+identifier = "marketcap"
 
-identifier = "marketcap" # String | The Intrinio ID or the code-name of the Data Tag
-
-
-begin
-  result = dataTag_api.get_data_tag_by_id(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling DataTagApi->get_data_tag_by_id: #{e}"
-end
+result = dataTag_api.get_data_tag_by_id(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -235,19 +225,14 @@ Intrinio.configure do |config|
 end
 
 dataTag_api = Intrinio::DataTagApi.new
+query = "revenue"
 
-query = "revenue" # String | 
-
-opts = { 
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  page_size: 100
 }
 
-begin
-  result = dataTag_api.search_data_tags(query, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling DataTagApi->search_data_tags: #{e}"
-end
+result = dataTag_api.search_data_tags(query, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

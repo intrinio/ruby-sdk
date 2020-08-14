@@ -62,18 +62,14 @@ end
 
 eTFs_api = Intrinio::ETFsApi.new
 
-opts = { 
-  exchange: "XNAS", # String | 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  exchange: "XNAS",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = eTFs_api.get_all_etfs(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ETFsApi->get_all_etfs: #{e}"
-end
+result = eTFs_api.get_all_etfs(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -148,16 +144,10 @@ Intrinio.configure do |config|
 end
 
 eTFs_api = Intrinio::ETFsApi.new
+identifier = "SPY"
 
-identifier = "SPY" # String | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
-
-
-begin
-  result = eTFs_api.get_etf(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ETFsApi->get_etf: #{e}"
-end
+result = eTFs_api.get_etf(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -230,16 +220,10 @@ Intrinio.configure do |config|
 end
 
 eTFs_api = Intrinio::ETFsApi.new
+identifier = "SPY"
 
-identifier = "SPY" # String | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
-
-
-begin
-  result = eTFs_api.get_etf_analytics(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ETFsApi->get_etf_analytics: #{e}"
-end
+result = eTFs_api.get_etf_analytics(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -312,20 +296,15 @@ Intrinio.configure do |config|
 end
 
 eTFs_api = Intrinio::ETFsApi.new
+identifier = "SPY"
 
-identifier = "SPY" # String | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
-
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = eTFs_api.get_etf_holdings(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ETFsApi->get_etf_holdings: #{e}"
-end
+result = eTFs_api.get_etf_holdings(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -400,16 +379,10 @@ Intrinio.configure do |config|
 end
 
 eTFs_api = Intrinio::ETFsApi.new
+identifier = "SPY"
 
-identifier = "SPY" # String | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
-
-
-begin
-  result = eTFs_api.get_etf_stats(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ETFsApi->get_etf_stats: #{e}"
-end
+result = eTFs_api.get_etf_stats(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -482,16 +455,10 @@ Intrinio.configure do |config|
 end
 
 eTFs_api = Intrinio::ETFsApi.new
+query = "iShares"
 
-query = "iShares" # String | 
-
-
-begin
-  result = eTFs_api.search_etfs(query)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ETFsApi->search_etfs: #{e}"
-end
+result = eTFs_api.search_etfs(query)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

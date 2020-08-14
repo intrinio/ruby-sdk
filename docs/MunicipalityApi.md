@@ -58,28 +58,24 @@ end
 
 municipality_api = Intrinio::MunicipalityApi.new
 
-opts = { 
-  has_financials: true, # BOOLEAN | Return municipalities with financials
-  government_name: nil, # String | Return municipalities with a government name matching the given query
-  government_type: nil, # String | Return municipalities with the given government type
-  area_name: nil, # String | Return municipalities with an area name matching the given query
-  area_type: nil, # String | Return municipalities with the given area type
-  city: nil, # String | Return municipalities in the given city
-  state: nil, # String | Return municipalities in the given state
-  zipcode: nil, # Float | Return municipalities in the given zipcode
-  population_greater_than: nil, # Float | Return municipalities with a population greater than the given number
-  population_less_than: nil, # Float | Return municipalities with a population less than the given number
-  enrollment_greater_than: nil, # Float | Return municipalities with an enrollment greater than the given number
-  enrollment_less_than: nil, # Float | Return municipalities with an enrollment less than the given number
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  has_financials: true,
+  government_name: nil,
+  government_type: nil,
+  area_name: nil,
+  area_type: nil,
+  city: nil,
+  state: nil,
+  zipcode: nil,
+  population_greater_than: nil,
+  population_less_than: nil,
+  enrollment_greater_than: nil,
+  enrollment_less_than: nil,
+  next_page: nil
 }
 
-begin
-  result = municipality_api.get_all_municipalities(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling MunicipalityApi->get_all_municipalities: #{e}"
-end
+result = municipality_api.get_all_municipalities(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -164,16 +160,10 @@ Intrinio.configure do |config|
 end
 
 municipality_api = Intrinio::MunicipalityApi.new
+id = "mun_Xn7x4z"
 
-id = "mun_Xn7x4z" # String | An Intrinio ID of a Municipality
-
-
-begin
-  result = municipality_api.get_municipality_by_id(id)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling MunicipalityApi->get_municipality_by_id: #{e}"
-end
+result = municipality_api.get_municipality_by_id(id)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -246,19 +236,14 @@ Intrinio.configure do |config|
 end
 
 municipality_api = Intrinio::MunicipalityApi.new
+id = "mun_Xn7x4z"
 
-id = "mun_Xn7x4z" # String | An Intrinio ID of a Municipality
-
-opts = { 
-  fiscal_year: 2017 # Float | Return financials for the given fiscal year
+opts = {
+  fiscal_year: 2017
 }
 
-begin
-  result = municipality_api.get_municipality_financials(id, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling MunicipalityApi->get_municipality_financials: #{e}"
-end
+result = municipality_api.get_municipality_financials(id, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

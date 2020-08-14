@@ -58,13 +58,8 @@ Intrinio.configure do |config|
 end
 
 forex_api = Intrinio::ForexApi.new
-
-begin
-  result = forex_api.get_forex_currencies
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ForexApi->get_forex_currencies: #{e}"
-end
+result = forex_api.get_forex_currencies
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -134,13 +129,8 @@ Intrinio.configure do |config|
 end
 
 forex_api = Intrinio::ForexApi.new
-
-begin
-  result = forex_api.get_forex_pairs
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ForexApi->get_forex_pairs: #{e}"
-end
+result = forex_api.get_forex_pairs
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -210,27 +200,21 @@ Intrinio.configure do |config|
 end
 
 forex_api = Intrinio::ForexApi.new
+pair = "EURUSD"
+timeframe = "D1"
 
-pair = "EURUSD" # String | The Forex Currency Pair code
-
-timeframe = "D1" # String | The time interval for the quotes
-
-opts = { 
-  timezone: "UTC", # String | Returns trading times in this timezone
-  start_date: nil, # Date | Return Forex Prices on or after this date
-  start_time: nil, # String | Return Forex Prices at or after this time (24-hour)
-  end_date: nil, # Date | Return Forex Prices on or before this date
-  end_time: nil, # String | Return Forex Prices at or before this time (24-hour)
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  timezone: "UTC",
+  start_date: nil,
+  start_time: nil,
+  end_date: nil,
+  end_time: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = forex_api.get_forex_prices(pair, timeframe, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ForexApi->get_forex_prices: #{e}"
-end
+result = forex_api.get_forex_prices(pair, timeframe, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

@@ -65,25 +65,20 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+company = "AAPL"
 
-company = "AAPL" # String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-
-opts = { 
-  report_type: nil, # String | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>.
-  start_date: Date.parse("2015-01-01"), # Date | Filed on or after the given date
-  end_date: nil, # Date | Filed before or after the given date
-  industry_category: nil, # String | Return companies in the given industry category
-  industry_group: nil, # String | Return companies in the given industry group
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  report_type: nil,
+  start_date: Date.parse("2015-01-01"),
+  end_date: nil,
+  industry_category: nil,
+  industry_group: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = filing_api.get_all_filings(company, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_all_filings: #{e}"
-end
+result = filing_api.get_all_filings(company, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -164,23 +159,19 @@ end
 
 filing_api = Intrinio::FilingApi.new
 
-opts = { 
-  company: "AAPL", # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  report_type: "10-Q", # String | Notes contained in filings that match the given <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>
-  filing_start_date: nil, # Date | Limit search to filings on or after this date
-  filing_end_date: nil, # Date | Limit search to filings on or before this date
-  period_ended_start_date: nil, # Date | Limit search to filings with a period end date on or after this date
-  period_ended_end_date: nil, # Date | Limit search to filings with a period end date on or before this date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  company: "AAPL",
+  report_type: "10-Q",
+  filing_start_date: nil,
+  filing_end_date: nil,
+  period_ended_start_date: nil,
+  period_ended_end_date: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = filing_api.get_all_notes(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_all_notes: #{e}"
-end
+result = filing_api.get_all_notes(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -260,16 +251,10 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+id = "fil_7Kn2P6"
 
-id = "fil_7Kn2P6" # String | The Intrinio ID of the Filing
-
-
-begin
-  result = filing_api.get_filing_by_id(id)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_filing_by_id: #{e}"
-end
+result = filing_api.get_filing_by_id(id)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -342,25 +327,20 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+identifier = "fil_B73xBG"
 
-identifier = "fil_B73xBG" # String | A Filing identifier
-
-opts = { 
-  statement_code: nil, # String | Filters fundamentals by statement code
-  type: nil, # String | Filters fundamentals by type
-  fiscal_year: nil, # Integer | Filters fundamentals by fiscal year
-  fiscal_period: nil, # String | Filters fundamentals by fiscal period
-  start_date: nil, # Date | Returns fundamentals on or after the given date
-  end_date: nil, # Date | Returns fundamentals on or before the given date
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  statement_code: nil,
+  type: nil,
+  fiscal_year: nil,
+  fiscal_period: nil,
+  start_date: nil,
+  end_date: nil,
+  next_page: nil
 }
 
-begin
-  result = filing_api.get_filing_fundamentals(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_filing_fundamentals: #{e}"
-end
+result = filing_api.get_filing_fundamentals(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -439,16 +419,10 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+identifier = "fil_B73xBG"
 
-identifier = "fil_B73xBG" # String | A Filing identifier
-
-
-begin
-  result = filing_api.get_filing_html(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_filing_html: #{e}"
-end
+result = filing_api.get_filing_html(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -520,16 +494,10 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+identifier = "fil_B73xBG"
 
-identifier = "fil_B73xBG" # String | A Filing identifier
-
-
-begin
-  result = filing_api.get_filing_text(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_filing_text: #{e}"
-end
+result = filing_api.get_filing_text(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -601,19 +569,14 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+identifier = "xbn_ydK3QL"
 
-identifier = "xbn_ydK3QL" # String | The Intrinio ID of the filing note
-
-opts = { 
-  content_format: "text" # String | Returns content in html (as filed) or plain text
+opts = {
+  content_format: "text"
 }
 
-begin
-  result = filing_api.get_note(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_note: #{e}"
-end
+result = filing_api.get_note(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -686,16 +649,10 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+identifier = "xbn_ydK3QL"
 
-identifier = "xbn_ydK3QL" # String | The Intrinio ID of the filing note
-
-
-begin
-  result = filing_api.get_note_html(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_note_html: #{e}"
-end
+result = filing_api.get_note_html(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -767,16 +724,10 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+identifier = "xbn_ydK3QL"
 
-identifier = "xbn_ydK3QL" # String | The Intrinio ID of the filing note
-
-
-begin
-  result = filing_api.get_note_text(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->get_note_text: #{e}"
-end
+result = filing_api.get_note_text(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -849,21 +800,16 @@ Intrinio.configure do |config|
 end
 
 filing_api = Intrinio::FilingApi.new
+query = "inflation"
 
-query = "inflation" # String | Search for notes that contain all or parts of this text
-
-opts = { 
-  filing_start_date: Date.parse("2018-07-15"), # Date | Limit search to filings on or after this date
-  filing_end_date: Date.parse("2018-11-30"), # Date | Limit search to filings on or before this date
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  filing_start_date: Date.parse("2018-07-15"),
+  filing_end_date: Date.parse("2018-11-30"),
+  page_size: 100
 }
 
-begin
-  result = filing_api.search_notes(query, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FilingApi->search_notes: #{e}"
-end
+result = filing_api.search_notes(query, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

@@ -73,17 +73,13 @@ end
 
 index_api = Intrinio::IndexApi.new
 
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = index_api.get_all_economic_indices(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_all_economic_indices: #{e}"
-end
+result = index_api.get_all_economic_indices(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -157,17 +153,13 @@ end
 
 index_api = Intrinio::IndexApi.new
 
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = index_api.get_all_sic_indices(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_all_sic_indices: #{e}"
-end
+result = index_api.get_all_sic_indices(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -241,17 +233,13 @@ end
 
 index_api = Intrinio::IndexApi.new
 
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = index_api.get_all_stock_market_indices(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_all_stock_market_indices: #{e}"
-end
+result = index_api.get_all_stock_market_indices(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -324,16 +312,10 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$GDP"
 
-identifier = "$GDP" # String | An Index Identifier (symbol, Intrinio ID)
-
-
-begin
-  result = index_api.get_economic_index_by_id(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_economic_index_by_id: #{e}"
-end
+result = index_api.get_economic_index_by_id(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -406,18 +388,11 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$GDP"
+tag = "level"
 
-identifier = "$GDP" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "level" # String | An Intrinio data tag <a href='https://data.intrinio.com/data-tags/economic'>reference</a>
-
-
-begin
-  result = index_api.get_economic_index_data_point_number(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_economic_index_data_point_number: #{e}"
-end
+result = index_api.get_economic_index_data_point_number(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -491,18 +466,11 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$GDP"
+tag = "level"
 
-identifier = "$GDP" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "level" # String | An Intrinio data tag ID or code-name
-
-
-begin
-  result = index_api.get_economic_index_data_point_text(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_economic_index_data_point_text: #{e}"
-end
+result = index_api.get_economic_index_data_point_text(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -576,26 +544,20 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$GDP"
+tag = "level"
 
-identifier = "$GDP" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "level" # String | An Intrinio data tag <a href='https://data.intrinio.com/data-tags/economic'>reference</a>
-
-opts = { 
-  type: nil, # String | Filter by type, when applicable
-  start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
-  end_date: nil, # Date | Get historical data on or before this date
-  sort_order: "desc", # String | Sort by date `asc` or `desc`
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  type: nil,
+  start_date: Date.parse("2018-01-01"),
+  end_date: nil,
+  sort_order: "desc",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = index_api.get_economic_index_historical_data(identifier, tag, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_economic_index_historical_data: #{e}"
-end
+result = index_api.get_economic_index_historical_data(identifier, tag, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -674,16 +636,10 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$SIC.1"
 
-identifier = "$SIC.1" # String | An Index Identifier (symbol, Intrinio ID)
-
-
-begin
-  result = index_api.get_sic_index_by_id(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_sic_index_by_id: #{e}"
-end
+result = index_api.get_sic_index_by_id(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -756,18 +712,11 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$SIC.1"
+tag = "level"
 
-identifier = "$SIC.1" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "level" # String | An Intrinio data tag ID or code-name
-
-
-begin
-  result = index_api.get_sic_index_data_point_number(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_sic_index_data_point_number: #{e}"
-end
+result = index_api.get_sic_index_data_point_number(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -841,18 +790,11 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$SIC.1"
+tag = "level"
 
-identifier = "$SIC.1" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "level" # String | An Intrinio data tag ID or code-name
-
-
-begin
-  result = index_api.get_sic_index_data_point_text(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_sic_index_data_point_text: #{e}"
-end
+result = index_api.get_sic_index_data_point_text(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -926,26 +868,20 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$SIC.1"
+tag = "marketcap"
 
-identifier = "$SIC.1" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "marketcap" # String | An Intrinio data tag ID or code-name
-
-opts = { 
-  type: nil, # String | Filter by type, when applicable
-  start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
-  end_date: nil, # Date | Get historical data on or before this date
-  sort_order: "desc", # String | Sort by date `asc` or `desc`
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  type: nil,
+  start_date: Date.parse("2018-01-01"),
+  end_date: nil,
+  sort_order: "desc",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = index_api.get_sic_index_historical_data(identifier, tag, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_sic_index_historical_data: #{e}"
-end
+result = index_api.get_sic_index_historical_data(identifier, tag, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1024,16 +960,10 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$DJI"
 
-identifier = "$DJI" # String | An Index Identifier (symbol, Intrinio ID)
-
-
-begin
-  result = index_api.get_stock_market_index_by_id(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_stock_market_index_by_id: #{e}"
-end
+result = index_api.get_stock_market_index_by_id(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1106,18 +1036,11 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$DJI"
+tag = "level"
 
-identifier = "$DJI" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "level" # String | An Intrinio data tag ID or code-name
-
-
-begin
-  result = index_api.get_stock_market_index_data_point_number(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_stock_market_index_data_point_number: #{e}"
-end
+result = index_api.get_stock_market_index_data_point_number(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1191,18 +1114,11 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$DJI"
+tag = "level"
 
-identifier = "$DJI" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "level" # String | An Intrinio data tag ID or code-name
-
-
-begin
-  result = index_api.get_stock_market_index_data_point_text(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_stock_market_index_data_point_text: #{e}"
-end
+result = index_api.get_stock_market_index_data_point_text(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1276,26 +1192,20 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+identifier = "$DJI"
+tag = "level"
 
-identifier = "$DJI" # String | An Index Identifier (symbol, Intrinio ID)
-
-tag = "level" # String | An Intrinio data tag ID or code-name
-
-opts = { 
-  type: nil, # String | Filter by type, when applicable
-  start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
-  end_date: nil, # Date | Get historical data on or before this date
-  sort_order: "desc", # String | Sort by date `asc` or `desc`
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  type: nil,
+  start_date: Date.parse("2018-01-01"),
+  end_date: nil,
+  sort_order: "desc",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = index_api.get_stock_market_index_historical_data(identifier, tag, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->get_stock_market_index_historical_data: #{e}"
-end
+result = index_api.get_stock_market_index_historical_data(identifier, tag, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1375,19 +1285,14 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+query = "GDP"
 
-query = "GDP" # String | Search query
-
-opts = { 
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  page_size: 100
 }
 
-begin
-  result = index_api.search_economic_indices(query, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->search_economic_indices: #{e}"
-end
+result = index_api.search_economic_indices(query, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1461,19 +1366,14 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+query = "agriculture"
 
-query = "agriculture" # String | Search query
-
-opts = { 
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  page_size: 100
 }
 
-begin
-  result = index_api.search_sic_indices(query, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->search_sic_indices: #{e}"
-end
+result = index_api.search_sic_indices(query, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1547,19 +1447,14 @@ Intrinio.configure do |config|
 end
 
 index_api = Intrinio::IndexApi.new
+query = "dow"
 
-query = "dow" # String | Search query
-
-opts = { 
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  page_size: 100
 }
 
-begin
-  result = index_api.search_stock_markets_indices(query, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling IndexApi->search_stock_markets_indices: #{e}"
-end
+result = index_api.search_stock_markets_indices(query, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

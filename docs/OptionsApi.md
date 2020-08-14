@@ -59,27 +59,22 @@ Intrinio.configure do |config|
 end
 
 options_api = Intrinio::OptionsApi.new
+symbol = "MSFT"
 
-symbol = "MSFT" # String | The option symbol, corresponding to the underlying security.
-
-opts = { 
-  type: "put", # String | The option contract type.
-  strike: 170.0, # Float | The strike price of the option contract. This will return options contracts with strike price equal to this price.
-  strike_greater_than: 190.0, # Float | The strike price of the option contract. This will return options contracts with strike prices greater than this price.
-  strike_less_than: 150.0, # Float | The strike price of the option contract. This will return options contracts with strike prices less than this price.
-  expiration: "2019-03-01", # String | The expiration date of the option contract. This will return options contracts with expiration dates on this date.
-  expiration_after: "2019-01-01", # String | The expiration date of the option contract. This will return options contracts with expiration dates after this date.
-  expiration_before: "2019-12-31", # String | The expiration date of the option contract. This will return options contracts with expiration dates before this date.
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  type: "put",
+  strike: 170.0,
+  strike_greater_than: 190.0,
+  strike_less_than: 150.0,
+  expiration: "2019-03-01",
+  expiration_after: "2019-01-01",
+  expiration_before: "2019-12-31",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = options_api.get_options(symbol, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling OptionsApi->get_options: #{e}"
-end
+result = options_api.get_options(symbol, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -161,27 +156,21 @@ Intrinio.configure do |config|
 end
 
 options_api = Intrinio::OptionsApi.new
+symbol = "MSFT"
+expiration = "2019-04-05"
 
-symbol = "MSFT" # String | The option symbol, corresponding to the underlying security.
-
-expiration = "2019-04-05" # String | The expiration date of the options contract
-
-opts = { 
-  date: Date.parse("2019-04-05"), # Date | The date of the option price. Returns option prices on this date.
-  type: "put", # String | The option contract type.
-  strike: 170.0, # Float | The strike price of the option contract. This will return options contracts with strike price equal to this price.
-  strike_greater_than: 190.0, # Float | The strike price of the option contract. This will return options contracts with strike prices greater than this price.
-  strike_less_than: 150.0, # Float | The strike price of the option contract. This will return options contracts with strike prices less than this price.
-  moneyness: "in_the_money", # String | The moneyness of the options contracts to return. 'all' will return all options contracts. 'in_the_money' will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). 'out_of_they_money' will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). 'near_the_money' will return options contracts that are $0.50 or less away from being in the money.
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  date: Date.parse("2019-04-05"),
+  type: "put",
+  strike: 170.0,
+  strike_greater_than: 190.0,
+  strike_less_than: 150.0,
+  moneyness: "in_the_money",
+  page_size: 100
 }
 
-begin
-  result = options_api.get_options_chain(symbol, expiration, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling OptionsApi->get_options_chain: #{e}"
-end
+result = options_api.get_options_chain(symbol, expiration, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -262,20 +251,15 @@ Intrinio.configure do |config|
 end
 
 options_api = Intrinio::OptionsApi.new
+symbol = "MSFT"
 
-symbol = "MSFT" # String | The option symbol, corresponding to the underlying security.
-
-opts = { 
-  after: "2019-01-01", # String | Return option contract expiration dates after this date.
-  before: "2019-12-31" # String | Return option contract expiration dates before this date.
+opts = {
+  after: "2019-01-01",
+  before: "2019-12-31"
 }
 
-begin
-  result = options_api.get_options_expirations(symbol, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling OptionsApi->get_options_expirations: #{e}"
-end
+result = options_api.get_options_expirations(symbol, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -350,22 +334,17 @@ Intrinio.configure do |config|
 end
 
 options_api = Intrinio::OptionsApi.new
+identifier = "identifier_example"
 
-identifier = "identifier_example" # String | The Intrinio ID or code of the options contract to request prices for.
-
-opts = { 
-  start_date: "2019-01-01", # String | Return option contract prices on or after this date.
-  end_date: "2019-12-31", # String | Return option contract prices on or before this date.
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: "2019-01-01",
+  end_date: "2019-12-31",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = options_api.get_options_prices(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling OptionsApi->get_options_prices: #{e}"
-end
+result = options_api.get_options_prices(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

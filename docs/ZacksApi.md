@@ -67,34 +67,30 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  identifier: "AAPL", # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-  start_date: nil, # Date | Limit ratings to those on or after this date
-  end_date: nil, # Date | Limit ratings to those on or before this date
-  mean_greater: nil, # Float | Return only records with a mean (average) higher than this value
-  mean_less: nil, # Float | Return only records with a mean (average) lower than this value
-  strong_buys_greater: nil, # Integer | Return only records with more than this many Strong Buy recommendations
-  strong_buys_less: nil, # Integer | Return only records with fewer than this many Strong Buy recommendations
-  buys_greater: nil, # Integer | Return only records with more than this many Buy recommendations
-  buys_less: nil, # Integer | Return only records with fewer than this many Buy recommendations
-  holds_greater: nil, # Integer | Return only records with more than this many Hold recommendations
-  holds_less: nil, # Integer | Return only records with fewer than this many Hold recommendations
-  sells_greater: nil, # Integer | Return only records with more than this many Sell recommendations
-  sells_less: nil, # Integer | Return only records with fewer than this many Sell recommendations
-  strong_sells_greater: nil, # Integer | Return only records with more than this many Strong Sell recommendations
-  strong_sells_less: nil, # Integer | Return only records with fewer than this many Strong Sell recommendations
-  total_greater: nil, # Integer | Return only records with more than this many recommendations, regardless of type
-  total_less: nil, # Integer | Return only records with fewer than this many recommendations, regardless of type
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  identifier: "AAPL",
+  start_date: nil,
+  end_date: nil,
+  mean_greater: nil,
+  mean_less: nil,
+  strong_buys_greater: nil,
+  strong_buys_less: nil,
+  buys_greater: nil,
+  buys_less: nil,
+  holds_greater: nil,
+  holds_less: nil,
+  sells_greater: nil,
+  sells_less: nil,
+  strong_sells_greater: nil,
+  strong_sells_less: nil,
+  total_greater: nil,
+  total_less: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_analyst_ratings(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_analyst_ratings: #{e}"
-end
+result = zacks_api.get_zacks_analyst_ratings(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -186,24 +182,20 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  identifier: "AAPL", # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  start_date: nil, # Date | Limit EPS estimates to those on or after this date
-  end_date: nil, # Date | Limit EPS estimates to those on or before this date
-  fiscal_year: nil, # Integer | Only for the given fiscal year
-  fiscal_period: nil, # String | The fiscal period
-  calendar_year: nil, # Integer | Only for the given calendar year
-  calendar_period: nil, # String | The calendar period
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  identifier: "AAPL",
+  start_date: nil,
+  end_date: nil,
+  fiscal_year: nil,
+  fiscal_period: nil,
+  calendar_year: nil,
+  calendar_period: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_eps_estimates(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_eps_estimates: #{e}"
-end
+result = zacks_api.get_zacks_eps_estimates(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -285,20 +277,16 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  company: "AAPL", # String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-  industry_group_name: nil, # String | Return only growth rates for companies in the given Zacks industry group name
-  industry_group_number: nil, # String | Return only growth rates for companies in the given Zacks industry group number
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  company: "AAPL",
+  industry_group_name: nil,
+  industry_group_number: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_eps_growth_rates(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_eps_growth_rates: #{e}"
-end
+result = zacks_api.get_zacks_eps_growth_rates(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -376,31 +364,27 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  start_date: nil, # Date | Limit EPS surprises to those on or after this date
-  end_date: nil, # Date | Limit EPS surprises to those on or before this date
-  eps_actual_greater: nil, # Float | Return only records with an actual EPS higher than this value
-  eps_actual_less: nil, # Float | Return only records with an actual EPS lower than this value
-  eps_mean_estimate_greater: nil, # Float | Return only records with an EPS mean estimate greater than this value
-  eps_mean_estimate_less: nil, # Float | Return only records with an EPS mean estimate lower than this value
-  eps_amount_diff_greater: nil, # Float | Return only records with an EPS amount difference greater than this value
-  eps_amount_diff_less: nil, # Float | Return only records with an EPS amount difference less than this value
-  eps_percent_diff_greater: nil, # Float | Return only records with an EPS percent difference greater than this value
-  eps_percent_diff_less: nil, # Float | Return only records with an EPS percent difference less than this value
-  eps_count_estimate_greater: nil, # Float | Return only records with an EPS count estimate greater than this value
-  eps_count_estimate_less: nil, # Float | Return only records with an EPS count estimate less than this value
-  eps_std_dev_estimate_greater: nil, # Float | Return only records with an EPS standard deviation greater than this value
-  eps_std_dev_estimate_less: nil, # Float | Return only records with an EPS standard deviation less than this value
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: nil,
+  end_date: nil,
+  eps_actual_greater: nil,
+  eps_actual_less: nil,
+  eps_mean_estimate_greater: nil,
+  eps_mean_estimate_less: nil,
+  eps_amount_diff_greater: nil,
+  eps_amount_diff_less: nil,
+  eps_percent_diff_greater: nil,
+  eps_percent_diff_less: nil,
+  eps_count_estimate_greater: nil,
+  eps_count_estimate_less: nil,
+  eps_std_dev_estimate_greater: nil,
+  eps_std_dev_estimate_less: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_eps_surprises(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_eps_surprises: #{e}"
-end
+result = zacks_api.get_zacks_eps_surprises(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -489,21 +473,17 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  etf_ticker: nil, # String | Return holdings of the ETF with the given ticker
-  holding_symbol: nil, # String | Return holdings where the instrument being held has the given trading symbol
-  weight_greater: nil, # Float | Return on the holdings with a weight greater than
-  weight_less: nil, # Float | Return on the holdings with a weight less than
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  etf_ticker: nil,
+  holding_symbol: nil,
+  weight_greater: nil,
+  weight_less: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_etf_holdings(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_etf_holdings: #{e}"
-end
+result = zacks_api.get_zacks_etf_holdings(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -582,18 +562,14 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  ticker: nil, # String | Return companies with the given ticker
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  ticker: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_institutional_holding_companies(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_institutional_holding_companies: #{e}"
-end
+result = zacks_api.get_zacks_institutional_holding_companies(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -669,18 +645,14 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  cik: nil, # String | Return owners with the given Central Index Key (CIK)
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  cik: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_institutional_holding_owners(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_institutional_holding_owners: #{e}"
-end
+result = zacks_api.get_zacks_institutional_holding_owners(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -756,19 +728,15 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  ticker: nil, # String | Return holdings where the company being held has the given ticker
-  owner_cik: nil, # String | Return holdings where the owner/holder has the given Central Index Key (CIK)
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  ticker: nil,
+  owner_cik: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_institutional_holdings(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_institutional_holdings: #{e}"
-end
+result = zacks_api.get_zacks_institutional_holdings(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -845,18 +813,14 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  identifier: "AAPL", # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  identifier: "AAPL",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_long_term_growth_rates(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_long_term_growth_rates: #{e}"
-end
+result = zacks_api.get_zacks_long_term_growth_rates(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -932,31 +896,27 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  start_date: nil, # Date | Limit sales surprises to those on or after this date
-  end_date: nil, # Date | Limit sales surprises to those on or before this date
-  sales_actual_greater: nil, # Float | Return only records with an actual sales higher than this value
-  sales_actual_less: nil, # Float | Return only records with an actual sales lower than this value
-  sales_mean_estimate_greater: nil, # Float | Return only records with a sales mean estimate greater than this value
-  sales_mean_estimate_less: nil, # Float | Return only records with a sales mean estimate lower than this value
-  sales_amount_diff_greater: nil, # Float | Return only records with a sales amount difference greater than this value
-  sales_amount_diff_less: nil, # Float | Return only records with a sales amount difference less than this value
-  sales_percent_diff_greater: nil, # Float | Return only records with a sales percent difference greater than this value
-  sales_percent_diff_less: nil, # Float | Return only records with a sales percent difference less than this value
-  sales_count_estimate_greater: nil, # Float | Return only records with a sales count estimate greater than this value
-  sales_count_estimate_less: nil, # Float | Return only records with a sales count estimate less than this value
-  sales_std_dev_estimate_greater: nil, # Float | Return only records with a sales standard deviation greater than this value
-  sales_std_dev_estimate_less: nil, # Float | Return only records with a sales standard deviation less than this value
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: nil,
+  end_date: nil,
+  sales_actual_greater: nil,
+  sales_actual_less: nil,
+  sales_mean_estimate_greater: nil,
+  sales_mean_estimate_less: nil,
+  sales_amount_diff_greater: nil,
+  sales_amount_diff_less: nil,
+  sales_percent_diff_greater: nil,
+  sales_percent_diff_less: nil,
+  sales_count_estimate_greater: nil,
+  sales_count_estimate_less: nil,
+  sales_std_dev_estimate_greater: nil,
+  sales_std_dev_estimate_less: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_sales_surprises(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_sales_surprises: #{e}"
-end
+result = zacks_api.get_zacks_sales_surprises(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1045,19 +1005,15 @@ end
 
 zacks_api = Intrinio::ZacksApi.new
 
-opts = { 
-  identifier: "AAPL", # String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-  industry_group_number: nil, # String | Return only growth rates for companies in the given Zacks industry group number
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  identifier: "AAPL",
+  industry_group_number: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = zacks_api.get_zacks_target_price_consensuses(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling ZacksApi->get_zacks_target_price_consensuses: #{e}"
-end
+result = zacks_api.get_zacks_target_price_consensuses(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

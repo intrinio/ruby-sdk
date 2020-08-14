@@ -104,33 +104,29 @@ end
 
 security_api = Intrinio::SecurityApi.new
 
-opts = { 
-  active: true, # BOOLEAN | When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings).
-  delisted: false, # BOOLEAN | When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted.
-  code: nil, # String | Return securities classified with the given code (<a href=\"https://docs.intrinio.com/documentation/security_codes\" target=\"_blank\">reference</a>).
-  currency: nil, # String | Return securities traded in the given 3-digit ISO 4217 currency code (<a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">reference</a>).
-  ticker: nil, # String | Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity.
-  name: nil, # String | Return securities with the given text in their name (not case sensitive).
-  composite_mic: nil, # String | Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below. 
-  exchange_mic: nil, # String | The MIC code of the exchange where the security is actually traded.
-  stock_prices_after: nil, # Date | Return securities with end-of-day stock prices on or after this date.
-  stock_prices_before: nil, # Date | Return securities with end-of-day stock prices on or before this date.
-  cik: nil, # String | Return securities belonging to the company with the given Central Index Key (CIK).
-  figi: nil, # String | Return securities with the given Exchange Level FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>).
-  composite_figi: nil, # String | Return securities with the given Country Composite FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>).
-  share_class_figi: nil, # String | Return securities with the given Global Share Class FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>).
-  figi_unique_id: nil, # String | Return securities with the given FIGI Unique ID (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>).
-  include_non_figi: false, # BOOLEAN | When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned.
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  active: true,
+  delisted: false,
+  code: nil,
+  currency: nil,
+  ticker: nil,
+  name: nil,
+  composite_mic: nil,
+  exchange_mic: nil,
+  stock_prices_after: nil,
+  stock_prices_before: nil,
+  cik: nil,
+  figi: nil,
+  composite_figi: nil,
+  share_class_figi: nil,
+  figi_unique_id: nil,
+  include_non_figi: false,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_all_securities(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_all_securities: #{e}"
-end
+result = security_api.get_all_securities(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -220,16 +216,10 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-
-begin
-  result = security_api.get_security_by_id(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_by_id: #{e}"
-end
+result = security_api.get_security_by_id(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -302,18 +292,11 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
+tag = "close_price"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-tag = "close_price" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-
-
-begin
-  result = security_api.get_security_data_point_number(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_data_point_number: #{e}"
-end
+result = security_api.get_security_data_point_number(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -387,18 +370,11 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
+tag = "figi"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-tag = "figi" # String | An Intrinio data tag ID or code-name
-
-
-begin
-  result = security_api.get_security_data_point_text(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_data_point_text: #{e}"
-end
+result = security_api.get_security_data_point_text(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -472,27 +448,21 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
+tag = "adj_close_price"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-tag = "adj_close_price" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-
-opts = { 
-  frequency: "daily", # String | Return historical data in the given frequency
-  type: nil, # String | Filter by type, when applicable
-  start_date: Date.parse("2018-01-01"), # Date | Get historical data on or after this date
-  end_date: nil, # Date | Get historical date on or before this date
-  sort_order: "desc", # String | Sort by date `asc` or `desc`
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  frequency: "daily",
+  type: nil,
+  start_date: Date.parse("2018-01-01"),
+  end_date: nil,
+  sort_order: "desc",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_historical_data(identifier, tag, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_historical_data: #{e}"
-end
+result = security_api.get_security_historical_data(identifier, tag, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -573,25 +543,20 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  source: nil, # String | Return intraday prices from the specified data source
-  start_date: nil, # Date | Return intraday prices starting at the specified date
-  start_time: nil, # String | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC)
-  end_date: nil, # Date | Return intraday prices stopping at the specified date
-  end_time: nil, # String | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC)
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  source: nil,
+  start_date: nil,
+  start_time: nil,
+  end_date: nil,
+  end_time: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_intraday_prices(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_intraday_prices: #{e}"
-end
+result = security_api.get_security_intraday_prices(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -671,16 +636,10 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-
-begin
-  result = security_api.get_security_latest_dividend_record(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_latest_dividend_record: #{e}"
-end
+result = security_api.get_security_latest_dividend_record(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -753,16 +712,10 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-
-begin
-  result = security_api.get_security_latest_earnings_record(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_latest_earnings_record: #{e}"
-end
+result = security_api.get_security_latest_earnings_record(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -835,22 +788,17 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_adi(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_adi: #{e}"
-end
+result = security_api.get_security_price_technicals_adi(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -927,23 +875,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 22, # Integer | The number of observations, per period, to calculate Average Daily Trading Volume
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 22,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_adtv(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_adtv: #{e}"
-end
+result = security_api.get_security_price_technicals_adtv(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1021,23 +964,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 14, # Integer | The number of observations, per period, to calculate Average Directional Index
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 14,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_adx(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_adx: #{e}"
-end
+result = security_api.get_security_price_technicals_adx(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1115,24 +1053,19 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  short_period: 5, # Integer | The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator
-  long_period: 34, # Integer | The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  short_period: 5,
+  long_period: 34,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_ao(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_ao: #{e}"
-end
+result = security_api.get_security_price_technicals_ao(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1211,23 +1144,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 14, # Integer | The number of observations, per period, to calculate Average True Range
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 14,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_atr(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_atr: #{e}"
-end
+result = security_api.get_security_price_technicals_atr(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1305,25 +1233,20 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 20, # Integer | The number of observations, per period, to calculate Bollinger Bands
-  standard_deviations: 2.0, # Float | The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands
-  price_key: "close", # String | The Stock Price field to use when calculating Bollinger Bands
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 20,
+  standard_deviations: 2.0,
+  price_key: "close",
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_bb(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_bb: #{e}"
-end
+result = security_api.get_security_price_technicals_bb(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1403,24 +1326,19 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 20, # Integer | The number of observations, per period, to calculate Commodity Channel Index
-  constant: 0.015, # Float | The number of observations, per period, to calculate Commodity Channel Index
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 20,
+  constant: 0.015,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_cci(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_cci: #{e}"
-end
+result = security_api.get_security_price_technicals_cci(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1499,23 +1417,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 20, # Integer | The number of observations, per period, to calculate Chaikin Money Flow
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 20,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_cmf(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_cmf: #{e}"
-end
+result = security_api.get_security_price_technicals_cmf(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1593,24 +1506,19 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 20, # Integer | The number of observations, per period, to calculate Donchian Channel
-  price_key: "close", # String | The Stock Price field to use when calculating Donchian Channel
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 20,
+  price_key: "close",
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_dc(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_dc: #{e}"
-end
+result = security_api.get_security_price_technicals_dc(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1689,24 +1597,19 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 20, # Integer | The number of observations, per period, to calculate Detrended Price Oscillator
-  price_key: "close", # String | The Stock Price field to use when calculating Detrended Price Oscillator
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 20,
+  price_key: "close",
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_dpo(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_dpo: #{e}"
-end
+result = security_api.get_security_price_technicals_dpo(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1785,23 +1688,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 20, # Integer | The number of observations, per period, to calculate Ease of Movement
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 20,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_eom(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_eom: #{e}"
-end
+result = security_api.get_security_price_technicals_eom(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1879,22 +1777,17 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_fi(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_fi: #{e}"
-end
+result = security_api.get_security_price_technicals_fi(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1971,25 +1864,20 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  low_period: 9, # Integer | The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo
-  medium_period: 26, # Integer | The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo
-  high_period: 52, # Integer | The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  low_period: 9,
+  medium_period: 26,
+  high_period: 52,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_ichimoku(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_ichimoku: #{e}"
-end
+result = security_api.get_security_price_technicals_ichimoku(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2069,23 +1957,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 10, # Integer | The number of observations, per period, to calculate Kelter Channel
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 10,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_kc(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_kc: #{e}"
-end
+result = security_api.get_security_price_technicals_kc(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2163,31 +2046,26 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  roc1: 10, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA1
-  roc2: 15, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA2
-  roc3: 20, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA3
-  roc4: 30, # Integer | The number of observations, per period, to calculate the rate-of-change for RCMA4
-  sma1: 10, # Integer | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1
-  sma2: 10, # Integer | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2
-  sma3: 10, # Integer | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3
-  sma4: 15, # Integer | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4
-  price_key: "close", # String | The Stock Price field to use when calculating Know Sure Thing
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  roc1: 10,
+  roc2: 15,
+  roc3: 20,
+  roc4: 30,
+  sma1: 10,
+  sma2: 10,
+  sma3: 10,
+  sma4: 15,
+  price_key: "close",
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_kst(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_kst: #{e}"
-end
+result = security_api.get_security_price_technicals_kst(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2273,26 +2151,21 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  fast_period: 12, # Integer | The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence
-  slow_period: 26, # Integer | The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence
-  signal_period: 9, # Integer | The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence
-  price_key: "close", # String | The Stock Price field to use when calculating Moving Average Convergence Divergence
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  fast_period: 12,
+  slow_period: 26,
+  signal_period: 9,
+  price_key: "close",
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_macd(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_macd: #{e}"
-end
+result = security_api.get_security_price_technicals_macd(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2373,23 +2246,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 14, # Integer | The number of observations, per period, to calculate Money Flow Index
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 14,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_mfi(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_mfi: #{e}"
-end
+result = security_api.get_security_price_technicals_mfi(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2467,24 +2335,19 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  ema_period: 9, # Integer | The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index
-  sum_period: 25, # Integer | The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  ema_period: 9,
+  sum_period: 25,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_mi(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_mi: #{e}"
-end
+result = security_api.get_security_price_technicals_mi(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2563,22 +2426,17 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_nvi(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_nvi: #{e}"
-end
+result = security_api.get_security_price_technicals_nvi(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2655,22 +2513,17 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_obv(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_obv: #{e}"
-end
+result = security_api.get_security_price_technicals_obv(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2747,23 +2600,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 10, # Integer | The number of observations, per period, to calculate On-balance Volume Mean
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 10,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_obv_mean(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_obv_mean: #{e}"
-end
+result = security_api.get_security_price_technicals_obv_mean(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2841,24 +2689,19 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 14, # Integer | The number of observations, per period, to calculate Relative Strength Index
-  price_key: "close", # String | The Stock Price field to use when calculating Relative Strength Index
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 14,
+  price_key: "close",
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_rsi(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_rsi: #{e}"
-end
+result = security_api.get_security_price_technicals_rsi(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -2937,24 +2780,19 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 20, # Integer | The number of observations, per period, to calculate Simple Moving Average
-  price_key: "close", # String | The Stock Price field to use when calculating Simple Moving Average
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 20,
+  price_key: "close",
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_sma(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_sma: #{e}"
-end
+result = security_api.get_security_price_technicals_sma(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3033,24 +2871,19 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 14, # Integer | The number of observations, per period, to calculate %K of Stochastic Oscillator
-  signal_period: 3, # Integer | The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 14,
+  signal_period: 3,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_sr(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_sr: #{e}"
-end
+result = security_api.get_security_price_technicals_sr(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3129,23 +2962,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 15, # Integer | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 15,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_trix(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_trix: #{e}"
-end
+result = security_api.get_security_price_technicals_trix(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3223,25 +3051,20 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  low_period: 13, # Integer | The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index
-  high_period: 25, # Integer | The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index
-  price_key: "close", # String | The Stock Price field to use when calculating True Strength Index
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  low_period: 13,
+  high_period: 25,
+  price_key: "close",
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_tsi(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_tsi: #{e}"
-end
+result = security_api.get_security_price_technicals_tsi(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3321,28 +3144,23 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  short_period: 7, # Integer | The number of observations, per period, to calculate the short period for Ultimate Oscillator
-  medium_period: 14, # Integer | The number of observations, per period, to calculate the medium period for Ultimate Oscillator
-  long_period: 28, # Integer | The number of observations, per period, to calculate the long period for Ultimate Oscillator
-  short_weight: 4.0, # Float | The weight of short Buying Pressure average for Ultimate Oscillator
-  medium_weight: 2.0, # Float | The weight of medium Buying Pressure average for Ultimate Oscillator
-  long_weight: 1.0, # Float | The weight of long Buying Pressure average for Ultimate Oscillator
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  short_period: 7,
+  medium_period: 14,
+  long_period: 28,
+  short_weight: 4.0,
+  medium_weight: 2.0,
+  long_weight: 1.0,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_uo(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_uo: #{e}"
-end
+result = security_api.get_security_price_technicals_uo(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3425,23 +3243,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 14, # Integer | The number of observations, per period, to calculate Vortex Indicator
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 14,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_vi(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_vi: #{e}"
-end
+result = security_api.get_security_price_technicals_vi(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3519,22 +3332,17 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_vpt(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_vpt: #{e}"
-end
+result = security_api.get_security_price_technicals_vpt(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3611,22 +3419,17 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_vwap(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_vwap: #{e}"
-end
+result = security_api.get_security_price_technicals_vwap(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3703,23 +3506,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  period: 14, # Integer | The number of observations, per period, to look-back when calculating Williams %R
-  start_date: "2018-01-01", # String | Return technical indicator values on or after the date
-  end_date: "2019-01-01", # String | Return technical indicator values on or before the date
-  page_size: 100, # Float | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  period: 14,
+  start_date: "2018-01-01",
+  end_date: "2019-01-01",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_price_technicals_wr(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_price_technicals_wr: #{e}"
-end
+result = security_api.get_security_price_technicals_wr(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3797,19 +3595,14 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  source: nil # String | Return the realtime price from the specified data source. If no source is specified, the best source available is used.
+opts = {
+  source: nil
 }
 
-begin
-  result = security_api.get_security_realtime_price(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_realtime_price: #{e}"
-end
+result = security_api.get_security_realtime_price(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3883,22 +3676,17 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: Date.parse("2018-01-01"), # Date | Return price adjustments on or after the date
-  end_date: Date.parse("2019-01-01"), # Date | Return price adjustments on or before the date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: Date.parse("2018-01-01"),
+  end_date: Date.parse("2019-01-01"),
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_stock_price_adjustments(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_stock_price_adjustments: #{e}"
-end
+result = security_api.get_security_stock_price_adjustments(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -3975,23 +3763,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: Date.parse("2018-01-01"), # Date | Return prices on or after the date
-  end_date: Date.parse("2019-01-01"), # Date | Return prices on or before the date
-  frequency: "daily", # String | Return stock prices in the given frequency
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  start_date: Date.parse("2018-01-01"),
+  end_date: Date.parse("2019-01-01"),
+  frequency: "daily",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_stock_prices(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_stock_prices: #{e}"
-end
+result = security_api.get_security_stock_prices(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -4069,35 +3852,30 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  start_date: nil, # String | Limit ratings to those on or after this date
-  end_date: nil, # String | Limit ratings to those on or before this date
-  mean_greater: nil, # Float | Return only records with a mean (average) higher than this value
-  mean_less: nil, # Float | Return only records with a mean (average) lower than this value
-  strong_buys_greater: nil, # Integer | Return only records with more than this many Strong Buy recommendations
-  strong_buys_less: nil, # Integer | Return only records with fewer than this many Strong Buy recommendations
-  buys_greater: nil, # Integer | Return only records with more than this many Buy recommendations
-  buys_less: nil, # Integer | Return only records with fewer than this many Buy recommendations
-  holds_greater: nil, # Integer | Return only records with more than this many Hold recommendations
-  holds_less: nil, # Integer | Return only records with fewer than this many Hold recommendations
-  sells_greater: nil, # Integer | Return only records with more than this many Sell recommendations
-  sells_less: nil, # Integer | Return only records with fewer than this many Sell recommendations
-  strong_sells_greater: nil, # Integer | Return only records with more than this many Strong Sell recommendations
-  strong_sells_less: nil, # Integer | Return only records with fewer than this many Strong Sell recommendations
-  total_greater: nil, # Integer | Return only records with more than this many recommendations, regardless of type
-  total_less: nil, # Integer | Return only records with fewer than this many recommendations, regardless of type
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  start_date: nil,
+  end_date: nil,
+  mean_greater: nil,
+  mean_less: nil,
+  strong_buys_greater: nil,
+  strong_buys_less: nil,
+  buys_greater: nil,
+  buys_less: nil,
+  holds_greater: nil,
+  holds_less: nil,
+  sells_greater: nil,
+  sells_less: nil,
+  strong_sells_greater: nil,
+  strong_sells_less: nil,
+  total_greater: nil,
+  total_less: nil,
+  page_size: 100
 }
 
-begin
-  result = security_api.get_security_zacks_analyst_ratings(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_zacks_analyst_ratings: #{e}"
-end
+result = security_api.get_security_zacks_analyst_ratings(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -4187,19 +3965,14 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  date: nil # String | Lookup a historical snapshot on the given date
+opts = {
+  date: nil
 }
 
-begin
-  result = security_api.get_security_zacks_analyst_ratings_snapshot(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_zacks_analyst_ratings_snapshot: #{e}"
-end
+result = security_api.get_security_zacks_analyst_ratings_snapshot(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -4273,20 +4046,15 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_zacks_eps_surprises(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_zacks_eps_surprises: #{e}"
-end
+result = security_api.get_security_zacks_eps_surprises(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -4361,20 +4129,15 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = security_api.get_security_zacks_sales_surprises(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->get_security_zacks_sales_surprises: #{e}"
-end
+result = security_api.get_security_zacks_sales_surprises(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -4449,21 +4212,30 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+clauses = [
+  {
+    "field": "marketcap",
+    "operator": "gt",
+    "value": "10000000"
+  },
+  {
+    "field": "beta",
+    "operator": "lt",
+    "value": "5"
+  }
+]
 
-opts = { 
-  logic: Intrinio::SecurityScreenGroup.new, # SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"https://docs.intrinio.com/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
-  order_column: "marketcap", # String | Results returned sorted by this column
-  order_direction: "asc", # String | Sort order to use with the order_column
-  primary_only: false, # BOOLEAN | Return only primary securities
-  page_size: 100 # Integer | The number of results to return. Maximum for this endpoint is 50000.
+
+opts = {
+  logic: Intrinio::SecurityScreenGroup.new(operator: "AND", clauses: clauses),
+  order_column: "marketcap",
+  order_direction: "asc",
+  primary_only: false,
+  page_size: 100
 }
 
-begin
-  result = security_api.screen_securities(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->screen_securities: #{e}"
-end
+result = security_api.screen_securities(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -4540,19 +4312,14 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+query = "Apple"
 
-query = "Apple" # String | 
-
-opts = { 
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  page_size: 100
 }
 
-begin
-  result = security_api.search_securities(query, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling SecurityApi->search_securities: #{e}"
-end
+result = security_api.search_securities(query, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

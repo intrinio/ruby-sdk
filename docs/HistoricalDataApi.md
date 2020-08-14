@@ -56,27 +56,21 @@ Intrinio.configure do |config|
 end
 
 historicalData_api = Intrinio::HistoricalDataApi.new
+identifier = "AAPL"
+tag = "marketcap"
 
-identifier = "AAPL" # String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-
-tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-
-opts = { 
-  frequency: "daily", # String | Return historical data in the given frequency
-  type: nil, # String | Filter by type, when applicable
-  start_date: Date.parse("2015-01-01"), # Date | Get historical data on or after this date
-  end_date: nil, # Date | Get historical date on or before this date
-  sort_order: "desc", # String | Sort by date `asc` or `desc`
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  frequency: "daily",
+  type: nil,
+  start_date: Date.parse("2015-01-01"),
+  end_date: nil,
+  sort_order: "desc",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = historicalData_api.get_historical_data(identifier, tag, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling HistoricalDataApi->get_historical_data: #{e}"
-end
+result = historicalData_api.get_historical_data(identifier, tag, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

@@ -69,25 +69,21 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-opts = { 
-  latest_filing_date: nil, # Date | Return companies whose latest 10-Q or 10-K was filed on or after this date
-  sic: nil, # String | Return companies with the given Standard Industrial Classification code
-  template: nil, # String | Return companies with the given financial statement template
-  sector: nil, # String | Return companies in the given industry sector
-  industry_category: nil, # String | Return companies in the given industry category
-  industry_group: nil, # String | Return companies in the given industry group
-  has_fundamentals: true, # BOOLEAN | Return only companies that have fundamentals when true
-  has_stock_prices: true, # BOOLEAN | Return only companies that have stock prices when true
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  latest_filing_date: nil,
+  sic: nil,
+  template: nil,
+  sector: nil,
+  industry_category: nil,
+  industry_group: nil,
+  has_fundamentals: true,
+  has_stock_prices: true,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = company_api.get_all_companies(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_all_companies: #{e}"
-end
+result = company_api.get_all_companies(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -170,17 +166,13 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = company_api.get_all_company_news(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_all_company_news: #{e}"
-end
+result = company_api.get_all_company_news(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -254,16 +246,10 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-
-begin
-  result = company_api.get_company(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company: #{e}"
-end
+result = company_api.get_company(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -336,18 +322,11 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
+tag = "marketcap"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-
-
-begin
-  result = company_api.get_company_data_point_number(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company_data_point_number: #{e}"
-end
+result = company_api.get_company_data_point_number(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -421,18 +400,11 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
+tag = "ceo"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-tag = "ceo" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-
-
-begin
-  result = company_api.get_company_data_point_text(identifier, tag)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company_data_point_text: #{e}"
-end
+result = company_api.get_company_data_point_text(identifier, tag)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -506,23 +478,18 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-opts = { 
-  report_type: nil, # String | Filter by <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types.
-  start_date: Date.parse("2015-01-01"), # Date | Filed on or after the given date
-  end_date: nil, # Date | Filed before or after the given date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  report_type: nil,
+  start_date: Date.parse("2015-01-01"),
+  end_date: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = company_api.get_company_filings(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company_filings: #{e}"
-end
+result = company_api.get_company_filings(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -600,28 +567,23 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-opts = { 
-  filed_after: nil, # Date | Filed on or after this date
-  filed_before: nil, # Date | Filed on or before this date
-  reported_only: false, # BOOLEAN | Only as-reported fundamentals
-  fiscal_year: nil, # Integer | Only for the given fiscal year
-  statement_code: nil, # String | Only of the given statement code
-  type: nil, # String | Only of the given type
-  start_date: nil, # Date | Only on or after the given date
-  end_date: nil, # Date | Only on or before the given date
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  filed_after: nil,
+  filed_before: nil,
+  reported_only: false,
+  fiscal_year: nil,
+  statement_code: nil,
+  type: nil,
+  start_date: nil,
+  end_date: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = company_api.get_company_fundamentals(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company_fundamentals: #{e}"
-end
+result = company_api.get_company_fundamentals(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -704,27 +666,21 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
+tag = "marketcap"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-tag = "marketcap" # String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
-
-opts = { 
-  frequency: "daily", # String | Return historical data in the given frequency
-  type: nil, # String | Return historical data for given fiscal period type
-  start_date: Date.parse("2018-01-01"), # Date | Return historical data on or after this date
-  end_date: nil, # Date | Return historical data on or before this date
-  sort_order: "desc", # String | Sort by date `asc` or `desc`
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  frequency: "daily",
+  type: nil,
+  start_date: Date.parse("2018-01-01"),
+  end_date: nil,
+  sort_order: "desc",
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = company_api.get_company_historical_data(identifier, tag, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company_historical_data: #{e}"
-end
+result = company_api.get_company_historical_data(identifier, tag, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -806,23 +762,19 @@ end
 
 company_api = Intrinio::CompanyApi.new
 
-opts = { 
-  ticker: nil, # String | Return IPOs with the given ticker (typically the IPO for the company)
-  status: nil, # String | Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand
-  start_date: nil, # Date | Return IPOs on or after the given date
-  end_date: nil, # Date | Return IPOs on or before the given date
-  offer_amount_greater_than: nil, # Integer | Return IPOs with an offer dollar amount greater than the given amount
-  offer_amount_less_than: nil, # Integer | Return IPOs with an offer dollar amount less than the given amount
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  ticker: nil,
+  status: nil,
+  start_date: nil,
+  end_date: nil,
+  offer_amount_greater_than: nil,
+  offer_amount_less_than: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = company_api.get_company_ipos(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company_ipos: #{e}"
-end
+result = company_api.get_company_ipos(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -902,20 +854,15 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = company_api.get_company_news(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company_news: #{e}"
-end
+result = company_api.get_company_news(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -990,19 +937,14 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-opts = { 
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  next_page: nil
 }
 
-begin
-  result = company_api.get_company_securities(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->get_company_securities: #{e}"
-end
+result = company_api.get_company_securities(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1076,22 +1018,13 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
+statement_code = "income_statement"
+fiscal_period = "FY"
+fiscal_year = 2017
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-statement_code = "income_statement" # String | The statement code
-
-fiscal_period = "FY" # String | The fiscal period
-
-fiscal_year = 2017 # Integer | The fiscal year
-
-
-begin
-  result = company_api.lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->lookup_company_fundamental: #{e}"
-end
+result = company_api.lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -1167,19 +1100,14 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
+query = "Apple"
 
-query = "Apple" # String | Search parameters
-
-opts = { 
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  page_size: 100
 }
 
-begin
-  result = company_api.search_companies(query, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling CompanyApi->search_companies: #{e}"
-end
+result = company_api.search_companies(query, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

@@ -62,19 +62,15 @@ end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
 
-opts = { 
-  city: "New York", # String | Filter by city
-  country: "UNITED STATES OF AMERICA", # String | Filter by country
-  country_code: "US", # String | Filter by ISO country code
-  page_size: 100 # Integer | The number of results to return
+opts = {
+  city: "New York",
+  country: "UNITED STATES OF AMERICA",
+  country_code: "US",
+  page_size: 100
 }
 
-begin
-  result = stockExchange_api.get_all_stock_exchanges(opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->get_all_stock_exchanges: #{e}"
-end
+result = stockExchange_api.get_all_stock_exchanges(opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -150,16 +146,10 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
+identifier = "USCOMP"
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
-
-
-begin
-  result = stockExchange_api.get_stock_exchange_by_id(identifier)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->get_stock_exchange_by_id: #{e}"
-end
+result = stockExchange_api.get_stock_exchange_by_id(identifier)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -232,21 +222,16 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
+identifier = "USCOMP"
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
-
-opts = { 
-  date: Date.parse("2018-08-14"), # Date | The date for which to return price adjustments
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  date: Date.parse("2018-08-14"),
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = stockExchange_api.get_stock_exchange_price_adjustments(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->get_stock_exchange_price_adjustments: #{e}"
-end
+result = stockExchange_api.get_stock_exchange_price_adjustments(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -322,21 +307,16 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
+identifier = "USCOMP"
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
-
-opts = { 
-  date: Date.parse("2018-08-14"), # Date | The date for which to return prices
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  date: Date.parse("2018-08-14"),
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = stockExchange_api.get_stock_exchange_prices(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->get_stock_exchange_prices: #{e}"
-end
+result = stockExchange_api.get_stock_exchange_prices(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -412,21 +392,16 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
+identifier = "USCOMP"
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
-
-opts = { 
-  source: nil, # String | Return realtime prices from the specified data source. If no source is specified, all sources are used.
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  source: nil,
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = stockExchange_api.get_stock_exchange_realtime_prices(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->get_stock_exchange_realtime_prices: #{e}"
-end
+result = stockExchange_api.get_stock_exchange_realtime_prices(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -502,20 +477,15 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
+identifier = "USCOMP"
 
-identifier = "USCOMP" # String | A Stock Exchange identifier (MIC or Intrinio ID)
-
-opts = { 
-  page_size: 100, # Integer | The number of results to return
-  next_page: nil # String | Gets the next page of data from a previous API call
+opts = {
+  page_size: 100,
+  next_page: nil
 }
 
-begin
-  result = stockExchange_api.get_stock_exchange_securities(identifier, opts)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling StockExchangeApi->get_stock_exchange_securities: #{e}"
-end
+result = stockExchange_api.get_stock_exchange_securities(identifier, opts)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)

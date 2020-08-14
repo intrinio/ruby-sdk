@@ -59,16 +59,10 @@ Intrinio.configure do |config|
 end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
+id = "fun_ge9LlE"
 
-id = "fun_ge9LlE" # String | The Intrinio ID for the Fundamental
-
-
-begin
-  result = fundamentals_api.get_fundamental_by_id(id)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FundamentalsApi->get_fundamental_by_id: #{e}"
-end
+result = fundamentals_api.get_fundamental_by_id(id)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -141,16 +135,10 @@ Intrinio.configure do |config|
 end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
+id = "AAPL-income_statement-2018-Q1"
 
-id = "AAPL-income_statement-2018-Q1" # String | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
-
-
-begin
-  result = fundamentals_api.get_fundamental_reported_financials(id)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FundamentalsApi->get_fundamental_reported_financials: #{e}"
-end
+result = fundamentals_api.get_fundamental_reported_financials(id)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -223,16 +211,10 @@ Intrinio.configure do |config|
 end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
+id = "AAPL-income_statement-2018-Q1"
 
-id = "AAPL-income_statement-2018-Q1" # String | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
-
-
-begin
-  result = fundamentals_api.get_fundamental_standardized_financials(id)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FundamentalsApi->get_fundamental_standardized_financials: #{e}"
-end
+result = fundamentals_api.get_fundamental_standardized_financials(id)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
@@ -305,22 +287,13 @@ Intrinio.configure do |config|
 end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
+identifier = "AAPL"
+statement_code = "income_statement"
+fiscal_year = 2017
+fiscal_period = "FY"
 
-identifier = "AAPL" # String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-statement_code = "income_statement" # String | The statement code
-
-fiscal_year = 2017 # Integer | The fiscal year
-
-fiscal_period = "FY" # String | The fiscal period
-
-
-begin
-  result = fundamentals_api.lookup_fundamental(identifier, statement_code, fiscal_year, fiscal_period)
-  pp result
-rescue Intrinio::ApiError => e
-  puts "Exception when calling FundamentalsApi->lookup_fundamental: #{e}"
-end
+result = fundamentals_api.lookup_fundamental(identifier, statement_code, fiscal_year, fiscal_period)
+pp result
 ```
 
 [//]: # (END_CODE_EXAMPLE)
