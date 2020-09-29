@@ -69,6 +69,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -149,6 +150,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -229,6 +231,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -309,6 +312,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -385,6 +389,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -463,6 +468,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -541,6 +547,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -633,10 +640,11 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
-identifier = "$SIC.1"
+identifier = "$SIC.2911"
 
 result = index_api.get_sic_index_by_id(identifier)
 pp result
@@ -709,11 +717,12 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
-identifier = "$SIC.1"
-tag = "level"
+identifier = "$SIC.2911"
+tag = "marketcap"
 
 result = index_api.get_sic_index_data_point_number(identifier, tag)
 pp result
@@ -787,11 +796,12 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
-identifier = "$SIC.1"
-tag = "level"
+identifier = "$SIC.2911"
+tag = "marketcap"
 
 result = index_api.get_sic_index_data_point_text(identifier, tag)
 pp result
@@ -865,6 +875,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -957,6 +968,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -1033,6 +1045,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -1111,6 +1124,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -1189,6 +1203,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -1282,6 +1297,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -1363,6 +1379,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new
@@ -1444,6 +1461,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 index_api = Intrinio::IndexApi.new

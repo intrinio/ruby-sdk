@@ -39,6 +39,7 @@ Method | HTTP request | Description
 #### All Municipalities
 
 
+Returns all Municipalities. When parameters are specified, returns matching municipalities.
 
 [//]: # (END_OVERVIEW)
 
@@ -54,12 +55,13 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 municipality_api = Intrinio::MunicipalityApi.new
 
 opts = {
-  has_financials: true,
+  has_financials: nil,
   government_name: nil,
   government_type: nil,
   area_name: nil,
@@ -157,6 +159,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 municipality_api = Intrinio::MunicipalityApi.new
@@ -233,6 +236,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 municipality_api = Intrinio::MunicipalityApi.new

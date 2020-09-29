@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**get_security_data_point_text**](SecurityApi.md#get_security_data_point_text) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**get_security_historical_data**](SecurityApi.md#get_security_historical_data) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
 [**get_security_intraday_prices**](SecurityApi.md#get_security_intraday_prices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
-[**get_security_latest_dividend_record**](SecurityApi.md#get_security_latest_dividend_record) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
-[**get_security_latest_earnings_record**](SecurityApi.md#get_security_latest_earnings_record) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
+[**get_security_latest_dividend_record**](SecurityApi.md#get_security_latest_dividend_record) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
+[**get_security_latest_earnings_record**](SecurityApi.md#get_security_latest_earnings_record) | **GET** /securities/{identifier}/earnings/latest | Latest Earnings Record for Security
 [**get_security_price_technicals_adi**](SecurityApi.md#get_security_price_technicals_adi) | **GET** /securities/{identifier}/prices/technicals/adi | Accumulation/Distribution Index
 [**get_security_price_technicals_adtv**](SecurityApi.md#get_security_price_technicals_adtv) | **GET** /securities/{identifier}/prices/technicals/adtv | Average Daily Trading Volume
 [**get_security_price_technicals_adx**](SecurityApi.md#get_security_price_technicals_adx) | **GET** /securities/{identifier}/prices/technicals/adx | Average Directional Index
@@ -100,6 +100,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -213,6 +214,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -289,6 +291,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -367,6 +370,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -445,6 +449,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -540,6 +545,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -547,9 +553,9 @@ identifier = "AAPL"
 
 opts = {
   source: nil,
-  start_date: nil,
+  start_date: Date.parse("2018-01-01"),
   start_time: nil,
-  end_date: nil,
+  end_date: Date.parse("2019-01-01"),
   end_time: nil,
   page_size: 100,
   next_page: nil
@@ -573,9 +579,9 @@ Name | Type | Description  | Notes
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
  **source** | String| Return intraday prices from the specified data source | [optional]  &nbsp;
  **start_date** | Date| Return intraday prices starting at the specified date | [optional]  &nbsp;
- **start_time** | String| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional]  &nbsp;
+ **start_time** | String| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **end_date** | Date| Return intraday prices stopping at the specified date | [optional]  &nbsp;
- **end_time** | String| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional]  &nbsp;
+ **end_time** | String| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
@@ -614,7 +620,7 @@ Name | Type | Description  | Notes
 
 > DividendRecord get_security_latest_dividend_record(identifier)
 
-#### Lastest Dividend Record for Security
+#### Latest Dividend Record for Security
 
 
 Returns the latest available dividend information for the Security with the given `identifier`
@@ -633,6 +639,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -690,7 +697,7 @@ Name | Type | Description  | Notes
 
 > EarningsRecord get_security_latest_earnings_record(identifier)
 
-#### Lastest Earnings Record for Security
+#### Latest Earnings Record for Security
 
 
 Returns latest available earnings information for the Security with the given `identifier`
@@ -709,6 +716,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -785,6 +793,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -872,6 +881,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -961,6 +971,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1050,6 +1061,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1141,6 +1153,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1230,6 +1243,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1323,6 +1337,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1414,6 +1429,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1503,6 +1519,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1594,6 +1611,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1685,6 +1703,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1774,6 +1793,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1861,6 +1881,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -1954,6 +1975,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2043,6 +2065,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2148,6 +2171,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2243,6 +2267,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2332,6 +2357,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2423,6 +2449,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2510,6 +2537,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2597,6 +2625,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2686,6 +2715,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2777,6 +2807,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2868,6 +2899,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -2959,6 +2991,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3048,6 +3081,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3141,6 +3175,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3240,6 +3275,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3329,6 +3365,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3416,6 +3453,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3503,6 +3541,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3592,6 +3631,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3673,6 +3713,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3760,6 +3801,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3849,6 +3891,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -3962,6 +4005,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -4043,6 +4087,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -4126,6 +4171,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -4209,6 +4255,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new
@@ -4309,6 +4356,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 security_api = Intrinio::SecurityApi.new

@@ -65,6 +65,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -162,6 +163,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -243,6 +245,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -319,6 +322,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -397,6 +401,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -475,6 +480,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -564,6 +570,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -663,6 +670,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -758,12 +766,13 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
 
 opts = {
-  ticker: nil,
+  ticker: "UBER",
   status: nil,
   start_date: nil,
   end_date: nil,
@@ -851,6 +860,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -934,6 +944,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -1015,6 +1026,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new
@@ -1097,6 +1109,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 company_api = Intrinio::CompanyApi.new

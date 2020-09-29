@@ -63,6 +63,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -178,6 +179,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -273,6 +275,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -360,6 +363,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -469,13 +473,14 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
 
 opts = {
-  etf_ticker: nil,
-  holding_symbol: nil,
+  etf_ticker: "SPY",
+  holding_symbol: "AAPL",
   weight_greater: nil,
   weight_less: nil,
   page_size: 100,
@@ -558,6 +563,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -641,6 +647,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -724,6 +731,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -809,6 +817,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -892,6 +901,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new
@@ -1001,6 +1011,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 zacks_api = Intrinio::ZacksApi.new

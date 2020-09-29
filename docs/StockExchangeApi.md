@@ -58,6 +58,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -143,6 +144,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -219,6 +221,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -304,6 +307,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -389,6 +393,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
@@ -474,6 +479,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new

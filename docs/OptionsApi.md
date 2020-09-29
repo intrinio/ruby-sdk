@@ -56,16 +56,17 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 options_api = Intrinio::OptionsApi.new
-symbol = "MSFT"
+symbol = "AAPL"
 
 opts = {
   type: "put",
-  strike: 170.0,
-  strike_greater_than: 190.0,
-  strike_less_than: 150.0,
+  strike: 170,
+  strike_greater_than: 150,
+  strike_less_than: 190,
   expiration: "2019-03-01",
   expiration_after: "2019-01-01",
   expiration_before: "2019-12-31",
@@ -153,6 +154,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 options_api = Intrinio::OptionsApi.new
@@ -160,12 +162,12 @@ symbol = "MSFT"
 expiration = "2019-04-05"
 
 opts = {
-  date: Date.parse("2019-04-05"),
-  type: "put",
-  strike: 170.0,
-  strike_greater_than: 190.0,
-  strike_less_than: 150.0,
-  moneyness: "in_the_money",
+  date: nil,
+  type: nil,
+  strike: nil,
+  strike_greater_than: nil,
+  strike_less_than: nil,
+  moneyness: nil,
   page_size: 100
 }
 
@@ -248,6 +250,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 options_api = Intrinio::OptionsApi.new
@@ -331,10 +334,11 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 options_api = Intrinio::OptionsApi.new
-identifier = "identifier_example"
+identifier = "MSFT190405C00118000"
 
 opts = {
   start_date: "2019-01-01",

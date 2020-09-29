@@ -62,13 +62,14 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
 company = "AAPL"
 
 opts = {
-  report_type: nil,
+  report_type: "10-Q",
   start_date: Date.parse("2015-01-01"),
   end_date: nil,
   industry_category: nil,
@@ -155,6 +156,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -248,6 +250,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -324,6 +327,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -416,6 +420,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -491,6 +496,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -566,6 +572,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -646,6 +653,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -721,6 +729,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new
@@ -797,6 +806,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 filing_api = Intrinio::FilingApi.new

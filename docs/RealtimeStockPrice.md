@@ -14,6 +14,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **last_price** | Float | The price of the last trade. &nbsp;
 **last_time** | DateTime | The date and time when the last trade occurred. &nbsp;
+**last_size** | Float | The size of the last trade. &nbsp;
 **bid_price** | Float | The price of the top bid order. &nbsp;
 **bid_size** | Float | The size of the top bid order. &nbsp;
 **ask_price** | Float | The price of the top ask order. &nbsp;

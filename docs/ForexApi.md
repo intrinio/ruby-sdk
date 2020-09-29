@@ -55,6 +55,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 forex_api = Intrinio::ForexApi.new
@@ -126,6 +127,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 forex_api = Intrinio::ForexApi.new
@@ -197,6 +199,7 @@ require 'pp'
 # Setup authorization
 Intrinio.configure do |config|
   config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
 end
 
 forex_api = Intrinio::ForexApi.new
@@ -205,9 +208,9 @@ timeframe = "D1"
 
 opts = {
   timezone: "UTC",
-  start_date: nil,
+  start_date: Date.parse("2018-01-01"),
   start_time: nil,
-  end_date: nil,
+  end_date: Date.parse("2019-01-01"),
   end_time: nil,
   page_size: 100,
   next_page: nil
@@ -232,9 +235,9 @@ Name | Type | Description  | Notes
  **timeframe** | String| The time interval for the quotes |  &nbsp;
  **timezone** | String| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **start_date** | Date| Return Forex Prices on or after this date | [optional]  &nbsp;
- **start_time** | String| Return Forex Prices at or after this time (24-hour) | [optional]  &nbsp;
+ **start_time** | String| Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **end_date** | Date| Return Forex Prices on or before this date | [optional]  &nbsp;
- **end_time** | String| Return Forex Prices at or before this time (24-hour) | [optional]  &nbsp;
+ **end_time** | String| Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
