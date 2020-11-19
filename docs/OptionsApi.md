@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_options**](OptionsApi.md#get_options) | **GET** /options/{symbol} | Options
 [**get_options_chain**](OptionsApi.md#get_options_chain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
+[**get_options_chain_realtime**](OptionsApi.md#get_options_chain_realtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**get_options_expirations**](OptionsApi.md#get_options_expirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**get_options_prices**](OptionsApi.md#get_options_prices) | **GET** /options/prices/{identifier} | Option Prices
+[**get_options_prices_realtime**](OptionsApi.md#get_options_prices_realtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 
 
 
@@ -209,6 +211,108 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio::OptionsApi)
 
+[//]: # (METHOD:get_options_chain_realtime)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsChainRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsChainRealtime.md)
+
+[//]: # (OPERATION:get_options_chain_realtime_v2)
+
+[//]: # (ENDPOINT:/options/chain/{symbol}/{expiration}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_options_chain_realtime)
+
+## **get_options_chain_realtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_chain_realtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsChainRealtime get_options_chain_realtime(symbol, expiration, opts)
+
+#### Options Chain Realtime
+
+
+Returns all realtime options contracts and their prices for the given symbol and expiration date.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+symbol = "MSFT"
+expiration = "2021-01-08"
+
+opts = {
+  source: nil,
+  type: nil,
+  strike: nil,
+  strike_greater_than: nil,
+  strike_less_than: nil,
+  volume_greater_than: nil,
+  volume_less_than: nil,
+  open_interest_greater_than: nil,
+  open_interest_less_than: nil,
+  moneyness: nil
+}
+
+result = options_api.get_options_chain_realtime(symbol, expiration, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **expiration** | String| The expiration date of the options contract |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **type** | String| The option contract type. | [optional]  &nbsp;
+ **strike** | Float| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
+ **strike_greater_than** | Float| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
+ **strike_less_than** | Float| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **volume_greater_than** | Float| The volume of the option contract. This will return options contracts with volumes greater than this amount. | [optional]  &nbsp;
+ **volume_less_than** | Float| The volume of the option contract. This will return options contracts with volumes less than this amout. | [optional]  &nbsp;
+ **open_interest_greater_than** | Float| The open interest of the option contract. This will return options contracts with open interest greater than this amount. | [optional]  &nbsp;
+ **open_interest_less_than** | Float| The open interest of the option contract. This will return options contracts with open interest less than this amount. | [optional]  &nbsp;
+ **moneyness** | String| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money.  Requires subscription to realtime stock price data. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsChainRealtime**](ApiResponseOptionsChainRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
 [//]: # (METHOD:get_options_expirations)
 
 [//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsExpirations)
@@ -373,6 +477,88 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionPrices**](ApiResponseOptionPrices.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_prices_realtime)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionPricesRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionPricesRealtime.md)
+
+[//]: # (OPERATION:get_options_prices_realtime_v2)
+
+[//]: # (ENDPOINT:/options/prices/{identifier}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_options_prices_realtime)
+
+## **get_options_prices_realtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_prices_realtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionPricesRealtime get_options_prices_realtime(identifier, opts)
+
+#### Option Prices Realtime
+
+
+Returns all option prices for a given option contract identifier.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+identifier = "AAPL230120C00090000"
+
+opts = {
+  source: nil
+}
+
+result = options_api.get_options_prices_realtime(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionPricesRealtime**](ApiResponseOptionPricesRealtime.md)
 
 [//]: # (END_OPERATION)
 

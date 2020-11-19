@@ -1116,6 +1116,7 @@ company_api = Intrinio::CompanyApi.new
 query = "Apple"
 
 opts = {
+  active: true,
   page_size: 100
 }
 
@@ -1135,6 +1136,7 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String| Search parameters |  &nbsp;
+ **active** | BOOLEAN| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
 
 [//]: # (END_PARAMETERS)
