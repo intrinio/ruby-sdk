@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**get_options_expirations**](OptionsApi.md#get_options_expirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**get_options_prices**](OptionsApi.md#get_options_prices) | **GET** /options/prices/{identifier} | Option Prices
 [**get_options_prices_realtime**](OptionsApi.md#get_options_prices_realtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
+[**get_options_stats_realtime**](OptionsApi.md#get_options_stats_realtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 
 
 
@@ -257,7 +258,7 @@ end
 
 options_api = Intrinio::OptionsApi.new
 symbol = "MSFT"
-expiration = "2021-01-08"
+expiration = "2023-01-20"
 
 opts = {
   source: nil,
@@ -487,11 +488,11 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:get_options_prices_realtime)
 
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionPricesRealtime)
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsPriceRealtime)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
-[//]: # (RETURN_TYPE_DOC:ApiResponseOptionPricesRealtime.md)
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsPriceRealtime.md)
 
 [//]: # (OPERATION:get_options_prices_realtime_v2)
 
@@ -505,7 +506,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionPricesRealtime get_options_prices_realtime(identifier, opts)
+> ApiResponseOptionsPriceRealtime get_options_prices_realtime(identifier, opts)
 
 #### Option Prices Realtime
 
@@ -558,7 +559,89 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseOptionPricesRealtime**](ApiResponseOptionPricesRealtime.md)
+[**ApiResponseOptionsPriceRealtime**](ApiResponseOptionsPriceRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_stats_realtime)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsStatsRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsStatsRealtime.md)
+
+[//]: # (OPERATION:get_options_stats_realtime_v2)
+
+[//]: # (ENDPOINT:/options/prices/{identifier}/realtime/stats)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_options_stats_realtime)
+
+## **get_options_stats_realtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_stats_realtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsStatsRealtime get_options_stats_realtime(identifier, opts)
+
+#### Option Stats Realtime
+
+
+Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+identifier = "AAPL230120C00090000"
+
+opts = {
+  source: nil
+}
+
+result = options_api.get_options_stats_realtime(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsStatsRealtime**](ApiResponseOptionsStatsRealtime.md)
 
 [//]: # (END_OPERATION)
 

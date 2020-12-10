@@ -123,6 +123,7 @@ opts = {
   figi_unique_id: nil,
   include_non_figi: false,
   page_size: 100,
+  primary_listing: nil,
   next_page: nil
 }
 
@@ -158,6 +159,7 @@ Name | Type | Description  | Notes
  **figi_unique_id** | String| Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **include_non_figi** | BOOLEAN| When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. | [optional] [default to false] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **primary_listing** | BOOLEAN| If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
@@ -3638,7 +3640,7 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  source: nil
+  source: "bats"
 }
 
 result = security_api.get_security_realtime_price(identifier, opts)
