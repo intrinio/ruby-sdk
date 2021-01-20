@@ -20,6 +20,7 @@ Name | Type | Description
 **ask_price** | Float | The price of the top ask order. &nbsp;
 **ask_size** | Float | The size of the top ask order. &nbsp;
 **open_price** | Float | The price at the open of the trading day. &nbsp;
+**close_price** | Float | The price at the close of the trading day. &nbsp;
 **high_price** | Float | The high price for the trading day. &nbsp;
 **low_price** | Float | The low price for the trading day. &nbsp;
 **exchange_volume** | Float | The number of shares exchanged during the trading day on the exchange. &nbsp;

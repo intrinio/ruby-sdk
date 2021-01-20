@@ -25,6 +25,13 @@ Name | Type | Description
 **adj_low** | Float | The lowest price over the span of the period, adjusted for splits and dividends &nbsp;
 **adj_close** | Float | The price at the end of the period, adjusted for splits and dividends &nbsp;
 **adj_volume** | Float | The number of shares exchanged during the period, adjusted for splits and dividends &nbsp;
+**factor** | Float | The factor by which to multiply stock prices before this date, in order to calculate historically-adjusted stock prices. &nbsp;
+**split_ratio** | Float | The ratio of the stock split, if a stock split occurred. &nbsp;
+**dividend** | Float | The dividend amount, if a dividend was paid. &nbsp;
+**change** | Float | The difference in price from the last price for this frequency &nbsp;
+**percent_change** | Float | The percent difference in price from the last price for this frequency &nbsp;
+**fifty_two_week_high** | Float | The 52 week high price (daily only) &nbsp;
+**fifty_two_week_low** | Float | The 52 week low price (daily only) &nbsp;
 **security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the stock price &nbsp;
 
 [//]: # (END_DEFINITION)
