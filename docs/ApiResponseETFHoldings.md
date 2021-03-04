@@ -12,11 +12,14 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**holdings** | Object |  &nbsp;
+**holdings** | [**Array&lt;ETFHolding&gt;**](ETFHolding.md) |  &nbsp;
 **etf** | [**ETFSummary**](ETFSummary.md) |  &nbsp;
 **next_page** | String | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Intrinio::ETFHolding)
 
 
 [//]: # (CONTAINED_CLASS:Intrinio::ETFSummary)

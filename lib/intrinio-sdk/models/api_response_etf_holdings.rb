@@ -35,7 +35,7 @@ module Intrinio
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'holdings' => :'Object',
+        :'holdings' => :'Array<ETFHolding>',
         :'etf' => :'ETFSummary',
         :'next_page' => :'String'
       }
@@ -50,7 +50,9 @@ module Intrinio
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'holdings')
-        self.holdings = attributes[:'holdings']
+        if (value = attributes[:'holdings']).is_a?(Array)
+          self.holdings = value
+        end
       end
 
       if attributes.has_key?(:'etf')
