@@ -4,7 +4,9 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**get_option_expirations_realtime**](OptionsApi.md#get_option_expirations_realtime) | **GET** /options/expirations/{symbol}/realtime | Option Expirations Realtime
 [**get_options**](OptionsApi.md#get_options) | **GET** /options/{symbol} | Options
+[**get_options_by_symbol_realtime**](OptionsApi.md#get_options_by_symbol_realtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 [**get_options_chain**](OptionsApi.md#get_options_chain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
 [**get_options_chain_realtime**](OptionsApi.md#get_options_chain_realtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**get_options_expirations**](OptionsApi.md#get_options_expirations) | **GET** /options/expirations/{symbol} | Options Expirations
@@ -12,6 +14,92 @@ Method | HTTP request | Description
 [**get_options_prices_realtime**](OptionsApi.md#get_options_prices_realtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**get_options_stats_realtime**](OptionsApi.md#get_options_stats_realtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_option_expirations_realtime)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsExpirations)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsExpirations.md)
+
+[//]: # (OPERATION:get_option_expirations_realtime_v2)
+
+[//]: # (ENDPOINT:/options/expirations/{symbol}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_option_expirations_realtime)
+
+## **get_option_expirations_realtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_option_expirations_realtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsExpirations get_option_expirations_realtime(symbol, opts)
+
+#### Option Expirations Realtime
+
+
+Returns all realtime option contract expiration dates for a given symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+symbol = "MSFT"
+
+opts = {
+  after: "2022-01-01",
+  before: "2023-04-01",
+  source: nil
+}
+
+result = options_api.get_option_expirations_realtime(symbol, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **after** | String| Return option contract expiration dates after this date. | [optional]  &nbsp;
+ **before** | String| Return option contract expiration dates before this date. | [optional]  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
+
+[//]: # (END_OPERATION)
 
 
 [//]: # (START_OPERATION)
@@ -108,6 +196,102 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptions**](ApiResponseOptions.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_by_symbol_realtime)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsRealtime.md)
+
+[//]: # (OPERATION:get_options_by_symbol_realtime_v2)
+
+[//]: # (ENDPOINT:/options/{symbol}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_options_by_symbol_realtime)
+
+## **get_options_by_symbol_realtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_by_symbol_realtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsRealtime get_options_by_symbol_realtime(symbol, opts)
+
+#### Options by Symbol Realtime
+
+
+Returns the master list of realtime option contracts for a given symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+symbol = "AAPL"
+
+opts = {
+  type: "put",
+  strike: 170,
+  strike_greater_than: 150,
+  strike_less_than: 190,
+  expiration: "2022-04-16",
+  expiration_after: "2022-01-01",
+  expiration_before: "2023-12-31",
+  source: nil
+}
+
+result = options_api.get_options_by_symbol_realtime(symbol, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **type** | String| The option contract type. | [optional]  &nbsp;
+ **strike** | Float| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
+ **strike_greater_than** | Float| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
+ **strike_less_than** | Float| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **expiration** | String| The expiration date of the option contract. This will return options contracts with expiration dates on this date. | [optional]  &nbsp;
+ **expiration_after** | String| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional]  &nbsp;
+ **expiration_before** | String| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional]  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsRealtime**](ApiResponseOptionsRealtime.md)
 
 [//]: # (END_OPERATION)
 
