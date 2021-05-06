@@ -716,7 +716,13 @@ Intrinio.configure do |config|
 end
 
 options_api = Intrinio::OptionsApi.new
-body = Intrinio::OptionContractsList.new
+body = {
+  contracts: [
+    "A220121P00055000",
+    "A220121P00057500",
+    "A220121P00060000"
+  ]
+}
 
 opts = {
   source: nil
