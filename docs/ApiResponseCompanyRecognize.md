@@ -12,12 +12,12 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**companies** | [**Array&lt;DefinitionsCompanySummary&gt;**](DefinitionsCompanySummary.md) |  &nbsp;
+**companies** | [**Array&lt;CompanySummary&gt;**](CompanySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
 
 
-[//]: # (CONTAINED_CLASS:Intrinio::DefinitionsCompanySummary)
+[//]: # (CONTAINED_CLASS:Intrinio::CompanySummary)
 
 
 

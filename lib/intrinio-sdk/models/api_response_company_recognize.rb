@@ -28,7 +28,7 @@ module Intrinio
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'companies' => :'Array<DefinitionsCompanySummary>'
+        :'companies' => :'Array<CompanySummary>'
       }
     end
 

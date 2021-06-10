@@ -1289,7 +1289,7 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
-text = Apple
+text = "Apple"
 
 result = company_api.recognize_company(text)
 pp result
@@ -1306,7 +1306,7 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **text** | String| The text sent to the Thea API to analyze | [default to Apple] &nbsp;
+ **text** | String| The text sent to the Thea API to analyze |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
