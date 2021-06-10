@@ -78,6 +78,19 @@ describe 'CompanyApi' do
     end
   end
 
+  # unit tests for get_company_answers
+  # Company Answers
+  # Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+  # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+  # @param query The query to ask the Thea API
+  # @param [Hash] opts the optional parameters
+  # @return [ApiResponseCompanyAnswers]
+  describe 'get_company_answers test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for get_company_data_point_number
   # Data Point (Number) for Company
   # Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;

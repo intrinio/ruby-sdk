@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**get_all_companies**](CompanyApi.md#get_all_companies) | **GET** /companies | All Companies
 [**get_all_company_news**](CompanyApi.md#get_all_company_news) | **GET** /companies/news | All News
 [**get_company**](CompanyApi.md#get_company) | **GET** /companies/{identifier} | Lookup Company
+[**get_company_answers**](CompanyApi.md#get_company_answers) | **GET** /companies/{identifier}/answers | Company Answers
 [**get_company_data_point_number**](CompanyApi.md#get_company_data_point_number) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 [**get_company_data_point_text**](CompanyApi.md#get_company_data_point_text) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
 [**get_company_filings**](CompanyApi.md#get_company_filings) | **GET** /companies/{identifier}/filings | All Filings by Company
@@ -277,6 +278,85 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Company**](Company.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::CompanyApi)
+
+[//]: # (METHOD:get_company_answers)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanyAnswers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyAnswers.md)
+
+[//]: # (OPERATION:get_company_answers_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/answers)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_answers)
+
+## **get_company_answers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_answers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyAnswers get_company_answers(identifier, query)
+
+#### Company Answers
+
+
+Returns answers for a question about the Company with the given `identifier`
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
+query = "Where is the company headquartered?"
+
+result = company_api.get_company_answers(identifier, query)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **query** | String| The query to ask the Thea API |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyAnswers**](ApiResponseCompanyAnswers.md)
 
 [//]: # (END_OPERATION)
 

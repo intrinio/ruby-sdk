@@ -214,6 +214,66 @@ module Intrinio
       return data, status_code, headers
     end
 
+    # Company Answers
+    # Returns answers for a question about the Company with the given `identifier`
+    # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+    # @param query The query to ask the Thea API
+    # @param [Hash] opts the optional parameters
+    # @return [ApiResponseCompanyAnswers]
+    def get_company_answers(identifier, query, opts = {})
+      data, _status_code, _headers = get_company_answers_with_http_info(identifier, query, opts)
+      return data
+    end
+
+    # Company Answers
+    # Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+    # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+    # @param query The query to ask the Thea API
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ApiResponseCompanyAnswers, Fixnum, Hash)>] ApiResponseCompanyAnswers data, response status code and response headers
+    def get_company_answers_with_http_info(identifier, query, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CompanyApi.get_company_answers ..."
+      end
+      # verify the required parameter 'identifier' is set
+      if @api_client.config.client_side_validation && identifier.nil?
+        fail ArgumentError, "Missing the required parameter 'identifier' when calling CompanyApi.get_company_answers"
+      end
+      # verify the required parameter 'query' is set
+      if @api_client.config.client_side_validation && query.nil?
+        fail ArgumentError, "Missing the required parameter 'query' when calling CompanyApi.get_company_answers"
+      end
+      # resource path
+      local_var_path = "/companies/{identifier}/answers".sub('{' + 'identifier' + '}', identifier.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'query'] = query
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['ApiKeyAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ApiResponseCompanyAnswers')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CompanyApi#get_company_answers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Data Point (Number) for Company
     # Returns a numeric value for the given `tag` for the Company with the given `identifier`
     # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
