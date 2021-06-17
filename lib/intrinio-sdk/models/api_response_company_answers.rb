@@ -23,13 +23,16 @@ module Intrinio
 
     attr_accessor :answers
 
+    attr_accessor :companies
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'source' => :'source',
         :'query' => :'query',
-        :'answers' => :'answers'
+        :'answers' => :'answers',
+        :'companies' => :'companies'
       }
     end
 
@@ -38,7 +41,8 @@ module Intrinio
       {
         :'source' => :'String',
         :'query' => :'String',
-        :'answers' => :'Array<TheaEntityAnswer>'
+        :'answers' => :'Array<TheaEntityAnswer>',
+        :'companies' => :'Array<CompanySummary>'
       }
     end
 
@@ -64,6 +68,12 @@ module Intrinio
         end
       end
 
+      if attributes.has_key?(:'companies')
+        if (value = attributes[:'companies']).is_a?(Array)
+          self.companies = value
+        end
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -86,7 +96,8 @@ module Intrinio
       self.class == o.class &&
           source == o.source &&
           query == o.query &&
-          answers == o.answers
+          answers == o.answers &&
+          companies == o.companies
     end
 
     # @see the `==` method
@@ -98,7 +109,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [source, query, answers].hash
+      [source, query, answers, companies].hash
     end
 
     # Builds the object from hash

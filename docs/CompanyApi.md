@@ -332,7 +332,7 @@ end
 
 company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
-query = "Where is the company headquartered?"
+query = "What do they believe in?"
 
 result = company_api.get_company_answers(identifier, query)
 pp result
