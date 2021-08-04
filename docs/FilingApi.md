@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all_filings**](FilingApi.md#get_all_filings) | **GET** /filings | All Filings
 [**get_all_notes**](FilingApi.md#get_all_notes) | **GET** /filings/notes | All Filing Notes
+[**get_filing_answers**](FilingApi.md#get_filing_answers) | **GET** /filings/{identifier}/answers | Filing Answers
 [**get_filing_by_id**](FilingApi.md#get_filing_by_id) | **GET** /filings/{id} | Lookup Filing
 [**get_filing_fundamentals**](FilingApi.md#get_filing_fundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
 [**get_filing_html**](FilingApi.md#get_filing_html) | **GET** /filings/{identifier}/html | Filing Html
@@ -74,6 +75,7 @@ opts = {
   end_date: nil,
   industry_category: nil,
   industry_group: nil,
+  thea_enabled: nil,
   page_size: 100,
   next_page: nil
 }
@@ -99,6 +101,7 @@ Name | Type | Description  | Notes
  **end_date** | Date| Filed before or after the given date | [optional]  &nbsp;
  **industry_category** | String| Return companies in the given industry category | [optional]  &nbsp;
  **industry_group** | String| Return companies in the given industry group | [optional]  &nbsp;
+ **thea_enabled** | BOOLEAN| Return filings that have been read by our Thea NLP and are ready for our answers endpoint | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
@@ -201,6 +204,84 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::FilingApi)
+
+[//]: # (METHOD:get_filing_answers)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseFilingAnswers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseFilingAnswers.md)
+
+[//]: # (OPERATION:get_filing_answers_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/answers)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#get_filing_answers)
+
+## **get_filing_answers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_filing_answers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseFilingAnswers get_filing_answers(identifier, query)
+
+#### Filing Answers
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+filing_api = Intrinio::FilingApi.new
+identifier = "fil_B73xBG"
+query = "What do they believe in?"
+
+result = filing_api.get_filing_answers(identifier, query)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Filing identifier |  &nbsp;
+ **query** | String| The query to ask the Thea API |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseFilingAnswers**](ApiResponseFilingAnswers.md)
 
 [//]: # (END_OPERATION)
 
