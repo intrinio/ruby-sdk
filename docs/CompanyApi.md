@@ -84,6 +84,7 @@ opts = {
   industry_group: nil,
   has_fundamentals: true,
   has_stock_prices: true,
+  thea_enabled: nil,
   page_size: 100,
   next_page: nil
 }
@@ -111,6 +112,7 @@ Name | Type | Description  | Notes
  **industry_group** | String| Return companies in the given industry group | [optional]  &nbsp;
  **has_fundamentals** | BOOLEAN| Return only companies that have fundamentals when true | [optional]  &nbsp;
  **has_stock_prices** | BOOLEAN| Return only companies that have stock prices when true | [optional]  &nbsp;
+ **thea_enabled** | BOOLEAN| Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
