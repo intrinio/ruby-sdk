@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**get_fundamental_by_id**](FundamentalsApi.md#get_fundamental_by_id) | **GET** /fundamentals/{id} | Fundamental by ID
 [**get_fundamental_reported_financials**](FundamentalsApi.md#get_fundamental_reported_financials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 [**get_fundamental_standardized_financials**](FundamentalsApi.md#get_fundamental_standardized_financials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
+[**get_fundamental_standardized_financials_dimensions**](FundamentalsApi.md#get_fundamental_standardized_financials_dimensions) | **GET** /fundamentals/{id}/standardized_financials/dimensions/{tag} | Standardized Financials Dimensions
 [**lookup_fundamental**](FundamentalsApi.md#lookup_fundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental
 
 
@@ -238,6 +239,85 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseStandardizedFinancials**](ApiResponseStandardizedFinancials.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::FundamentalsApi)
+
+[//]: # (METHOD:get_fundamental_standardized_financials_dimensions)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseStandardizedFinancialsDimensions)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStandardizedFinancialsDimensions.md)
+
+[//]: # (OPERATION:get_fundamental_standardized_financials_dimensions_v2)
+
+[//]: # (ENDPOINT:/fundamentals/{id}/standardized_financials/dimensions/{tag})
+
+[//]: # (DOCUMENT_LINK:FundamentalsApi.md#get_fundamental_standardized_financials_dimensions)
+
+## **get_fundamental_standardized_financials_dimensions**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_fundamental_standardized_financials_dimensions_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStandardizedFinancialsDimensions get_fundamental_standardized_financials_dimensions(id, tag)
+
+#### Standardized Financials Dimensions
+
+
+Returns as reported dimensionality of a data tag
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+fundamentals_api = Intrinio::FundamentalsApi.new
+id = "AAPL-income_statement-2020-FY"
+tag = "ceo"
+
+result = fundamentals_api.get_fundamental_standardized_financials_dimensions(id, tag)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | String| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
+ **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStandardizedFinancialsDimensions**](ApiResponseStandardizedFinancialsDimensions.md)
 
 [//]: # (END_OPERATION)
 
