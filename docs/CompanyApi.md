@@ -1125,6 +1125,7 @@ opts = {
   end_date: Date.parse("2019-01-01"),
   ownership_type: "D",
   page_size: 100,
+  sort_by: "updated_on",
   next_page: nil
 }
 
@@ -1148,6 +1149,7 @@ Name | Type | Description  | Notes
  **end_date** | Date| Return Company&#39;s insider transaction filings on or before this date | [optional]  &nbsp;
  **ownership_type** | String| The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **sort_by** | String| The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
