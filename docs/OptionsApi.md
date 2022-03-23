@@ -19,7 +19,9 @@ Method | HTTP request | Description
 [**get_options_prices_realtime**](OptionsApi.md#get_options_prices_realtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**get_options_stats_realtime**](OptionsApi.md#get_options_stats_realtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 [**get_unusual_activity**](OptionsApi.md#get_unusual_activity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
+[**get_unusual_activity_intraday**](OptionsApi.md#get_unusual_activity_intraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 [**get_unusual_activity_universal**](OptionsApi.md#get_unusual_activity_universal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
+[**get_unusual_activity_universal_intraday**](OptionsApi.md#get_unusual_activity_universal_intraday) | **GET** /options/unusual_activity/intraday | Options Unusual Activity Universal Intraday
 
 
 
@@ -1329,6 +1331,102 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio::OptionsApi)
 
+[//]: # (METHOD:get_unusual_activity_intraday)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsUnusualActivity)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (OPERATION:get_unusual_activity_intraday_v2)
+
+[//]: # (ENDPOINT:/options/unusual_activity/{symbol}/intraday)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_unusual_activity_intraday)
+
+## **get_unusual_activity_intraday**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_unusual_activity_intraday_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsUnusualActivity get_unusual_activity_intraday(symbol, opts)
+
+#### Options Unusual Activity Intraday
+
+
+Returns unusual trades for a given identifier within the query parameters.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+symbol = "AAPL"
+
+opts = {
+  next_page: nil,
+  page_size: 1000,
+  activity_type: nil,
+  sentiment: nil,
+  start_date: Date.parse("2022-02-01"),
+  end_date: Date.parse("2022-02-03"),
+  minimum_total_value: 100000.0,
+  maximum_total_value: 200000.0
+}
+
+result = options_api.get_unusual_activity_intraday(symbol, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 1000] &nbsp;
+ **activity_type** | String| The unusual activity type to query for. | [optional]  &nbsp;
+ **sentiment** | String| The sentiment type to query for. | [optional]  &nbsp;
+ **start_date** | Date| Return unusual activity on or after this date. | [optional]  &nbsp;
+ **end_date** | Date| Return unusual activity on or before this date. | [optional]  &nbsp;
+ **minimum_total_value** | [**Object**](.md)| The inclusive minimum total value for the unusual activity. | [optional]  &nbsp;
+ **maximum_total_value** | [**Object**](.md)| The inclusive maximum total value for the unusual activity. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
 [//]: # (METHOD:get_unusual_activity_universal)
 
 [//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsUnusualActivity)
@@ -1395,6 +1493,100 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_unusual_activity_universal_intraday)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsUnusualActivity)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (OPERATION:get_unusual_activity_universal_intraday_v2)
+
+[//]: # (ENDPOINT:/options/unusual_activity/intraday)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_unusual_activity_universal_intraday)
+
+## **get_unusual_activity_universal_intraday**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_unusual_activity_universal_intraday_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsUnusualActivity get_unusual_activity_universal_intraday(opts)
+
+#### Options Unusual Activity Universal Intraday
+
+
+Returns unusual trades for all underlying security symbols within the query parameters.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+
+opts = {
+  next_page: nil,
+  page_size: 1000,
+  activity_type: nil,
+  sentiment: nil,
+  start_date: Date.parse("2022-02-01"),
+  end_date: Date.parse("2022-02-03"),
+  minimum_total_value: 100000.0,
+  maximum_total_value: 200000.0
+}
+
+result = options_api.get_unusual_activity_universal_intraday(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 1000] &nbsp;
+ **activity_type** | String| The unusual activity type to query for. | [optional]  &nbsp;
+ **sentiment** | String| The sentiment type to query for. | [optional]  &nbsp;
+ **start_date** | Date| Return unusual activity on or after this date. | [optional]  &nbsp;
+ **end_date** | Date| Return unusual activity on or before this date. | [optional]  &nbsp;
+ **minimum_total_value** | [**Object**](.md)| The inclusive minimum total value for the unusual activity. | [optional]  &nbsp;
+ **maximum_total_value** | [**Object**](.md)| The inclusive maximum total value for the unusual activity. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
