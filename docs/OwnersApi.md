@@ -314,7 +314,7 @@ identifier = 430692
 
 opts = {
   page_size: 100,
-  as_of_date: "2021-01-05",
+  as_of_date: Date.parse("2021-01-05"),
   next_page: nil
 }
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Central Index Key issued by the SEC, which is the unique identifier all owner filings are issued under. |  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
- **as_of_date** | [**Object**](.md)| Return only holdings filed before this date. | [optional]  &nbsp;
+ **as_of_date** | Date| Return only holdings filed before this date. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)

@@ -54,6 +54,7 @@ Method | HTTP request | Description
 #### All Economic Indices
 
 
+Returns a list of reference data on more than 200,000 economic indices from the Federal Reserve Economic Data (FRED) database.
 
 [//]: # (END_OVERVIEW)
 
@@ -297,6 +298,7 @@ Name | Type | Description  | Notes
 #### Lookup Economic Index
 
 
+Returns reference data for a specified Federal Reserve Economic Data (FRED) series ID.
 
 [//]: # (END_OVERVIEW)
 
@@ -373,7 +375,7 @@ Name | Type | Description  | Notes
 #### Data Point (Number) for an Economic Index
 
 
-Returns a numeric value for the given `tag` for the Economic Index with the given `identifier`
+Returns latest data for a specified Federal Reserve Economic Data (FRED) ID.
 
 [//]: # (END_OVERVIEW)
 
@@ -531,7 +533,7 @@ Name | Type | Description  | Notes
 #### Historical Data for an Economic Index
 
 
-Returns historical values for the given `tag` and the Economic Index with the given `identifier`
+Returns historical data for a specified Federal Reserve Economic Data (FRED) ID over a period of time.
 
 [//]: # (END_OVERVIEW)
 
@@ -1281,7 +1283,7 @@ Name | Type | Description  | Notes
 #### Search Economic Indices
 
 
-Searches for indices using the text in `query`
+Search the Federal Reserve Economic Data (FRED) database and return a list of economic indices matching the text query parameter passed through.
 
 [//]: # (END_OVERVIEW)
 
