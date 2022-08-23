@@ -401,6 +401,7 @@ identifier = "USCOMP"
 
 opts = {
   source: nil,
+  active_only: nil,
   page_size: 100,
   next_page: nil
 }
@@ -422,6 +423,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
  **source** | String| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
+ **active_only** | BOOLEAN| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
