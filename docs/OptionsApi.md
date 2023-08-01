@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsChainRealtime get_option_strikes_realtime(symbol, strike)
+> ApiResponseOptionsChainRealtime get_option_strikes_realtime(symbol, strike, opts)
 
 #### Option Strikes Realtime
 
@@ -241,7 +241,12 @@ options_api = Intrinio::OptionsApi.new
 symbol = "MSFT"
 strike = 95
 
-result = options_api.get_option_strikes_realtime(symbol, strike)
+opts = {
+  stock_price_source: nil,
+  model: nil
+}
+
+result = options_api.get_option_strikes_realtime(symbol, strike, opts)
 pp result
 ```
 
@@ -258,6 +263,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
  **strike** | Float| The strike price of the option contract. This will return options contracts with strike price equal to this price. |  &nbsp;
+ **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -712,7 +719,9 @@ opts = {
   volume_less_than: nil,
   open_interest_greater_than: nil,
   open_interest_less_than: nil,
-  moneyness: nil
+  moneyness: nil,
+  stock_price_source: nil,
+  model: nil
 }
 
 result = options_api.get_options_chain_realtime(symbol, expiration, opts)
@@ -742,6 +751,8 @@ Name | Type | Description  | Notes
  **open_interest_greater_than** | Float| The open interest of the option contract. This will return options contracts with open interest greater than this amount. | [optional]  &nbsp;
  **open_interest_less_than** | Float| The open interest of the option contract. This will return options contracts with open interest less than this amount. | [optional]  &nbsp;
  **moneyness** | String| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money.  Requires subscription to realtime stock price data. | [optional]  &nbsp;
+ **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -1400,7 +1411,9 @@ body = {
 }
 
 opts = {
-  source: nil
+  source: nil,
+  stock_price_source: nil,
+  model: nil
 }
 
 result = options_api.get_options_prices_batch_realtime(body, opts)
@@ -1420,6 +1433,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -1559,7 +1574,9 @@ options_api = Intrinio::OptionsApi.new
 identifier = "AAPL230120C00090000"
 
 opts = {
-  source: nil
+  source: nil,
+  stock_price_source: nil,
+  model: nil
 }
 
 result = options_api.get_options_prices_realtime(identifier, opts)
@@ -1579,6 +1596,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
