@@ -1513,7 +1513,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanySharesOutstanding shares_outstanding_by_company(identifier)
+> ApiResponseCompanySharesOutstanding shares_outstanding_by_company(identifier, opts)
 
 #### Shares Outstanding by Company
 
@@ -1540,7 +1540,12 @@ end
 company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
-result = company_api.shares_outstanding_by_company(identifier)
+opts = {
+  end_date_greater_than: nil,
+  end_date_less_than: nil
+}
+
+result = company_api.shares_outstanding_by_company(identifier, opts)
 pp result
 ```
 
@@ -1556,6 +1561,8 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **end_date_greater_than** | Date| Returns shares outstanding after this date. | [optional]  &nbsp;
+ **end_date_less_than** | Date| Returns shares outstanding before this date. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 

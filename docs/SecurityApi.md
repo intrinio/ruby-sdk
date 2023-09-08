@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityInstitutionalOwnership get_security_insider_ownership(identifier)
+> ApiResponseSecurityInstitutionalOwnership get_security_insider_ownership(identifier, opts)
 
 #### Institutional Ownership by Security
 
@@ -562,7 +562,11 @@ end
 security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
-result = security_api.get_security_insider_ownership(identifier)
+opts = {
+  next_page: nil
+}
+
+result = security_api.get_security_insider_ownership(identifier, opts)
 pp result
 ```
 
@@ -578,6 +582,7 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
