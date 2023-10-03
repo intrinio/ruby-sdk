@@ -242,6 +242,7 @@ symbol = "MSFT"
 strike = 95
 
 opts = {
+  source: nil,
   stock_price_source: nil,
   model: nil
 }
@@ -263,6 +264,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
  **strike** | Float| The strike price of the option contract. This will return options contracts with strike price equal to this price. |  &nbsp;
+ **source** | String| Realtime or delayed. | [optional]  &nbsp;
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 
@@ -646,7 +648,7 @@ Name | Type | Description  | Notes
  **strike** | Float| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
  **strike_greater_than** | Float| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strike_less_than** | Float| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
- **date** | Date| The the date to retrieve prices for | [optional]  &nbsp;
+ **date** | Date| The date to retrieve prices for | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -1412,6 +1414,7 @@ body = {
 
 opts = {
   source: nil,
+  show_stats: nil,
   stock_price_source: nil,
   model: nil
 }
@@ -1433,6 +1436,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **show_stats** | BOOLEAN| Whether to include Greek calculations or not. | [optional]  &nbsp;
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 
@@ -1469,7 +1473,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesEod get_options_prices_eod(identifier)
+> ApiResponseOptionsPricesEod get_options_prices_eod(identifier, opts)
 
 #### Option Prices EOD
 
@@ -1496,7 +1500,13 @@ end
 options_api = Intrinio::OptionsApi.new
 identifier = "AAPL230616P00190000"
 
-result = options_api.get_options_prices_eod(identifier)
+opts = {
+  next_page: nil,
+  start_date: nil,
+  end_date: nil
+}
+
+result = options_api.get_options_prices_eod(identifier, opts)
 pp result
 ```
 
@@ -1512,6 +1522,9 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **start_date** | Date| The start date to retrieve prices for | [optional]  &nbsp;
+ **end_date** | Date| The end date to retrieve prices for | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
