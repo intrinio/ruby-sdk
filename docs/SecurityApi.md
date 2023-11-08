@@ -893,9 +893,9 @@ interval_size = "15m"
 
 opts = {
   source: nil,
-  start_date: Date.parse("2018-01-01"),
+  start_date: Date.parse("2023-01-01"),
   start_time: nil,
-  end_date: Date.parse("2019-01-01"),
+  end_date: Date.parse("2023-02-01"),
   end_time: nil,
   timezone: "UTC",
   page_size: 100,
@@ -4560,7 +4560,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> SecurityTradesResult get_security_trades_by_symbol(source, opts)
+> SecurityTradesResult get_security_trades_by_symbol(identifier, source, opts)
 
 #### Security Trades By Symbol
 
@@ -4585,6 +4585,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
 source = nil
 
 opts = {
@@ -4597,7 +4598,7 @@ opts = {
   next_page: nil
 }
 
-result = security_api.get_security_trades_by_symbol(source, opts)
+result = security_api.get_security_trades_by_symbol(identifier, source, opts)
 pp result
 ```
 
@@ -4612,6 +4613,7 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **identifier** | String| The ticker symbol for which trades are being requested. |  &nbsp;
  **source** | String| The specific source of the data being requested. |  &nbsp;
  **start_date** | Date| The start date for the data being requested. | [optional]  &nbsp;
  **start_time** | String| The start time for the data being requested. | [optional]  &nbsp;

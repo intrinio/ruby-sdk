@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**get_economic_index_data_point_number**](IndexApi.md#get_economic_index_data_point_number) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Data Point (Number) for an Economic Index
 [**get_economic_index_data_point_text**](IndexApi.md#get_economic_index_data_point_text) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 [**get_economic_index_historical_data**](IndexApi.md#get_economic_index_historical_data) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
+[**get_realtime_index_price_by_id**](IndexApi.md#get_realtime_index_price_by_id) | **GET** /indices/{identifier}/realtime | Realtime Index Price
 [**get_sic_index_by_id**](IndexApi.md#get_sic_index_by_id) | **GET** /indices/sic/{identifier} | Lookup SIC Index
 [**get_sic_index_data_point_number**](IndexApi.md#get_sic_index_data_point_number) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Data Point (Number) for an SIC Index
 [**get_sic_index_data_point_text**](IndexApi.md#get_sic_index_data_point_text) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Data Point (Text) for an SIC Index
@@ -594,6 +595,82 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::IndexApi)
+
+[//]: # (METHOD:get_realtime_index_price_by_id)
+
+[//]: # (RETURN_TYPE:Intrinio::RealtimeIndexPrice)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:RealtimeIndexPrice.md)
+
+[//]: # (OPERATION:get_realtime_index_price_by_id_v2)
+
+[//]: # (ENDPOINT:/indices/{identifier}/realtime)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#get_realtime_index_price_by_id)
+
+## **get_realtime_index_price_by_id**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_realtime_index_price_by_id_v2)
+
+[//]: # (START_OVERVIEW)
+
+> RealtimeIndexPrice get_realtime_index_price_by_id(identifier)
+
+#### Realtime Index Price
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+index_api = Intrinio::IndexApi.new
+identifier = "SPX"
+
+result = index_api.get_realtime_index_price_by_id(identifier)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The ticker symbol of the currently trading index |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**RealtimeIndexPrice**](RealtimeIndexPrice.md)
 
 [//]: # (END_OPERATION)
 
