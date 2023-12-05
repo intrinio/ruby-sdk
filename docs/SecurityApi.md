@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**get_security_data_point_number**](SecurityApi.md#get_security_data_point_number) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**get_security_data_point_text**](SecurityApi.md#get_security_data_point_text) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**get_security_historical_data**](SecurityApi.md#get_security_historical_data) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**get_security_history_by_identifier**](SecurityApi.md#get_security_history_by_identifier) | **GET** /securities/history-by-identifier/{identifier} | Security History By Identifier
+[**get_security_history_by_ticker**](SecurityApi.md#get_security_history_by_ticker) | **GET** /securities/history-by-ticker/{ticker} | Security History By Ticker
 [**get_security_insider_ownership**](SecurityApi.md#get_security_insider_ownership) | **GET** /securities/{identifier}/institutional_ownership | Institutional Ownership by Security
 [**get_security_interval_movers**](SecurityApi.md#get_security_interval_movers) | **GET** /securities/market_movers | Security Intervals Movers
 [**get_security_interval_movers_change**](SecurityApi.md#get_security_interval_movers_change) | **GET** /securities/market_movers/change | Security Intervals Movers By Change
@@ -507,6 +509,160 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_security_history_by_identifier)
+
+[//]: # (RETURN_TYPE:Intrinio::SecurityHistoryListResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityHistoryListResult.md)
+
+[//]: # (OPERATION:get_security_history_by_identifier_v2)
+
+[//]: # (ENDPOINT:/securities/history-by-identifier/{identifier})
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_security_history_by_identifier)
+
+## **get_security_history_by_identifier**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_history_by_identifier_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityHistoryListResult get_security_history_by_identifier(identifier)
+
+#### Security History By Identifier
+
+
+Lists the tickers a company has used over time.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+identifier = "037833100"
+
+result = security_api.get_security_history_by_identifier(identifier)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (FIGI, COMPOSITE FIGI, SHARE CLASS FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityHistoryListResult**](SecurityHistoryListResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_security_history_by_ticker)
+
+[//]: # (RETURN_TYPE:Intrinio::SecurityHistoryListResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityHistoryListResult.md)
+
+[//]: # (OPERATION:get_security_history_by_ticker_v2)
+
+[//]: # (ENDPOINT:/securities/history-by-ticker/{ticker})
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_security_history_by_ticker)
+
+## **get_security_history_by_ticker**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_history_by_ticker_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityHistoryListResult get_security_history_by_ticker(ticker)
+
+#### Security History By Ticker
+
+
+Lists the tickers a company has used over time.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+ticker = "AAPL"
+
+result = security_api.get_security_history_by_ticker(ticker)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ticker** | String| A Security ticker symbol |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityHistoryListResult**](SecurityHistoryListResult.md)
 
 [//]: # (END_OPERATION)
 
