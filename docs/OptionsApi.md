@@ -244,7 +244,8 @@ strike = 95
 opts = {
   source: nil,
   stock_price_source: nil,
-  model: nil
+  model: nil,
+  show_extended_price: nil
 }
 
 result = options_api.get_option_strikes_realtime(symbol, strike, opts)
@@ -267,6 +268,7 @@ Name | Type | Description  | Notes
  **source** | String| Realtime or delayed. | [optional]  &nbsp;
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -723,7 +725,8 @@ opts = {
   open_interest_less_than: nil,
   moneyness: nil,
   stock_price_source: nil,
-  model: nil
+  model: nil,
+  show_extended_price: nil
 }
 
 result = options_api.get_options_chain_realtime(symbol, expiration, opts)
@@ -755,6 +758,7 @@ Name | Type | Description  | Notes
  **moneyness** | String| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money.  Requires subscription to realtime stock price data. | [optional]  &nbsp;
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -1414,9 +1418,10 @@ body = {
 
 opts = {
   source: nil,
-  show_stats: nil,
+  show_extended_price: nil,
   stock_price_source: nil,
-  model: nil
+  model: nil,
+  show_extended_price2: nil
 }
 
 result = options_api.get_options_prices_batch_realtime(body, opts)
@@ -1436,9 +1441,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
- **show_stats** | BOOLEAN| Whether to include Greek calculations or not. | [optional]  &nbsp;
+ **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **show_extended_price2** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -1589,7 +1595,8 @@ identifier = "AAPL230120C00090000"
 opts = {
   source: nil,
   stock_price_source: nil,
-  model: nil
+  model: nil,
+  show_extended_price: nil
 }
 
 result = options_api.get_options_prices_realtime(identifier, opts)
@@ -1611,6 +1618,7 @@ Name | Type | Description  | Notes
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -1755,7 +1763,8 @@ options_api = Intrinio::OptionsApi.new
 identifier = "AAPL230120C00090000"
 
 opts = {
-  source: nil
+  source: nil,
+  show_extended_price: nil
 }
 
 result = options_api.get_options_stats_realtime(identifier, opts)
@@ -1775,6 +1784,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 

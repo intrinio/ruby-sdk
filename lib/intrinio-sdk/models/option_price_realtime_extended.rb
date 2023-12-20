@@ -13,58 +13,83 @@ Swagger Codegen version: unset
 require 'date'
 
 module Intrinio
-  # An intraday stock price for a Security.
-  class IntradayStockPrice
-    # The timestamp that the `last_price` represents.
-    attr_accessor :time
+  # An extended option price contains extended price information for a specific options contract.
+  class OptionPriceRealtimeExtended
+    # The price of the bid at open
+    attr_accessor :bid_open
 
-    # The price of the last trade.
-    attr_accessor :last_price
+    # The high bid so far today
+    attr_accessor :bid_high
 
-    # The price of the top ask order.
-    attr_accessor :ask_price
+    # The low bid so far today
+    attr_accessor :bid_low
 
-    # The size of the top ask order.
-    attr_accessor :ask_size
+    # The price of the ask at open
+    attr_accessor :ask_open
 
-    # The price of the top bid order.
-    attr_accessor :bid_price
+    # The high ask so far today
+    attr_accessor :ask_high
 
-    # The size of the top bid order.
-    attr_accessor :bid_size
+    # The low ask so far today
+    attr_accessor :ask_low
 
-    # The number of shares exchanged during the trading day on the exchange.
-    attr_accessor :volume
+    # The price of the trade at open
+    attr_accessor :trade_open
 
-    # The source of the data.
-    attr_accessor :source
+    # The high trade so far today
+    attr_accessor :trade_high
+
+    # The low trade so far today
+    attr_accessor :trade_low
+
+    # The price of ask at close today
+    attr_accessor :ask_close
+
+    # The price of bid at close today
+    attr_accessor :bid_close
+
+    # The price of the last trade of the day
+    attr_accessor :trade_close
+
+    # The mark price
+    attr_accessor :mark
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'time' => :'time',
-        :'last_price' => :'last_price',
-        :'ask_price' => :'ask_price',
-        :'ask_size' => :'ask_size',
-        :'bid_price' => :'bid_price',
-        :'bid_size' => :'bid_size',
-        :'volume' => :'volume',
-        :'source' => :'source'
+        :'bid_open' => :'bid_open',
+        :'bid_high' => :'bid_high',
+        :'bid_low' => :'bid_low',
+        :'ask_open' => :'ask_open',
+        :'ask_high' => :'ask_high',
+        :'ask_low' => :'ask_low',
+        :'trade_open' => :'trade_open',
+        :'trade_high' => :'trade_high',
+        :'trade_low' => :'trade_low',
+        :'ask_close' => :'ask_close',
+        :'bid_close' => :'bid_close',
+        :'trade_close' => :'trade_close',
+        :'mark' => :'mark'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'time' => :'DateTime',
-        :'last_price' => :'Float',
-        :'ask_price' => :'Float',
-        :'ask_size' => :'Float',
-        :'bid_price' => :'Float',
-        :'bid_size' => :'Float',
-        :'volume' => :'Float',
-        :'source' => :'String'
+        :'bid_open' => :'Float',
+        :'bid_high' => :'Float',
+        :'bid_low' => :'Float',
+        :'ask_open' => :'Float',
+        :'ask_high' => :'Float',
+        :'ask_low' => :'Float',
+        :'trade_open' => :'Float',
+        :'trade_high' => :'Float',
+        :'trade_low' => :'Float',
+        :'ask_close' => :'Float',
+        :'bid_close' => :'Float',
+        :'trade_close' => :'Float',
+        :'mark' => :'Float'
       }
     end
 
@@ -76,36 +101,56 @@ module Intrinio
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'time')
-        self.time = attributes[:'time']
+      if attributes.has_key?(:'bid_open')
+        self.bid_open = attributes[:'bid_open']
       end
 
-      if attributes.has_key?(:'last_price')
-        self.last_price = attributes[:'last_price']
+      if attributes.has_key?(:'bid_high')
+        self.bid_high = attributes[:'bid_high']
       end
 
-      if attributes.has_key?(:'ask_price')
-        self.ask_price = attributes[:'ask_price']
+      if attributes.has_key?(:'bid_low')
+        self.bid_low = attributes[:'bid_low']
       end
 
-      if attributes.has_key?(:'ask_size')
-        self.ask_size = attributes[:'ask_size']
+      if attributes.has_key?(:'ask_open')
+        self.ask_open = attributes[:'ask_open']
       end
 
-      if attributes.has_key?(:'bid_price')
-        self.bid_price = attributes[:'bid_price']
+      if attributes.has_key?(:'ask_high')
+        self.ask_high = attributes[:'ask_high']
       end
 
-      if attributes.has_key?(:'bid_size')
-        self.bid_size = attributes[:'bid_size']
+      if attributes.has_key?(:'ask_low')
+        self.ask_low = attributes[:'ask_low']
       end
 
-      if attributes.has_key?(:'volume')
-        self.volume = attributes[:'volume']
+      if attributes.has_key?(:'trade_open')
+        self.trade_open = attributes[:'trade_open']
       end
 
-      if attributes.has_key?(:'source')
-        self.source = attributes[:'source']
+      if attributes.has_key?(:'trade_high')
+        self.trade_high = attributes[:'trade_high']
+      end
+
+      if attributes.has_key?(:'trade_low')
+        self.trade_low = attributes[:'trade_low']
+      end
+
+      if attributes.has_key?(:'ask_close')
+        self.ask_close = attributes[:'ask_close']
+      end
+
+      if attributes.has_key?(:'bid_close')
+        self.bid_close = attributes[:'bid_close']
+      end
+
+      if attributes.has_key?(:'trade_close')
+        self.trade_close = attributes[:'trade_close']
+      end
+
+      if attributes.has_key?(:'mark')
+        self.mark = attributes[:'mark']
       end
 
     end
@@ -128,14 +173,19 @@ module Intrinio
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          time == o.time &&
-          last_price == o.last_price &&
-          ask_price == o.ask_price &&
-          ask_size == o.ask_size &&
-          bid_price == o.bid_price &&
-          bid_size == o.bid_size &&
-          volume == o.volume &&
-          source == o.source
+          bid_open == o.bid_open &&
+          bid_high == o.bid_high &&
+          bid_low == o.bid_low &&
+          ask_open == o.ask_open &&
+          ask_high == o.ask_high &&
+          ask_low == o.ask_low &&
+          trade_open == o.trade_open &&
+          trade_high == o.trade_high &&
+          trade_low == o.trade_low &&
+          ask_close == o.ask_close &&
+          bid_close == o.bid_close &&
+          trade_close == o.trade_close &&
+          mark == o.mark
     end
 
     # @see the `==` method
@@ -147,7 +197,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [time, last_price, ask_price, ask_size, bid_price, bid_size, volume, source].hash
+      [bid_open, bid_high, bid_low, ask_open, ask_high, ask_low, trade_open, trade_high, trade_low, ask_close, bid_close, trade_close, mark].hash
     end
 
     # Builds the object from hash
