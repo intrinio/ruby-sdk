@@ -1418,10 +1418,10 @@ body = {
 
 opts = {
   source: nil,
-  show_extended_price: nil,
+  show_stats: nil,
   stock_price_source: nil,
   model: nil,
-  show_extended_price2: nil
+  show_extended_price: nil
 }
 
 result = options_api.get_options_prices_batch_realtime(body, opts)
@@ -1441,10 +1441,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
- **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **show_stats** | BOOLEAN| Whether to include Greek calculations or not. | [optional]  &nbsp;
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
- **show_extended_price2** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 

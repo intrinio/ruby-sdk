@@ -1102,10 +1102,10 @@ module Intrinio
     # @param body The contract symbols for which to return options prices for.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :source Realtime or 15-minute delayed contracts.
-    # @option opts [BOOLEAN] :show_extended_price Whether to include open close high low type fields.
+    # @option opts [BOOLEAN] :show_stats Whether to include Greek calculations or not.
     # @option opts [String] :stock_price_source Source for underlying price for calculating Greeks.
     # @option opts [String] :model Model for calculating Greek values. Default is black_scholes.
-    # @option opts [BOOLEAN] :show_extended_price2 Whether to include open close high low type fields.
+    # @option opts [BOOLEAN] :show_extended_price Whether to include open close high low type fields.
     # @return [ApiResponseOptionsPricesBatchRealtime]
     def get_options_prices_batch_realtime(body, opts = {})
       data, _status_code, _headers = get_options_prices_batch_realtime_with_http_info(body, opts)
@@ -1117,10 +1117,10 @@ module Intrinio
     # @param body The contract symbols for which to return options prices for.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :source Realtime or 15-minute delayed contracts.
-    # @option opts [BOOLEAN] :show_extended_price Whether to include open close high low type fields.
+    # @option opts [BOOLEAN] :show_stats Whether to include Greek calculations or not.
     # @option opts [String] :stock_price_source Source for underlying price for calculating Greeks.
     # @option opts [String] :model Model for calculating Greek values. Default is black_scholes.
-    # @option opts [BOOLEAN] :show_extended_price2 Whether to include open close high low type fields.
+    # @option opts [BOOLEAN] :show_extended_price Whether to include open close high low type fields.
     # @return [Array<(ApiResponseOptionsPricesBatchRealtime, Fixnum, Hash)>] ApiResponseOptionsPricesBatchRealtime data, response status code and response headers
     def get_options_prices_batch_realtime_with_http_info(body, opts = {})
       if @api_client.config.debugging
@@ -1145,10 +1145,10 @@ module Intrinio
       # query parameters
       query_params = {}
       query_params[:'source'] = opts[:'source'] if !opts[:'source'].nil?
-      query_params[:'show_extended_price'] = opts[:'show_extended_price'] if !opts[:'show_extended_price'].nil?
+      query_params[:'show_stats'] = opts[:'show_stats'] if !opts[:'show_stats'].nil?
       query_params[:'stock_price_source'] = opts[:'stock_price_source'] if !opts[:'stock_price_source'].nil?
       query_params[:'model'] = opts[:'model'] if !opts[:'model'].nil?
-      query_params[:'show_extended_price'] = opts[:'show_extended_price2'] if !opts[:'show_extended_price2'].nil?
+      query_params[:'show_extended_price'] = opts[:'show_extended_price'] if !opts[:'show_extended_price'].nil?
 
       # header parameters
       header_params = {}
