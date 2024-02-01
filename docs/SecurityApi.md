@@ -4750,6 +4750,7 @@ opts = {
   end_date: nil,
   end_time: nil,
   timezone: "UTC",
+  darkpool_only: false,
   page_size: 100,
   next_page: nil
 }
@@ -4770,12 +4771,13 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The ticker symbol for which trades are being requested. |  &nbsp;
- **source** | String| The specific source of the data being requested. |  &nbsp;
+ **source** | String| The specific source of the data being requested.  Specifying delayed sip will result in the system automatically determining which delayed sip source (cta_delayed, cta_b_delayed, utp_delayed) to use. |  &nbsp;
  **start_date** | Date| The start date for the data being requested. | [optional]  &nbsp;
  **start_time** | String| The start time for the data being requested. | [optional]  &nbsp;
  **end_date** | Date| The end date for the data being requested. | [optional]  &nbsp;
  **end_time** | String| The end time for the data being requested. | [optional]  &nbsp;
  **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **darkpool_only** | BOOLEAN| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
  **page_size** | Integer| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
