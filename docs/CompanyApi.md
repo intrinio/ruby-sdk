@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all_companies**](CompanyApi.md#get_all_companies) | **GET** /companies | All Companies
+[**get_all_companies_daily_metrics**](CompanyApi.md#get_all_companies_daily_metrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 [**get_all_company_news**](CompanyApi.md#get_all_company_news) | **GET** /companies/news | All News
 [**get_company**](CompanyApi.md#get_company) | **GET** /companies/{identifier} | Lookup Company
 [**get_company_answers**](CompanyApi.md#get_company_answers) | **GET** /companies/{identifier}/answers | Company Answers
@@ -123,6 +124,92 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanies**](ApiResponseCompanies.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::CompanyApi)
+
+[//]: # (METHOD:get_all_companies_daily_metrics)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanyDailyMetrics)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyDailyMetrics.md)
+
+[//]: # (OPERATION:get_all_companies_daily_metrics_v2)
+
+[//]: # (ENDPOINT:/companies/daily_metrics)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#get_all_companies_daily_metrics)
+
+## **get_all_companies_daily_metrics**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_all_companies_daily_metrics_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyDailyMetrics get_all_companies_daily_metrics(opts)
+
+#### All Companies daily metrics
+
+
+Returns the company metrics for a date.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+company_api = Intrinio::CompanyApi.new
+
+opts = {
+  on_date: Date.parse("2013-10-20"),
+  page_size: 100,
+  next_page: nil,
+  next_page2: nil
+}
+
+result = company_api.get_all_companies_daily_metrics(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **on_date** | Date| Date of the metric | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **next_page2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyDailyMetrics**](ApiResponseCompanyDailyMetrics.md)
 
 [//]: # (END_OPERATION)
 
@@ -417,6 +504,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
+  on_date: Date.parse("2013-10-20"),
   page_size: 100,
   next_page: nil,
   next_page2: nil
@@ -438,6 +526,7 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **on_date** | Date| Date of the metric | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
  **next_page2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
