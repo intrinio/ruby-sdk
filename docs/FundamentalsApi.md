@@ -73,6 +73,8 @@ opts = {
   fiscal_period: "FY",
   start_date: Date.parse("2022-01-01"),
   end_date: Date.parse("2022-12-01"),
+  updated_after: Date.parse("2022-12-01"),
+  updated_before: Date.parse("2022-12-01"),
   next_page: nil
 }
 
@@ -100,6 +102,8 @@ Name | Type | Description  | Notes
  **fiscal_period** | String| The fiscal period | [optional]  &nbsp;
  **start_date** | Date| Only include fundamentals where covered period is on or after this date. | [optional]  &nbsp;
  **end_date** | Date| Only include fundamentals where covered period is on or before this date. | [optional]  &nbsp;
+ **updated_after** | Date| Only include fundamentals where it was updated after this date. | [optional]  &nbsp;
+ **updated_before** | Date| Only include fundamentals where it was updated before this date. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
