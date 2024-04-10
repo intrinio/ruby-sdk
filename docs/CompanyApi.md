@@ -265,7 +265,20 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = {
+  specific_source: nil,
   page_size: 100,
+  sentiment: nil,
+  topic: nil,
+  company: "AAPL",
+  security: "AAPL",
+  start_date: nil,
+  end_date: nil,
+  language: nil,
+  word_count_greater_than: nil,
+  word_count_less_than: nil,
+  is_spam: nil,
+  business_relevance_greater_than: nil,
+  business_relevance_less_than: nil,
   next_page: nil
 }
 
@@ -284,7 +297,20 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **specific_source** | String| Only news from this source. | [optional]  &nbsp;
+ **page_size** | Integer| The maximum number of results to return. | [optional] [default to 100] &nbsp;
+ **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **company** | String| Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **security** | String| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
+ **start_date** | Date| Limit news stories to those on or after this date. | [optional]  &nbsp;
+ **end_date** | Date| Limit news stories to those on or before this date. | [optional]  &nbsp;
+ **language** | String| Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **word_count_greater_than** | Integer| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **word_count_less_than** | Integer| News stories will have a word count less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **is_spam** | BOOLEAN| Filter whether it is marked as spam or not.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **business_relevance_greater_than** | Float| News stories will have a business relevance score more than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **business_relevance_less_than** | Float| News stories will have a business relevance score less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
@@ -1136,7 +1162,19 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
+  specific_source: nil,
   page_size: 100,
+  sentiment: nil,
+  topic: nil,
+  security: "AAPL",
+  start_date: nil,
+  end_date: nil,
+  language: nil,
+  word_count_greater_than: nil,
+  word_count_less_than: nil,
+  is_spam: nil,
+  business_relevance_greater_than: nil,
+  business_relevance_less_than: nil,
   next_page: nil
 }
 
@@ -1156,7 +1194,19 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **specific_source** | String| Only news from this source | [optional]  &nbsp;
+ **page_size** | Integer| The maximum number of results to return | [optional] [default to 100] &nbsp;
+ **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **security** | String| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
+ **start_date** | Date| Limit news stories to those on or after this date | [optional]  &nbsp;
+ **end_date** | Date| Limit news stories to those on or before this date | [optional]  &nbsp;
+ **language** | String| Filter by language.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **word_count_greater_than** | Integer| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **word_count_less_than** | Integer| News stories will have a word count less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **is_spam** | BOOLEAN| Filter whether it is marked as spam or not.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **business_relevance_greater_than** | Float| News stories will have a business relevance score more than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **business_relevance_less_than** | Float| News stories will have a business relevance score less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)

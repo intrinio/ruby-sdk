@@ -157,7 +157,8 @@ symbol = "MSFT"
 opts = {
   after: "2022-01-01",
   before: "2023-04-01",
-  source: nil
+  source: nil,
+  include_related_symbols: false
 }
 
 result = options_api.get_option_expirations_realtime(symbol, opts)
@@ -179,6 +180,7 @@ Name | Type | Description  | Notes
  **after** | String| Return option contract expiration dates after this date. | [optional]  &nbsp;
  **before** | String| Return option contract expiration dates before this date. | [optional]  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -245,7 +247,8 @@ opts = {
   source: nil,
   stock_price_source: nil,
   model: nil,
-  show_extended_price: nil
+  show_extended_price: nil,
+  include_related_symbols: false
 }
 
 result = options_api.get_option_strikes_realtime(symbol, strike, opts)
@@ -269,6 +272,7 @@ Name | Type | Description  | Notes
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -436,7 +440,8 @@ opts = {
   expiration: "2022-04-16",
   expiration_after: "2022-01-01",
   expiration_before: "2023-12-31",
-  source: nil
+  source: nil,
+  include_related_symbols: false
 }
 
 result = options_api.get_options_by_symbol_realtime(symbol, opts)
@@ -463,6 +468,7 @@ Name | Type | Description  | Notes
  **expiration_after** | String| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional]  &nbsp;
  **expiration_before** | String| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional]  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -626,7 +632,8 @@ opts = {
   strike: nil,
   strike_greater_than: nil,
   strike_less_than: nil,
-  date: nil
+  date: nil,
+  include_related_symbols: false
 }
 
 result = options_api.get_options_chain_eod(symbol, expiration, opts)
@@ -651,6 +658,7 @@ Name | Type | Description  | Notes
  **strike_greater_than** | Float| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strike_less_than** | Float| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **date** | Date| The date to retrieve prices for | [optional]  &nbsp;
+ **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -726,7 +734,8 @@ opts = {
   moneyness: nil,
   stock_price_source: nil,
   model: nil,
-  show_extended_price: nil
+  show_extended_price: nil,
+  include_related_symbols: false
 }
 
 result = options_api.get_options_chain_realtime(symbol, expiration, opts)
@@ -759,6 +768,7 @@ Name | Type | Description  | Notes
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -906,7 +916,8 @@ symbol = "MSFT"
 
 opts = {
   after: "2019-01-01",
-  before: "2019-12-31"
+  before: "2019-12-31",
+  include_related_symbols: false
 }
 
 result = options_api.get_options_expirations_eod(symbol, opts)
@@ -927,6 +938,7 @@ Name | Type | Description  | Notes
  **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
  **after** | String| Return option contract expiration dates after this date. | [optional]  &nbsp;
  **before** | String| Return option contract expiration dates before this date. | [optional]  &nbsp;
+ **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 

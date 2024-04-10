@@ -4656,6 +4656,8 @@ opts = {
   end_time: nil,
   timezone: "UTC",
   page_size: 100,
+  darkpool_only: false,
+  min_size: 100,
   next_page: nil
 }
 
@@ -4681,6 +4683,8 @@ Name | Type | Description  | Notes
  **end_time** | String| The end time for the data being requested. | [optional]  &nbsp;
  **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
  **page_size** | Integer| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **darkpool_only** | BOOLEAN| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
+ **min_size** | Integer| Trades must be larger or equal to this size. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
@@ -4752,6 +4756,7 @@ opts = {
   timezone: "UTC",
   darkpool_only: false,
   page_size: 100,
+  min_size: 100,
   next_page: nil
 }
 
@@ -4779,6 +4784,7 @@ Name | Type | Description  | Notes
  **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
  **darkpool_only** | BOOLEAN| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
  **page_size** | Integer| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **min_size** | Integer| Trades must be larger or equal to this size. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
