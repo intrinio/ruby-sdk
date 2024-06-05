@@ -5,10 +5,13 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_zacks_analyst_ratings**](ZacksApi.md#get_zacks_analyst_ratings) | **GET** /zacks/analyst_ratings | Zacks Analyst Ratings
+[**get_zacks_ebitda_consensus**](ZacksApi.md#get_zacks_ebitda_consensus) | **GET** /zacks/ebitda_consensus | Zacks EBITDA Consensus
 [**get_zacks_eps_estimates**](ZacksApi.md#get_zacks_eps_estimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
 [**get_zacks_eps_growth_rates**](ZacksApi.md#get_zacks_eps_growth_rates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 [**get_zacks_eps_surprises**](ZacksApi.md#get_zacks_eps_surprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
 [**get_zacks_etf_holdings**](ZacksApi.md#get_zacks_etf_holdings) | **GET** /zacks/etf_holdings | Zacks ETF Holdings
+[**get_zacks_forward_pe**](ZacksApi.md#get_zacks_forward_pe) | **GET** /zacks/forward_pe | Zacks Forward PE Estimates
+[**get_zacks_forward_pe_by_identifier**](ZacksApi.md#get_zacks_forward_pe_by_identifier) | **GET** /zacks/forward_pe/{identifier} | Zacks Forward PE by identifer
 [**get_zacks_institutional_holding_companies**](ZacksApi.md#get_zacks_institutional_holding_companies) | **GET** /zacks/institutional_holdings/companies | Zacks Institutional Holding Companies
 [**get_zacks_institutional_holding_owners**](ZacksApi.md#get_zacks_institutional_holding_owners) | **GET** /zacks/institutional_holdings/owners | Zacks Institutional Holding Owners
 [**get_zacks_institutional_holdings**](ZacksApi.md#get_zacks_institutional_holdings) | **GET** /zacks/institutional_holdings | Zacks Institutional Holdings
@@ -131,6 +134,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksAnalystRatings**](ApiResponseZacksAnalystRatings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ZacksApi)
+
+[//]: # (METHOD:get_zacks_ebitda_consensus)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseZacksEBITDAConsensus)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksEBITDAConsensus.md)
+
+[//]: # (OPERATION:get_zacks_ebitda_consensus_v2)
+
+[//]: # (ENDPOINT:/zacks/ebitda_consensus)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_ebitda_consensus)
+
+## **get_zacks_ebitda_consensus**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_ebitda_consensus_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksEBITDAConsensus get_zacks_ebitda_consensus(opts)
+
+#### Zacks EBITDA Consensus
+
+
+This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+zacks_api = Intrinio::ZacksApi.new
+
+opts = {
+  identifier: "AAPL",
+  type: nil,
+  next_page: nil
+}
+
+result = zacks_api.get_zacks_ebitda_consensus(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **type** | String| Limit EBITDA estimates to this type | [optional]  &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksEBITDAConsensus**](ApiResponseZacksEBITDAConsensus.md)
 
 [//]: # (END_OPERATION)
 
@@ -515,6 +602,163 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksETFHoldings**](ApiResponseZacksETFHoldings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ZacksApi)
+
+[//]: # (METHOD:get_zacks_forward_pe)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseZacksForwardPEs)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksForwardPEs.md)
+
+[//]: # (OPERATION:get_zacks_forward_pe_v2)
+
+[//]: # (ENDPOINT:/zacks/forward_pe)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_forward_pe)
+
+## **get_zacks_forward_pe**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_forward_pe_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksForwardPEs get_zacks_forward_pe(opts)
+
+#### Zacks Forward PE Estimates
+
+
+This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+zacks_api = Intrinio::ZacksApi.new
+
+opts = {
+  next_page: nil
+}
+
+result = zacks_api.get_zacks_forward_pe(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksForwardPEs**](ApiResponseZacksForwardPEs.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ZacksApi)
+
+[//]: # (METHOD:get_zacks_forward_pe_by_identifier)
+
+[//]: # (RETURN_TYPE:Intrinio::ZacksForwardPE)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ZacksForwardPE.md)
+
+[//]: # (OPERATION:get_zacks_forward_pe_by_identifier_v2)
+
+[//]: # (ENDPOINT:/zacks/forward_pe/{identifier})
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#get_zacks_forward_pe_by_identifier)
+
+## **get_zacks_forward_pe_by_identifier**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_zacks_forward_pe_by_identifier_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ZacksForwardPE get_zacks_forward_pe_by_identifier(identifier)
+
+#### Zacks Forward PE by identifer
+
+
+Returns the forward PE estimates for the identifier
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+zacks_api = Intrinio::ZacksApi.new
+identifier = "MSFT"
+
+result = zacks_api.get_zacks_forward_pe_by_identifier(identifier)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| An Intrinio ID or ticker for a Security |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ZacksForwardPE**](ZacksForwardPE.md)
 
 [//]: # (END_OPERATION)
 

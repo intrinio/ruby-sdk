@@ -297,7 +297,7 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **specific_source** | String| Only news from this source. | [optional]  &nbsp;
+ **specific_source** | String| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
  **page_size** | Integer| The maximum number of results to return. | [optional] [default to 100] &nbsp;
  **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
  **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -1194,7 +1194,7 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **specific_source** | String| Only news from this source | [optional]  &nbsp;
+ **specific_source** | String| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
  **page_size** | Integer| The maximum number of results to return | [optional] [default to 100] &nbsp;
  **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
  **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -1777,6 +1777,7 @@ query = "Apple"
 
 opts = {
   active: true,
+  mode: nil,
   page_size: 100
 }
 
@@ -1796,7 +1797,8 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String| Search parameters |  &nbsp;
- **active** | BOOLEAN| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. | [optional]  &nbsp;
+ **active** | BOOLEAN| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. Not setting this value returns all. Not used when mode is set. | [optional]  &nbsp;
+ **mode** | String| When set, changes search mode to the specified mode. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
 
 [//]: # (END_PARAMETERS)

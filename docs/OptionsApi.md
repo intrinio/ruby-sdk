@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all_options_tickers**](OptionsApi.md#get_all_options_tickers) | **GET** /options/tickers | Options Tickers
+[**get_option_aggregates**](OptionsApi.md#get_option_aggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 [**get_option_expirations_realtime**](OptionsApi.md#get_option_expirations_realtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**get_option_strikes_realtime**](OptionsApi.md#get_option_strikes_realtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
 [**get_options**](OptionsApi.md#get_options) | **GET** /options/{symbol} | Options
@@ -99,6 +100,86 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ApiResponseOptionsTickers**](ApiResponseOptionsTickers.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_option_aggregates)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsAggregates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsAggregates.md)
+
+[//]: # (OPERATION:get_option_aggregates_v2)
+
+[//]: # (ENDPOINT:/options/aggregates)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_option_aggregates)
+
+## **get_option_aggregates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_option_aggregates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsAggregates get_option_aggregates(opts)
+
+#### Total open interest and volume aggregated by ticker
+
+
+Returns total open interest and volume by ticker
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+
+opts = {
+  date: "2024-04-24"
+}
+
+result = options_api.get_option_aggregates(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **date** | [**Object**](.md)| Return aggregated data for this date | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsAggregates**](ApiResponseOptionsAggregates.md)
 
 [//]: # (END_OPERATION)
 

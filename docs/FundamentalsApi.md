@@ -75,6 +75,7 @@ opts = {
   end_date: Date.parse("2022-12-01"),
   updated_after: Date.parse("2022-12-01"),
   updated_before: Date.parse("2022-12-01"),
+  template: "indu",
   next_page: nil
 }
 
@@ -104,6 +105,7 @@ Name | Type | Description  | Notes
  **end_date** | Date| Only include fundamentals where covered period is on or before this date. | [optional]  &nbsp;
  **updated_after** | Date| Only include fundamentals where it was updated after this date. | [optional]  &nbsp;
  **updated_before** | Date| Only include fundamentals where it was updated before this date. | [optional]  &nbsp;
+ **template** | String| The financial statement template used by Intrinio to standardize the as reported data | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)

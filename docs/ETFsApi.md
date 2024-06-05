@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseETFs search_etfs(query)
+> ApiResponseETFs search_etfs(query, opts)
 
 #### Search ETFs
 
@@ -463,7 +463,11 @@ end
 eTFs_api = Intrinio::ETFsApi.new
 query = "iShares"
 
-result = eTFs_api.search_etfs(query)
+opts = {
+  mode: nil
+}
+
+result = eTFs_api.search_etfs(query, opts)
 pp result
 ```
 
@@ -479,6 +483,7 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String|  |  &nbsp;
+ **mode** | String| When set, changes search mode to the specified mode. Paging is not available in rank_order. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
