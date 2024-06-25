@@ -275,6 +275,7 @@ module Intrinio
     # @option opts [String] :source Return realtime prices from the specified data source. If no source is specified, all sources are used.
     # @option opts [BOOLEAN] :active_only Returns prices only from the most recent trading day.
     # @option opts [Integer] :page_size The number of results to return (default to 100)
+    # @option opts [Array<String>] :tickers The list of ticker symbols to filter to.
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [ApiResponseStockExchangeRealtimeStockPrices]
     def get_stock_exchange_realtime_prices(identifier, opts = {})
@@ -289,6 +290,7 @@ module Intrinio
     # @option opts [String] :source Return realtime prices from the specified data source. If no source is specified, all sources are used.
     # @option opts [BOOLEAN] :active_only Returns prices only from the most recent trading day.
     # @option opts [Integer] :page_size The number of results to return
+    # @option opts [Array<String>] :tickers The list of ticker symbols to filter to.
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [Array<(ApiResponseStockExchangeRealtimeStockPrices, Fixnum, Hash)>] ApiResponseStockExchangeRealtimeStockPrices data, response status code and response headers
     def get_stock_exchange_realtime_prices_with_http_info(identifier, opts = {})
@@ -314,6 +316,7 @@ module Intrinio
       query_params[:'source'] = opts[:'source'] if !opts[:'source'].nil?
       query_params[:'active_only'] = opts[:'active_only'] if !opts[:'active_only'].nil?
       query_params[:'page_size'] = opts[:'page_size'] if !opts[:'page_size'].nil?
+      query_params[:'tickers'] = @api_client.build_collection_param(opts[:'tickers'], :csv) if !opts[:'tickers'].nil?
       query_params[:'next_page'] = opts[:'next_page'] if !opts[:'next_page'].nil?
 
       # header parameters

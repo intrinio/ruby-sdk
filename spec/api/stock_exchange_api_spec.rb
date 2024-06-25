@@ -97,6 +97,7 @@ describe 'StockExchangeApi' do
   # @option opts [String] :source Return realtime prices from the specified data source. If no source is specified, all sources are used.
   # @option opts [BOOLEAN] :active_only Returns prices only from the most recent trading day.
   # @option opts [Integer] :page_size The number of results to return
+  # @option opts [Array<String>] :tickers The list of ticker symbols to filter to.
   # @option opts [String] :next_page Gets the next page of data from a previous API call
   # @return [ApiResponseStockExchangeRealtimeStockPrices]
   describe 'get_stock_exchange_realtime_prices test' do

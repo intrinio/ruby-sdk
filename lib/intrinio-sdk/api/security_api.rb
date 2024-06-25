@@ -731,6 +731,7 @@ module Intrinio
     # @option opts [String] :end_time Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
     # @option opts [String] :timezone Returns trading times in this timezone (default to UTC)
     # @option opts [Integer] :page_size The number of results to return (default to 100)
+    # @option opts [BOOLEAN] :split_adjusted Whether to return the values adjusted for splits or not. Default is false. (default to false)
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [ApiResponseSecurityIntervalPrices]
     def get_security_interval_prices(identifier, interval_size, opts = {})
@@ -750,6 +751,7 @@ module Intrinio
     # @option opts [String] :end_time Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
     # @option opts [String] :timezone Returns trading times in this timezone
     # @option opts [Integer] :page_size The number of results to return
+    # @option opts [BOOLEAN] :split_adjusted Whether to return the values adjusted for splits or not. Default is false.
     # @option opts [String] :next_page Gets the next page of data from a previous API call
     # @return [Array<(ApiResponseSecurityIntervalPrices, Fixnum, Hash)>] ApiResponseSecurityIntervalPrices data, response status code and response headers
     def get_security_interval_prices_with_http_info(identifier, interval_size, opts = {})
@@ -787,6 +789,7 @@ module Intrinio
       query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
       query_params[:'timezone'] = opts[:'timezone'] if !opts[:'timezone'].nil?
       query_params[:'page_size'] = opts[:'page_size'] if !opts[:'page_size'].nil?
+      query_params[:'split_adjusted'] = opts[:'split_adjusted'] if !opts[:'split_adjusted'].nil?
       query_params[:'next_page'] = opts[:'next_page'] if !opts[:'next_page'].nil?
 
       # header parameters

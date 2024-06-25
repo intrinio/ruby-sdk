@@ -209,6 +209,7 @@ describe 'SecurityApi' do
   # @option opts [String] :end_time Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
   # @option opts [String] :timezone Returns trading times in this timezone
   # @option opts [Integer] :page_size The number of results to return
+  # @option opts [BOOLEAN] :split_adjusted Whether to return the values adjusted for splits or not. Default is false.
   # @option opts [String] :next_page Gets the next page of data from a previous API call
   # @return [ApiResponseSecurityIntervalPrices]
   describe 'get_security_interval_prices test' do

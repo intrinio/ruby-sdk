@@ -403,6 +403,7 @@ opts = {
   source: nil,
   active_only: nil,
   page_size: 100,
+  tickers: [nil],
   next_page: nil
 }
 
@@ -425,6 +426,7 @@ Name | Type | Description  | Notes
  **source** | String| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **active_only** | BOOLEAN| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **tickers** | [**Array&lt;String&gt;**](String.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)

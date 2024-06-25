@@ -1055,6 +1055,7 @@ opts = {
   end_time: nil,
   timezone: "UTC",
   page_size: 100,
+  split_adjusted: false,
   next_page: nil
 }
 
@@ -1082,6 +1083,7 @@ Name | Type | Description  | Notes
  **end_time** | String| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **timezone** | String| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **split_adjusted** | BOOLEAN| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
