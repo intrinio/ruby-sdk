@@ -26,7 +26,6 @@ Name | Type | Description
 **business_relevance** | Float | How strongly correlated the news article is to the business &nbsp;
 **article_sentiment** | String | The news sentiment. &nbsp;
 **article_sentiment_confidence** | Float | The confidence score of the sentiment rating &nbsp;
-**body** | String | The article body. Requires additional access. &nbsp;
 
 [//]: # (END_DEFINITION)
 

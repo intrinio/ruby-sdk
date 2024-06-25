@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**get_company_historical_data**](CompanyApi.md#get_company_historical_data) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 [**get_company_ipos**](CompanyApi.md#get_company_ipos) | **GET** /companies/ipos | IPOs
 [**get_company_news**](CompanyApi.md#get_company_news) | **GET** /companies/{identifier}/news | All News by Company
+[**get_company_news_body**](CompanyApi.md#get_company_news_body) | **GET** /companies/news/body | The body of a news article
 [**get_company_public_float**](CompanyApi.md#get_company_public_float) | **GET** /companies/{identifier}/public_float | Get Company&#39;s public float
 [**get_company_securities**](CompanyApi.md#get_company_securities) | **GET** /companies/{identifier}/securities | All Securities by Company
 [**insider_transaction_filings_by_company**](CompanyApi.md#insider_transaction_filings_by_company) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
@@ -1214,6 +1215,92 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanyNews**](ApiResponseCompanyNews.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::CompanyApi)
+
+[//]: # (METHOD:get_company_news_body)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanyNewsBody)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyNewsBody.md)
+
+[//]: # (OPERATION:get_company_news_body_v2)
+
+[//]: # (ENDPOINT:/companies/news/body)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#get_company_news_body)
+
+## **get_company_news_body**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_company_news_body_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyNewsBody get_company_news_body(news_story_id, publication_date, opts)
+
+#### The body of a news article
+
+
+Returns the news article body.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+company_api = Intrinio::CompanyApi.new
+news_story_id = "new_aBcDef"
+publication_date = DateTime.parse(nil)
+
+opts = {
+  specific_source: nil,
+  next_page: nil
+}
+
+result = company_api.get_company_news_body(news_story_id, publication_date, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **news_story_id** | String| The identifier of the news story. |  &nbsp;
+ **publication_date** | DateTime| The DateTime of the story. |  &nbsp;
+ **specific_source** | String| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyNewsBody**](ApiResponseCompanyNewsBody.md)
 
 [//]: # (END_OPERATION)
 
