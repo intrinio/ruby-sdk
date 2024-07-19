@@ -228,9 +228,9 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP"
 
 opts = {
-  date: Date.parse("\"2018-08-14\""),
+  date: Date.parse("2018-08-14"),
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = stockExchange_api.get_stock_exchange_price_adjustments(identifier, opts)
@@ -314,9 +314,9 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP"
 
 opts = {
-  date: Date.parse("\"2018-08-14\""),
+  date: Date.parse("2018-08-14"),
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = stockExchange_api.get_stock_exchange_prices(identifier, opts)
@@ -400,11 +400,11 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP"
 
 opts = {
-  source: ["\"~null\""],
-  active_only: "~null",
+  source: [nil],
+  active_only: nil,
   page_size: 100,
-  tickers: ["~null"],
-  next_page: "~null"
+  tickers: [nil],
+  next_page: nil
 }
 
 result = stockExchange_api.get_stock_exchange_realtime_prices(identifier, opts)
@@ -491,7 +491,7 @@ identifier = "USCOMP"
 
 opts = {
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = stockExchange_api.get_stock_exchange_securities(identifier, opts)

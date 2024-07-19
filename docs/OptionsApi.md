@@ -239,7 +239,7 @@ symbol = "MSFT"
 opts = {
   after: "2022-01-01",
   before: "2023-04-01",
-  source: "\"~null\"",
+  source: nil,
   include_related_symbols: false
 }
 
@@ -326,10 +326,10 @@ symbol = "MSFT"
 strike = 95
 
 opts = {
-  source: "\"~null\"",
-  stock_price_source: "\"~null\"",
-  model: "\"~null\"",
-  show_extended_price: "~null",
+  source: nil,
+  stock_price_source: nil,
+  model: nil,
+  show_extended_price: nil,
   include_related_symbols: false
 }
 
@@ -417,7 +417,7 @@ options_api = Intrinio::OptionsApi.new
 symbol = "AAPL"
 
 opts = {
-  type: "\"put\"",
+  type: "put",
   strike: 170,
   strike_greater_than: 150,
   strike_less_than: 190,
@@ -425,7 +425,7 @@ opts = {
   expiration_after: "2019-01-01",
   expiration_before: "2019-12-31",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = options_api.get_options(symbol, opts)
@@ -515,14 +515,14 @@ options_api = Intrinio::OptionsApi.new
 symbol = "AAPL"
 
 opts = {
-  type: "\"put\"",
+  type: "put",
   strike: 170,
   strike_greater_than: 150,
   strike_less_than: 190,
   expiration: "2022-04-16",
   expiration_after: "2022-01-01",
   expiration_before: "2023-12-31",
-  source: "\"~null\"",
+  source: nil,
   include_related_symbols: false
 }
 
@@ -614,12 +614,12 @@ symbol = "MSFT"
 expiration = "2019-04-05"
 
 opts = {
-  date: Date.parse("\"~null\""),
-  type: "\"~null\"",
-  strike: "~null",
-  strike_greater_than: "~null",
-  strike_less_than: "~null",
-  moneyness: "\"~null\"",
+  date: nil,
+  type: nil,
+  strike: nil,
+  strike_greater_than: nil,
+  strike_less_than: nil,
+  moneyness: nil,
   page_size: 100
 }
 
@@ -710,11 +710,11 @@ symbol = "AAPL"
 expiration = "2023-01-20"
 
 opts = {
-  type: "\"~null\"",
-  strike: "~null",
-  strike_greater_than: "~null",
-  strike_less_than: "~null",
-  date: Date.parse("\"~null\""),
+  type: nil,
+  strike: nil,
+  strike_greater_than: nil,
+  strike_less_than: nil,
+  date: nil,
   include_related_symbols: false
 }
 
@@ -804,19 +804,19 @@ symbol = "MSFT"
 expiration = "2023-01-20"
 
 opts = {
-  source: "\"~null\"",
-  type: "\"~null\"",
-  strike: "~null",
-  strike_greater_than: "~null",
-  strike_less_than: "~null",
-  volume_greater_than: "~null",
-  volume_less_than: "~null",
-  open_interest_greater_than: "~null",
-  open_interest_less_than: "~null",
-  moneyness: "\"~null\"",
-  stock_price_source: "\"~null\"",
-  model: "\"~null\"",
-  show_extended_price: "~null",
+  source: nil,
+  type: nil,
+  strike: nil,
+  strike_greater_than: nil,
+  strike_less_than: nil,
+  volume_greater_than: nil,
+  volume_less_than: nil,
+  open_interest_greater_than: nil,
+  open_interest_less_than: nil,
+  moneyness: nil,
+  stock_price_source: nil,
+  model: nil,
+  show_extended_price: nil,
   include_related_symbols: false
 }
 
@@ -1081,12 +1081,12 @@ end
 
 options_api = Intrinio::OptionsApi.new
 identifier = "SPY___230103P00380000"
-interval_size = "\"5m\""
+interval_size = "5m"
 
 opts = {
-  source: "\"~null\"",
+  source: nil,
   page_size: 100,
-  end_time: DateTime.parse("\"~null\"")
+  end_time: DateTime.parse(nil)
 }
 
 result = options_api.get_options_interval_by_contract(identifier, interval_size, opts)
@@ -1170,8 +1170,8 @@ end
 options_api = Intrinio::OptionsApi.new
 
 opts = {
-  source: "\"~null\"",
-  open_time: DateTime.parse("\"~null\"")
+  source: nil,
+  open_time: DateTime.parse(nil)
 }
 
 result = options_api.get_options_interval_movers(opts)
@@ -1252,8 +1252,8 @@ end
 options_api = Intrinio::OptionsApi.new
 
 opts = {
-  source: "\"~null\"",
-  open_time: DateTime.parse("\"~null\"")
+  source: nil,
+  open_time: DateTime.parse(nil)
 }
 
 result = options_api.get_options_interval_movers_change(opts)
@@ -1334,8 +1334,8 @@ end
 options_api = Intrinio::OptionsApi.new
 
 opts = {
-  source: "\"~null\"",
-  open_time: DateTime.parse("\"~null\"")
+  source: nil,
+  open_time: DateTime.parse(nil)
 }
 
 result = options_api.get_options_interval_movers_volume(opts)
@@ -1420,7 +1420,7 @@ opts = {
   start_date: "2019-01-01",
   end_date: "2019-12-31",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = options_api.get_options_prices(identifier, opts)
@@ -1511,11 +1511,11 @@ body = {
 }
 
 opts = {
-  source: "\"~null\"",
-  show_stats: "~null",
-  stock_price_source: "\"~null\"",
-  model: "\"~null\"",
-  show_extended_price: "~null"
+  source: nil,
+  show_stats: nil,
+  stock_price_source: nil,
+  model: nil,
+  show_extended_price: nil
 }
 
 result = options_api.get_options_prices_batch_realtime(body, opts)
@@ -1601,9 +1601,9 @@ options_api = Intrinio::OptionsApi.new
 identifier = "AAPL230616P00190000"
 
 opts = {
-  next_page: "~null",
-  start_date: Date.parse("\"~null\""),
-  end_date: Date.parse("\"~null\"")
+  next_page: nil,
+  start_date: nil,
+  end_date: nil
 }
 
 result = options_api.get_options_prices_eod(identifier, opts)
@@ -1687,10 +1687,10 @@ options_api = Intrinio::OptionsApi.new
 identifier = "AAPL230120C00090000"
 
 opts = {
-  source: "\"~null\"",
-  stock_price_source: "\"~null\"",
-  model: "\"~null\"",
-  show_extended_price: "~null"
+  source: nil,
+  stock_price_source: nil,
+  model: nil,
+  show_extended_price: nil
 }
 
 result = options_api.get_options_prices_realtime(identifier, opts)
@@ -1775,13 +1775,13 @@ options_api = Intrinio::OptionsApi.new
 symbol = "MSFT"
 
 opts = {
-  source: "\"~null\"",
-  iv_mode: "\"~null\"",
-  next_page: "~null",
+  source: nil,
+  iv_mode: nil,
+  next_page: nil,
   page_size: 250,
-  stock_price_source: "\"~null\"",
-  model: "\"~null\"",
-  show_extended_price: "~null"
+  stock_price_source: nil,
+  model: nil,
+  show_extended_price: nil
 }
 
 result = options_api.get_options_prices_realtime_by_ticker(symbol, opts)
@@ -1868,8 +1868,8 @@ end
 options_api = Intrinio::OptionsApi.new
 
 opts = {
-  source: "\"~null\"",
-  at_datetime: DateTime.parse("\"~null\"")
+  source: nil,
+  at_datetime: DateTime.parse(nil)
 }
 
 result = options_api.get_options_snapshots(opts)
@@ -1951,8 +1951,8 @@ options_api = Intrinio::OptionsApi.new
 identifier = "AAPL230120C00090000"
 
 opts = {
-  source: "\"~null\"",
-  show_extended_price: "~null"
+  source: nil,
+  show_extended_price: nil
 }
 
 result = options_api.get_options_stats_realtime(identifier, opts)
@@ -2035,7 +2035,7 @@ options_api = Intrinio::OptionsApi.new
 symbol = "AAPL"
 
 opts = {
-  source: "\"~null\""
+  source: nil
 }
 
 result = options_api.get_unusual_activity(symbol, opts)
@@ -2117,12 +2117,12 @@ options_api = Intrinio::OptionsApi.new
 symbol = "AAPL"
 
 opts = {
-  next_page: "~null",
+  next_page: nil,
   page_size: 1000,
-  activity_type: "\"~null\"",
-  sentiment: "\"~null\"",
-  start_date: Date.parse("\"2022-02-01\""),
-  end_date: Date.parse("\"2022-02-03\""),
+  activity_type: nil,
+  sentiment: nil,
+  start_date: Date.parse("2022-02-01"),
+  end_date: Date.parse("2022-02-03"),
   minimum_total_value: 100000.0,
   maximum_total_value: 200000.0
 }
@@ -2212,7 +2212,7 @@ end
 options_api = Intrinio::OptionsApi.new
 
 opts = {
-  source: "\"~null\""
+  source: nil
 }
 
 result = options_api.get_unusual_activity_universal(opts)
@@ -2292,12 +2292,12 @@ end
 options_api = Intrinio::OptionsApi.new
 
 opts = {
-  next_page: "~null",
+  next_page: nil,
   page_size: 1000,
-  activity_type: "\"~null\"",
-  sentiment: "\"~null\"",
-  start_date: Date.parse("\"2022-02-01\""),
-  end_date: Date.parse("\"2022-02-03\""),
+  activity_type: nil,
+  sentiment: nil,
+  start_date: Date.parse("2022-02-01"),
+  end_date: Date.parse("2022-02-03"),
   minimum_total_value: 100000.0,
   maximum_total_value: 200000.0
 }

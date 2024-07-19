@@ -71,13 +71,13 @@ filing_api = Intrinio::FilingApi.new
 opts = {
   company: "AAPL",
   report_type: "10-Q",
-  start_date: Date.parse("\"2015-01-01\""),
-  end_date: Date.parse("\"~null\""),
-  industry_category: "~null",
-  industry_group: "~null",
-  thea_enabled: "~null",
+  start_date: Date.parse("2015-01-01"),
+  end_date: nil,
+  industry_category: nil,
+  industry_group: nil,
+  thea_enabled: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = filing_api.get_all_filings(opts)
@@ -166,13 +166,13 @@ filing_api = Intrinio::FilingApi.new
 
 opts = {
   company: "AAPL",
-  report_type: "\"10-Q\"",
-  filing_start_date: Date.parse("\"~null\""),
-  filing_end_date: Date.parse("\"~null\""),
-  period_ended_start_date: Date.parse("\"~null\""),
-  period_ended_end_date: Date.parse("\"~null\""),
+  report_type: "10-Q",
+  filing_start_date: nil,
+  filing_end_date: nil,
+  period_ended_start_date: nil,
+  period_ended_end_date: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = filing_api.get_all_notes(opts)
@@ -415,13 +415,13 @@ filing_api = Intrinio::FilingApi.new
 identifier = "fil_B73xBG"
 
 opts = {
-  statement_code: "\"~null\"",
-  type: "\"~null\"",
-  fiscal_year: "~null",
-  fiscal_period: "\"~null\"",
-  start_date: Date.parse("\"~null\""),
-  end_date: Date.parse("\"~null\""),
-  next_page: "~null"
+  statement_code: nil,
+  type: nil,
+  fiscal_year: nil,
+  fiscal_period: nil,
+  start_date: nil,
+  end_date: nil,
+  next_page: nil
 }
 
 result = filing_api.get_filing_fundamentals(identifier, opts)
@@ -896,8 +896,8 @@ filing_api = Intrinio::FilingApi.new
 query = "inflation"
 
 opts = {
-  filing_start_date: Date.parse("\"2018-07-15\""),
-  filing_end_date: Date.parse("\"2018-11-30\""),
+  filing_start_date: Date.parse("2018-07-15"),
+  filing_end_date: Date.parse("2018-11-30"),
   page_size: 100
 }
 

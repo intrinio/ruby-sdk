@@ -61,19 +61,19 @@ end
 municipality_api = Intrinio::MunicipalityApi.new
 
 opts = {
-  has_financials: "~null",
-  government_name: "~null",
-  government_type: "~null",
-  area_name: "~null",
-  area_type: "\"~null\"",
-  city: "~null",
-  state: "~null",
-  zipcode: "~null",
-  population_greater_than: "~null",
-  population_less_than: "~null",
-  enrollment_greater_than: "~null",
-  enrollment_less_than: "~null",
-  next_page: "~null"
+  has_financials: nil,
+  government_name: nil,
+  government_type: nil,
+  area_name: nil,
+  area_type: nil,
+  city: nil,
+  state: nil,
+  zipcode: nil,
+  population_greater_than: nil,
+  population_less_than: nil,
+  enrollment_greater_than: nil,
+  enrollment_less_than: nil,
+  next_page: nil
 }
 
 result = municipality_api.get_all_municipalities(opts)

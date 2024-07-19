@@ -61,13 +61,13 @@ end
 dataTag_api = Intrinio::DataTagApi.new
 
 opts = {
-  tag: "~null",
-  type: "~null",
-  parent: "~null",
-  statement_code: "\"income_statement\"",
+  tag: nil,
+  type: nil,
+  parent: nil,
+  statement_code: "income_statement",
   fs_template: "industrial",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = dataTag_api.get_all_data_tags(opts)

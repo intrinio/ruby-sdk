@@ -66,7 +66,7 @@ eTFs_api = Intrinio::ETFsApi.new
 opts = {
   exchange: "XNAS",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = eTFs_api.get_all_etfs(opts)
@@ -304,7 +304,7 @@ identifier = "SPY"
 
 opts = {
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = eTFs_api.get_etf_holdings(identifier, opts)
@@ -464,7 +464,7 @@ eTFs_api = Intrinio::ETFsApi.new
 query = "iShares"
 
 opts = {
-  mode: "\"~null\""
+  mode: nil
 }
 
 result = eTFs_api.search_etfs(query, opts)

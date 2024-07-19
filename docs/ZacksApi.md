@@ -74,24 +74,24 @@ zacks_api = Intrinio::ZacksApi.new
 
 opts = {
   identifier: "AAPL",
-  start_date: Date.parse("\"~null\""),
-  end_date: Date.parse("\"~null\""),
-  mean_greater: "~null",
-  mean_less: "~null",
-  strong_buys_greater: "~null",
-  strong_buys_less: "~null",
-  buys_greater: "~null",
-  buys_less: "~null",
-  holds_greater: "~null",
-  holds_less: "~null",
-  sells_greater: "~null",
-  sells_less: "~null",
-  strong_sells_greater: "~null",
-  strong_sells_less: "~null",
-  total_greater: "~null",
-  total_less: "~null",
+  start_date: nil,
+  end_date: nil,
+  mean_greater: nil,
+  mean_less: nil,
+  strong_buys_greater: nil,
+  strong_buys_less: nil,
+  buys_greater: nil,
+  buys_less: nil,
+  holds_greater: nil,
+  holds_less: nil,
+  sells_greater: nil,
+  sells_less: nil,
+  strong_sells_greater: nil,
+  strong_sells_less: nil,
+  total_greater: nil,
+  total_less: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_analyst_ratings(opts)
@@ -190,8 +190,8 @@ zacks_api = Intrinio::ZacksApi.new
 
 opts = {
   identifier: "AAPL",
-  type: "~null",
-  next_page: "~null"
+  type: nil,
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_ebitda_consensus(opts)
@@ -274,14 +274,14 @@ zacks_api = Intrinio::ZacksApi.new
 
 opts = {
   identifier: "AAPL",
-  start_date: Date.parse("\"~null\""),
-  end_date: Date.parse("\"~null\""),
-  fiscal_year: "~null",
-  fiscal_period: "\"~null\"",
-  calendar_year: "~null",
-  calendar_period: "\"~null\"",
+  start_date: nil,
+  end_date: nil,
+  fiscal_year: nil,
+  fiscal_period: nil,
+  calendar_year: nil,
+  calendar_period: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_eps_estimates(opts)
@@ -370,10 +370,10 @@ zacks_api = Intrinio::ZacksApi.new
 
 opts = {
   company: "AAPL",
-  industry_group_name: "~null",
-  industry_group_number: "~null",
+  industry_group_name: nil,
+  industry_group_number: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_eps_growth_rates(opts)
@@ -457,22 +457,22 @@ end
 zacks_api = Intrinio::ZacksApi.new
 
 opts = {
-  start_date: Date.parse("\"~null\""),
-  end_date: Date.parse("\"~null\""),
-  eps_actual_greater: "~null",
-  eps_actual_less: "~null",
-  eps_mean_estimate_greater: "~null",
-  eps_mean_estimate_less: "~null",
-  eps_amount_diff_greater: "~null",
-  eps_amount_diff_less: "~null",
-  eps_percent_diff_greater: "~null",
-  eps_percent_diff_less: "~null",
-  eps_count_estimate_greater: "~null",
-  eps_count_estimate_less: "~null",
-  eps_std_dev_estimate_greater: "~null",
-  eps_std_dev_estimate_less: "~null",
+  start_date: nil,
+  end_date: nil,
+  eps_actual_greater: nil,
+  eps_actual_less: nil,
+  eps_mean_estimate_greater: nil,
+  eps_mean_estimate_less: nil,
+  eps_amount_diff_greater: nil,
+  eps_amount_diff_less: nil,
+  eps_percent_diff_greater: nil,
+  eps_percent_diff_less: nil,
+  eps_count_estimate_greater: nil,
+  eps_count_estimate_less: nil,
+  eps_std_dev_estimate_greater: nil,
+  eps_std_dev_estimate_less: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_eps_surprises(opts)
@@ -569,10 +569,10 @@ zacks_api = Intrinio::ZacksApi.new
 opts = {
   etf_ticker: "SPY",
   holding_symbol: "AAPL",
-  weight_greater: "~null",
-  weight_less: "~null",
+  weight_greater: nil,
+  weight_less: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_etf_holdings(opts)
@@ -657,7 +657,7 @@ end
 zacks_api = Intrinio::ZacksApi.new
 
 opts = {
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_forward_pe(opts)
@@ -814,9 +814,9 @@ end
 zacks_api = Intrinio::ZacksApi.new
 
 opts = {
-  ticker: "~null",
+  ticker: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_institutional_holding_companies(opts)
@@ -898,9 +898,9 @@ end
 zacks_api = Intrinio::ZacksApi.new
 
 opts = {
-  cik: "~null",
+  cik: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_institutional_holding_owners(opts)
@@ -982,10 +982,10 @@ end
 zacks_api = Intrinio::ZacksApi.new
 
 opts = {
-  ticker: "~null",
-  owner_cik: "~null",
+  ticker: nil,
+  owner_cik: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_institutional_holdings(opts)
@@ -1070,7 +1070,7 @@ zacks_api = Intrinio::ZacksApi.new
 opts = {
   identifier: "AAPL",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_long_term_growth_rates(opts)
@@ -1153,15 +1153,15 @@ zacks_api = Intrinio::ZacksApi.new
 
 opts = {
   identifier: "AAPL",
-  start_date: Date.parse("\"~null\""),
-  end_date: Date.parse("\"~null\""),
-  fiscal_year: "~null",
-  fiscal_period: "\"~null\"",
-  calendar_year: "~null",
-  calendar_period: "\"~null\"",
-  next_page: "~null",
+  start_date: nil,
+  end_date: nil,
+  fiscal_year: nil,
+  fiscal_period: nil,
+  calendar_year: nil,
+  calendar_period: nil,
+  next_page: nil,
   page_size: 100,
-  next_page2: "~null"
+  next_page2: nil
 }
 
 result = zacks_api.get_zacks_sales_estimates(opts)
@@ -1250,22 +1250,22 @@ end
 zacks_api = Intrinio::ZacksApi.new
 
 opts = {
-  start_date: Date.parse("\"~null\""),
-  end_date: Date.parse("\"~null\""),
-  sales_actual_greater: "~null",
-  sales_actual_less: "~null",
-  sales_mean_estimate_greater: "~null",
-  sales_mean_estimate_less: "~null",
-  sales_amount_diff_greater: "~null",
-  sales_amount_diff_less: "~null",
-  sales_percent_diff_greater: "~null",
-  sales_percent_diff_less: "~null",
-  sales_count_estimate_greater: "~null",
-  sales_count_estimate_less: "~null",
-  sales_std_dev_estimate_greater: "~null",
-  sales_std_dev_estimate_less: "~null",
+  start_date: nil,
+  end_date: nil,
+  sales_actual_greater: nil,
+  sales_actual_less: nil,
+  sales_mean_estimate_greater: nil,
+  sales_mean_estimate_less: nil,
+  sales_amount_diff_greater: nil,
+  sales_amount_diff_less: nil,
+  sales_percent_diff_greater: nil,
+  sales_percent_diff_less: nil,
+  sales_count_estimate_greater: nil,
+  sales_count_estimate_less: nil,
+  sales_std_dev_estimate_greater: nil,
+  sales_std_dev_estimate_less: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_sales_surprises(opts)
@@ -1361,9 +1361,9 @@ zacks_api = Intrinio::ZacksApi.new
 
 opts = {
   identifier: "AAPL",
-  industry_group_number: "~null",
+  industry_group_number: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = zacks_api.get_zacks_target_price_consensuses(opts)

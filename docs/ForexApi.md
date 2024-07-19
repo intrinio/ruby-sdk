@@ -204,16 +204,16 @@ end
 
 forex_api = Intrinio::ForexApi.new
 pair = "EURUSD"
-timeframe = "\"D1\""
+timeframe = "D1"
 
 opts = {
   timezone: "UTC",
-  start_date: Date.parse("\"2018-01-01\""),
-  start_time: "~null",
-  end_date: Date.parse("\"2019-01-01\""),
-  end_time: "~null",
+  start_date: Date.parse("2018-01-01"),
+  start_time: nil,
+  end_date: Date.parse("2019-01-01"),
+  end_time: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = forex_api.get_forex_prices(pair, timeframe, opts)

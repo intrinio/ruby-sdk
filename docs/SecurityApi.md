@@ -119,23 +119,23 @@ security_api = Intrinio::SecurityApi.new
 opts = {
   active: true,
   delisted: false,
-  code: "~null",
-  currency: "~null",
-  ticker: "~null",
-  name: "~null",
-  composite_mic: "~null",
-  exchange_mic: "~null",
-  stock_prices_after: Date.parse("\"~null\""),
-  stock_prices_before: Date.parse("\"~null\""),
-  cik: "~null",
-  figi: "~null",
-  composite_figi: "~null",
-  share_class_figi: "~null",
-  figi_unique_id: "~null",
+  code: nil,
+  currency: nil,
+  ticker: nil,
+  name: nil,
+  composite_mic: nil,
+  exchange_mic: nil,
+  stock_prices_after: nil,
+  stock_prices_before: nil,
+  cik: nil,
+  figi: nil,
+  composite_figi: nil,
+  share_class_figi: nil,
+  figi_unique_id: nil,
   include_non_figi: false,
   page_size: 100,
-  primary_listing: "~null",
-  next_page: "~null"
+  primary_listing: nil,
+  next_page: nil
 }
 
 result = security_api.get_all_securities(opts)
@@ -471,12 +471,12 @@ tag = "adj_close_price"
 
 opts = {
   frequency: "daily",
-  type: "~null",
-  start_date: Date.parse("\"2018-01-01\""),
-  end_date: Date.parse("\"~null\""),
+  type: nil,
+  start_date: Date.parse("2018-01-01"),
+  end_date: nil,
   sort_order: "desc",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_historical_data(identifier, tag, opts)
@@ -719,7 +719,7 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_insider_ownership(identifier, opts)
@@ -800,8 +800,8 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = {
-  source: "\"~null\"",
-  open_time: DateTime.parse("\"~null\"")
+  source: nil,
+  open_time: DateTime.parse(nil)
 }
 
 result = security_api.get_security_interval_movers(opts)
@@ -882,8 +882,8 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = {
-  source: "\"~null\"",
-  open_time: DateTime.parse("\"~null\"")
+  source: nil,
+  open_time: DateTime.parse(nil)
 }
 
 result = security_api.get_security_interval_movers_change(opts)
@@ -964,8 +964,8 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = {
-  source: "\"~null\"",
-  open_time: DateTime.parse("\"~null\"")
+  source: nil,
+  open_time: DateTime.parse(nil)
 }
 
 result = security_api.get_security_interval_movers_volume(opts)
@@ -1048,15 +1048,15 @@ identifier = "AAPL"
 interval_size = "15m"
 
 opts = {
-  source: "\"~null\"",
-  start_date: Date.parse("\"2023-01-01\""),
-  start_time: "~null",
-  end_date: Date.parse("\"2023-02-01\""),
-  end_time: "~null",
+  source: nil,
+  start_date: Date.parse("2023-01-01"),
+  start_time: nil,
+  end_date: Date.parse("2023-02-01"),
+  end_time: nil,
   timezone: "UTC",
   page_size: 100,
   split_adjusted: false,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_interval_prices(identifier, interval_size, opts)
@@ -1147,13 +1147,13 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  source: "\"~null\"",
-  start_date: Date.parse("\"2018-01-01\""),
-  start_time: "~null",
-  end_date: Date.parse("\"2019-01-01\""),
-  end_time: "~null",
+  source: nil,
+  start_date: Date.parse("2018-01-01"),
+  start_time: nil,
+  end_date: Date.parse("2019-01-01"),
+  end_time: nil,
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_intraday_prices(identifier, opts)
@@ -1398,7 +1398,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_adi(identifier, opts)
@@ -1487,7 +1487,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_adtv(identifier, opts)
@@ -1577,7 +1577,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_adx(identifier, opts)
@@ -1668,7 +1668,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_ao(identifier, opts)
@@ -1759,7 +1759,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_atr(identifier, opts)
@@ -1851,7 +1851,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_bb(identifier, opts)
@@ -1944,7 +1944,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_cci(identifier, opts)
@@ -2035,7 +2035,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_cmf(identifier, opts)
@@ -2126,7 +2126,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_dc(identifier, opts)
@@ -2218,7 +2218,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_dpo(identifier, opts)
@@ -2309,7 +2309,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_eom(identifier, opts)
@@ -2398,7 +2398,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_fi(identifier, opts)
@@ -2489,7 +2489,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_ichimoku(identifier, opts)
@@ -2581,7 +2581,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_kc(identifier, opts)
@@ -2679,7 +2679,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_kst(identifier, opts)
@@ -2780,7 +2780,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_macd(identifier, opts)
@@ -2873,7 +2873,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_mfi(identifier, opts)
@@ -2964,7 +2964,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_mi(identifier, opts)
@@ -3054,7 +3054,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_nvi(identifier, opts)
@@ -3142,7 +3142,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_obv(identifier, opts)
@@ -3231,7 +3231,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_obv_mean(identifier, opts)
@@ -3322,7 +3322,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_rsi(identifier, opts)
@@ -3414,7 +3414,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_sma(identifier, opts)
@@ -3506,7 +3506,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_sr(identifier, opts)
@@ -3597,7 +3597,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_trix(identifier, opts)
@@ -3689,7 +3689,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_tsi(identifier, opts)
@@ -3786,7 +3786,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_uo(identifier, opts)
@@ -3881,7 +3881,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_vi(identifier, opts)
@@ -3970,7 +3970,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_vpt(identifier, opts)
@@ -4058,7 +4058,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_vwap(identifier, opts)
@@ -4147,7 +4147,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_price_technicals_wr(identifier, opts)
@@ -4233,7 +4233,7 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  source: ["\"iex\""]
+  source: ["iex"]
 }
 
 result = security_api.get_security_realtime_price(identifier, opts)
@@ -4312,8 +4312,8 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-subsource = "\"~null\""
-date = Date.parse("\"~null\"")
+subsource = nil
+date = nil
 
 result = security_api.get_security_replay_file(subsource, date)
 pp result
@@ -4393,7 +4393,7 @@ end
 security_api = Intrinio::SecurityApi.new
 
 opts = {
-  at_datetime: DateTime.parse("\"~null\"")
+  at_datetime: DateTime.parse(nil)
 }
 
 result = security_api.get_security_snapshots(opts)
@@ -4474,10 +4474,10 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  start_date: Date.parse("\"2018-01-01\""),
-  end_date: Date.parse("\"2019-01-01\""),
+  start_date: Date.parse("2018-01-01"),
+  end_date: Date.parse("2019-01-01"),
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_stock_price_adjustments(identifier, opts)
@@ -4562,11 +4562,11 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  start_date: Date.parse("\"2018-01-01\""),
-  end_date: Date.parse("\"2019-01-01\""),
+  start_date: Date.parse("2018-01-01"),
+  end_date: Date.parse("2019-01-01"),
   frequency: "daily",
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_stock_prices(identifier, opts)
@@ -4649,18 +4649,18 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-source = "\"~null\""
+source = nil
 
 opts = {
-  start_date: Date.parse("\"~null\""),
-  start_time: "~null",
-  end_date: Date.parse("\"~null\""),
-  end_time: "~null",
+  start_date: nil,
+  start_time: nil,
+  end_date: nil,
+  end_time: nil,
   timezone: "UTC",
   page_size: 100,
   darkpool_only: false,
   min_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_trades(source, opts)
@@ -4748,18 +4748,18 @@ end
 
 security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
-source = "\"~null\""
+source = nil
 
 opts = {
-  start_date: Date.parse("\"~null\""),
-  start_time: "~null",
-  end_date: Date.parse("\"~null\""),
-  end_time: "~null",
+  start_date: nil,
+  start_time: nil,
+  end_date: nil,
+  end_time: nil,
   timezone: "UTC",
   darkpool_only: false,
   page_size: 100,
   min_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_trades_by_symbol(identifier, source, opts)
@@ -4850,22 +4850,22 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  start_date: "~null",
-  end_date: "~null",
-  mean_greater: "~null",
-  mean_less: "~null",
-  strong_buys_greater: "~null",
-  strong_buys_less: "~null",
-  buys_greater: "~null",
-  buys_less: "~null",
-  holds_greater: "~null",
-  holds_less: "~null",
-  sells_greater: "~null",
-  sells_less: "~null",
-  strong_sells_greater: "~null",
-  strong_sells_less: "~null",
-  total_greater: "~null",
-  total_less: "~null",
+  start_date: nil,
+  end_date: nil,
+  mean_greater: nil,
+  mean_less: nil,
+  strong_buys_greater: nil,
+  strong_buys_less: nil,
+  buys_greater: nil,
+  buys_less: nil,
+  holds_greater: nil,
+  holds_less: nil,
+  sells_greater: nil,
+  sells_less: nil,
+  strong_sells_greater: nil,
+  strong_sells_less: nil,
+  total_greater: nil,
+  total_less: nil,
   page_size: 100
 }
 
@@ -4964,7 +4964,7 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  date: "~null"
+  date: nil
 }
 
 result = security_api.get_security_zacks_analyst_ratings_snapshot(identifier, opts)
@@ -5047,7 +5047,7 @@ identifier = "AAPL"
 
 opts = {
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_zacks_eps_surprises(identifier, opts)
@@ -5131,7 +5131,7 @@ identifier = "AAPL"
 
 opts = {
   page_size: 100,
-  next_page: "~null"
+  next_page: nil
 }
 
 result = security_api.get_security_zacks_sales_surprises(identifier, opts)
