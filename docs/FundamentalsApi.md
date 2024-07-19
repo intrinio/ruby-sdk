@@ -64,19 +64,19 @@ end
 fundamentals_api = Intrinio::FundamentalsApi.new
 
 opts = {
-  filed_after: Date.parse("2022-01-01"),
-  filed_before: Date.parse("2022-12-01"),
+  filed_after: Date.parse("\"2022-01-01\""),
+  filed_before: Date.parse("\"2022-12-01\""),
   reported_only: false,
   fiscal_year: 2017,
-  statement_code: nil,
+  statement_code: "\"~null\"",
   type: "false",
-  fiscal_period: "FY",
-  start_date: Date.parse("2022-01-01"),
-  end_date: Date.parse("2022-12-01"),
-  updated_after: Date.parse("2022-12-01"),
-  updated_before: Date.parse("2022-12-01"),
-  template: "indu",
-  next_page: nil
+  fiscal_period: "\"FY\"",
+  start_date: Date.parse("\"2022-01-01\""),
+  end_date: Date.parse("\"2022-12-01\""),
+  updated_after: Date.parse("\"2022-12-01\""),
+  updated_before: Date.parse("\"2022-12-01\""),
+  template: "\"indu\"",
+  next_page: "~null"
 }
 
 result = fundamentals_api.filter_fundamental(opts)
@@ -477,9 +477,9 @@ end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
 identifier = "AAPL"
-statement_code = "income_statement"
+statement_code = "\"income_statement\""
 fiscal_year = 2017
-fiscal_period = "FY"
+fiscal_period = "\"FY\""
 
 result = fundamentals_api.lookup_fundamental(identifier, statement_code, fiscal_year, fiscal_period)
 pp result

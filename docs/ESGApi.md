@@ -66,7 +66,7 @@ opts = {
   industry: "Retail",
   ticker: "SHOP",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = eSG_api.get_esg_companies(opts)
@@ -151,7 +151,7 @@ identifier = "AAPL"
 
 opts = {
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = eSG_api.get_esg_company_comprehensive_ratings(identifier, opts)
@@ -234,7 +234,7 @@ identifier = "AAPL"
 
 opts = {
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = eSG_api.get_esg_company_ratings(identifier, opts)
@@ -317,7 +317,7 @@ eSG_api = Intrinio::ESGApi.new
 opts = {
   country: "USA",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = eSG_api.get_esg_latest(opts)
@@ -400,7 +400,7 @@ eSG_api = Intrinio::ESGApi.new
 opts = {
   country: "USA",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = eSG_api.get_esg_latest_comprehensive(opts)

@@ -228,9 +228,9 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP"
 
 opts = {
-  date: Date.parse("2018-08-14"),
+  date: Date.parse("\"2018-08-14\""),
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = stockExchange_api.get_stock_exchange_price_adjustments(identifier, opts)
@@ -314,9 +314,9 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP"
 
 opts = {
-  date: Date.parse("2018-08-14"),
+  date: Date.parse("\"2018-08-14\""),
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = stockExchange_api.get_stock_exchange_prices(identifier, opts)
@@ -400,11 +400,11 @@ stockExchange_api = Intrinio::StockExchangeApi.new
 identifier = "USCOMP"
 
 opts = {
-  source: nil,
-  active_only: nil,
+  source: ["\"~null\""],
+  active_only: "~null",
   page_size: 100,
-  tickers: [nil],
-  next_page: nil
+  tickers: ["~null"],
+  next_page: "~null"
 }
 
 result = stockExchange_api.get_stock_exchange_realtime_prices(identifier, opts)
@@ -423,7 +423,7 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **source** | String| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
+ **source** | [**Array&lt;String&gt;**](String.md)| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **active_only** | BOOLEAN| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **tickers** | [**Array&lt;String&gt;**](String.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
@@ -491,7 +491,7 @@ identifier = "USCOMP"
 
 opts = {
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = stockExchange_api.get_stock_exchange_securities(identifier, opts)

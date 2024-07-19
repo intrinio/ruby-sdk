@@ -80,17 +80,17 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = {
-  latest_filing_date: nil,
-  sic: nil,
-  template: nil,
-  sector: nil,
-  industry_category: nil,
-  industry_group: nil,
+  latest_filing_date: Date.parse("\"~null\""),
+  sic: "~null",
+  template: "\"~null\"",
+  sector: "~null",
+  industry_category: "~null",
+  industry_group: "~null",
   has_fundamentals: true,
   has_stock_prices: true,
-  thea_enabled: nil,
+  thea_enabled: "~null",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = company_api.get_all_companies(opts)
@@ -182,8 +182,8 @@ company_api = Intrinio::CompanyApi.new
 opts = {
   on_date: Date.parse("2013-10-20"),
   page_size: 100,
-  next_page: nil,
-  next_page2: nil
+  next_page: "~null",
+  next_page2: "~null"
 }
 
 result = company_api.get_all_companies_daily_metrics(opts)
@@ -266,21 +266,21 @@ end
 company_api = Intrinio::CompanyApi.new
 
 opts = {
-  specific_source: nil,
+  specific_source: "\"~null\"",
   page_size: 100,
-  sentiment: nil,
-  topic: nil,
+  sentiment: "\"~null\"",
+  topic: "~null",
   company: "AAPL",
   security: "AAPL",
-  start_date: nil,
-  end_date: nil,
-  language: nil,
-  word_count_greater_than: nil,
-  word_count_less_than: nil,
-  is_spam: nil,
-  business_relevance_greater_than: nil,
-  business_relevance_less_than: nil,
-  next_page: nil
+  start_date: Date.parse("\"~null\""),
+  end_date: Date.parse("\"~null\""),
+  language: "~null",
+  word_count_greater_than: "~null",
+  word_count_less_than: "~null",
+  is_spam: "~null",
+  business_relevance_greater_than: "~null",
+  business_relevance_less_than: "~null",
+  next_page: "~null"
 }
 
 result = company_api.get_all_company_news(opts)
@@ -304,9 +304,9 @@ Name | Type | Description  | Notes
  **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
  **company** | String| Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
  **security** | String| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
- **start_date** | Date| Limit news stories to those on or after this date. | [optional]  &nbsp;
+ **start_date** | Date| Limit news stories to those on or after this date. Defaults to yesterday if unspecified. | [optional]  &nbsp;
  **end_date** | Date| Limit news stories to those on or before this date. | [optional]  &nbsp;
- **language** | String| Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **language** | String| Filter by language.  Unsupported for yahoo source. | [optional]  &nbsp;
  **word_count_greater_than** | Integer| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **word_count_less_than** | Integer| News stories will have a word count less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **is_spam** | BOOLEAN| Filter whether it is marked as spam or not.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -533,8 +533,8 @@ identifier = "AAPL"
 opts = {
   on_date: Date.parse("2013-10-20"),
   page_size: 100,
-  next_page: nil,
-  next_page2: nil
+  next_page: "~null",
+  next_page2: "~null"
 }
 
 result = company_api.get_company_daily_metrics(identifier, opts)
@@ -777,12 +777,12 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
-  report_type: nil,
-  start_date: Date.parse("2015-01-01"),
-  end_date: nil,
-  thea_enabled: nil,
+  report_type: "~null",
+  start_date: Date.parse("\"2015-01-01\""),
+  end_date: Date.parse("\"~null\""),
+  thea_enabled: "~null",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = company_api.get_company_filings(identifier, opts)
@@ -869,18 +869,18 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
-  filed_after: nil,
-  filed_before: nil,
+  filed_after: Date.parse("\"~null\""),
+  filed_before: Date.parse("\"~null\""),
   reported_only: false,
-  fiscal_year: nil,
-  statement_code: nil,
-  type: nil,
-  start_date: nil,
-  end_date: nil,
-  updated_after: Date.parse("2022-12-01"),
-  updated_before: Date.parse("2022-12-01"),
+  fiscal_year: "~null",
+  statement_code: "\"~null\"",
+  type: "\"~null\"",
+  start_date: Date.parse("\"~null\""),
+  end_date: Date.parse("\"~null\""),
+  updated_after: Date.parse("\"2022-12-01\""),
+  updated_before: Date.parse("\"2022-12-01\""),
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = company_api.get_company_fundamentals(identifier, opts)
@@ -975,12 +975,12 @@ tag = "marketcap"
 
 opts = {
   frequency: "daily",
-  type: nil,
-  start_date: Date.parse("2018-01-01"),
-  end_date: nil,
+  type: "\"~null\"",
+  start_date: Date.parse("\"2018-01-01\""),
+  end_date: Date.parse("\"~null\""),
   sort_order: "desc",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = company_api.get_company_historical_data(identifier, tag, opts)
@@ -1069,13 +1069,13 @@ company_api = Intrinio::CompanyApi.new
 
 opts = {
   ticker: "UBER",
-  status: nil,
-  start_date: nil,
-  end_date: nil,
-  offer_amount_greater_than: nil,
-  offer_amount_less_than: nil,
+  status: "\"~null\"",
+  start_date: Date.parse("\"~null\""),
+  end_date: Date.parse("\"~null\""),
+  offer_amount_greater_than: "~null",
+  offer_amount_less_than: "~null",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = company_api.get_company_ipos(opts)
@@ -1163,20 +1163,20 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
-  specific_source: nil,
+  specific_source: "\"~null\"",
   page_size: 100,
-  sentiment: nil,
-  topic: nil,
+  sentiment: "\"~null\"",
+  topic: "~null",
   security: "AAPL",
-  start_date: nil,
-  end_date: nil,
-  language: nil,
-  word_count_greater_than: nil,
-  word_count_less_than: nil,
-  is_spam: nil,
-  business_relevance_greater_than: nil,
-  business_relevance_less_than: nil,
-  next_page: nil
+  start_date: Date.parse("\"~null\""),
+  end_date: Date.parse("\"~null\""),
+  language: "~null",
+  word_count_greater_than: "~null",
+  word_count_less_than: "~null",
+  is_spam: "~null",
+  business_relevance_greater_than: "~null",
+  business_relevance_less_than: "~null",
+  next_page: "~null"
 }
 
 result = company_api.get_company_news(identifier, opts)
@@ -1200,7 +1200,7 @@ Name | Type | Description  | Notes
  **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
  **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
  **security** | String| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
- **start_date** | Date| Limit news stories to those on or after this date | [optional]  &nbsp;
+ **start_date** | Date| Limit news stories to those on or after this date. Defaults to yesterday if unspecified. | [optional]  &nbsp;
  **end_date** | Date| Limit news stories to those on or before this date | [optional]  &nbsp;
  **language** | String| Filter by language.  Unsupported for yahoo source. | [optional]  &nbsp;
  **word_count_greater_than** | Integer| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -1269,11 +1269,11 @@ end
 
 company_api = Intrinio::CompanyApi.new
 news_story_id = "new_aBcDef"
-publication_date = DateTime.parse(nil)
+publication_date = DateTime.parse("\"~null\"")
 
 opts = {
-  specific_source: nil,
-  next_page: nil
+  specific_source: "\"~null\"",
+  next_page: "~null"
 }
 
 result = company_api.get_company_news_body(news_story_id, publication_date, opts)
@@ -1357,10 +1357,10 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
-  float_date_greater_than: nil,
-  float_date_less_than: nil,
-  next_page: nil,
-  next_page2: nil
+  float_date_greater_than: Date.parse("\"~null\""),
+  float_date_less_than: Date.parse("\"~null\""),
+  next_page: "~null",
+  next_page2: "~null"
 }
 
 result = company_api.get_company_public_float(identifier, opts)
@@ -1445,7 +1445,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
-  next_page: nil
+  next_page: "~null"
 }
 
 result = company_api.get_company_securities(identifier, opts)
@@ -1527,13 +1527,13 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
-  start_date: Date.parse("2018-01-01"),
-  end_date: Date.parse("2019-01-01"),
+  start_date: Date.parse("\"2018-01-01\""),
+  end_date: Date.parse("\"2019-01-01\""),
   ownership_type: "D",
-  next_page: nil,
+  next_page: "~null",
   page_size: 1000,
-  sort_by: "updated_on",
-  next_page2: nil
+  sort_by: "\"updated_on\"",
+  next_page2: "~null"
 }
 
 result = company_api.insider_transaction_filings_by_company(identifier, opts)
@@ -1621,7 +1621,7 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
-  next_page: nil
+  next_page: "~null"
 }
 
 result = company_api.latest_insider_transaction_filing_by_company(identifier, opts)
@@ -1701,8 +1701,8 @@ end
 
 company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
-statement_code = "income_statement"
-fiscal_period = "FY"
+statement_code = "\"income_statement\""
+fiscal_period = "\"FY\""
 fiscal_year = 2017
 
 result = company_api.lookup_company_fundamental(identifier, statement_code, fiscal_period, fiscal_year)
@@ -1864,7 +1864,7 @@ query = "Apple"
 
 opts = {
   active: true,
-  mode: nil,
+  mode: "\"~null\"",
   page_size: 100
 }
 
@@ -1949,8 +1949,8 @@ company_api = Intrinio::CompanyApi.new
 identifier = "AAPL"
 
 opts = {
-  end_date_greater_than: nil,
-  end_date_less_than: nil
+  end_date_greater_than: Date.parse("\"~null\""),
+  end_date_less_than: Date.parse("\"~null\"")
 }
 
 result = company_api.shares_outstanding_by_company(identifier, opts)

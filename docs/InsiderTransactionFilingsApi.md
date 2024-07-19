@@ -59,11 +59,11 @@ end
 insiderTransactionFilings_api = Intrinio::InsiderTransactionFilingsApi.new
 
 opts = {
-  start_date: Date.parse("2015-01-01"),
-  end_date: nil,
+  start_date: Date.parse("\"2015-01-01\""),
+  end_date: Date.parse("\"~null\""),
   page_size: 100,
   sort_by: "updated_on",
-  next_page: nil
+  next_page: "~null"
 }
 
 result = insiderTransactionFilings_api.get_all_insider_transaction_filings(opts)

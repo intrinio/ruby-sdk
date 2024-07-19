@@ -83,7 +83,7 @@ index_api = Intrinio::IndexApi.new
 
 opts = {
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = index_api.get_all_economic_indices(opts)
@@ -164,8 +164,8 @@ index_api = Intrinio::IndexApi.new
 
 opts = {
   page_size: 100,
-  start_date: nil,
-  end_date: nil
+  start_date: Date.parse("\"~null\""),
+  end_date: Date.parse("\"~null\"")
 }
 
 result = index_api.get_all_eod_index_prices(opts)
@@ -405,7 +405,7 @@ index_api = Intrinio::IndexApi.new
 
 opts = {
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = index_api.get_all_sic_indices(opts)
@@ -486,7 +486,7 @@ index_api = Intrinio::IndexApi.new
 
 opts = {
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = index_api.get_all_stock_market_indices(opts)
@@ -804,12 +804,12 @@ identifier = "$GDP"
 tag = "level"
 
 opts = {
-  type: nil,
-  start_date: Date.parse("2018-01-01"),
-  end_date: nil,
+  type: "~null",
+  start_date: Date.parse("\"2018-01-01\""),
+  end_date: Date.parse("\"~null\""),
   sort_order: "desc",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = index_api.get_economic_index_historical_data(identifier, tag, opts)
@@ -897,8 +897,8 @@ identifier = "SPX"
 
 opts = {
   page_size: 100,
-  start_date: nil,
-  end_date: nil
+  start_date: Date.parse("\"~null\""),
+  end_date: Date.parse("\"~null\"")
 }
 
 result = index_api.get_eod_index_price_by_id(identifier, opts)
@@ -1369,12 +1369,12 @@ identifier = "$SIC.1"
 tag = "marketcap"
 
 opts = {
-  type: nil,
-  start_date: Date.parse("2018-01-01"),
-  end_date: nil,
+  type: "~null",
+  start_date: Date.parse("\"2018-01-01\""),
+  end_date: Date.parse("\"~null\""),
   sort_order: "desc",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = index_api.get_sic_index_historical_data(identifier, tag, opts)
@@ -1697,12 +1697,12 @@ identifier = "$DJI"
 tag = "level"
 
 opts = {
-  type: nil,
-  start_date: Date.parse("2018-01-01"),
-  end_date: nil,
+  type: "~null",
+  start_date: Date.parse("\"2018-01-01\""),
+  end_date: Date.parse("\"~null\""),
   sort_order: "desc",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = index_api.get_stock_market_index_historical_data(identifier, tag, opts)

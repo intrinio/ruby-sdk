@@ -93,7 +93,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_adi(identifier, opts)
@@ -182,7 +182,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_adtv(identifier, opts)
@@ -272,7 +272,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_adx(identifier, opts)
@@ -363,7 +363,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_ao(identifier, opts)
@@ -454,7 +454,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_atr(identifier, opts)
@@ -546,7 +546,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_bb(identifier, opts)
@@ -639,7 +639,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_cci(identifier, opts)
@@ -730,7 +730,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_cmf(identifier, opts)
@@ -821,7 +821,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_dc(identifier, opts)
@@ -913,7 +913,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_dpo(identifier, opts)
@@ -1004,7 +1004,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_eom(identifier, opts)
@@ -1093,7 +1093,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_fi(identifier, opts)
@@ -1184,7 +1184,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_ichimoku(identifier, opts)
@@ -1276,7 +1276,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_kc(identifier, opts)
@@ -1374,7 +1374,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_kst(identifier, opts)
@@ -1475,7 +1475,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_macd(identifier, opts)
@@ -1568,7 +1568,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_mfi(identifier, opts)
@@ -1659,7 +1659,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_mi(identifier, opts)
@@ -1749,7 +1749,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_nvi(identifier, opts)
@@ -1837,7 +1837,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_obv(identifier, opts)
@@ -1926,7 +1926,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_obv_mean(identifier, opts)
@@ -2017,7 +2017,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_rsi(identifier, opts)
@@ -2109,7 +2109,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_sma(identifier, opts)
@@ -2201,7 +2201,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_sr(identifier, opts)
@@ -2292,7 +2292,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_trix(identifier, opts)
@@ -2384,7 +2384,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_tsi(identifier, opts)
@@ -2481,7 +2481,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_uo(identifier, opts)
@@ -2576,7 +2576,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_vi(identifier, opts)
@@ -2665,7 +2665,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_vpt(identifier, opts)
@@ -2753,7 +2753,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_vwap(identifier, opts)
@@ -2842,7 +2842,7 @@ opts = {
   start_date: "2018-01-01",
   end_date: "2019-01-01",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = technical_api.get_security_price_technicals_wr(identifier, opts)

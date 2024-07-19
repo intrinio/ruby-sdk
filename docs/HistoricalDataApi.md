@@ -62,12 +62,12 @@ tag = "marketcap"
 
 opts = {
   frequency: "daily",
-  type: nil,
-  start_date: Date.parse("2015-01-01"),
-  end_date: nil,
+  type: "~null",
+  start_date: Date.parse("\"2015-01-01\""),
+  end_date: Date.parse("\"~null\""),
   sort_order: "desc",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = historicalData_api.get_historical_data(identifier, tag, opts)

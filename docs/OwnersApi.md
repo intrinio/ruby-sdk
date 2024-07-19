@@ -63,9 +63,9 @@ end
 owners_api = Intrinio::OwnersApi.new
 
 opts = {
-  institutional: nil,
+  institutional: "~null",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = owners_api.get_all_owners(opts)
@@ -225,10 +225,10 @@ owners_api = Intrinio::OwnersApi.new
 identifier = "0001494730"
 
 opts = {
-  start_date: Date.parse("2018-01-01"),
-  end_date: Date.parse("2019-01-01"),
+  start_date: Date.parse("\"2018-01-01\""),
+  end_date: Date.parse("\"2019-01-01\""),
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = owners_api.insider_transaction_filings_by_owner(identifier, opts)
@@ -314,8 +314,8 @@ identifier = 430692
 
 opts = {
   page_size: 100,
-  as_of_date: Date.parse("2021-01-05"),
-  next_page: nil
+  as_of_date: Date.parse("\"2021-01-05\""),
+  next_page: "~null"
 }
 
 result = owners_api.institutional_holdings_by_owner(identifier, opts)
@@ -399,9 +399,9 @@ owners_api = Intrinio::OwnersApi.new
 query = "Cook"
 
 opts = {
-  institutional: nil,
+  institutional: "~null",
   page_size: 100,
-  next_page: nil
+  next_page: "~null"
 }
 
 result = owners_api.search_owners(query, opts)
