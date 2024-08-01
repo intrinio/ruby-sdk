@@ -50,6 +50,7 @@ Method | HTTP request | Description
 [**get_security_price_technicals_vpt**](SecurityApi.md#get_security_price_technicals_vpt) | **GET** /securities/{identifier}/prices/technicals/vpt | Volume-price Trend
 [**get_security_price_technicals_vwap**](SecurityApi.md#get_security_price_technicals_vwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 [**get_security_price_technicals_wr**](SecurityApi.md#get_security_price_technicals_wr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
+[**get_security_quote**](SecurityApi.md#get_security_quote) | **GET** /securities/{identifier}/quote | Quote for a Security
 [**get_security_realtime_price**](SecurityApi.md#get_security_realtime_price) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 [**get_security_replay_file**](SecurityApi.md#get_security_replay_file) | **GET** /securities/replay | Security Replay File
 [**get_security_snapshots**](SecurityApi.md#get_security_snapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
@@ -4177,6 +4178,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityWilliamsR**](ApiResponseSecurityWilliamsR.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_security_quote)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseSecurityQuote)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityQuote.md)
+
+[//]: # (OPERATION:get_security_quote_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/quote)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_security_quote)
+
+## **get_security_quote**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_quote_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityQuote get_security_quote(identifier, opts)
+
+#### Quote for a Security
+
+
+Return a current pricing quote for a security across multiple sources.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
+
+opts = {
+  active_only: false,
+  next_page: nil
+}
+
+result = security_api.get_security_quote(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **active_only** | BOOLEAN| Whether to return only realtime prices from today. | [optional] [default to false] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityQuote**](ApiResponseSecurityQuote.md)
 
 [//]: # (END_OPERATION)
 
