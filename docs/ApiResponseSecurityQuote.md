@@ -28,6 +28,16 @@ Name | Type | Description
 **previous_close_date** | Float | The date of the previous close. &nbsp;
 **change** | Float | The difference in last price from the last close price &nbsp;
 **change_percent** | Float | The percent difference in last price from the last close price &nbsp;
+**adj_close_5_days_ago** | Float | The adjusted close price 5 days ago. &nbsp;
+**adj_close_30_days_ago** | Float | The adjusted close price 30 days ago. &nbsp;
+**adj_close_180_days_ago** | Float | The adjusted close price 180 days ago. &nbsp;
+**adj_close_365_days_ago** | Float | The adjusted close price 365 days ago. &nbsp;
+**adj_close_1825_days_ago** | Float | The adjusted close price 1825 days ago. &nbsp;
+**change_percent_5_days** | Float | The percent change from the adjusted price 5 days ago to now. &nbsp;
+**change_percent_30_days** | Float | The percent change from the adjusted price 30 days ago to now. &nbsp;
+**change_percent_180_days** | Float | The percent change from the adjusted price 180 days ago to now. &nbsp;
+**change_percent_365_days** | Float | The percent change from the adjusted price 365 days ago to now. &nbsp;
+**change_percent_1825_days** | Float | The percent change from the adjusted price 1825 days ago to now. &nbsp;
 
 [//]: # (END_DEFINITION)
 
