@@ -4318,7 +4318,7 @@ security_api = Intrinio::SecurityApi.new
 identifier = "AAPL"
 
 opts = {
-  source: ["iex"]
+  source: ["iex,delayed_sip"]
 }
 
 result = security_api.get_security_realtime_price(identifier, opts)
@@ -4337,7 +4337,7 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **source** | [**Array&lt;String&gt;**](String.md)| Return the realtime price from the specified data source. If no source is specified, the best source available is used. | [optional]  &nbsp;
+ **source** | [**Array&lt;String&gt;**](String.md)| Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
