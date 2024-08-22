@@ -1051,12 +1051,13 @@ interval_size = "15m"
 opts = {
   source: nil,
   start_date: Date.parse("2023-01-01"),
-  start_time: nil,
+  start_time: 33300,
   end_date: Date.parse("2023-02-01"),
-  end_time: nil,
+  end_time: 33300,
   timezone: "UTC",
   page_size: 100,
   split_adjusted: false,
+  include_quote_only_bars: false,
   next_page: nil
 }
 
@@ -1085,6 +1086,7 @@ Name | Type | Description  | Notes
  **timezone** | String| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **split_adjusted** | BOOLEAN| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
+ **include_quote_only_bars** | BOOLEAN| If true, also include bars where no trades occurred but quotes did. | [optional] [default to false] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
@@ -1125,7 +1127,7 @@ Name | Type | Description  | Notes
 #### Intraday Stock Prices for Security
 
 
-Return intraday stock prices for the Security with the given `identifier`
+Deprecated.  Return intraday stock prices for the Security with the given `identifier`
 
 [//]: # (END_OVERVIEW)
 
@@ -4235,6 +4237,7 @@ identifier = "AAPL"
 
 opts = {
   active_only: false,
+  source: "delayed_sip",
   next_page: nil
 }
 
@@ -4255,6 +4258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
  **active_only** | BOOLEAN| Whether to return only realtime prices from today. | [optional] [default to false] &nbsp;
+ **source** | String| Return the realtime price from the specified source instead of the most recent. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
