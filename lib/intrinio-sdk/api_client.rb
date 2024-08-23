@@ -296,7 +296,7 @@ module Intrinio
     def build_request_url(path)
       # Add leading and trailing slashes to path
       path = "/#{path}".gsub(/\/+/, '/')
-      URI.encode(@config.base_url + path)
+      URI::DEFAULT_PARSER.escape(@config.base_url + path)
     end
 
     # Builds the HTTP request body
