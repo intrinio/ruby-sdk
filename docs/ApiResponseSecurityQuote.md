@@ -26,7 +26,7 @@ Name | Type | Description
 **marketcap** | Float | The current market cap. &nbsp;
 **pricetoearnings** | Float | The current price to earnings. &nbsp;
 **previous_close** | Float | The previous close price. &nbsp;
-**previous_close_date** | Float | The date of the previous close. &nbsp;
+**previous_close_date** | Date | The date of the previous close. &nbsp;
 **change** | Float | The difference in last price from the last close price &nbsp;
 **change_percent** | Float | The percent difference in last price from the last close price &nbsp;
 **adj_close_5_days_ago** | Float | The adjusted close price 5 days ago. &nbsp;

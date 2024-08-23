@@ -147,7 +147,7 @@ module Intrinio
         :'marketcap' => :'Float',
         :'pricetoearnings' => :'Float',
         :'previous_close' => :'Float',
-        :'previous_close_date' => :'Float',
+        :'previous_close_date' => :'Date',
         :'change' => :'Float',
         :'change_percent' => :'Float',
         :'adj_close_5_days_ago' => :'Float',
