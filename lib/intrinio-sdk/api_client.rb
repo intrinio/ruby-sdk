@@ -22,7 +22,7 @@ module Intrinio
   class ApiClient
     # The max number of seconds allowed between each retry interval
     MAX_INTERVAL_SECONDS = 60
-    
+
     # The Configuration object holding settings to be used in the API client.
     attr_accessor :config
 
@@ -55,12 +55,12 @@ module Intrinio
       retry_amount = @config.allow_retries ? 5 : 1
       Retriable.retriable(tries: retry_amount, base_interval: 1.0, multiplier: 1.0, rand_factor: 0.5, max_interval: MAX_INTERVAL_SECONDS) do
         @config.logger.debug("Calling Intrinio API [#{http_method}] - #{path}...") if @config.debugging
-        
+
         request = build_request(http_method, path, opts)
         response = request.run
-        
+
         rate_limit_header = response.headers["retry-after"]
-        
+
         if @config.debugging
           @config.logger.debug "HTTP response body ~BEGIN~\n#{response.body}\n~END~\n"
         end
@@ -70,13 +70,13 @@ module Intrinio
             fail ApiError.new('Connection timed out')
           elsif response.code == 429 && rate_limit_header
             wait_in_seconds = rate_limit_header.to_i
-            
+
             #if the rate limit elapse time header is less than the max allowed interval time, sleep the program until the rate limit period elapses
             if wait_in_seconds < MAX_INTERVAL_SECONDS
               @config.logger.debug "API Rate Limit Reached - Retrying in #{wait_in_seconds} seconds..."
               sleep(wait_in_seconds)
             end
-            
+
             fail ApiError.new(:code => 429,
                               :message => response.return_message)
           elsif response.code.to_s.split("")[0].to_i == 4
@@ -104,7 +104,7 @@ module Intrinio
         end
         return data, response.code, response.headers
       end
-      
+
       # Catch errors that broke out of retry block
       fail non_retriable_error
     end
@@ -296,7 +296,7 @@ module Intrinio
     def build_request_url(path)
       # Add leading and trailing slashes to path
       path = "/#{path}".gsub(/\/+/, '/')
-      URI.encode(@config.base_url + path)
+      URI::DEFAULT_PARSER.escape(@config.base_url + path)
     end
 
     # Builds the HTTP request body
