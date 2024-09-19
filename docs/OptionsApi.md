@@ -156,7 +156,9 @@ end
 options_api = Intrinio::OptionsApi.new
 
 opts = {
-  date: "2024-04-24"
+  date: "2024-04-24",
+  page_size: 100,
+  next_page: nil
 }
 
 result = options_api.get_option_aggregates(opts)
@@ -175,6 +177,8 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | [**Object**](.md)| Return aggregated data for this date | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
