@@ -1785,7 +1785,9 @@ opts = {
   page_size: 250,
   stock_price_source: nil,
   model: nil,
-  show_extended_price: nil
+  show_extended_price: nil,
+  expiration_start_date: "2024-01-01",
+  expiration_end_date: "2024-02-02"
 }
 
 result = options_api.get_options_prices_realtime_by_ticker(symbol, opts)
@@ -1811,6 +1813,8 @@ Name | Type | Description  | Notes
  **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **expiration_start_date** | [**Object**](.md)| Filter out contracts that expire before this date. | [optional]  &nbsp;
+ **expiration_end_date** | [**Object**](.md)| Filter out contracts that expire after this date. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
