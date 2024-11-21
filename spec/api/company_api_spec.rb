@@ -139,8 +139,8 @@ describe 'CompanyApi' do
   # unit tests for get_company_data_point_number
   # Data Point (Number) for Company
   # Returns latest value for calculations, metrics, and financial data points for a company.
-  # @param identifier $$v2_company_data_point_identifier_description$$
-  # @param tag $$v2_company_data_point_item_description$$
+  # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+  # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
   # @param [Hash] opts the optional parameters
   # @return [Float]
   describe 'get_company_data_point_number test' do
@@ -152,8 +152,8 @@ describe 'CompanyApi' do
   # unit tests for get_company_data_point_text
   # Data Point (Text) for Company
   # Returns latest value for metadata items for a company.
-  # @param identifier $$v2_company_data_point_identifier_description$$
-  # @param tag $$v2_company_data_point_item_description$$
+  # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+  # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'get_company_data_point_text test' do
@@ -206,9 +206,9 @@ describe 'CompanyApi' do
 
   # unit tests for get_company_historical_data
   # Historical Data for Company
-  # $$v2_company_historical_data_description$$
-  # @param identifier $$v2_company_historical_data_identifier_description$$
-  # @param tag $$v2_company_historical_data_item_description$$
+  # Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+  # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+  # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
   # @param [Hash] opts the optional parameters
   # @option opts [String] :frequency Return historical data in the given frequency
   # @option opts [String] :type Return historical data for given fiscal period type

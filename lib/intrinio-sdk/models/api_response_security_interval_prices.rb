@@ -107,7 +107,7 @@ module Intrinio
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      source_validator = EnumAttributeValidator.new('String', ["$$v2_stock_price_interval_sources_enum$$"])
+      source_validator = EnumAttributeValidator.new('String', ["realtime", "delayed", "nasdaq_basic", "nasdaq_basic_filtered"])
       return false unless source_validator.valid?(@source)
       return true
     end
@@ -115,7 +115,7 @@ module Intrinio
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] source Object to be assigned
     def source=(source)
-      validator = EnumAttributeValidator.new('String', ["$$v2_stock_price_interval_sources_enum$$"])
+      validator = EnumAttributeValidator.new('String', ["realtime", "delayed", "nasdaq_basic", "nasdaq_basic_filtered"])
       unless validator.valid?(source)
         fail ArgumentError, "invalid value for 'source', must be one of #{validator.allowable_values}."
       end

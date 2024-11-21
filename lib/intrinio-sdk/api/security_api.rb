@@ -182,9 +182,9 @@ module Intrinio
     end
 
     # Data Point (Number) for Security
-    # $$v2_security_data_point_number_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns a numeric value for the given `tag` for the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Float]
     def get_security_data_point_number(identifier, tag, opts = {})
@@ -193,9 +193,9 @@ module Intrinio
     end
 
     # Data Point (Number) for Security
-    # $$v2_security_data_point_number_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Array<(Float, Fixnum, Hash)>] Float data, response status code and response headers
     def get_security_data_point_number_with_http_info(identifier, tag, opts = {})
@@ -241,8 +241,8 @@ module Intrinio
     end
 
     # Data Point (Text) for Security
-    # $$v2_security_data_point_text_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
+    # Returns a text value for the given `tag` for the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
     # @return [String]
@@ -252,8 +252,8 @@ module Intrinio
     end
 
     # Data Point (Text) for Security
-    # $$v2_security_data_point_text_description$$
-    # @param identifier $$v2_security_data_point_identifier_description$$
+    # Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param tag An Intrinio data tag ID or code-name
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
@@ -300,9 +300,9 @@ module Intrinio
     end
 
     # Historical Data for Security
-    # $$v2_security_historical_data_description$$
-    # @param identifier $$v2_security_historical_data_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns historical values for the given `tag` and the Security with the given `identifier`
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :frequency Return historical data in the given frequency (default to daily)
     # @option opts [String] :type Filter by type, when applicable
@@ -318,9 +318,9 @@ module Intrinio
     end
 
     # Historical Data for Security
-    # $$v2_security_historical_data_description$$
-    # @param identifier $$v2_security_historical_data_identifier_description$$
-    # @param tag $$v2_security_data_point_item_description$$
+    # Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+    # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :frequency Return historical data in the given frequency
     # @option opts [String] :type Filter by type, when applicable
@@ -772,8 +772,8 @@ module Intrinio
       if @api_client.config.client_side_validation && !['1m', '5m', '10m', '15m', '30m', '60m', '1h'].include?(interval_size)
         fail ArgumentError, "invalid value for 'interval_size', must be one of 1m, 5m, 10m, 15m, 30m, 60m, 1h"
       end
-      if @api_client.config.client_side_validation && opts[:'source'] && !['$$v2_stock_price_interval_sources_enum$$'].include?(opts[:'source'])
-        fail ArgumentError, 'invalid value for "source", must be one of $$v2_stock_price_interval_sources_enum$$'
+      if @api_client.config.client_side_validation && opts[:'source'] && !['realtime', 'delayed', 'nasdaq_basic', 'nasdaq_basic_filtered'].include?(opts[:'source'])
+        fail ArgumentError, 'invalid value for "source", must be one of realtime, delayed, nasdaq_basic, nasdaq_basic_filtered'
       end
       if @api_client.config.client_side_validation && opts[:'timezone'] && !['Africa/Algiers', 'Africa/Cairo', 'Africa/Casablanca', 'Africa/Harare', 'Africa/Johannesburg', 'Africa/Monrovia', 'Africa/Nairobi', 'America/Argentina/Buenos_Aires', 'America/Bogota', 'America/Caracas', 'America/Chicago', 'America/Chihuahua', 'America/Denver', 'America/Godthab', 'America/Guatemala', 'America/Guyana', 'America/Halifax', 'America/Indiana/Indianapolis', 'America/Juneau', 'America/La_Paz', 'America/Lima', 'America/Lima', 'America/Los_Angeles', 'America/Mazatlan', 'America/Mexico_City', 'America/Mexico_City', 'America/Monterrey', 'America/Montevideo', 'America/New_York', 'America/Phoenix', 'America/Regina', 'America/Santiago', 'America/Sao_Paulo', 'America/St_Johns', 'America/Tijuana', 'Asia/Almaty', 'Asia/Baghdad', 'Asia/Baku', 'Asia/Bangkok', 'Asia/Bangkok', 'Asia/Chongqing', 'Asia/Colombo', 'Asia/Dhaka', 'Asia/Dhaka', 'Asia/Hong_Kong', 'Asia/Irkutsk', 'Asia/Jakarta', 'Asia/Jerusalem', 'Asia/Kabul', 'Asia/Kamchatka', 'Asia/Karachi', 'Asia/Karachi', 'Asia/Kathmandu', 'Asia/Kolkata', 'Asia/Kolkata', 'Asia/Kolkata', 'Asia/Kolkata', 'Asia/Krasnoyarsk', 'Asia/Kuala_Lumpur', 'Asia/Kuwait', 'Asia/Magadan', 'Asia/Muscat', 'Asia/Muscat', 'Asia/Novosibirsk', 'Asia/Rangoon', 'Asia/Riyadh', 'Asia/Seoul', 'Asia/Shanghai', 'Asia/Singapore', 'Asia/Srednekolymsk', 'Asia/Taipei', 'Asia/Tashkent', 'Asia/Tbilisi', 'Asia/Tehran', 'Asia/Tokyo', 'Asia/Tokyo', 'Asia/Tokyo', 'Asia/Ulaanbaatar', 'Asia/Urumqi', 'Asia/Vladivostok', 'Asia/Yakutsk', 'Asia/Yekaterinburg', 'Asia/Yerevan', 'Atlantic/Azores', 'Atlantic/Cape_Verde', 'Atlantic/South_Georgia', 'Australia/Adelaide', 'Australia/Brisbane', 'Australia/Darwin', 'Australia/Hobart', 'Australia/Melbourne', 'Australia/Melbourne', 'Australia/Perth', 'Australia/Sydney', 'Etc/UTC', 'UTC', 'Europe/Amsterdam', 'Europe/Athens', 'Europe/Belgrade', 'Europe/Berlin', 'Europe/Berlin', 'Europe/Bratislava', 'Europe/Brussels', 'Europe/Bucharest', 'Europe/Budapest', 'Europe/Copenhagen', 'Europe/Dublin', 'Europe/Helsinki', 'Europe/Istanbul', 'Europe/Kaliningrad', 'Europe/Kiev', 'Europe/Lisbon', 'Europe/Ljubljana', 'Europe/London', 'Europe/London', 'Europe/Madrid', 'Europe/Minsk', 'Europe/Moscow', 'Europe/Moscow', 'Europe/Paris', 'Europe/Prague', 'Europe/Riga', 'Europe/Rome', 'Europe/Samara', 'Europe/Sarajevo', 'Europe/Skopje', 'Europe/Sofia', 'Europe/Stockholm', 'Europe/Tallinn', 'Europe/Vienna', 'Europe/Vilnius', 'Europe/Volgograd', 'Europe/Warsaw', 'Europe/Zagreb', 'Pacific/Apia', 'Pacific/Auckland', 'Pacific/Auckland', 'Pacific/Chatham', 'Pacific/Fakaofo', 'Pacific/Fiji', 'Pacific/Guadalcanal', 'Pacific/Guam', 'Pacific/Honolulu', 'Pacific/Majuro', 'Pacific/Midway', 'Pacific/Midway', 'Pacific/Noumea', 'Pacific/Pago_Pago', 'Pacific/Port_Moresby', 'Pacific/Tongatapu'].include?(opts[:'timezone'])
         fail ArgumentError, 'invalid value for "timezone", must be one of Africa/Algiers, Africa/Cairo, Africa/Casablanca, Africa/Harare, Africa/Johannesburg, Africa/Monrovia, Africa/Nairobi, America/Argentina/Buenos_Aires, America/Bogota, America/Caracas, America/Chicago, America/Chihuahua, America/Denver, America/Godthab, America/Guatemala, America/Guyana, America/Halifax, America/Indiana/Indianapolis, America/Juneau, America/La_Paz, America/Lima, America/Lima, America/Los_Angeles, America/Mazatlan, America/Mexico_City, America/Mexico_City, America/Monterrey, America/Montevideo, America/New_York, America/Phoenix, America/Regina, America/Santiago, America/Sao_Paulo, America/St_Johns, America/Tijuana, Asia/Almaty, Asia/Baghdad, Asia/Baku, Asia/Bangkok, Asia/Bangkok, Asia/Chongqing, Asia/Colombo, Asia/Dhaka, Asia/Dhaka, Asia/Hong_Kong, Asia/Irkutsk, Asia/Jakarta, Asia/Jerusalem, Asia/Kabul, Asia/Kamchatka, Asia/Karachi, Asia/Karachi, Asia/Kathmandu, Asia/Kolkata, Asia/Kolkata, Asia/Kolkata, Asia/Kolkata, Asia/Krasnoyarsk, Asia/Kuala_Lumpur, Asia/Kuwait, Asia/Magadan, Asia/Muscat, Asia/Muscat, Asia/Novosibirsk, Asia/Rangoon, Asia/Riyadh, Asia/Seoul, Asia/Shanghai, Asia/Singapore, Asia/Srednekolymsk, Asia/Taipei, Asia/Tashkent, Asia/Tbilisi, Asia/Tehran, Asia/Tokyo, Asia/Tokyo, Asia/Tokyo, Asia/Ulaanbaatar, Asia/Urumqi, Asia/Vladivostok, Asia/Yakutsk, Asia/Yekaterinburg, Asia/Yerevan, Atlantic/Azores, Atlantic/Cape_Verde, Atlantic/South_Georgia, Australia/Adelaide, Australia/Brisbane, Australia/Darwin, Australia/Hobart, Australia/Melbourne, Australia/Melbourne, Australia/Perth, Australia/Sydney, Etc/UTC, UTC, Europe/Amsterdam, Europe/Athens, Europe/Belgrade, Europe/Berlin, Europe/Berlin, Europe/Bratislava, Europe/Brussels, Europe/Bucharest, Europe/Budapest, Europe/Copenhagen, Europe/Dublin, Europe/Helsinki, Europe/Istanbul, Europe/Kaliningrad, Europe/Kiev, Europe/Lisbon, Europe/Ljubljana, Europe/London, Europe/London, Europe/Madrid, Europe/Minsk, Europe/Moscow, Europe/Moscow, Europe/Paris, Europe/Prague, Europe/Riga, Europe/Rome, Europe/Samara, Europe/Sarajevo, Europe/Skopje, Europe/Sofia, Europe/Stockholm, Europe/Tallinn, Europe/Vienna, Europe/Vilnius, Europe/Volgograd, Europe/Warsaw, Europe/Zagreb, Pacific/Apia, Pacific/Auckland, Pacific/Auckland, Pacific/Chatham, Pacific/Fakaofo, Pacific/Fiji, Pacific/Guadalcanal, Pacific/Guam, Pacific/Honolulu, Pacific/Majuro, Pacific/Midway, Pacific/Midway, Pacific/Noumea, Pacific/Pago_Pago, Pacific/Port_Moresby, Pacific/Tongatapu'
@@ -820,7 +820,7 @@ module Intrinio
     end
 
     # Intraday Stock Prices for Security
-    # Deprecated.  $$v2_security_intraday_prices_description$$
+    # Deprecated.  Return intraday stock prices for the Security with the given `identifier`
     # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :source Return intraday prices from the specified data source
@@ -837,7 +837,7 @@ module Intrinio
     end
 
     # Intraday Stock Prices for Security
-    # Deprecated.  $$v2_security_intraday_prices_description$$
+    # Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
     # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :source Return intraday prices from the specified data source

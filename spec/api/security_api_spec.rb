@@ -76,9 +76,9 @@ describe 'SecurityApi' do
 
   # unit tests for get_security_data_point_number
   # Data Point (Number) for Security
-  # $$v2_security_data_point_number_description$$
-  # @param identifier $$v2_security_data_point_identifier_description$$
-  # @param tag $$v2_security_data_point_item_description$$
+  # Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+  # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+  # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
   # @param [Hash] opts the optional parameters
   # @return [Float]
   describe 'get_security_data_point_number test' do
@@ -89,8 +89,8 @@ describe 'SecurityApi' do
 
   # unit tests for get_security_data_point_text
   # Data Point (Text) for Security
-  # $$v2_security_data_point_text_description$$
-  # @param identifier $$v2_security_data_point_identifier_description$$
+  # Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+  # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
   # @param tag An Intrinio data tag ID or code-name
   # @param [Hash] opts the optional parameters
   # @return [String]
@@ -102,9 +102,9 @@ describe 'SecurityApi' do
 
   # unit tests for get_security_historical_data
   # Historical Data for Security
-  # $$v2_security_historical_data_description$$
-  # @param identifier $$v2_security_historical_data_identifier_description$$
-  # @param tag $$v2_security_data_point_item_description$$
+  # Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+  # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+  # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
   # @param [Hash] opts the optional parameters
   # @option opts [String] :frequency Return historical data in the given frequency
   # @option opts [String] :type Filter by type, when applicable
@@ -221,7 +221,7 @@ describe 'SecurityApi' do
 
   # unit tests for get_security_intraday_prices
   # Intraday Stock Prices for Security
-  # Deprecated.  $$v2_security_intraday_prices_description$$
+  # Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
   # @param identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
   # @param [Hash] opts the optional parameters
   # @option opts [String] :source Return intraday prices from the specified data source

@@ -34,9 +34,9 @@ describe 'HistoricalDataApi' do
 
   # unit tests for get_historical_data
   # Historical Data
-  # $$v2_historical_data_description$$
-  # @param identifier $$v2_historical_data_identifier_description$$
-  # @param tag $$v2_historical_data_item_description$$
+  # Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+  # @param identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+  # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
   # @param [Hash] opts the optional parameters
   # @option opts [String] :frequency Return historical data in the given frequency
   # @option opts [String] :type Filter by type, when applicable

@@ -14,7 +14,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **index** | [**ApiResponseIndex**](ApiResponseIndex.md) | The index &nbsp;
 **date** | Date | The date when an update was last received for the index constituents &nbsp;
-**constituents** | [**IndexConstituents**](IndexConstituents.md) |  &nbsp;
+**constituents** | [**Array&lt;SecuritySummary&gt;**](SecuritySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
 
@@ -22,7 +22,7 @@ Name | Type | Description
 [//]: # (CONTAINED_CLASS:Intrinio::ApiResponseIndex)
 
 
-[//]: # (CONTAINED_CLASS:Intrinio::IndexConstituents)
+[//]: # (CONTAINED_CLASS:Intrinio::SecuritySummary)
 
 
 

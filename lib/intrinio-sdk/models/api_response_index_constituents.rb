@@ -38,7 +38,7 @@ module Intrinio
       {
         :'index' => :'ApiResponseIndex',
         :'date' => :'Date',
-        :'constituents' => :'IndexConstituents'
+        :'constituents' => :'Array<SecuritySummary>'
       }
     end
 
@@ -59,7 +59,9 @@ module Intrinio
       end
 
       if attributes.has_key?(:'constituents')
-        self.constituents = attributes[:'constituents']
+        if (value = attributes[:'constituents']).is_a?(Array)
+          self.constituents = value
+        end
       end
 
     end
