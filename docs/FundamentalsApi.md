@@ -398,7 +398,7 @@ end
 
 fundamentals_api = Intrinio::FundamentalsApi.new
 id = "AAPL-income_statement-2020-FY"
-tag = "ceo"
+tag = "$$v2_data_point_item_text_default$$"
 
 result = fundamentals_api.get_fundamental_standardized_financials_dimensions(id, tag)
 pp result
@@ -416,7 +416,7 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | String| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **tag** | String| $$v2_data_point_item_description$$ |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 

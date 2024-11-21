@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**get_economic_index_data_point_text**](IndexApi.md#get_economic_index_data_point_text) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 [**get_economic_index_historical_data**](IndexApi.md#get_economic_index_historical_data) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
 [**get_eod_index_price_by_id**](IndexApi.md#get_eod_index_price_by_id) | **GET** /indices/{identifier}/eod | End of Day Index Prices By Identifier
+[**get_index_constituents_by_id**](IndexApi.md#get_index_constituents_by_id) | **GET** /indices/{identifier}/constituents | Index Constituents By Index Identifier
 [**get_index_summary_by_id**](IndexApi.md#get_index_summary_by_id) | **GET** /indices/{identifier} | Index Summary By Identifier
 [**get_realtime_index_price_by_id**](IndexApi.md#get_realtime_index_price_by_id) | **GET** /indices/{identifier}/realtime | Realtime Index Price By Identifier
 [**get_sic_index_by_id**](IndexApi.md#get_sic_index_by_id) | **GET** /indices/sic/{identifier} | Lookup SIC Index
@@ -926,6 +927,82 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseEodIndexPrices**](ApiResponseEodIndexPrices.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::IndexApi)
+
+[//]: # (METHOD:get_index_constituents_by_id)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseIndexConstituents)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseIndexConstituents.md)
+
+[//]: # (OPERATION:get_index_constituents_by_id_v2)
+
+[//]: # (ENDPOINT:/indices/{identifier}/constituents)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#get_index_constituents_by_id)
+
+## **get_index_constituents_by_id**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_index_constituents_by_id_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseIndexConstituents get_index_constituents_by_id(identifier)
+
+#### Index Constituents By Index Identifier
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+index_api = Intrinio::IndexApi.new
+identifier = "DJI"
+
+result = index_api.get_index_constituents_by_id(identifier)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The index symbol |  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseIndexConstituents**](ApiResponseIndexConstituents.md)
 
 [//]: # (END_OPERATION)
 

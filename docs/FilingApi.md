@@ -76,6 +76,7 @@ opts = {
   industry_category: nil,
   industry_group: nil,
   thea_enabled: nil,
+  earnings_release: nil,
   page_size: 100,
   next_page: nil
 }
@@ -102,6 +103,7 @@ Name | Type | Description  | Notes
  **industry_category** | String| Return companies in the given industry category | [optional]  &nbsp;
  **industry_group** | String| Return companies in the given industry group | [optional]  &nbsp;
  **thea_enabled** | BOOLEAN| Return filings that have been read by our Thea NLP and are ready for our answers endpoint | [optional]  &nbsp;
+ **earnings_release** | BOOLEAN| Return filings that have been tagged as having Results of Operations and Financial Conditions | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
