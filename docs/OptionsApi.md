@@ -60,7 +60,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsTickers get_all_options_tickers
+> ApiResponseOptionsTickers get_all_options_tickers(opts)
 
 #### Options Tickers
 
@@ -85,7 +85,12 @@ Intrinio.configure do |config|
 end
 
 options_api = Intrinio::OptionsApi.new
-result = options_api.get_all_options_tickers
+
+opts = {
+  use_underlying_symbols: false
+}
+
+result = options_api.get_all_options_tickers(opts)
 pp result
 ```
 
@@ -97,7 +102,10 @@ pp result
 
 [//]: # (START_PARAMETERS)
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **use_underlying_symbols** | BOOLEAN| Use underlying symbol vs contract symbol | [optional] [default to false] &nbsp;
 
 [//]: # (END_PARAMETERS)
 

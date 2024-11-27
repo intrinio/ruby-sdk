@@ -36,6 +36,7 @@ Name | Type | Description
 **ask_first_time** | DateTime | The timestamp that represents the first ask time from the interval span. &nbsp;
 **ask_last_time** | DateTime | The timestamp that represents the last ask time from the interval span. &nbsp;
 **ask_change_percent** | Float | The ratio of the close to open ask difference, in percent. &nbsp;
+**trade_count** | Float | The number of qualified trades executed during the period &nbsp;
 
 [//]: # (END_DEFINITION)
 
