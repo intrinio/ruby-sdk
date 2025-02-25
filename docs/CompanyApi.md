@@ -875,9 +875,11 @@ opts = {
   fiscal_year: nil,
   statement_code: nil,
   type: nil,
+  fundamental_type: nil,
   start_date: nil,
   end_date: nil,
   updated_after: Date.parse("2022-12-01"),
+  latest_only: true,
   updated_before: Date.parse("2022-12-01"),
   page_size: 100,
   next_page: nil
@@ -905,9 +907,11 @@ Name | Type | Description  | Notes
  **fiscal_year** | Integer| Only for the given fiscal year | [optional]  &nbsp;
  **statement_code** | String| Only of the given statement code | [optional]  &nbsp;
  **type** | String| Only of the given type | [optional]  &nbsp;
+ **fundamental_type** | String| Only of the given fundamental type | [optional]  &nbsp;
  **start_date** | Date| Only on or after the given date | [optional]  &nbsp;
  **end_date** | Date| Only on or before the given date | [optional]  &nbsp;
  **updated_after** | Date| Only include fundamentals where it was updated after this date. | [optional]  &nbsp;
+ **latest_only** | BOOLEAN| Only the most-recently reported fundamental for the period | [optional]  &nbsp;
  **updated_before** | Date| Only include fundamentals where it was updated before this date. | [optional]  &nbsp;
  **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
