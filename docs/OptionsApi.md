@@ -2180,7 +2180,10 @@ options_api = Intrinio::OptionsApi.new
 
 opts = {
   source: nil,
-  at_datetime: DateTime.parse(nil)
+  at_datetime: DateTime.parse(nil),
+  with_greeks: nil,
+  stock_price_source: nil,
+  with_underlying_price: nil
 }
 
 result = options_api.get_options_snapshots(opts)
@@ -2200,6 +2203,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
  **at_datetime** | DateTime| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
+ **with_greeks** | BOOLEAN| Whether to include Greek calculations fields when available. | [optional]  &nbsp;
+ **stock_price_source** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **with_underlying_price** | BOOLEAN| Whether to include the underlying price of the security in the file. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
