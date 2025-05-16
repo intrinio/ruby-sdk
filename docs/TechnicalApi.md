@@ -87,7 +87,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -175,7 +175,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 22,
@@ -265,7 +265,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -355,7 +355,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   short_period: 5,
@@ -447,7 +447,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -537,7 +537,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -631,7 +631,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -723,7 +723,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -813,7 +813,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -905,7 +905,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -997,7 +997,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -1087,7 +1087,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -1175,7 +1175,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   low_period: 9,
@@ -1269,7 +1269,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 10,
@@ -1359,7 +1359,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   roc1: 10,
@@ -1465,7 +1465,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   fast_period: 12,
@@ -1561,7 +1561,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -1651,7 +1651,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   ema_period: 9,
@@ -1743,7 +1743,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -1831,7 +1831,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -1919,7 +1919,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 10,
@@ -2009,7 +2009,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -2101,7 +2101,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -2193,7 +2193,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -2285,7 +2285,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 15,
@@ -2375,7 +2375,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   low_period: 13,
@@ -2469,7 +2469,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   short_period: 7,
@@ -2569,7 +2569,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -2659,7 +2659,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -2747,7 +2747,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -2835,7 +2835,7 @@ Intrinio.configure do |config|
 end
 
 technical_api = Intrinio::TechnicalApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,

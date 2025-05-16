@@ -232,7 +232,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 result = security_api.get_security_by_id(identifier)
 pp result
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 #### Data Point (Number) for Security
 
 
-Returns a numeric value for the given `tag` for the Security with the given `identifier`
+$$v2_security_data_point_number_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -309,8 +309,8 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
-tag = "close_price"
+identifier = "$$v2_security_data_point_identifier_default$$"
+tag = "$$v2_security_data_point_item_number_default$$"
 
 result = security_api.get_security_data_point_number(identifier, tag)
 pp result
@@ -327,8 +327,8 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_security_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_security_data_point_item_description$$ |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 #### Data Point (Text) for Security
 
 
-Returns a text value for the given `tag` for the Security with the given `identifier`
+$$v2_security_data_point_text_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -388,8 +388,8 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
-tag = "figi"
+identifier = "$$v2_security_data_point_identifier_default$$"
+tag = "$$v2_security_data_point_item_text_default$$"
 
 result = security_api.get_security_data_point_text(identifier, tag)
 pp result
@@ -406,7 +406,7 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **identifier** | String| $$v2_security_data_point_identifier_description$$ |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code-name |  &nbsp;
 
 [//]: # (END_PARAMETERS)
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 #### Historical Data for Security
 
 
-Returns historical values for the given `tag` and the Security with the given `identifier`
+$$v2_security_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -467,8 +467,8 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
-tag = "adj_close_price"
+identifier = "$$v2_security_historical_data_identifier_default$$"
+tag = "$$v2_security_historical_data_item_default$$"
 
 opts = {
   frequency: "daily",
@@ -495,8 +495,8 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_security_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_security_data_point_item_description$$ |  &nbsp;
  **frequency** | String| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | String| Filter by type, when applicable | [optional]  &nbsp;
  **start_date** | Date| Get historical data on or after this date | [optional]  &nbsp;
@@ -717,7 +717,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   next_page: nil
@@ -1045,8 +1045,8 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
-interval_size = "15m"
+identifier = "$$v2_ticker_default$$"
+interval_size = "5m"
 
 opts = {
   source: nil,
@@ -1077,14 +1077,14 @@ pp result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **interval_size** | String| The interval for which to return stock prices | [default to 15m] &nbsp;
+ **interval_size** | String| The interval size to return in minutes (m) or hour (h). | [default to 5m] &nbsp;
  **source** | String| Return intervals from the specified data source | [optional]  &nbsp;
  **start_date** | Date| Return intervals starting at the specified date | [optional]  &nbsp;
  **start_time** | String| Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **end_date** | Date| Return intervals stopping at the specified date | [optional]  &nbsp;
  **end_time** | String| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **timezone** | String| Interprets the input times in this time zone, as well as returns times in this timezone. | [optional] [default to UTC] &nbsp;
- **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **page_size** | Integer| The number of results to return per page. | [optional] [default to 100] &nbsp;
  **split_adjusted** | BOOLEAN| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
  **include_quote_only_bars** | BOOLEAN| If true, also include bars where no trades occurred but quotes did. | [optional] [default to false] &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
@@ -1127,7 +1127,7 @@ Name | Type | Description  | Notes
 #### Intraday Stock Prices for Security
 
 
-Deprecated.  Return intraday stock prices for the Security with the given `identifier`
+Deprecated.  $$v2_security_intraday_prices_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -1147,7 +1147,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   source: nil,
@@ -1241,7 +1241,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 result = security_api.get_security_latest_dividend_record(identifier)
 pp result
@@ -1318,7 +1318,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 result = security_api.get_security_latest_earnings_record(identifier)
 pp result
@@ -1395,7 +1395,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -1483,7 +1483,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 22,
@@ -1573,7 +1573,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -1663,7 +1663,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   short_period: 5,
@@ -1755,7 +1755,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -1845,7 +1845,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -1939,7 +1939,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -2031,7 +2031,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -2121,7 +2121,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -2213,7 +2213,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -2305,7 +2305,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -2395,7 +2395,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -2483,7 +2483,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   low_period: 9,
@@ -2577,7 +2577,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 10,
@@ -2667,7 +2667,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   roc1: 10,
@@ -2773,7 +2773,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   fast_period: 12,
@@ -2869,7 +2869,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -2959,7 +2959,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   ema_period: 9,
@@ -3051,7 +3051,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -3139,7 +3139,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -3227,7 +3227,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 10,
@@ -3317,7 +3317,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -3409,7 +3409,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 20,
@@ -3501,7 +3501,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -3593,7 +3593,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 15,
@@ -3683,7 +3683,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   low_period: 13,
@@ -3777,7 +3777,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   short_period: 7,
@@ -3877,7 +3877,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -3967,7 +3967,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -4055,7 +4055,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: "2018-01-01",
@@ -4143,7 +4143,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   period: 14,
@@ -4233,7 +4233,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   active_only: false,
@@ -4319,7 +4319,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   source: ["iex,delayed_sip"]
@@ -4560,7 +4560,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: Date.parse("2018-01-01"),
@@ -4648,7 +4648,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: Date.parse("2018-01-01"),
@@ -4936,7 +4936,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   start_date: nil,
@@ -5050,7 +5050,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   date: nil
@@ -5132,7 +5132,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   page_size: 100,
@@ -5216,7 +5216,7 @@ Intrinio.configure do |config|
 end
 
 security_api = Intrinio::SecurityApi.new
-identifier = "AAPL"
+identifier = "$$v2_ticker_default$$"
 
 opts = {
   page_size: 100,
