@@ -280,7 +280,7 @@ module Intrinio
     # Standardized Financials Dimensions
     # Returns as reported dimensionality of a data tag
     # @param id The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
-    # @param tag $$v2_data_point_item_description$$
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [ApiResponseStandardizedFinancialsDimensions]
     def get_fundamental_standardized_financials_dimensions(id, tag, opts = {})
@@ -291,7 +291,7 @@ module Intrinio
     # Standardized Financials Dimensions
     # Returns as reported dimensionality of a data tag
     # @param id The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
-    # @param tag $$v2_data_point_item_description$$
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Array<(ApiResponseStandardizedFinancialsDimensions, Fixnum, Hash)>] ApiResponseStandardizedFinancialsDimensions data, response status code and response headers
     def get_fundamental_standardized_financials_dimensions_with_http_info(id, tag, opts = {})

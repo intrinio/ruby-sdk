@@ -152,7 +152,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 
 opts = {
   type: "weekly",
@@ -240,7 +240,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 
 result = stockExchange_api.get_stock_exchange_by_id(identifier)
 pp result
@@ -317,7 +317,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 
 opts = {
   min_price: 8.14,
@@ -403,7 +403,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 
 opts = {
   min_price: 8.14,
@@ -489,7 +489,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 
 opts = {
   date: Date.parse("2018-08-14"),
@@ -575,7 +575,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 
 opts = {
   date: Date.parse("2018-08-14"),
@@ -669,7 +669,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 tickers = ["AAPL,MSFT,NVDA"]
 
 opts = {
@@ -755,7 +755,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 
 opts = {
   source: ["iex,delayed_sip"],
@@ -847,7 +847,7 @@ Intrinio.configure do |config|
 end
 
 stockExchange_api = Intrinio::StockExchangeApi.new
-identifier = "$$v2_mic_default$$"
+identifier = "USCOMP"
 
 opts = {
   page_size: 100,

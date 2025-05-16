@@ -146,6 +146,7 @@ Class | Method | HTTP request | Description
 *Intrinio::IndexApi* | [**search_economic_indices**](docs/IndexApi.md#search_economic_indices) | **GET** /indices/economic/search | Search Economic Indices
 *Intrinio::IndexApi* | [**search_sic_indices**](docs/IndexApi.md#search_sic_indices) | **GET** /indices/sic/search | Search SIC Indices
 *Intrinio::IndexApi* | [**search_stock_markets_indices**](docs/IndexApi.md#search_stock_markets_indices) | **GET** /indices/stock_market/search | Search Stock Market Indices
+*Intrinio::IndicesApi* | [**get_index_intervals**](docs/IndicesApi.md#get_index_intervals) | **GET** /indices/{identifier}/intervals | Index Intervals
 *Intrinio::InsiderTransactionFilingsApi* | [**get_all_insider_transaction_filings**](docs/InsiderTransactionFilingsApi.md#get_all_insider_transaction_filings) | **GET** /insider_transaction_filings | All Insider Transactions Filings
 *Intrinio::MarketApi* | [**get_market_status**](docs/MarketApi.md#get_market_status) | **GET** /market/status | Market Status
 *Intrinio::MunicipalityApi* | [**get_all_municipalities**](docs/MunicipalityApi.md#get_all_municipalities) | **GET** /municipalities | All Municipalities

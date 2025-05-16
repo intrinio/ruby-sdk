@@ -456,8 +456,8 @@ module Intrinio
 
     # Data Point (Number) for Company
     # Returns latest value for calculations, metrics, and financial data points for a company.
-    # @param identifier $$v2_company_data_point_identifier_description$$
-    # @param tag $$v2_company_data_point_item_description$$
+    # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Float]
     def get_company_data_point_number(identifier, tag, opts = {})
@@ -467,8 +467,8 @@ module Intrinio
 
     # Data Point (Number) for Company
     # Returns latest value for calculations, metrics, and financial data points for a company.
-    # @param identifier $$v2_company_data_point_identifier_description$$
-    # @param tag $$v2_company_data_point_item_description$$
+    # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Array<(Float, Fixnum, Hash)>] Float data, response status code and response headers
     def get_company_data_point_number_with_http_info(identifier, tag, opts = {})
@@ -515,8 +515,8 @@ module Intrinio
 
     # Data Point (Text) for Company
     # Returns latest value for metadata items for a company.
-    # @param identifier $$v2_company_data_point_identifier_description$$
-    # @param tag $$v2_company_data_point_item_description$$
+    # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [String]
     def get_company_data_point_text(identifier, tag, opts = {})
@@ -526,8 +526,8 @@ module Intrinio
 
     # Data Point (Text) for Company
     # Returns latest value for metadata items for a company.
-    # @param identifier $$v2_company_data_point_identifier_description$$
-    # @param tag $$v2_company_data_point_item_description$$
+    # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def get_company_data_point_text_with_http_info(identifier, tag, opts = {})
@@ -756,9 +756,9 @@ module Intrinio
     end
 
     # Historical Data for Company
-    # $$v2_company_historical_data_description$$
-    # @param identifier $$v2_company_historical_data_identifier_description$$
-    # @param tag $$v2_company_historical_data_item_description$$
+    # Returns historical values for the given `tag` and the Company with the given `identifier`
+    # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :frequency Return historical data in the given frequency (default to daily)
     # @option opts [String] :type Return historical data for given fiscal period type
@@ -774,9 +774,9 @@ module Intrinio
     end
 
     # Historical Data for Company
-    # $$v2_company_historical_data_description$$
-    # @param identifier $$v2_company_historical_data_identifier_description$$
-    # @param tag $$v2_company_historical_data_item_description$$
+    # Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+    # @param identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+    # @param tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :frequency Return historical data in the given frequency
     # @option opts [String] :type Return historical data for given fiscal period type
