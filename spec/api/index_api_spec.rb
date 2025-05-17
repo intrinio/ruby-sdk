@@ -193,6 +193,25 @@ describe 'IndexApi' do
     end
   end
 
+  # unit tests for get_index_intervals
+  # Index Intervals
+  # Returns a list of interval data points for a specified index, including open, close, high, low, volume, and average price. Intervals are available in 60-minute, 30-minute, 15-minute, 10-minute, 5-minute, and 1-minute increments.
+  # @param identifier The index identifier
+  # @param interval_size The interval size to return in minutes (m) or hour (h).
+  # @param [Hash] opts the optional parameters
+  # @option opts [Date] :start_date Return intervals starting at the specified date
+  # @option opts [String] :start_time Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+  # @option opts [Date] :end_date Return intervals stopping at the specified date
+  # @option opts [String] :end_time Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+  # @option opts [String] :timezone Interprets the input times in this time zone, as well as returns times in this timezone.
+  # @option opts [Integer] :page_size The number of results to return per page.
+  # @return [ApiResponseIndexIntervals]
+  describe 'get_index_intervals test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for get_index_summary_by_id
   # Index Summary By Identifier
   # 
@@ -207,7 +226,7 @@ describe 'IndexApi' do
 
   # unit tests for get_realtime_index_price_by_id
   # Realtime Index Price By Identifier
-  # 
+  # Returns the realtime price for an index.
   # @param identifier The index symbol
   # @param [Hash] opts the optional parameters
   # @return [RealtimeIndexPrice]
