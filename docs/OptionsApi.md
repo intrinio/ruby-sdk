@@ -17,6 +17,8 @@ Method | HTTP request | Description
 [**get_options_chain_realtime**](OptionsApi.md#get_options_chain_realtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**get_options_expirations**](OptionsApi.md#get_options_expirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**get_options_expirations_eod**](OptionsApi.md#get_options_expirations_eod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
+[**get_options_greeks_by_contract**](OptionsApi.md#get_options_greeks_by_contract) | **GET** /options/greeks/{contract}/realtime | Get realtime options greeks for a specific contract
+[**get_options_greeks_by_ticker**](OptionsApi.md#get_options_greeks_by_ticker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Get realtime options greeks by ticker
 [**get_options_implied_move_by_symbol**](OptionsApi.md#get_options_implied_move_by_symbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
 [**get_options_interval_by_contract**](OptionsApi.md#get_options_interval_by_contract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**get_options_interval_movers**](OptionsApi.md#get_options_interval_movers) | **GET** /options/interval/movers | Options Intervals Movers
@@ -34,8 +36,6 @@ Method | HTTP request | Description
 [**get_unusual_activity_intraday**](OptionsApi.md#get_unusual_activity_intraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 [**get_unusual_activity_universal**](OptionsApi.md#get_unusual_activity_universal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
 [**get_unusual_activity_universal_intraday**](OptionsApi.md#get_unusual_activity_universal_intraday) | **GET** /options/unusual_activity/intraday | Options Unusual Activity Universal Intraday
-[**options_greeks_by_ticker_identifier_realtime_get**](OptionsApi.md#options_greeks_by_ticker_identifier_realtime_get) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Get realtime options greeks by ticker
-[**options_greeks_contract_realtime_get**](OptionsApi.md#options_greeks_contract_realtime_get) | **GET** /options/greeks/{contract}/realtime | Get realtime options greeks for a specific contract
 
 
 
@@ -1241,6 +1241,194 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_greeks_by_contract)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsGreekContractRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsGreekContractRealtime.md)
+
+[//]: # (OPERATION:get_options_greeks_by_contract_v2)
+
+[//]: # (ENDPOINT:/options/greeks/{contract}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_options_greeks_by_contract)
+
+## **get_options_greeks_by_contract**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_greeks_by_contract_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsGreekContractRealtime get_options_greeks_by_contract(contract, opts)
+
+#### Get realtime options greeks for a specific contract
+
+
+Retrieves realtime options greeks data for a specific options contract
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+contract = "contract_example"
+
+opts = {
+  source: "source_example",
+  model: "black_scholes",
+  iv_mode: "iv_mode_example",
+  stock_price_source: "stock_price_source_example"
+}
+
+result = options_api.get_options_greeks_by_contract(contract, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contract** | String| The options contract identifier |  &nbsp;
+ **source** | String| The data source to use for options data | [optional]  &nbsp;
+ **model** | String| The options pricing model to use for greeks calculations | [optional] [default to black_scholes] &nbsp;
+ **iv_mode** | String| The implied volatility calculation mode | [optional]  &nbsp;
+ **stock_price_source** | String| The data source to use for underlying stock prices | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsGreekContractRealtime**](ApiResponseOptionsGreekContractRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_greeks_by_ticker)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsGreeksByTickerRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsGreeksByTickerRealtime.md)
+
+[//]: # (OPERATION:get_options_greeks_by_ticker_v2)
+
+[//]: # (ENDPOINT:/options/greeks/by_ticker/{identifier}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_options_greeks_by_ticker)
+
+## **get_options_greeks_by_ticker**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_greeks_by_ticker_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsGreeksByTickerRealtime get_options_greeks_by_ticker(identifier, opts)
+
+#### Get realtime options greeks by ticker
+
+
+Retrieves realtime options greeks data for all contracts of a given ticker symbol
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+identifier = "identifier_example"
+
+opts = {
+  source: "source_example",
+  model: "black_scholes",
+  iv_mode: "iv_mode_example",
+  stock_price_source: "stock_price_source_example",
+  expiration_start_date: Date.parse("2013-10-20"),
+  expiration_end_date: Date.parse("2013-10-20"),
+  strike: 3.4,
+  strike_greater_than: 3.4,
+  strike_less_than: 3.4,
+  page_size: 250
+}
+
+result = options_api.get_options_greeks_by_ticker(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The ticker symbol to get options greeks for |  &nbsp;
+ **source** | String| The data source to use for options data | [optional]  &nbsp;
+ **model** | String| The options pricing model to use for greeks calculations | [optional] [default to black_scholes] &nbsp;
+ **iv_mode** | String| The implied volatility calculation mode | [optional]  &nbsp;
+ **stock_price_source** | String| The data source to use for underlying stock prices | [optional]  &nbsp;
+ **expiration_start_date** | Date| Filter options by expiration date (start) | [optional]  &nbsp;
+ **expiration_end_date** | Date| Filter options by expiration date (end) | [optional]  &nbsp;
+ **strike** | Float| Filter options by strike price | [optional]  &nbsp;
+ **strike_greater_than** | Float| Filter options by minimum strike price | [optional]  &nbsp;
+ **strike_less_than** | Float| Filter options by maximum strike price | [optional]  &nbsp;
+ **page_size** | Integer| Number of results to return per page | [optional] [default to 250] &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsGreeksByTickerRealtime**](ApiResponseOptionsGreeksByTickerRealtime.md)
 
 [//]: # (END_OPERATION)
 
@@ -2739,194 +2927,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::OptionsApi)
-
-[//]: # (METHOD:options_greeks_by_ticker_identifier_realtime_get)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsGreeksByTickerRealtime)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsGreeksByTickerRealtime.md)
-
-[//]: # (OPERATION:options_greeks_by_ticker_identifier_realtime_get_v2)
-
-[//]: # (ENDPOINT:/options/greeks/by_ticker/{identifier}/realtime)
-
-[//]: # (DOCUMENT_LINK:OptionsApi.md#options_greeks_by_ticker_identifier_realtime_get)
-
-## **options_greeks_by_ticker_identifier_realtime_get**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/options_greeks_by_ticker_identifier_realtime_get_v2)
-
-[//]: # (START_OVERVIEW)
-
-> ApiResponseOptionsGreeksByTickerRealtime options_greeks_by_ticker_identifier_realtime_get(identifier, opts)
-
-#### Get realtime options greeks by ticker
-
-
-Retrieves realtime options greeks data for all contracts of a given ticker symbol
-
-[//]: # (END_OVERVIEW)
-
-### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
-```ruby
-# Load the gem
-require 'intrinio-sdk'
-require 'pp'
-
-# Setup authorization
-Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR_API_KEY'
-  config.allow_retries = true
-end
-
-options_api = Intrinio::OptionsApi.new
-identifier = "identifier_example"
-
-opts = {
-  source: "source_example",
-  model: "black_scholes",
-  iv_mode: "iv_mode_example",
-  stock_price_source: "stock_price_source_example",
-  expiration_start_date: Date.parse("2013-10-20"),
-  expiration_end_date: Date.parse("2013-10-20"),
-  strike: 3.4,
-  strike_greater_than: 3.4,
-  strike_less_than: 3.4,
-  page_size: 250
-}
-
-result = options_api.options_greeks_by_ticker_identifier_realtime_get(identifier, opts)
-pp result
-```
-
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
-### Parameters
-
-[//]: # (START_PARAMETERS)
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **identifier** | String| The ticker symbol to get options greeks for |  &nbsp;
- **source** | String| The data source to use for options data | [optional]  &nbsp;
- **model** | String| The options pricing model to use for greeks calculations | [optional] [default to black_scholes] &nbsp;
- **iv_mode** | String| The implied volatility calculation mode | [optional]  &nbsp;
- **stock_price_source** | String| The data source to use for underlying stock prices | [optional]  &nbsp;
- **expiration_start_date** | Date| Filter options by expiration date (start) | [optional]  &nbsp;
- **expiration_end_date** | Date| Filter options by expiration date (end) | [optional]  &nbsp;
- **strike** | Float| Filter options by strike price | [optional]  &nbsp;
- **strike_greater_than** | Float| Filter options by minimum strike price | [optional]  &nbsp;
- **strike_less_than** | Float| Filter options by maximum strike price | [optional]  &nbsp;
- **page_size** | Integer| Number of results to return per page | [optional] [default to 250] &nbsp;
-
-[//]: # (END_PARAMETERS)
-
-### Return type
-
-[**ApiResponseOptionsGreeksByTickerRealtime**](ApiResponseOptionsGreeksByTickerRealtime.md)
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:Intrinio::OptionsApi)
-
-[//]: # (METHOD:options_greeks_contract_realtime_get)
-
-[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsGreekContractRealtime)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsGreekContractRealtime.md)
-
-[//]: # (OPERATION:options_greeks_contract_realtime_get_v2)
-
-[//]: # (ENDPOINT:/options/greeks/{contract}/realtime)
-
-[//]: # (DOCUMENT_LINK:OptionsApi.md#options_greeks_contract_realtime_get)
-
-## **options_greeks_contract_realtime_get**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/options_greeks_contract_realtime_get_v2)
-
-[//]: # (START_OVERVIEW)
-
-> ApiResponseOptionsGreekContractRealtime options_greeks_contract_realtime_get(contract, opts)
-
-#### Get realtime options greeks for a specific contract
-
-
-Retrieves realtime options greeks data for a specific options contract
-
-[//]: # (END_OVERVIEW)
-
-### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
-```ruby
-# Load the gem
-require 'intrinio-sdk'
-require 'pp'
-
-# Setup authorization
-Intrinio.configure do |config|
-  config.api_key['api_key'] = 'YOUR_API_KEY'
-  config.allow_retries = true
-end
-
-options_api = Intrinio::OptionsApi.new
-contract = "contract_example"
-
-opts = {
-  source: "source_example",
-  model: "black_scholes",
-  iv_mode: "iv_mode_example",
-  stock_price_source: "stock_price_source_example"
-}
-
-result = options_api.options_greeks_contract_realtime_get(contract, opts)
-pp result
-```
-
-[//]: # (END_CODE_EXAMPLE)
-
-[//]: # (START_DEFINITION)
-
-### Parameters
-
-[//]: # (START_PARAMETERS)
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contract** | String| The options contract identifier |  &nbsp;
- **source** | String| The data source to use for options data | [optional]  &nbsp;
- **model** | String| The options pricing model to use for greeks calculations | [optional] [default to black_scholes] &nbsp;
- **iv_mode** | String| The implied volatility calculation mode | [optional]  &nbsp;
- **stock_price_source** | String| The data source to use for underlying stock prices | [optional]  &nbsp;
-
-[//]: # (END_PARAMETERS)
-
-### Return type
-
-[**ApiResponseOptionsGreekContractRealtime**](ApiResponseOptionsGreekContractRealtime.md)
 
 [//]: # (END_OPERATION)
 
