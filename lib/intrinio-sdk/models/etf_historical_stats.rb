@@ -41,7 +41,7 @@ module Intrinio
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'messages' => :'Array<null>',
+        :'messages' => :'Array<String>',
         :'etf' => :'ETFSummary',
         :'stats' => :'Array<ETFStats>',
         :'next_page' => :'String'
