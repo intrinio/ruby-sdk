@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**get_all_etfs**](ETFsApi.md#get_all_etfs) | **GET** /etfs | All ETFs
 [**get_etf**](ETFsApi.md#get_etf) | **GET** /etfs/{identifier} | Lookup ETF
 [**get_etf_analytics**](ETFsApi.md#get_etf_analytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
+[**get_etf_historical_stats**](ETFsApi.md#get_etf_historical_stats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) stats
 [**get_etf_holdings**](ETFsApi.md#get_etf_holdings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
 [**get_etf_stats**](ETFsApi.md#get_etf_stats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) stats
 [**search_etfs**](ETFsApi.md#search_etfs) | **GET** /etfs/search | Search ETFs
@@ -247,6 +248,92 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ETFAnalytics**](ETFAnalytics.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ETFsApi)
+
+[//]: # (METHOD:get_etf_historical_stats)
+
+[//]: # (RETURN_TYPE:Intrinio::ETFHistoricalStats)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFHistoricalStats.md)
+
+[//]: # (OPERATION:get_etf_historical_stats_v2)
+
+[//]: # (ENDPOINT:/etfs/{identifier}/historical_stats)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#get_etf_historical_stats)
+
+## **get_etf_historical_stats**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_etf_historical_stats_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFHistoricalStats get_etf_historical_stats(identifier, opts)
+
+#### Exchange Traded Fund (ETF) stats
+
+
+Returns comprehensive key US ETF historical performance statistics, including prices, NAVs, flows, returns, and much more for both trailing and calendar year periods.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+eTFs_api = Intrinio::ETFsApi.new
+identifier = "SPY"
+
+opts = {
+  start_date: Date.parse("2020-01-01"),
+  end_date: Date.parse("2020-12-31"),
+  page_size: 100
+}
+
+result = eTFs_api.get_etf_historical_stats(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID) |  &nbsp;
+ **start_date** | Date| The start date for the historical stats data in YYYY-MM-DD format. | [optional]  &nbsp;
+ **end_date** | Date| The end date for the historical stats data in YYYY-MM-DD format. | [optional]  &nbsp;
+ **page_size** | Integer| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFHistoricalStats**](ETFHistoricalStats.md)
 
 [//]: # (END_OPERATION)
 

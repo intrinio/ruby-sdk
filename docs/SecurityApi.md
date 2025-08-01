@@ -54,6 +54,8 @@ Method | HTTP request | Description
 [**get_security_replay_file**](SecurityApi.md#get_security_replay_file) | **GET** /securities/replay | Security Replay File
 [**get_security_snapshots**](SecurityApi.md#get_security_snapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**get_security_stock_price_adjustments**](SecurityApi.md#get_security_stock_price_adjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
+[**get_security_stock_price_adjustments_dividends**](SecurityApi.md#get_security_stock_price_adjustments_dividends) | **GET** /securities/{identifier}/prices/adjustments/dividends | Dividends by Security
+[**get_security_stock_price_adjustments_splits**](SecurityApi.md#get_security_stock_price_adjustments_splits) | **GET** /securities/{identifier}/prices/adjustments/splits | Splits by Security
 [**get_security_stock_prices**](SecurityApi.md#get_security_stock_prices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**get_security_trades**](SecurityApi.md#get_security_trades) | **GET** /securities/trades | Security Trades
 [**get_security_trades_by_symbol**](SecurityApi.md#get_security_trades_by_symbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
@@ -4475,6 +4477,182 @@ opts = {
 }
 
 result = security_api.get_security_stock_price_adjustments(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **start_date** | Date| Return price adjustments on or after the date | [optional]  &nbsp;
+ **end_date** | Date| Return price adjustments on or before the date | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityStockPriceAdjustments**](ApiResponseSecurityStockPriceAdjustments.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_security_stock_price_adjustments_dividends)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseSecurityStockPriceAdjustments)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityStockPriceAdjustments.md)
+
+[//]: # (OPERATION:get_security_stock_price_adjustments_dividends_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/adjustments/dividends)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_security_stock_price_adjustments_dividends)
+
+## **get_security_stock_price_adjustments_dividends**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_stock_price_adjustments_dividends_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityStockPriceAdjustments get_security_stock_price_adjustments_dividends(identifier, opts)
+
+#### Dividends by Security
+
+
+Returns dividend price adjustments for the Security with the given `identifier`. A filtered api of /securities/{identifier}/prices/adjustments.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
+
+opts = {
+  start_date: Date.parse("2018-01-01"),
+  end_date: Date.parse("2019-01-01"),
+  page_size: 100,
+  next_page: nil
+}
+
+result = security_api.get_security_stock_price_adjustments_dividends(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **start_date** | Date| Return price adjustments on or after the date | [optional]  &nbsp;
+ **end_date** | Date| Return price adjustments on or before the date | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityStockPriceAdjustments**](ApiResponseSecurityStockPriceAdjustments.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_security_stock_price_adjustments_splits)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseSecurityStockPriceAdjustments)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityStockPriceAdjustments.md)
+
+[//]: # (OPERATION:get_security_stock_price_adjustments_splits_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/adjustments/splits)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_security_stock_price_adjustments_splits)
+
+## **get_security_stock_price_adjustments_splits**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_stock_price_adjustments_splits_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityStockPriceAdjustments get_security_stock_price_adjustments_splits(identifier, opts)
+
+#### Splits by Security
+
+
+Returns stock price split adjustments for the Security with the given `identifier`.  A filtered api of /securities/{identifier}/prices/adjustments.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
+
+opts = {
+  start_date: Date.parse("2018-01-01"),
+  end_date: Date.parse("2019-01-01"),
+  page_size: 100,
+  next_page: nil
+}
+
+result = security_api.get_security_stock_price_adjustments_splits(identifier, opts)
 pp result
 ```
 

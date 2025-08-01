@@ -1031,7 +1031,8 @@ opts = {
   stock_price_source: nil,
   model: nil,
   show_extended_price: nil,
-  include_related_symbols: false
+  include_related_symbols: false,
+  show_stats: nil
 }
 
 result = options_api.get_options_chain_realtime(symbol, expiration, opts)
@@ -1065,6 +1066,7 @@ Name | Type | Description  | Notes
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **show_extended_price** | BOOLEAN| Whether to include open close high low type fields. | [optional]  &nbsp;
  **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **show_stats** | BOOLEAN| Whether to include Greek calculations or not. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -1394,7 +1396,8 @@ opts = {
   strike: 3.4,
   strike_greater_than: 3.4,
   strike_less_than: 3.4,
-  page_size: 250
+  page_size: 250,
+  next_page: nil
 }
 
 result = options_api.get_options_greeks_by_ticker(identifier, opts)
@@ -1423,6 +1426,7 @@ Name | Type | Description  | Notes
  **strike_greater_than** | Float| Filter options by minimum strike price | [optional]  &nbsp;
  **strike_less_than** | Float| Filter options by maximum strike price | [optional]  &nbsp;
  **page_size** | Integer| Number of results to return per page | [optional] [default to 250] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -2368,7 +2372,9 @@ opts = {
   show_extended_price: nil,
   expiration_start_date: "2024-01-01",
   expiration_end_date: "2024-02-02",
-  strike: 100.0
+  strike: 100.0,
+  show_stats: nil,
+  next_page2: nil
 }
 
 result = options_api.get_options_prices_realtime_by_ticker(symbol, opts)
@@ -2397,6 +2403,8 @@ Name | Type | Description  | Notes
  **expiration_start_date** | [**Object**](.md)| Filter out contracts that expire before this date. | [optional]  &nbsp;
  **expiration_end_date** | [**Object**](.md)| Filter out contracts that expire after this date. | [optional]  &nbsp;
  **strike** | Float| Filter out contracts that have this strike price. | [optional]  &nbsp;
+ **show_stats** | BOOLEAN| Whether to include Greek calculations or not. | [optional]  &nbsp;
+ **next_page2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
