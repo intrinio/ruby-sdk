@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all_securities**](SecurityApi.md#get_all_securities) | **GET** /securities | All Securities
+[**get_securities_short_interest**](SecurityApi.md#get_securities_short_interest) | **GET** /securities/short_interest | Latest Short Interest
 [**get_security_by_id**](SecurityApi.md#get_security_by_id) | **GET** /securities/{identifier} | Lookup Security
 [**get_security_data_point_number**](SecurityApi.md#get_security_data_point_number) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**get_security_data_point_text**](SecurityApi.md#get_security_data_point_text) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
@@ -52,6 +53,7 @@ Method | HTTP request | Description
 [**get_security_quote**](SecurityApi.md#get_security_quote) | **GET** /securities/{identifier}/quote | Quote for a Security
 [**get_security_realtime_price**](SecurityApi.md#get_security_realtime_price) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 [**get_security_replay_file**](SecurityApi.md#get_security_replay_file) | **GET** /securities/replay | Security Replay File
+[**get_security_short_interest**](SecurityApi.md#get_security_short_interest) | **GET** /securities/{identifier}/short_interest | Short Interest by Security
 [**get_security_snapshots**](SecurityApi.md#get_security_snapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**get_security_stock_price_adjustments**](SecurityApi.md#get_security_stock_price_adjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**get_security_stock_price_adjustments_dividends**](SecurityApi.md#get_security_stock_price_adjustments_dividends) | **GET** /securities/{identifier}/prices/adjustments/dividends | Dividends by Security
@@ -180,6 +182,86 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_securities_short_interest)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseSecuritiesShortInterest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesShortInterest.md)
+
+[//]: # (OPERATION:get_securities_short_interest_v2)
+
+[//]: # (ENDPOINT:/securities/short_interest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_securities_short_interest)
+
+## **get_securities_short_interest**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_securities_short_interest_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesShortInterest get_securities_short_interest(opts)
+
+#### Latest Short Interest
+
+
+Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+
+opts = {
+  next_page: nil
+}
+
+result = security_api.get_securities_short_interest(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesShortInterest**](ApiResponseSecuritiesShortInterest.md)
 
 [//]: # (END_OPERATION)
 
@@ -4334,6 +4416,88 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityReplayFileResult**](SecurityReplayFileResult.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_security_short_interest)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseSecurityShortInterest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityShortInterest.md)
+
+[//]: # (OPERATION:get_security_short_interest_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/short_interest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_security_short_interest)
+
+## **get_security_short_interest**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_security_short_interest_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityShortInterest get_security_short_interest(identifier, opts)
+
+#### Short Interest by Security
+
+
+Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+identifier = "AAPL"
+
+opts = {
+  next_page: nil
+}
+
+result = security_api.get_security_short_interest(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityShortInterest**](ApiResponseSecurityShortInterest.md)
 
 [//]: # (END_OPERATION)
 
