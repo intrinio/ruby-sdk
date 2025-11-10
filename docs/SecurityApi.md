@@ -5,6 +5,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all_securities**](SecurityApi.md#get_all_securities) | **GET** /securities | All Securities
+[**get_securities_latest_dividend_records**](SecurityApi.md#get_securities_latest_dividend_records) | **GET** /securities/dividends/latest | Latest Dividend Records for All Securities
+[**get_securities_latest_earnings_records**](SecurityApi.md#get_securities_latest_earnings_records) | **GET** /securities/earnings/latest | Latest Earnings Records for All Securities
 [**get_securities_short_interest**](SecurityApi.md#get_securities_short_interest) | **GET** /securities/short_interest | Latest Short Interest
 [**get_security_by_id**](SecurityApi.md#get_security_by_id) | **GET** /securities/{identifier} | Lookup Security
 [**get_security_data_point_number**](SecurityApi.md#get_security_data_point_number) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
@@ -182,6 +184,182 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_securities_latest_dividend_records)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseSecuritiesDividendLatest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesDividendLatest.md)
+
+[//]: # (OPERATION:get_securities_latest_dividend_records_v2)
+
+[//]: # (ENDPOINT:/securities/dividends/latest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_securities_latest_dividend_records)
+
+## **get_securities_latest_dividend_records**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_securities_latest_dividend_records_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesDividendLatest get_securities_latest_dividend_records(opts)
+
+#### Latest Dividend Records for All Securities
+
+
+Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+
+opts = {
+  page_size: 100,
+  next_page: nil,
+  date: Date.parse("2013-10-20"),
+  identifiers: "AAPL,MSFT",
+  next_page2: nil
+}
+
+result = security_api.get_securities_latest_dividend_records(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **date** | Date| Return dividend records on or before this date. Format YYYY-MM-DD | [optional]  &nbsp;
+ **identifiers** | String| A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) | [optional]  &nbsp;
+ **next_page2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesDividendLatest**](ApiResponseSecuritiesDividendLatest.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::SecurityApi)
+
+[//]: # (METHOD:get_securities_latest_earnings_records)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseSecuritiesEarningsLatest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesEarningsLatest.md)
+
+[//]: # (OPERATION:get_securities_latest_earnings_records_v2)
+
+[//]: # (ENDPOINT:/securities/earnings/latest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#get_securities_latest_earnings_records)
+
+## **get_securities_latest_earnings_records**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_securities_latest_earnings_records_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesEarningsLatest get_securities_latest_earnings_records(opts)
+
+#### Latest Earnings Records for All Securities
+
+
+Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+security_api = Intrinio::SecurityApi.new
+
+opts = {
+  page_size: 100,
+  next_page: nil,
+  date: Date.parse("2013-10-20"),
+  identifiers: "AAPL,MSFT",
+  next_page2: nil
+}
+
+result = security_api.get_securities_latest_earnings_records(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **date** | Date| Return earnings records on or before this date. Format YYYY-MM-DD | [optional]  &nbsp;
+ **identifiers** | String| A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) | [optional]  &nbsp;
+ **next_page2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesEarningsLatest**](ApiResponseSecuritiesEarningsLatest.md)
 
 [//]: # (END_OPERATION)
 
