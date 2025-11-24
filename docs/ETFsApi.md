@@ -7,9 +7,12 @@ Method | HTTP request | Description
 [**get_all_etfs**](ETFsApi.md#get_all_etfs) | **GET** /etfs | All ETFs
 [**get_etf**](ETFsApi.md#get_etf) | **GET** /etfs/{identifier} | Lookup ETF
 [**get_etf_analytics**](ETFsApi.md#get_etf_analytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
+[**get_etf_historical_nav_flows**](ETFsApi.md#get_etf_historical_nav_flows) | **GET** /etfs/{identifier}/nav_flows/historical | Exchange Traded Fund (ETF) Historical NAV Flows
 [**get_etf_historical_stats**](ETFsApi.md#get_etf_historical_stats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) Historical Stats
 [**get_etf_holdings**](ETFsApi.md#get_etf_holdings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
+[**get_etf_nav_flows**](ETFsApi.md#get_etf_nav_flows) | **GET** /etfs/{identifier}/nav_flows | Exchange Traded Fund (ETF) NAV Flows
 [**get_etf_stats**](ETFsApi.md#get_etf_stats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) Stats
+[**get_etfs_nav_flows**](ETFsApi.md#get_etfs_nav_flows) | **GET** /etfs/nav_flows | Exchange Traded Funds (ETFs) Latest NAV Flows
 [**search_etfs**](ETFsApi.md#search_etfs) | **GET** /etfs/search | Search ETFs
 
 
@@ -256,6 +259,94 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio::ETFsApi)
 
+[//]: # (METHOD:get_etf_historical_nav_flows)
+
+[//]: # (RETURN_TYPE:Intrinio::ETFNavFlowsHistorical)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlowsHistorical.md)
+
+[//]: # (OPERATION:get_etf_historical_nav_flows_v2)
+
+[//]: # (ENDPOINT:/etfs/{identifier}/nav_flows/historical)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#get_etf_historical_nav_flows)
+
+## **get_etf_historical_nav_flows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_etf_historical_nav_flows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlowsHistorical get_etf_historical_nav_flows(identifier, opts)
+
+#### Exchange Traded Fund (ETF) Historical NAV Flows
+
+
+Returns a list of historical NAV (Net Asset Value) and flows data for Exchange Traded Funds. Includes NAV returns, NAV values, net flows data, share outstanding counts, and total net assets across multiple dates with pagination support.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+eTFs_api = Intrinio::ETFsApi.new
+identifier = "SPY"
+
+opts = {
+  start_date: Date.parse("2013-10-20"),
+  end_date: Date.parse("2013-10-20"),
+  page_size: 100,
+  next_page: "next_page_example"
+}
+
+result = eTFs_api.get_etf_historical_nav_flows(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID) |  &nbsp;
+ **start_date** | Date| Return NAV flows on or after this date | [optional]  &nbsp;
+ **end_date** | Date| Return NAV flows on or before this date | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlowsHistorical**](ETFNavFlowsHistorical.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ETFsApi)
+
 [//]: # (METHOD:get_etf_historical_stats)
 
 [//]: # (RETURN_TYPE:Intrinio::ETFHistoricalStats)
@@ -426,6 +517,94 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:Intrinio::ETFsApi)
 
+[//]: # (METHOD:get_etf_nav_flows)
+
+[//]: # (RETURN_TYPE:Intrinio::ETFNavFlows)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlows.md)
+
+[//]: # (OPERATION:get_etf_nav_flows_v2)
+
+[//]: # (ENDPOINT:/etfs/{identifier}/nav_flows)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#get_etf_nav_flows)
+
+## **get_etf_nav_flows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_etf_nav_flows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlows get_etf_nav_flows(identifier, opts)
+
+#### Exchange Traded Fund (ETF) NAV Flows
+
+
+Returns NAV (Net Asset Value) and flows data for Exchange Traded Funds. Includes NAV returns (daily, monthly, quarterly, yearly, annualized), NAV values (unadjusted and adjusted for splits/dividends), net flows data, share outstanding counts, and total net assets.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+eTFs_api = Intrinio::ETFsApi.new
+identifier = "SPY"
+
+opts = {
+  start_date: Date.parse("2013-10-20"),
+  end_date: Date.parse("2013-10-20"),
+  page_size: 100,
+  next_page: "next_page_example"
+}
+
+result = eTFs_api.get_etf_nav_flows(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID) |  &nbsp;
+ **start_date** | Date| Return NAV flows on or after this date | [optional]  &nbsp;
+ **end_date** | Date| Return NAV flows on or before this date | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlows**](ETFNavFlows.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ETFsApi)
+
 [//]: # (METHOD:get_etf_stats)
 
 [//]: # (RETURN_TYPE:Intrinio::ETFStats)
@@ -495,6 +674,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ETFStats**](ETFStats.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::ETFsApi)
+
+[//]: # (METHOD:get_etfs_nav_flows)
+
+[//]: # (RETURN_TYPE:Intrinio::ETFNavFlowsAll)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlowsAll.md)
+
+[//]: # (OPERATION:get_etfs_nav_flows_v2)
+
+[//]: # (ENDPOINT:/etfs/nav_flows)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#get_etfs_nav_flows)
+
+## **get_etfs_nav_flows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_etfs_nav_flows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlowsAll get_etfs_nav_flows(opts)
+
+#### Exchange Traded Funds (ETFs) Latest NAV Flows
+
+
+Returns the latest NAV (Net Asset Value) and flows data for all Exchange Traded Funds in the specified country, sorted by month-end assets in descending order. Each ETF appears only once with its most recent NAV flows data.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+eTFs_api = Intrinio::ETFsApi.new
+
+opts = {
+  country_code: US,
+  page_size: 100,
+  next_page: "next_page_example"
+}
+
+result = eTFs_api.get_etfs_nav_flows(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **country_code** | String| The ISO country code to filter ETFs by (e.g., US, CA, GB). Defaults to US. | [optional] [default to US] &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlowsAll**](ETFNavFlowsAll.md)
 
 [//]: # (END_OPERATION)
 

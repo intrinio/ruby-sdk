@@ -73,7 +73,7 @@ end
 zacks_api = Intrinio::ZacksApi.new
 
 opts = {
-  identifier: "AAPL",
+  identifier: "$$v2_ticker_default$$",
   start_date: nil,
   end_date: nil,
   mean_greater: nil,

@@ -38,7 +38,7 @@ Method | HTTP request | Description
 #### Data Point (Number)
 
 
-Returns a numeric value for the given `tag` and the entity with the given `identifier`
+$$v2_data_point_number_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -58,8 +58,8 @@ Intrinio.configure do |config|
 end
 
 dataPoint_api = Intrinio::DataPointApi.new
-identifier = "AAPL"
-tag = "marketcap"
+identifier = "$$v2_data_point_identifier_default$$"
+tag = "$$v2_data_point_item_number_default$$"
 
 result = dataPoint_api.get_data_point_number(identifier, tag)
 pp result
@@ -76,8 +76,8 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_data_point_item_description$$ |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 #### Data Point (Text)
 
 
-Returns a text value for the given `tag` for the Security with the given `identifier`
+$$v2_data_point_text_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -137,8 +137,8 @@ Intrinio.configure do |config|
 end
 
 dataPoint_api = Intrinio::DataPointApi.new
-identifier = "AAPL"
-tag = "ceo"
+identifier = "$$v2_data_point_identifier_default$$"
+tag = "$$v2_data_point_item_text_default$$"
 
 result = dataPoint_api.get_data_point_text(identifier, tag)
 pp result
@@ -155,8 +155,8 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_data_point_item_description$$ |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 

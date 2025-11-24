@@ -4,6 +4,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**all_expected_earnings_dates**](CompanyApi.md#all_expected_earnings_dates) | **GET** /companies/upcoming_earnings | All Expected Earnings Dates
+[**expected_earnings_dates_by_company**](CompanyApi.md#expected_earnings_dates_by_company) | **GET** /companies/{identifier}/upcoming_earnings | Expected Earnings Dates by Company
 [**get_all_companies**](CompanyApi.md#get_all_companies) | **GET** /companies | All Companies
 [**get_all_companies_daily_metrics**](CompanyApi.md#get_all_companies_daily_metrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 [**get_all_company_news**](CompanyApi.md#get_all_company_news) | **GET** /companies/news | All News
@@ -27,6 +29,190 @@ Method | HTTP request | Description
 [**search_companies**](CompanyApi.md#search_companies) | **GET** /companies/search | Search Companies
 [**shares_outstanding_by_company**](CompanyApi.md#shares_outstanding_by_company) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::CompanyApi)
+
+[//]: # (METHOD:all_expected_earnings_dates)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseAllExpectedEarningsDates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseAllExpectedEarningsDates.md)
+
+[//]: # (OPERATION:all_expected_earnings_dates_v2)
+
+[//]: # (ENDPOINT:/companies/upcoming_earnings)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#all_expected_earnings_dates)
+
+## **all_expected_earnings_dates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/all_expected_earnings_dates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseAllExpectedEarningsDates all_expected_earnings_dates(opts)
+
+#### All Expected Earnings Dates
+
+
+Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+company_api = Intrinio::CompanyApi.new
+
+opts = {
+  tickers: nil,
+  fiscal_year: nil,
+  fiscal_period: nil,
+  expected_date_after: Date.parse("today"),
+  expected_date_before: nil,
+  page_size: 100,
+  next_page: nil
+}
+
+result = company_api.all_expected_earnings_dates(opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tickers** | String| Comma-delimited list of tickers to filter results | [optional]  &nbsp;
+ **fiscal_year** | Integer| Filter by fiscal year | [optional]  &nbsp;
+ **fiscal_period** | String| Filter by fiscal period (Q1, Q2, Q3, FY) | [optional]  &nbsp;
+ **expected_date_after** | Date| Returns expected dates on or after this date. Defaults to today if not provided. | [optional] [default to today] &nbsp;
+ **expected_date_before** | Date| Returns expected dates before this date. | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseAllExpectedEarningsDates**](ApiResponseAllExpectedEarningsDates.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::CompanyApi)
+
+[//]: # (METHOD:expected_earnings_dates_by_company)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseCompanyExpectedEarningsDates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyExpectedEarningsDates.md)
+
+[//]: # (OPERATION:expected_earnings_dates_by_company_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/upcoming_earnings)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#expected_earnings_dates_by_company)
+
+## **expected_earnings_dates_by_company**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/expected_earnings_dates_by_company_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyExpectedEarningsDates expected_earnings_dates_by_company(identifier, opts)
+
+#### Expected Earnings Dates by Company
+
+
+Returns expected earnings announcement dates for a company's fiscal periods with confidence intervals and historical filing date ranges.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+company_api = Intrinio::CompanyApi.new
+identifier = "AAPL"
+
+opts = {
+  fiscal_year: nil,
+  fiscal_period: nil,
+  expected_date_after: Date.parse("today"),
+  expected_date_before: nil,
+  page_size: 100,
+  next_page: nil
+}
+
+result = company_api.expected_earnings_dates_by_company(identifier, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **fiscal_year** | Integer| Filter by fiscal year | [optional]  &nbsp;
+ **fiscal_period** | String| Filter by fiscal period (Q1, Q2, Q3, FY) | [optional]  &nbsp;
+ **expected_date_after** | Date| Returns expected dates on or after this date. Defaults to today if not provided. | [optional] [default to today] &nbsp;
+ **expected_date_before** | Date| Returns expected dates before this date. | [optional]  &nbsp;
+ **page_size** | Integer| The number of results to return | [optional] [default to 100] &nbsp;
+ **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyExpectedEarningsDates**](ApiResponseCompanyExpectedEarningsDates.md)
+
+[//]: # (END_OPERATION)
 
 
 [//]: # (START_OPERATION)
@@ -616,8 +802,8 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
-identifier = "AAPL"
-tag = "marketcap"
+identifier = "$$v2_company_data_point_identifier_default$$"
+tag = "$$v2_company_data_point_item_number_default$$"
 
 result = company_api.get_company_data_point_number(identifier, tag)
 pp result
@@ -634,8 +820,8 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_company_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_company_data_point_item_description$$ |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -695,8 +881,8 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
-identifier = "AAPL"
-tag = "ceo"
+identifier = "$$v2_company_data_point_identifier_default$$"
+tag = "$$v2_company_data_point_item_text_default$$"
 
 result = company_api.get_company_data_point_text(identifier, tag)
 pp result
@@ -713,8 +899,8 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_company_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_company_data_point_item_description$$ |  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -954,7 +1140,7 @@ Name | Type | Description  | Notes
 #### Historical Data for Company
 
 
-Returns historical values for the given `tag` and the Company with the given `identifier`
+$$v2_company_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -974,8 +1160,8 @@ Intrinio.configure do |config|
 end
 
 company_api = Intrinio::CompanyApi.new
-identifier = "AAPL"
-tag = "marketcap"
+identifier = "$$v2_company_historical_data_identifier_default$$"
+tag = "$$v2_company_historical_data_item_default$$"
 
 opts = {
   frequency: "daily",
@@ -1002,8 +1188,8 @@ pp result
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_company_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_company_historical_data_item_description$$ |  &nbsp;
  **frequency** | String| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | String| Return historical data for given fiscal period type | [optional]  &nbsp;
  **start_date** | Date| Return historical data on or after this date | [optional]  &nbsp;
