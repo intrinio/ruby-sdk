@@ -325,8 +325,8 @@ Class | Method | HTTP request | Description
 
  - [Intrinio::AccountCurrentUsage](docs/AccountCurrentUsage.md)
  - [Intrinio::AccumulationDistributionIndexTechnicalValue](docs/AccumulationDistributionIndexTechnicalValue.md)
- - [Intrinio::ApiResponseAccountCurrentUsages](docs/ApiResponseAccountCurrentUsages.md)
- - [Intrinio::ApiResponseAccountCurrentUsagesAccount](docs/ApiResponseAccountCurrentUsagesAccount.md)
+ - [Intrinio::ApiResponseAccountUsages](docs/ApiResponseAccountUsages.md)
+ - [Intrinio::ApiResponseAccountUsagesAccount](docs/ApiResponseAccountUsagesAccount.md)
  - [Intrinio::ApiResponseAllExpectedEarningsDates](docs/ApiResponseAllExpectedEarningsDates.md)
  - [Intrinio::ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [Intrinio::ApiResponseCompanies](docs/ApiResponseCompanies.md)

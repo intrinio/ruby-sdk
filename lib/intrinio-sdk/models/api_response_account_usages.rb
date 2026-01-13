@@ -13,23 +13,27 @@ Swagger Codegen version: unset
 require 'date'
 
 module Intrinio
-  # The account.
-  class ApiResponseAccountCurrentUsagesAccount
-    # The email address for the account.
-    attr_accessor :email
+  # The current usages on an account.
+  class ApiResponseAccountUsages
+    # The usages on the account.
+    attr_accessor :usage
+
+    attr_accessor :account
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'email' => :'email'
+        :'usage' => :'usage',
+        :'account' => :'account'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'email' => :'String'
+        :'usage' => :'Array<AccountCurrentUsage>',
+        :'account' => :'ApiResponseAccountUsagesAccount'
       }
     end
 
@@ -41,8 +45,14 @@ module Intrinio
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'email')
-        self.email = attributes[:'email']
+      if attributes.has_key?(:'usage')
+        if (value = attributes[:'usage']).is_a?(Array)
+          self.usage = value
+        end
+      end
+
+      if attributes.has_key?(:'account')
+        self.account = attributes[:'account']
       end
 
     end
@@ -65,7 +75,8 @@ module Intrinio
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          email == o.email
+          usage == o.usage &&
+          account == o.account
     end
 
     # @see the `==` method
@@ -77,7 +88,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [email].hash
+      [usage, account].hash
     end
 
     # Builds the object from hash

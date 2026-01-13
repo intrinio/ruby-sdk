@@ -23,7 +23,7 @@ module Intrinio
     # Account Current Usage
     # Returns a list of all access codes available with their current usage.
     # @param [Hash] opts the optional parameters
-    # @return [ApiResponseAccountCurrentUsages]
+    # @return [ApiResponseAccountUsages]
     def get_account_current_usage(opts = {})
       data, _status_code, _headers = get_account_current_usage_with_http_info(opts)
       return data
@@ -32,7 +32,7 @@ module Intrinio
     # Account Current Usage
     # Returns a list of all access codes available with their current usage.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ApiResponseAccountCurrentUsages, Fixnum, Hash)>] ApiResponseAccountCurrentUsages data, response status code and response headers
+    # @return [Array<(ApiResponseAccountUsages, Fixnum, Hash)>] ApiResponseAccountUsages data, response status code and response headers
     def get_account_current_usage_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AccountApi.get_account_current_usage ..."
@@ -60,7 +60,7 @@ module Intrinio
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ApiResponseAccountCurrentUsages')
+        :return_type => 'ApiResponseAccountUsages')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AccountApi#get_account_current_usage\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

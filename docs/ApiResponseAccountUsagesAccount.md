@@ -1,10 +1,10 @@
 
 
-[//]: # (CLASS:Intrinio::ApiResponseAccountCurrentUsagesAccount)
+[//]: # (CLASS:Intrinio::ApiResponseAccountUsagesAccount)
 
 [//]: # (KIND:object)
 
-### Intrinio::ApiResponseAccountCurrentUsagesAccount
+### Intrinio::ApiResponseAccountUsagesAccount
 
 #### Properties
 

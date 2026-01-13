@@ -36,7 +36,7 @@ describe 'AccountApi' do
   # Account Current Usage
   # Returns a list of all access codes available with their current usage.
   # @param [Hash] opts the optional parameters
-  # @return [ApiResponseAccountCurrentUsages]
+  # @return [ApiResponseAccountUsages]
   describe 'get_account_current_usage test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
