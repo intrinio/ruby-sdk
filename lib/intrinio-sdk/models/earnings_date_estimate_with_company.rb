@@ -13,8 +13,14 @@ Swagger Codegen version: unset
 require 'date'
 
 module Intrinio
-
+  # An estimated earnings announcement date for a company's fiscal period
   class EarningsDateEstimateWithCompany
+    # The Intrinio ID for the company
+    attr_accessor :company_id
+
+    # The ticker symbol of the company
+    attr_accessor :ticker
+
     # The fiscal year for the earnings report
     attr_accessor :fiscal_year
 
@@ -36,40 +42,34 @@ module Intrinio
     # Confidence intervals for the expected date, sorted by confidence level (descending)
     attr_accessor :confidence_intervals
 
-    # The Intrinio ID for the company
-    attr_accessor :company_id
-
-    # The ticker symbol of the company
-    attr_accessor :ticker
-
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'company_id' => :'company_id',
+        :'ticker' => :'ticker',
         :'fiscal_year' => :'fiscal_year',
         :'fiscal_period' => :'fiscal_period',
         :'expected_date' => :'expected_date',
         :'expected_8k_at' => :'expected_8k_at',
         :'historically_earliest' => :'historically_earliest',
         :'historically_latest' => :'historically_latest',
-        :'confidence_intervals' => :'confidence_intervals',
-        :'company_id' => :'company_id',
-        :'ticker' => :'ticker'
+        :'confidence_intervals' => :'confidence_intervals'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'company_id' => :'String',
+        :'ticker' => :'String',
         :'fiscal_year' => :'Integer',
         :'fiscal_period' => :'String',
         :'expected_date' => :'Date',
         :'expected_8k_at' => :'DateTime',
         :'historically_earliest' => :'String',
         :'historically_latest' => :'String',
-        :'confidence_intervals' => :'Hash<String, EarningsDateEstimateConfidenceIntervals>',
-        :'company_id' => :'String',
-        :'ticker' => :'String'
+        :'confidence_intervals' => :'Hash<String, EarningsDateEstimateConfidenceIntervals>'
       }
     end
 
@@ -80,6 +80,14 @@ module Intrinio
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'company_id')
+        self.company_id = attributes[:'company_id']
+      end
+
+      if attributes.has_key?(:'ticker')
+        self.ticker = attributes[:'ticker']
+      end
 
       if attributes.has_key?(:'fiscal_year')
         self.fiscal_year = attributes[:'fiscal_year']
@@ -111,14 +119,6 @@ module Intrinio
         end
       end
 
-      if attributes.has_key?(:'company_id')
-        self.company_id = attributes[:'company_id']
-      end
-
-      if attributes.has_key?(:'ticker')
-        self.ticker = attributes[:'ticker']
-      end
-
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -139,15 +139,15 @@ module Intrinio
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          company_id == o.company_id &&
+          ticker == o.ticker &&
           fiscal_year == o.fiscal_year &&
           fiscal_period == o.fiscal_period &&
           expected_date == o.expected_date &&
           expected_8k_at == o.expected_8k_at &&
           historically_earliest == o.historically_earliest &&
           historically_latest == o.historically_latest &&
-          confidence_intervals == o.confidence_intervals &&
-          company_id == o.company_id &&
-          ticker == o.ticker
+          confidence_intervals == o.confidence_intervals
     end
 
     # @see the `==` method
@@ -159,7 +159,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [fiscal_year, fiscal_period, expected_date, expected_8k_at, historically_earliest, historically_latest, confidence_intervals, company_id, ticker].hash
+      [company_id, ticker, fiscal_year, fiscal_period, expected_date, expected_8k_at, historically_earliest, historically_latest, confidence_intervals].hash
     end
 
     # Builds the object from hash

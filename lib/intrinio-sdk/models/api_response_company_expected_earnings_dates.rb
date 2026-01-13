@@ -15,6 +15,7 @@ require 'date'
 module Intrinio
 
   class ApiResponseCompanyExpectedEarningsDates
+    # Expected earnings dates.
     attr_accessor :expected_earnings_dates
 
     attr_accessor :company
