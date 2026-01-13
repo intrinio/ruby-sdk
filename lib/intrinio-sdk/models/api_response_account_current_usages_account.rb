@@ -13,7 +13,7 @@ Swagger Codegen version: unset
 require 'date'
 
 module Intrinio
-
+  # The account.
   class ApiResponseAccountCurrentUsagesAccount
     # The email address for the account.
     attr_accessor :email
