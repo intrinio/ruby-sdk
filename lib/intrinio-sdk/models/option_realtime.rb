@@ -24,6 +24,9 @@ module Intrinio
     # The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised.
     attr_accessor :expiration
 
+    # The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised.
+    attr_accessor :expiration_time
+
     # The strike price is the fixed price at which a derivative can be exercised, and refers to the price of the derivative’s underlying asset.  In a call option, the strike price is the price at which the option holder can purchase the underlying security.  For a put option, the strike price is the price at which the option holder can sell the underlying security.
     attr_accessor :strike
 
@@ -58,6 +61,7 @@ module Intrinio
         :'code' => :'code',
         :'ticker' => :'ticker',
         :'expiration' => :'expiration',
+        :'expiration_time' => :'expiration_time',
         :'strike' => :'strike',
         :'type' => :'type'
       }
@@ -68,7 +72,8 @@ module Intrinio
       {
         :'code' => :'String',
         :'ticker' => :'String',
-        :'expiration' => :'DateTime',
+        :'expiration' => :'Date',
+        :'expiration_time' => :'DateTime',
         :'strike' => :'Float',
         :'type' => :'String'
       }
@@ -92,6 +97,10 @@ module Intrinio
 
       if attributes.has_key?(:'expiration')
         self.expiration = attributes[:'expiration']
+      end
+
+      if attributes.has_key?(:'expiration_time')
+        self.expiration_time = attributes[:'expiration_time']
       end
 
       if attributes.has_key?(:'strike')
@@ -137,6 +146,7 @@ module Intrinio
           code == o.code &&
           ticker == o.ticker &&
           expiration == o.expiration &&
+          expiration_time == o.expiration_time &&
           strike == o.strike &&
           type == o.type
     end
@@ -150,7 +160,7 @@ module Intrinio
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [code, ticker, expiration, strike, type].hash
+      [code, ticker, expiration, expiration_time, strike, type].hash
     end
 
     # Builds the object from hash
