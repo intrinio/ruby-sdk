@@ -68,7 +68,7 @@ module Intrinio
       {
         :'code' => :'String',
         :'ticker' => :'String',
-        :'expiration' => :'Date',
+        :'expiration' => :'DateTime',
         :'strike' => :'Float',
         :'type' => :'String'
       }
