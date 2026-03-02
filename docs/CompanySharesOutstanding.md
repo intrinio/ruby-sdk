@@ -19,6 +19,7 @@ Name | Type | Description
 **trading_symbol** | String | The symbol under which the security is traded in the exchange &nbsp;
 **security_exchange_name** | String | The name of the secuirty exchange &nbsp;
 **shares_outstanding** | Float | The amount of stock currently held by all shareholders &nbsp;
+**adj_shares_outstanding** | Float | Adjusted Shares Outstanding - The shares outstanding adjusted for stock splits that have occurred since the filing was reported, making it comparable to current share counts &nbsp;
 
 [//]: # (END_DEFINITION)
 

@@ -24,6 +24,8 @@ Name | Type | Description
 **updated_date** | DateTime | The date and time when the fundamental was last updated &nbsp;
 **first_calculable** | DateTime | The date and time when the fundamental was first calculable &nbsp;
 **earnings_disclosed_at** | DateTime | The date and time when the earnings information was first disclosed via 8-K filing &nbsp;
+**standardized_signature** | String | A hash signature for standardized financials. This value is used to identify when standardized financials have changed between updates. &nbsp;
+**reported_signature** | String | A hash signature for reported financials. This value is used to identify when reported financials have changed between updates. &nbsp;
 **company** | [**CompanySummary**](CompanySummary.md) | The Company that the Fundamental was belongs to &nbsp;
 
 [//]: # (END_DEFINITION)
