@@ -931,7 +931,10 @@ opts = {
   strike_greater_than: nil,
   strike_less_than: nil,
   date: nil,
-  include_related_symbols: false
+  include_related_symbols: false,
+  recalculate_stats: false,
+  model: "black_scholes",
+  iv_mode: "iv_mode_example"
 }
 
 result = options_api.get_options_chain_eod(symbol, expiration, opts)
@@ -957,6 +960,9 @@ Name | Type | Description  | Notes
  **strike_less_than** | Float| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **date** | Date| The date to retrieve prices for | [optional]  &nbsp;
  **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **recalculate_stats** | BOOLEAN| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | String| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **iv_mode** | String| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -2261,7 +2267,10 @@ identifier = "AAPL230616P00190000"
 opts = {
   next_page: nil,
   start_date: nil,
-  end_date: nil
+  end_date: nil,
+  recalculate_stats: false,
+  model: "black_scholes",
+  iv_mode: "iv_mode_example"
 }
 
 result = options_api.get_options_prices_eod(identifier, opts)
@@ -2283,6 +2292,9 @@ Name | Type | Description  | Notes
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
  **start_date** | Date| The start date to retrieve prices for | [optional]  &nbsp;
  **end_date** | Date| The end date to retrieve prices for | [optional]  &nbsp;
+ **recalculate_stats** | BOOLEAN| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | String| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **iv_mode** | String| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
@@ -2352,6 +2364,9 @@ opts = {
   strike_greater_than: nil,
   strike_less_than: nil,
   include_related_symbols: false,
+  recalculate_stats: false,
+  model: "black_scholes",
+  iv_mode: "iv_mode_example",
   next_page: nil
 }
 
@@ -2378,6 +2393,9 @@ Name | Type | Description  | Notes
  **strike_greater_than** | Float| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strike_less_than** | Float| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **include_related_symbols** | BOOLEAN| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **recalculate_stats** | BOOLEAN| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | String| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **iv_mode** | String| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
  **next_page** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
