@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**get_option_aggregates**](OptionsApi.md#get_option_aggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 [**get_option_expirations_realtime**](OptionsApi.md#get_option_expirations_realtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**get_option_strikes_realtime**](OptionsApi.md#get_option_strikes_realtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
+[**get_option_surface**](OptionsApi.md#get_option_surface) | **GET** /options/surface/{identifier} | Option Surface
+[**get_option_surface_0**](OptionsApi.md#get_option_surface_0) | **GET** /options/surface/{identifier}/interpolate_iv | Option Surface
 [**get_option_trades**](OptionsApi.md#get_option_trades) | **GET** /options/trades | Option Trades
 [**get_option_trades_by_contract**](OptionsApi.md#get_option_trades_by_contract) | **GET** /options/{identifier}/trades | Option Trades By Contract
 [**get_options**](OptionsApi.md#get_options) | **GET** /options/{symbol} | Options
@@ -20,7 +22,8 @@ Method | HTTP request | Description
 [**get_options_gainers**](OptionsApi.md#get_options_gainers) | **GET** /options/gainers | Options Top Gainers
 [**get_options_greeks_by_contract**](OptionsApi.md#get_options_greeks_by_contract) | **GET** /options/greeks/{contract}/realtime | Option Greeks &amp; Derived Price by Contract
 [**get_options_greeks_by_ticker**](OptionsApi.md#get_options_greeks_by_ticker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks &amp; Derived Price by Ticker
-[**get_options_implied_move_by_symbol**](OptionsApi.md#get_options_implied_move_by_symbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
+[**get_options_implied_move_by_symbol**](OptionsApi.md#get_options_implied_move_by_symbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move (Expected) Realtime
+[**get_options_implied_move_historical_by_symbol**](OptionsApi.md#get_options_implied_move_historical_by_symbol) | **GET** /options/implied_move/{symbol}/{expiration_date}/historical/{as_of_date} | Options Implied Move (Expected) Historical
 [**get_options_interval_by_contract**](OptionsApi.md#get_options_interval_by_contract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**get_options_interval_movers**](OptionsApi.md#get_options_interval_movers) | **GET** /options/interval/movers | Options Intervals Movers
 [**get_options_interval_movers_change**](OptionsApi.md#get_options_interval_movers_change) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
@@ -381,6 +384,178 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsChainRealtime**](ApiResponseOptionsChainRealtime.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_option_surface)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsSurface)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsSurface.md)
+
+[//]: # (OPERATION:get_option_surface_v2)
+
+[//]: # (ENDPOINT:/options/surface/{identifier})
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_option_surface)
+
+## **get_option_surface**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_option_surface_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsSurface get_option_surface(identifier, surface_type, opts)
+
+#### Option Surface
+
+
+Returns the implied volatility surface for a ticker symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+identifier = "AAPL"
+surface_type = nil
+
+opts = {
+  source: nil
+}
+
+result = options_api.get_option_surface(identifier, surface_type, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The ticker symbol for the surface data being requested. |  &nbsp;
+ **surface_type** | String| The form of the surface being requested. |  &nbsp;
+ **source** | String| The specific source of the data being requested. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsSurface**](ApiResponseOptionsSurface.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_option_surface_0)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsSurfaceInterpolatedIv)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsSurfaceInterpolatedIv.md)
+
+[//]: # (OPERATION:get_option_surface_0_v2)
+
+[//]: # (ENDPOINT:/options/surface/{identifier}/interpolate_iv)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_option_surface_0)
+
+## **get_option_surface_0**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_option_surface_0_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsSurfaceInterpolatedIv get_option_surface_0(identifier, expiration, strike, opts)
+
+#### Option Surface
+
+
+The interpolated implied volatility is the implied volatility calculated from an arbitrary point on the smoothed volatility surface.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+identifier = "SPY"
+expiration = DateTime.parse(nil)
+strike = 715
+
+opts = {
+  source: nil,
+  as_of: DateTime.parse(nil)
+}
+
+result = options_api.get_option_surface_0(identifier, expiration, strike, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The ticker symbol for the surface data being requested. |  &nbsp;
+ **expiration** | DateTime| The DateTime of the expiration for the contract to calculate implied volatility from the surface. |  &nbsp;
+ **strike** | Float| The strike for the contract to calculate implied volatility from the surface. |  &nbsp;
+ **source** | String| The specific source of the data being requested. | [optional]  &nbsp;
+ **as_of** | DateTime| The time to use in calculating time until expiration.  Defaults to the current time. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsSurfaceInterpolatedIv**](ApiResponseOptionsSurfaceInterpolatedIv.md)
 
 [//]: # (END_OPERATION)
 
@@ -1553,7 +1728,7 @@ Name | Type | Description  | Notes
 
 > ApiResponseOptionsImpliedMove get_options_implied_move_by_symbol(symbol, expiration_date, opts)
 
-#### Options Implied Move By Symbol
+#### Options Implied Move (Expected) Realtime
 
 
 Returns the implied move data points for a ticker symbol.
@@ -1603,6 +1778,94 @@ Name | Type | Description  | Notes
  **expiration_date** | Date| The expiration date for the contracts to consider. |  &nbsp;
  **percentage** | [**Object**](.md)| Percentage to multiply the straddle by. Defaults to 0.85. | [optional]  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsImpliedMove**](ApiResponseOptionsImpliedMove.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:Intrinio::OptionsApi)
+
+[//]: # (METHOD:get_options_implied_move_historical_by_symbol)
+
+[//]: # (RETURN_TYPE:Intrinio::ApiResponseOptionsImpliedMove)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsImpliedMove.md)
+
+[//]: # (OPERATION:get_options_implied_move_historical_by_symbol_v2)
+
+[//]: # (ENDPOINT:/options/implied_move/{symbol}/{expiration_date}/historical/{as_of_date})
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#get_options_implied_move_historical_by_symbol)
+
+## **get_options_implied_move_historical_by_symbol**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/ruby/get_options_implied_move_historical_by_symbol_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsImpliedMove get_options_implied_move_historical_by_symbol(symbol, expiration_date, as_of_date, opts)
+
+#### Options Implied Move (Expected) Historical
+
+
+Returns historical implied move data points for a ticker symbol on a specific date.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```ruby
+# Load the gem
+require 'intrinio-sdk'
+require 'pp'
+
+# Setup authorization
+Intrinio.configure do |config|
+  config.api_key['api_key'] = 'YOUR_API_KEY'
+  config.allow_retries = true
+end
+
+options_api = Intrinio::OptionsApi.new
+symbol = "TSLA"
+expiration_date = Date.parse("2025-05-30")
+as_of_date = Date.parse("2025-05-15")
+
+opts = {
+  percentage: 0.85,
+  source: nil
+}
+
+result = options_api.get_options_implied_move_historical_by_symbol(symbol, expiration_date, as_of_date, opts)
+pp result
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+[//]: # (START_DEFINITION)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The ticker symbol for the contracts. |  &nbsp;
+ **expiration_date** | Date| The expiration date for the contracts to consider. |  &nbsp;
+ **as_of_date** | Date| The historical date to evaluate implied move on. |  &nbsp;
+ **percentage** | [**Object**](.md)| Percentage to multiply the straddle by. Defaults to 0.85. | [optional]  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts used for underlying mapping. | [optional]  &nbsp;
 
 [//]: # (END_PARAMETERS)
 
