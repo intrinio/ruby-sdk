@@ -1,4 +1,4 @@
-# Intrinio Ruby SDK
+# Intrinio Ruby SDK 
 
 intrinio-sdk - the Ruby gem for the Intrinio API
 
